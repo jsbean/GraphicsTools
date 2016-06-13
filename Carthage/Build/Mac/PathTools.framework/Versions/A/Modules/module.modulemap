@@ -1,0 +1,10 @@
+framework module PathTools {
+  umbrella header "PathTools.h"
+
+  export *
+  module * { export * }
+}
+
+module PathTools.Swift {
+    header "PathTools-Swift.h"
+}

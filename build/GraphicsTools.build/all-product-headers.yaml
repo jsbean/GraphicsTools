@@ -1,0 +1,33 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/BEAN/dn-m/Frameworks/GraphicsTools/build/Release-iphoneos/GraphicsTools.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "GraphicsTools-Swift.h",
+          'external-contents': "/Users/BEAN/dn-m/Frameworks/GraphicsTools/build/Release-iphoneos/GraphicsTools.framework/Headers/GraphicsTools-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "GraphicsTools.h",
+          'external-contents': "/Users/BEAN/dn-m/Frameworks/GraphicsTools/GraphicsTools/GraphicsTools.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/BEAN/dn-m/Frameworks/GraphicsTools/build/Release-iphoneos/GraphicsTools.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/BEAN/dn-m/Frameworks/GraphicsTools/build/GraphicsTools.build/Release-iphoneos/GraphicsTools.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}

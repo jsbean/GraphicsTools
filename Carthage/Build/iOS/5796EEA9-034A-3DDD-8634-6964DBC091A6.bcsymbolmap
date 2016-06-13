@@ -1,0 +1,25 @@
+BCSymbolMap Version: 1.0
+__swift_noop_void_return
+__swift_memcpy0_1
+__swift_noop_self_return
+__swift_memcpy_array0_1
+__swift_memmove_array0_1
+get_field_types_Path
+_TMfV9PathTools4Path
+_swift_FORCE_LOAD_$_swiftObjectiveC_$_PathTools
+_swift_FORCE_LOAD_$_swiftDarwin_$_PathTools
+_swift_FORCE_LOAD_$_swiftFoundation_$_PathTools
+_swift_FORCE_LOAD_$_swiftDispatch_$_PathTools
+_swift_FORCE_LOAD_$_swiftCoreGraphics_$_PathTools
+field_type_vector_Path
+Apple LLVM version 7.3.0 (clang-703.0.28)
+-emit-bc -primary-file /Users/BEAN/dn-m/Frameworks/GraphicsTools/Carthage/Checkouts/PathTools/PathTools/Path.swift -target armv7-apple-ios9.3 -enable-objc-interop -sdk /Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk -I /Users/BEAN/Library/Developer/Xcode/DerivedData/PathTools-atgeijmoeoakbaglvwykefwmsbjz/Build/Products/Release-iphoneos -F /Users/BEAN/Library/Developer/Xcode/DerivedData/PathTools-atgeijmoeoakbaglvwykefwmsbjz/Build/Products/Release-iphoneos -enable-testing -g -import-underlying-module -module-cache-path /Users/BEAN/Library/Developer/Xcode/DerivedData/ModuleCache -serialize-debugging-options -Xcc -I/Users/BEAN/Library/Developer/Xcode/DerivedData/PathTools-atgeijmoeoakbaglvwykefwmsbjz/Build/Intermediates/PathTools.build/Release-iphoneos/PathTools.build/swift-overrides.hmap -Xcc -iquote -Xcc /Users/BEAN/Library/Developer/Xcode/DerivedData/PathTools-atgeijmoeoakbaglvwykefwmsbjz/Build/Intermediates/PathTools.build/Release-iphoneos/PathTools.build/PathTools-generated-files.hmap -Xcc -I/Users/BEAN/Library/Developer/Xcode/DerivedData/PathTools-atgeijmoeoakbaglvwykefwmsbjz/Build/Intermediates/PathTools.build/Release-iphoneos/PathTools.build/PathTools-own-target-headers.hmap -Xcc -I/Users/BEAN/Library/Developer/Xcode/DerivedData/PathTools-atgeijmoeoakbaglvwykefwmsbjz/Build/Intermediates/PathTools.build/Release-iphoneos/PathTools.build/PathTools-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /Users/BEAN/Library/Developer/Xcode/DerivedData/PathTools-atgeijmoeoakbaglvwykefwmsbjz/Build/Intermediates/PathTools.build/all-product-headers.yaml -Xcc -iquote -Xcc /Users/BEAN/Library/Developer/Xcode/DerivedData/PathTools-atgeijmoeoakbaglvwykefwmsbjz/Build/Intermediates/PathTools.build/Release-iphoneos/PathTools.build/PathTools-project-headers.hmap -Xcc -I/Users/BEAN/Library/Developer/Xcode/DerivedData/PathTools-atgeijmoeoakbaglvwykefwmsbjz/Build/Products/Release-iphoneos/include -Xcc -I/Users/BEAN/Library/Developer/Xcode/DerivedData/PathTools-atgeijmoeoakbaglvwykefwmsbjz/Build/Intermediates/PathTools.build/Release-iphoneos/PathTools.build/DerivedSources/armv7 -Xcc -I/Users/BEAN/Library/Developer/Xcode/DerivedData/PathTools-atgeijmoeoakbaglvwykefwmsbjz/Build/Intermediates/PathTools.build/Release-iphoneos/PathTools.build/DerivedSources -Xcc -ivfsoverlay -Xcc /Users/BEAN/Library/Developer/Xcode/DerivedData/PathTools-atgeijmoeoakbaglvwykefwmsbjz/Build/Intermediates/PathTools.build/Release-iphoneos/PathTools.build/unextended-module-overlay.yaml -Xcc -working-directory/Users/BEAN/dn-m/Frameworks/GraphicsTools/Carthage/Checkouts/PathTools -emit-module-doc-path /Users/BEAN/Library/Developer/Xcode/DerivedData/PathTools-atgeijmoeoakbaglvwykefwmsbjz/Build/Intermediates/PathTools.build/Release-iphoneos/PathTools.build/Objects-normal/armv7/Path~partial.swiftdoc -O -parse-as-library -module-name PathTools -emit-module-path /Users/BEAN/Library/Developer/Xcode/DerivedData/PathTools-atgeijmoeoakbaglvwykefwmsbjz/Build/Intermediates/PathTools.build/Release-iphoneos/PathTools.build/Objects-normal/armv7/Path~partial.swiftmodule -serialize-diagnostics-path /Users/BEAN/Library/Developer/Xcode/DerivedData/PathTools-atgeijmoeoakbaglvwykefwmsbjz/Build/Intermediates/PathTools.build/Release-iphoneos/PathTools.build/Objects-normal/armv7/Path.dia -emit-dependencies-path /Users/BEAN/Library/Developer/Xcode/DerivedData/PathTools-atgeijmoeoakbaglvwykefwmsbjz/Build/Intermediates/PathTools.build/Release-iphoneos/PathTools.build/Objects-normal/armv7/Path.d -o /Users/BEAN/Library/Developer/Xcode/DerivedData/PathTools-atgeijmoeoakbaglvwykefwmsbjz/Build/Intermediates/PathTools.build/Release-iphoneos/PathTools.build/Objects-normal/armv7/Path.bc -resource-dir /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift
+<swift-imported-modules>
+/Users/BEAN/dn-m/Frameworks/GraphicsTools/Carthage/Checkouts/PathTools
+Apple Swift version 2.2 (swiftlang-703.0.17.4 clang-703.0.28)
+_TMaV9PathTools4Path
+Path.swift
+/Users/BEAN/dn-m/Frameworks/GraphicsTools/Carthage/Checkouts/PathTools/PathTools
+init
+/Users/BEAN/dn-m/Frameworks/GraphicsTools/Carthage/Checkouts/PathTools/PathTools/Path.swift
+/Users/BEAN/Library/Developer/Xcode/DerivedData/PathTools-atgeijmoeoakbaglvwykefwmsbjz/Build/Intermediates/PathTools.build/Release-iphoneos/PathTools.build/DerivedSources/PathTools_vers.c

@@ -1,0 +1,10 @@
+framework module Color {
+  umbrella header "Color.h"
+
+  export *
+  module * { export * }
+}
+
+module Color.Swift {
+    header "Color-Swift.h"
+}

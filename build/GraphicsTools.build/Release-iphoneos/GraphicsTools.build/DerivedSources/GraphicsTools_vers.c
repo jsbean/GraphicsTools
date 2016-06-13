@@ -1,0 +1,1 @@
+ const unsigned char GraphicsToolsVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:GraphicsTools  PROJECT:GraphicsTools-1" "\n"; const double GraphicsToolsVersionNumber __attribute__ ((used)) = (double)1.;

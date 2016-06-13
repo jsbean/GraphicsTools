@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>GraphicsTools.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<true/>
+		</dict>
+		<key>GraphicsToolsMac.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<true/>
+		</dict>
+		<key>GraphicsToolsMacTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<true/>
+		</dict>
+		<key>GraphicsToolsTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>2F46D806635EA5F6999506E1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A2FF81B83EBFC6672C5E5BAD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BEDDB99DA77E5A16B87F57B0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CB47AA21D5B0EC9EDA82C7C2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

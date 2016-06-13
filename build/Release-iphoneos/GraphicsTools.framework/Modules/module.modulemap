@@ -1,0 +1,6 @@
+framework module GraphicsTools {
+  umbrella header "GraphicsTools.h"
+
+  export *
+  module * { export * }
+}
