@@ -25,8 +25,7 @@ extension CompositeShapeType {
         createComponents()
         addComponents()
     }
-    
-    // TODO: change this
+
     public func addComponents() {
         components.forEach { addSublayer($0) }
     }
