@@ -13,8 +13,12 @@ import QuartzCore
  */
 public protocol PathMaking {
     
+    // MARK: - Instance Properties
+    
     /// Path of the object.
     var path: CGPath? { get set }
+    
+    // MARK: - Instance Methods
     
     /**
      Generate the path.

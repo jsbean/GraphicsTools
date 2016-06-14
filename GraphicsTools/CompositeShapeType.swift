@@ -15,6 +15,8 @@ public protocol CompositeShapeType: GraphicsContainerType { }
 
 extension CompositeShapeType {
     
+    // MARK: - Instance Methods
+    
     /**
      Perform the build phase.
      */

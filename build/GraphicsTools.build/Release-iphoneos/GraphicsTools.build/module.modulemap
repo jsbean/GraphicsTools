@@ -4,3 +4,7 @@ framework module GraphicsTools {
   export *
   module * { export * }
 }
+
+module GraphicsTools.Swift {
+    header "GraphicsTools-Swift.h"
+}

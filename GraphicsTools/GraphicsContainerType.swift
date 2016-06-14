@@ -15,11 +15,15 @@ import QuartzCore
  */
 public protocol GraphicsContainerType: Buildable, FrameMaking {
     
+    // MARK: - Instance Properties
+    
     /// Frame of object.
     var frame: CGRect { get set }
     
     /// Components that need to built and commited
     var components: [CALayer] { get set }
+    
+    // MARK: - Instance Methods
     
     /**
      Create the components contained herein.

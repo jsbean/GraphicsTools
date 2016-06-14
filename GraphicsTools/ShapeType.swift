@@ -13,6 +13,8 @@ import QuartzCore
  */
 public protocol ShapeType: Buildable, PathMaking, FrameMaking {
     
+    // MARK: - Instance Properties
+    
     /// Frame of the object.
     var frame: CGRect { get set }
     
