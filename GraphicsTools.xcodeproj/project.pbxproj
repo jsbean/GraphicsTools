@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		070D41631D1030C200C02AC9 /* GraphicsContainerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070D41621D1030C200C02AC9 /* GraphicsContainerType.swift */; };
+		070D41641D1030C200C02AC9 /* GraphicsContainerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070D41621D1030C200C02AC9 /* GraphicsContainerType.swift */; };
 		07305A501D0F47EE006E4085 /* Buildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07305A4B1D0F47EE006E4085 /* Buildable.swift */; };
 		07305A511D0F47EE006E4085 /* Buildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07305A4B1D0F47EE006E4085 /* Buildable.swift */; };
 		07305A521D0F47EE006E4085 /* CompositeShapeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07305A4C1D0F47EE006E4085 /* CompositeShapeType.swift */; };
@@ -68,6 +70,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		070D41621D1030C200C02AC9 /* GraphicsContainerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GraphicsContainerType.swift; path = GraphicsTools/GraphicsContainerType.swift; sourceTree = "<group>"; };
 		07305A4B1D0F47EE006E4085 /* Buildable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Buildable.swift; path = GraphicsTools/Buildable.swift; sourceTree = "<group>"; };
 		07305A4C1D0F47EE006E4085 /* CompositeShapeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompositeShapeType.swift; path = GraphicsTools/CompositeShapeType.swift; sourceTree = "<group>"; };
 		07305A4D1D0F47EE006E4085 /* FrameMaking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FrameMaking.swift; path = GraphicsTools/FrameMaking.swift; sourceTree = "<group>"; };
@@ -135,6 +138,7 @@
 			children = (
 				07305A4B1D0F47EE006E4085 /* Buildable.swift */,
 				07305A4C1D0F47EE006E4085 /* CompositeShapeType.swift */,
+				070D41621D1030C200C02AC9 /* GraphicsContainerType.swift */,
 				07305A4D1D0F47EE006E4085 /* FrameMaking.swift */,
 				07305A4E1D0F47EE006E4085 /* PathMaking.swift */,
 				07305A4F1D0F47EE006E4085 /* ShapeType.swift */,
@@ -334,6 +338,7 @@
 			files = (
 				07305A501D0F47EE006E4085 /* Buildable.swift in Sources */,
 				07305A541D0F47EE006E4085 /* FrameMaking.swift in Sources */,
+				070D41631D1030C200C02AC9 /* GraphicsContainerType.swift in Sources */,
 				07305A581D0F47EE006E4085 /* ShapeType.swift in Sources */,
 				07305A521D0F47EE006E4085 /* CompositeShapeType.swift in Sources */,
 				07305A561D0F47EE006E4085 /* PathMaking.swift in Sources */,
@@ -346,6 +351,7 @@
 			files = (
 				07305A511D0F47EE006E4085 /* Buildable.swift in Sources */,
 				07305A551D0F47EE006E4085 /* FrameMaking.swift in Sources */,
+				070D41641D1030C200C02AC9 /* GraphicsContainerType.swift in Sources */,
 				07305A591D0F47EE006E4085 /* ShapeType.swift in Sources */,
 				07305A531D0F47EE006E4085 /* CompositeShapeType.swift in Sources */,
 				07305A571D0F47EE006E4085 /* PathMaking.swift in Sources */,

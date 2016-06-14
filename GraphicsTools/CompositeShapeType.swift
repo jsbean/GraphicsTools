@@ -8,25 +8,17 @@
 
 import QuartzCore
 
-public protocol CompositeShapeType: Buildable, FrameMaking {
-
-    var frame: CGRect { get set }
-    var components: [CAShapeLayer] { get set }
-    
-    func createComponents()
-    func addComponents()
-    func addSublayer(layer: CALayer)
-}
+public protocol CompositeShapeType: GraphicsContainerType { }
 
 extension CompositeShapeType {
     
     public func build() {
         frame = makeFrame()
         createComponents()
-        addComponents()
+        commitComponents()
     }
 
-    public func addComponents() {
+    public func commitComponents() {
         components.forEach { addSublayer($0) }
     }
 }
