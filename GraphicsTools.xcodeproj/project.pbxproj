@@ -20,11 +20,11 @@
 		07305A581D0F47EE006E4085 /* ShapeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07305A4F1D0F47EE006E4085 /* ShapeType.swift */; };
 		07305A591D0F47EE006E4085 /* ShapeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07305A4F1D0F47EE006E4085 /* ShapeType.swift */; };
 		0C56CCD3163F739244E75E4D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBE41F31AC5943193DF8009F /* Cocoa.framework */; };
-		3EB442612FE008F7E4E588DA /* GraphicsTools.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 55B6B4C4D85417529193D762 /* GraphicsTools.framework */; };
+		3EB442612FE008F7E4E588DA /* GraphicsTools.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 55B6B4C4D85417529193D762 /* GraphicsTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		6E5AEA81D6CD7042D31B961B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23DEF5C9360A63417596864 /* Foundation.framework */; };
 		A94F712C5F12ED0EFC349E9E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBE41F31AC5943193DF8009F /* Cocoa.framework */; };
 		B27D7085F6AABF7739F09AE0 /* GraphicsTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 488C9F9C33792F48B0F51DE7 /* GraphicsTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E5DFC2E0C19BC5CF0E8B1F83 /* GraphicsTools.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D17EBDE8C860D1D14CAEC057 /* GraphicsTools.framework */; };
+		E5DFC2E0C19BC5CF0E8B1F83 /* GraphicsTools.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D17EBDE8C860D1D14CAEC057 /* GraphicsTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		F26C272E97DFE3042C32711A /* GraphicsTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 488C9F9C33792F48B0F51DE7 /* GraphicsTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FDA097E07045D1788A7EA9C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23DEF5C9360A63417596864 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -309,7 +309,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0730;
 			};
 			buildConfigurationList = 1D633F0F2BDAF7C373EBD0AF /* Build configuration list for PBXProject "GraphicsTools" */;
 			compatibilityVersion = "Xcode 3.2";

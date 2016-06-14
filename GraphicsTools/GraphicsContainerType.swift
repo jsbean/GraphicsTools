@@ -17,9 +17,6 @@ public protocol GraphicsContainerType: Buildable, FrameMaking {
     
     // MARK: - Instance Properties
     
-    /// Frame of object.
-    var frame: CGRect { get set }
-    
     /// Components that need to built and commited
     var components: [CALayer] { get set }
     
@@ -34,16 +31,9 @@ public protocol GraphicsContainerType: Buildable, FrameMaking {
      Commit the components as sublayers.
      */
     func commitComponents()
-    
-    /**
-     Add a CALAyer sublayer.
-     
-     > Shadowing the CALayer addSublayer(_:) method.
-     */
-    func addSublayer(layer: CALayer)
 }
 
-extension GraphicsContainerType {
+extension GraphicsContainerType where Self: CALayer {
     
     /**
      Perform the build phase.

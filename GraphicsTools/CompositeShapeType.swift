@@ -13,7 +13,7 @@ import QuartzCore
  */
 public protocol CompositeShapeType: GraphicsContainerType { }
 
-extension CompositeShapeType {
+extension CompositeShapeType where Self: CALayer {
     
     // MARK: - Instance Methods
     

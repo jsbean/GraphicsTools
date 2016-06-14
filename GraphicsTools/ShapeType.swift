@@ -11,18 +11,9 @@ import QuartzCore
 /**
  For simple path-based shapes.
  */
-public protocol ShapeType: Buildable, PathMaking, FrameMaking {
-    
-    // MARK: - Instance Properties
-    
-    /// Frame of the object.
-    var frame: CGRect { get set }
-    
-    /// Path of the object.
-    var path: CGPath? { get set }
-}
+public protocol ShapeType: Buildable, PathMaking, FrameMaking { }
 
-extension ShapeType {
+extension ShapeType where Self: CAShapeLayer {
     
     /**
      Perform the build phase.
