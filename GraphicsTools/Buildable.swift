@@ -8,7 +8,11 @@
 
 import Foundation
 
+/// For graphic objects that have a build phase.
 public protocol Buildable: class {
     
+    /**
+     Perform the build phase.
+     */
     func build()
 }

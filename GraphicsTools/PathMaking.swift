@@ -8,9 +8,16 @@
 
 import QuartzCore
 
+/**
+ For graphical objects that need to generate a path.
+ */
 public protocol PathMaking {
     
+    /// Path of the object.
     var path: CGPath? { get set }
     
+    /**
+     Generate the path.
+     */
     func makePath() -> CGPath
 }
