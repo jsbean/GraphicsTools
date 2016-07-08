@@ -1,0 +1,7 @@
+language: objective-c
+osx_image: xcode7.3
+xcode_project: Color.xcodeproj
+xcode_scheme: ColorMac
+xcode_sdk: macosx10.9
+before_script:
+	- carthage bootstrap
