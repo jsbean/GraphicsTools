@@ -48,7 +48,7 @@ extension GraphicsContainerType where Self: CALayer {
      Commit the components as sublayers.
      */
     public func commitComponents() {
-        components.forEach { addSublayer($0) }
+        components.forEach(addSublayer)
     }
 }
 
