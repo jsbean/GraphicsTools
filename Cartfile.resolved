@@ -1,1 +1,2 @@
-github "dn-m/Color" "v0.0.8"
+github "dn-m/Color" "v0.1"
+github "dn-m/PathTools" "v0.1"

@@ -14,13 +14,19 @@ public struct Color {
     public static let green = Color(0, 1, 0, 1)
     public static let blue  = Color(0, 0, 1, 1)
     
-    public var cgColor: CGColorRef
+    public var cgColor: CGColor
     
     public init(_ red: CGFloat, _ green: CGFloat, _ blue: CGFloat, _ alpha: CGFloat) {
-        self.cgColor = CGColorCreate(CGColorSpaceCreateDeviceRGB(), [red, green, blue, alpha])!
+        self.cgColor = CGColor(
+            colorSpace: CGColorSpaceCreateDeviceRGB(),
+            components: [red, green, blue, alpha]
+        )!
     }
     
     public init(gray: CGFloat, alpha: CGFloat) {
-        self.cgColor = CGColorCreate(CGColorSpaceCreateDeviceGray(), [gray, alpha])!
+        self.cgColor = CGColor(
+            colorSpace: CGColorSpaceCreateDeviceGray(),
+            components: [gray, alpha]
+        )!
     }
 }

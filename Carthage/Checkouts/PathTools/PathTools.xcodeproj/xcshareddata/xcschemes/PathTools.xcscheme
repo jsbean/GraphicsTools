@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8E194ED864425795D4FA70F4"
-               BuildableName = "Color.framework"
-               BlueprintName = "Color"
-               ReferencedContainer = "container:Color.xcodeproj">
+               BlueprintIdentifier = "265AF74D52742E81C475E0FB"
+               BuildableName = "PathTools.framework"
+               BlueprintName = "PathTools"
+               ReferencedContainer = "container:PathTools.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -28,10 +28,10 @@
             buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4368E841552C9EA4F8171605"
-               BuildableName = "ColorTests.xctest"
-               BlueprintName = "ColorTests"
-               ReferencedContainer = "container:Color.xcodeproj">
+               BlueprintIdentifier = "803B79FD5674F6F2DFD55144"
+               BuildableName = "PathToolsTests.xctest"
+               BlueprintName = "PathToolsTests"
+               ReferencedContainer = "container:PathTools.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,10 +47,10 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4368E841552C9EA4F8171605"
-               BuildableName = "ColorTests.xctest"
-               BlueprintName = "ColorTests"
-               ReferencedContainer = "container:Color.xcodeproj">
+               BlueprintIdentifier = "803B79FD5674F6F2DFD55144"
+               BuildableName = "PathToolsTests.xctest"
+               BlueprintName = "PathToolsTests"
+               ReferencedContainer = "container:PathTools.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -70,10 +70,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8E194ED864425795D4FA70F4"
-            BuildableName = "Color.framework"
-            BlueprintName = "Color"
-            ReferencedContainer = "container:Color.xcodeproj">
+            BlueprintIdentifier = "265AF74D52742E81C475E0FB"
+            BuildableName = "PathTools.framework"
+            BlueprintName = "PathTools"
+            ReferencedContainer = "container:PathTools.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
