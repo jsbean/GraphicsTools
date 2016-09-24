@@ -255,6 +255,7 @@
 				5C945FA33B166733F8B640BF /* Sources */,
 				CC067F0C1DD8256AE7043609 /* Frameworks */,
 				A16DB72448B711DFDAFFE70F /* CopyFiles */,
+				07072ADC1D96F4F4006876C1 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -273,6 +274,7 @@
 				B9170661B287E4C33CAB3213 /* Sources */,
 				E5E0940A69326869BD43BDAF /* Frameworks */,
 				2825C2889FAFBA5FEAFFF916 /* CopyFiles */,
+				07072ADB1D96F4D8006876C1 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -291,7 +293,6 @@
 				56FB2BD06CD79A443967FCAA /* Sources */,
 				143C57BC48DE08DF872E822A /* Frameworks */,
 				E9A68062D2FE958A2DEC30AA /* Headers */,
-				7C26CEC06E95F91E069BCF26 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -309,7 +310,6 @@
 				51E776C4324C6D76EA796F49 /* Sources */,
 				118057998F4F04DD0F6A51B5 /* Frameworks */,
 				FE2318A15879097ABFE01903 /* Headers */,
-				9B1EE7D5E7D496831BED68E8 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -358,22 +358,7 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7C26CEC06E95F91E069BCF26 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/Mac/Color.framework",
-				"$(SRCROOT)/Carthage/Build/Mac/PathTools.framework",
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
-		9B1EE7D5E7D496831BED68E8 /* ShellScript */ = {
+		07072ADB1D96F4D8006876C1 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -381,6 +366,21 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Color.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/PathTools.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		07072ADC1D96F4F4006876C1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/Mac/Color.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/PathTools.framework",
 			);
 			outputPaths = (
 			);
