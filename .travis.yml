@@ -1,12 +1,21 @@
 language: objective-c
-osx_image: xcode8
+osx_image: xcode8.2
 env:
   matrix:
+    - DESTINATION="platform=iOS Simulator,OS=9.3,name=iPad 2"
+      SCHEME="GraphicsTools iOS"
     - DESTINATION="platform=iOS Simulator,OS=10.0,name=iPad Pro (12.9 inch)"
-    
-before_script: carthage update
+      SCHEME="GraphicsTools iOS"
+    - DESTINATION="platform=OS X"
+      SCHEME="GraphicsTools macOS"
 
-script: xcodebuild test -project GraphicsTools.xcodeproj -scheme GraphicsTools -destination "${DESTINATION}" TOOLCHAINS=swift
+before_script: if [ -f ./Cartfile ]; then carthage update; fi;
+
+script: travis_retry xcodebuild test
+  -project GraphicsTools.xcodeproj
+  -scheme "${SCHEME}"
+  -destination "${DESTINATION}"
+  TOOLCHAINS=swift
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
