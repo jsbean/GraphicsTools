@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "BEDDB99DA77E5A16B87F57B0"
                BuildableName = "GraphicsTools.framework"
-               BlueprintName = "GraphicsToolsMac"
+               BlueprintName = "GraphicsTools macOS"
                ReferencedContainer = "container:GraphicsTools.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -29,8 +29,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2F46D806635EA5F6999506E1"
-               BuildableName = "GraphicsToolsMacTests.xctest"
-               BlueprintName = "GraphicsToolsMacTests"
+               BuildableName = "GraphicsTools macOS Tests.xctest"
+               BlueprintName = "GraphicsTools macOS Tests"
                ReferencedContainer = "container:GraphicsTools.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -48,8 +48,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2F46D806635EA5F6999506E1"
-               BuildableName = "GraphicsToolsMacTests.xctest"
-               BlueprintName = "GraphicsToolsMacTests"
+               BuildableName = "GraphicsTools macOS Tests.xctest"
+               BlueprintName = "GraphicsTools macOS Tests"
                ReferencedContainer = "container:GraphicsTools.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -72,7 +72,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BEDDB99DA77E5A16B87F57B0"
             BuildableName = "GraphicsTools.framework"
-            BlueprintName = "GraphicsToolsMac"
+            BlueprintName = "GraphicsTools macOS"
             ReferencedContainer = "container:GraphicsTools.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
