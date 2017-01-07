@@ -80,14 +80,14 @@
 		07305A4D1D0F47EE006E4085 /* FrameMaking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FrameMaking.swift; path = GraphicsTools/FrameMaking.swift; sourceTree = "<group>"; };
 		07305A4E1D0F47EE006E4085 /* PathMaking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PathMaking.swift; path = GraphicsTools/PathMaking.swift; sourceTree = "<group>"; };
 		07305A4F1D0F47EE006E4085 /* ShapeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShapeType.swift; path = GraphicsTools/ShapeType.swift; sourceTree = "<group>"; };
-		1AC915E6D64AA1A2072FAA9D /* GraphicsToolsMacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GraphicsToolsMacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AC915E6D64AA1A2072FAA9D /* GraphicsTools macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GraphicsTools macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C5A07620DC1BE344B2CC5D3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = GraphicsToolsTests/Info.plist; sourceTree = "<group>"; };
 		3EE4F42166106014BBC4DD96 /* GraphicsTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GraphicsTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		488C9F9C33792F48B0F51DE7 /* GraphicsTools.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GraphicsTools.h; path = GraphicsTools/GraphicsTools.h; sourceTree = "<group>"; };
 		509E0002B0FB0CFF8524F37A /* GraphicsTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GraphicsTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55B6B4C4D85417529193D762 /* GraphicsTools.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; path = GraphicsTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F9BB74D0893C6E54A94EAD6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = GraphicsTools/Info.plist; sourceTree = "<group>"; };
-		83E1D5E578D7F5A2044A6FA0 /* GraphicsToolsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GraphicsToolsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		83E1D5E578D7F5A2044A6FA0 /* GraphicsTools iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GraphicsTools iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CEB5921EE0226FB91F6B2DA /* Color.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Color.framework; path = Carthage/Build/iOS/Color.framework; sourceTree = "<group>"; };
 		BBCE9E1C6C5989277ED8EBF7 /* Color.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Color.framework; path = Carthage/Build/Mac/Color.framework; sourceTree = "<group>"; };
 		D17EBDE8C860D1D14CAEC057 /* GraphicsTools.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; path = GraphicsTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -211,9 +211,9 @@
 			isa = PBXGroup;
 			children = (
 				3EE4F42166106014BBC4DD96 /* GraphicsTools.framework */,
-				83E1D5E578D7F5A2044A6FA0 /* GraphicsToolsTests.xctest */,
+				83E1D5E578D7F5A2044A6FA0 /* GraphicsTools iOS Tests.xctest */,
 				509E0002B0FB0CFF8524F37A /* GraphicsTools.framework */,
-				1AC915E6D64AA1A2072FAA9D /* GraphicsToolsMacTests.xctest */,
+				1AC915E6D64AA1A2072FAA9D /* GraphicsTools macOS Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -248,9 +248,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		2F46D806635EA5F6999506E1 /* GraphicsToolsMacTests */ = {
+		2F46D806635EA5F6999506E1 /* GraphicsTools macOS Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 63D33E612BA5C24C53D54F93 /* Build configuration list for PBXNativeTarget "GraphicsToolsMacTests" */;
+			buildConfigurationList = 63D33E612BA5C24C53D54F93 /* Build configuration list for PBXNativeTarget "GraphicsTools macOS Tests" */;
 			buildPhases = (
 				5C945FA33B166733F8B640BF /* Sources */,
 				CC067F0C1DD8256AE7043609 /* Frameworks */,
@@ -262,14 +262,14 @@
 			dependencies = (
 				40CF5DA59BE8A07DB9FFC366 /* PBXTargetDependency */,
 			);
-			name = GraphicsToolsMacTests;
+			name = "GraphicsTools macOS Tests";
 			productName = GraphicsToolsMacTests;
-			productReference = 1AC915E6D64AA1A2072FAA9D /* GraphicsToolsMacTests.xctest */;
+			productReference = 1AC915E6D64AA1A2072FAA9D /* GraphicsTools macOS Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		A2FF81B83EBFC6672C5E5BAD /* GraphicsToolsTests */ = {
+		A2FF81B83EBFC6672C5E5BAD /* GraphicsTools iOS Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A77397FE476F130C008067D9 /* Build configuration list for PBXNativeTarget "GraphicsToolsTests" */;
+			buildConfigurationList = A77397FE476F130C008067D9 /* Build configuration list for PBXNativeTarget "GraphicsTools iOS Tests" */;
 			buildPhases = (
 				B9170661B287E4C33CAB3213 /* Sources */,
 				E5E0940A69326869BD43BDAF /* Frameworks */,
@@ -281,14 +281,14 @@
 			dependencies = (
 				9578B568386EF07F42316B27 /* PBXTargetDependency */,
 			);
-			name = GraphicsToolsTests;
+			name = "GraphicsTools iOS Tests";
 			productName = GraphicsToolsTests;
-			productReference = 83E1D5E578D7F5A2044A6FA0 /* GraphicsToolsTests.xctest */;
+			productReference = 83E1D5E578D7F5A2044A6FA0 /* GraphicsTools iOS Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		BEDDB99DA77E5A16B87F57B0 /* GraphicsToolsMac */ = {
+		BEDDB99DA77E5A16B87F57B0 /* GraphicsTools macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 060F1FE319F564519BB8A242 /* Build configuration list for PBXNativeTarget "GraphicsToolsMac" */;
+			buildConfigurationList = 060F1FE319F564519BB8A242 /* Build configuration list for PBXNativeTarget "GraphicsTools macOS" */;
 			buildPhases = (
 				56FB2BD06CD79A443967FCAA /* Sources */,
 				143C57BC48DE08DF872E822A /* Frameworks */,
@@ -298,14 +298,14 @@
 			);
 			dependencies = (
 			);
-			name = GraphicsToolsMac;
+			name = "GraphicsTools macOS";
 			productName = GraphicsToolsMac;
 			productReference = 509E0002B0FB0CFF8524F37A /* GraphicsTools.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		CB47AA21D5B0EC9EDA82C7C2 /* GraphicsTools */ = {
+		CB47AA21D5B0EC9EDA82C7C2 /* GraphicsTools iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 623FFC4C21FE5389B654F06E /* Build configuration list for PBXNativeTarget "GraphicsTools" */;
+			buildConfigurationList = 623FFC4C21FE5389B654F06E /* Build configuration list for PBXNativeTarget "GraphicsTools iOS" */;
 			buildPhases = (
 				51E776C4324C6D76EA796F49 /* Sources */,
 				118057998F4F04DD0F6A51B5 /* Frameworks */,
@@ -315,7 +315,7 @@
 			);
 			dependencies = (
 			);
-			name = GraphicsTools;
+			name = "GraphicsTools iOS";
 			productName = GraphicsTools;
 			productReference = 3EE4F42166106014BBC4DD96 /* GraphicsTools.framework */;
 			productType = "com.apple.product-type.framework";
@@ -349,10 +349,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CB47AA21D5B0EC9EDA82C7C2 /* GraphicsTools */,
-				A2FF81B83EBFC6672C5E5BAD /* GraphicsToolsTests */,
-				BEDDB99DA77E5A16B87F57B0 /* GraphicsToolsMac */,
-				2F46D806635EA5F6999506E1 /* GraphicsToolsMacTests */,
+				CB47AA21D5B0EC9EDA82C7C2 /* GraphicsTools iOS */,
+				A2FF81B83EBFC6672C5E5BAD /* GraphicsTools iOS Tests */,
+				BEDDB99DA77E5A16B87F57B0 /* GraphicsTools macOS */,
+				2F46D806635EA5F6999506E1 /* GraphicsTools macOS Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -364,6 +364,8 @@
 			files = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/ArithmeticTools.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Collections.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Color.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/PathTools.framework",
 			);
@@ -379,8 +381,10 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/Mac/Color.framework",
-				"$(SRCROOT)/Carthage/Build/Mac/PathTools.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ArithmeticTools.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Collections.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Color.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PathTools.framework",
 			);
 			outputPaths = (
 			);
@@ -437,13 +441,13 @@
 		40CF5DA59BE8A07DB9FFC366 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GraphicsToolsMac;
-			target = BEDDB99DA77E5A16B87F57B0 /* GraphicsToolsMac */;
+			target = BEDDB99DA77E5A16B87F57B0 /* GraphicsTools macOS */;
 			targetProxy = B5D5BCE0DEBCB565953D908D /* PBXContainerItemProxy */;
 		};
 		9578B568386EF07F42316B27 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GraphicsTools;
-			target = CB47AA21D5B0EC9EDA82C7C2 /* GraphicsTools */;
+			target = CB47AA21D5B0EC9EDA82C7C2 /* GraphicsTools iOS */;
 			targetProxy = 79EADCC83BAA9C2E084356E6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -583,8 +587,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/iOS";
 				INFOPLIST_FILE = GraphicsToolsTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(SRCROOT)/Carthage/Build/iOS";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -598,7 +604,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/Mac";
 				INFOPLIST_FILE = GraphicsToolsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks $(SRCROOT)/Carthage/Build/Mac";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -611,8 +619,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/iOS";
 				INFOPLIST_FILE = GraphicsToolsTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(SRCROOT)/Carthage/Build/iOS";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -657,7 +667,9 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/Mac";
 				INFOPLIST_FILE = GraphicsToolsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks $(SRCROOT)/Carthage/Build/Mac";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -709,7 +721,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		060F1FE319F564519BB8A242 /* Build configuration list for PBXNativeTarget "GraphicsToolsMac" */ = {
+		060F1FE319F564519BB8A242 /* Build configuration list for PBXNativeTarget "GraphicsTools macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6B056ADD616EA736A09D2C51 /* Release */,
@@ -727,7 +739,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		623FFC4C21FE5389B654F06E /* Build configuration list for PBXNativeTarget "GraphicsTools" */ = {
+		623FFC4C21FE5389B654F06E /* Build configuration list for PBXNativeTarget "GraphicsTools iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CE4C5AD274BA0EDBC6F916A8 /* Release */,
@@ -736,7 +748,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		63D33E612BA5C24C53D54F93 /* Build configuration list for PBXNativeTarget "GraphicsToolsMacTests" */ = {
+		63D33E612BA5C24C53D54F93 /* Build configuration list for PBXNativeTarget "GraphicsTools macOS Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D28E973EADBAF5C8C553C978 /* Release */,
@@ -745,7 +757,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A77397FE476F130C008067D9 /* Build configuration list for PBXNativeTarget "GraphicsToolsTests" */ = {
+		A77397FE476F130C008067D9 /* Build configuration list for PBXNativeTarget "GraphicsTools iOS Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B5A612455641920355ECFB33 /* Release */,
