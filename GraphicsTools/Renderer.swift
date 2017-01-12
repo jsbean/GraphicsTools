@@ -7,13 +7,11 @@
 //
 
 /// Renderers its information onto the given `layer` with a given `configuration`.
-///
-/// - note: Move this to `GraphicsTools`. Require `GraphicsTools` in `Plot`.
 public protocol Renderer {
     
+    associatedtype Configuration
+    associatedtype GraphicalContext
+    
     /// Render contents in a given `context`, with a given `configuration`.
-    func render <Context, Configuration> (
-        in context: Context,
-        with configuration: Configuration
-    )
+    func render(in context: GraphicalContext, with configuration: Configuration)
 }
