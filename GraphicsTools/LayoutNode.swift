@@ -58,9 +58,8 @@ public final class LayoutNode: MutableTreeProtocol {
     internal var frameByChild: [LayoutNode: CGRect] = [:]
     
     // MARK: - Initializers
-    /**
-     Create a `LayoutNode` with a given `layer` and layout configuration.
-     */
+    
+    /// Create a `LayoutNode` with a given `layer` and layout configuration.
     public init(
         _ layer: CALayer = CALayer(),
         stackingVerticallyFrom verticalStackOrigin: VerticalLayoutPosition = .none,
@@ -79,17 +78,14 @@ public final class LayoutNode: MutableTreeProtocol {
     }
     
     // MARK: - Position
-    
-    /**
-     - warning: Not yet implemented!
-     */
+
+    /// - warning: Not yet implemented!
     public func move(to origin: CGPoint, animated: Bool = false) {
         fatalError()
     }
     
-    /**
-     - warning: Not yet implemented!
-     */
+    
+    /// - warning: Not yet implemented!
     public func move(
         horizontallyBy tx: CGFloat = 0,
         verticallyBy ty: CGFloat = 0,
@@ -115,63 +111,42 @@ extension LayoutNode {
     
     // MARK: - Layout
     
-    /**
-     Positions used for vertical stacking and aligning `LayoutNode` objects.
-     */
+    /// Positions used for vertical stacking and aligning `LayoutNode` objects.
     public enum VerticalLayoutPosition {
         
-        /**
-         No vertical layout position.
-         */
+        /// No vertical layout position.
         case none
         
-        /**
-         Top.
-         */
+        /// Top.
         case top
-        
-        /**
-         Middle.
-         */
+
+        /// Middle.
         case middle
         
-        /**
-         Bottom.
-         */
+        /// Bottom.
         case bottom
     }
     
-    /**
-     Positions used for horizontally stacking and aligning `LayoutNode` objects.
-     */
+    /// Positions used for horizontally stacking and aligning `LayoutNode` objects.
     public enum HorizontalLayoutPosition {
         
-        /**
-         No horizontal layout position
-         */
+        /// No horizontal layout position
         case none
         
-        /**
-         Left.
-         */
+        /// Left.
         case left
-        
-        /**
-         Center.
-         */
+
+        /// Center.
         case center
         
-        /**
-         Right.
-         */
+        /// Right.
         case right
     }
     
-    /**
-     Amount of space to each side of a `LayoutNode`.
-     
-     - TODO: Make `init` with a scale of a given size attribute of a `LayoutNode`.
-     */
+    
+    /// Amount of space to each side of a `LayoutNode`.
+    ///
+    /// - TODO: Make `init` with a scale of a given size attribute of a `LayoutNode`.
     public struct Padding {
         
         /// Padding above a `LayoutNode`.
@@ -191,15 +166,13 @@ extension LayoutNode {
         
         // MARK: - Initializers
         
-        /**
-         Create a `Padding` value.
-         */
+        /// Create a `Padding` value.
         public init(
             top: CGFloat = 0,
             bottom: CGFloat = 0,
             left: CGFloat = 0,
             right: CGFloat = 0
-            )
+        )
         {
             self.top = top
             self.bottom = bottom
@@ -207,9 +180,7 @@ extension LayoutNode {
             self.right = right
         }
         
-        /**
-         Create a `Padding` value with even padding on each side.
-         */
+        /// Create a `Padding` value with even padding on each side.
         public init(_ value: CGFloat) {
             self.top = value
             self.bottom = value
@@ -218,17 +189,14 @@ extension LayoutNode {
         }
     }
     
-    /**
-     Prepare for layout, then immediately commit frames.
-     */
+    /// Prepare for layout, then immediately commit frames.
     public func layout(animated: Bool = false) {
         prepareForLayout()
         commitLayout(animated: animated)
     }
     
-    /**
-     Calculate the frames for children nodes without committing frames.
-     */
+
+    /// Calculate the frames for children nodes without committing frames.
     public func prepareForLayout() {
         prepareFrameByChildForLayout()
         stackVertically()
@@ -245,9 +213,7 @@ extension LayoutNode {
         children.forEach { child in frameByChild[child] = child.frame }
     }
     
-    /**
-     Commit the layout that has been prepared by `prepareForLayout()`.
-     */
+    /// Commit the layout that has been prepared by `prepareForLayout()`.
     public func commitLayout(animated: Bool = false) {
         defer { parent?.commitLayout() }
         guard isContainer else { return }
@@ -481,48 +447,44 @@ extension LayoutNode {
     
     // MARK: - Add nodes
     
-    /**
-     Append child node.
-     */
+    /// Append child node.
     public func addChild(_ node: LayoutNode) {
         children.append(node)
         node.parent = self
         commitLayer(for: node)
     }
     
-    /**
-     Insert the given `node` at the given `index`.
-     
-     - throws: `NodeError.insertionError` if the given `index` is out-of-bounds.
-     */
+    
+    /// Insert the given `node` at the given `index`.
+    ///
+    /// - throws: `NodeError.insertionError` if the given `index` is out-of-bounds.
     public func insertChild(_ node: LayoutNode, at index: Int) throws {
+        
         guard index >= children.startIndex && index <= children.endIndex else {
             throw MutableTreeError.insertionError
         }
+        
         if index == children.endIndex {
             children.append(node)
         } else {
             children.insert(node, at: index)
         }
+        
         node.parent = self
         commitLayer(for: node)
     }
     
-    /**
-     Insert the given `node` before another `node`.
-     
-     - throws: `NodeError.insertionError` if the other `node` is not contained herein.
-     */
+    /// Insert the given `node` before another `node`.
+    ///
+    /// - throws: `NodeError.insertionError` if the other `node` is not contained herein.
     public func insertChild(_ node: LayoutNode, before other: LayoutNode) throws {
         guard let index = children.index(of: other) else { throw MutableTreeError.insertionError }
         try insertChild(node, at: index)
     }
     
-    /**
-     Insert the given `node` after another `node`.
-     
-     - throws: `NodeError.insertionError` if the other `node` is not contained herein.
-     */
+    /// Insert the given `node` after another `node`.
+    ///
+    /// - throws: `NodeError.insertionError` if the other `node` is not contained herein.
     public func insertChild(_ node: LayoutNode, after other: LayoutNode) throws {
         guard let index = children.index(of: other) else { throw MutableTreeError.insertionError }
         try insertChild(node, at: index + 1)
@@ -540,21 +502,17 @@ extension LayoutNode {
     
     // MARK: - Remove nodes
     
-    /**
-     Remove a given child `node`.
-     
-     - throws: `NodeError.removalError` if the given `node` is not contained herein.
-     */
+    /// Remove a given child `node`.
+    ///
+    /// - throws: `NodeError.removalError` if the given `node` is not contained herein.
     public func removeChild(_ node: LayoutNode) throws {
         guard let index = children.index(of: node) else { throw MutableTreeError.removalError }
         try removeChild(at: index)
     }
     
-    /**
-     Remove the child node at a given `index`.
-     
-     - throws: `NodeError.removalError` if no node exists at the given `index`.
-     */
+    /// Remove the child node at a given `index`.
+    ///
+    /// - throws: `NodeError.removalError` if no node exists at the given `index`.
     public func removeChild(at index: Int) throws {
         guard children.indices.contains(index) else { throw MutableTreeError.removalError }
         let node = children.remove(at: index)
