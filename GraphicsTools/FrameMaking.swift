@@ -8,9 +8,7 @@
 
 import QuartzCore
 
-/**
- For graphical objects need to set their frame.
- */
+/// Interface for graphical objects need to set their frame.
 public protocol FrameMaking {
     
     // MARK: - Instance Properties
@@ -18,8 +16,6 @@ public protocol FrameMaking {
     /// Frame of the object.
     var frame: CGRect { get set }
     
-    /**
-     Generate the frame.
-     */
+    /// Generate the frame.
     func makeFrame() -> CGRect
 }
