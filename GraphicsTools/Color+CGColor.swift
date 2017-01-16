@@ -14,10 +14,10 @@ extension Color {
         return CGColor(
             colorSpace: CGColorSpaceCreateDeviceRGB(),
             components: [
-                CGFloat(red),
-                CGFloat(green),
-                CGFloat(blue),
-                CGFloat(alpha)
+                CGFloat(redComponent),
+                CGFloat(greenComponent),
+                CGFloat(blueComponent),
+                CGFloat(alphaComponent)
             ]
         )!
     }

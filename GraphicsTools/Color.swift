@@ -6,32 +6,29 @@
 //
 //
 
+/// FIXME: Structure representing a color.
 public struct Color {
     
-    public struct Gray {
-        public subscript (value: Double) -> Color {
-            return Color(gray: value, alpha: 1)
-        }
-    }
-    
-    public static var gray = Gray()
+    public static let red = Color(red: 1, green: 0, blue: 0, alpha: 1)
+    public static let green = Color(red: 0, green: 1, blue: 0, alpha: 1)
+    public static let blue = Color(red: 0, green: 0, blue: 1, alpha: 1)
 
-    internal let red: Double
-    internal let green: Double
-    internal let blue: Double
-    internal let alpha: Double
+    internal let redComponent: Double
+    internal let greenComponent: Double
+    internal let blueComponent: Double
+    internal let alphaComponent: Double
 
     public init(red: Double, green: Double, blue: Double, alpha: Double = 1) {
-        self.red = red
-        self.green = green
-        self.blue = blue
-        self.alpha = alpha
+        self.redComponent = red
+        self.greenComponent = green
+        self.blueComponent = blue
+        self.alphaComponent = alpha
     }
     
     public init(gray: Double, alpha: Double) {
-        self.red = gray
-        self.green = gray
-        self.blue = gray
-        self.alpha = alpha
+        self.redComponent = gray
+        self.greenComponent = gray
+        self.blueComponent = gray
+        self.alphaComponent = alpha
     }
 }
