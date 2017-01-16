@@ -454,7 +454,6 @@ extension LayoutNode {
         commitLayer(for: node)
     }
     
-    
     /// Insert the given `node` at the given `index`.
     ///
     /// - throws: `NodeError.insertionError` if the given `index` is out-of-bounds.
