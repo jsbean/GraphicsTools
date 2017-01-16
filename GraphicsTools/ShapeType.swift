@@ -8,9 +8,7 @@
 
 import QuartzCore
 
-/**
- For simple path-based shapes.
- */
+/// Interface for simple path-based shapes.
 public protocol ShapeType: Buildable, PathMaking, FrameMaking { }
 
 extension ShapeType where Self: CAShapeLayer {

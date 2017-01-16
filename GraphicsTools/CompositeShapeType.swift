@@ -8,27 +8,21 @@
 
 import QuartzCore
 
-/**
- For graphical objects that contain other `ShapeType`.
- */
+/// Interface for graphical objects that contain other `ShapeType`.
 public protocol CompositeShapeType: GraphicsContainerType { }
 
 extension CompositeShapeType where Self: CALayer {
     
     // MARK: - Instance Methods
     
-    /**
-     Perform the build phase.
-     */
+    /// Perform the build phase.
     public func build() {
         frame = makeFrame()
         createComponents()
         commitComponents()
     }
 
-    /**
-     Commit the components as sublayers.
-     */
+    /// Commit the components as sublayers.
     public func commitComponents() {
         components.forEach(addSublayer)
     }

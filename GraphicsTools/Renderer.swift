@@ -6,7 +6,7 @@
 //
 //
 
-/// Renderers its information onto the given `layer` with a given `configuration`.
+/// Renders its information onto the given `layer` with a given `configuration`.
 public protocol Renderer {
     
     associatedtype Configuration
