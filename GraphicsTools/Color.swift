@@ -10,6 +10,8 @@ import QuartzCore
 
 /// TODO: Save internal representation that can produce a `CGColor` when asked (computed
 /// property), not one that _is_ a `CGColor`.
+///
+/// Further, ensure that this can be passed around as a value, not as an object.
 public struct Color {
     
     public static let red   = Color(1, 0, 0, 1)
