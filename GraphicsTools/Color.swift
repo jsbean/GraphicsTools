@@ -6,7 +6,7 @@
 //
 //
 
-/// FIXME: Structure representing a color.
+/// Structure representing a color.
 public struct Color {
     
     public static let red = Color(red: 1, green: 0, blue: 0, alpha: 1)

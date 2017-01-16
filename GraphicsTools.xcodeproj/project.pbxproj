@@ -25,6 +25,10 @@
 		076D04621E2D1CB00023ED96 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D04601E2D1CB00023ED96 /* Color.swift */; };
 		076D04641E2D22C50023ED96 /* Color+CGColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D04631E2D22C50023ED96 /* Color+CGColor.swift */; };
 		076D04651E2D22C50023ED96 /* Color+CGColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D04631E2D22C50023ED96 /* Color+CGColor.swift */; };
+		076D04711E2D2D740023ED96 /* LayoutNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D04701E2D2D740023ED96 /* LayoutNode.swift */; };
+		076D04721E2D2D740023ED96 /* LayoutNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D04701E2D2D740023ED96 /* LayoutNode.swift */; };
+		076D04741E2D2F050023ED96 /* LayoutNodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D04731E2D2F050023ED96 /* LayoutNodeTests.swift */; };
+		076D04751E2D2F060023ED96 /* LayoutNodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D04731E2D2F050023ED96 /* LayoutNodeTests.swift */; };
 		0C56CCD3163F739244E75E4D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBE41F31AC5943193DF8009F /* Cocoa.framework */; };
 		2417798D322DC39F086554C4 /* Color.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBCE9E1C6C5989277ED8EBF7 /* Color.framework */; };
 		2EA995C2C248A0979BC2E6E1 /* PathTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F32459F613893A329A4CF0DE /* PathTools.framework */; };
@@ -89,6 +93,8 @@
 		0748EEBD1E25816C003F19FD /* Renderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Renderer.swift; path = GraphicsTools/Renderer.swift; sourceTree = "<group>"; };
 		076D04601E2D1CB00023ED96 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Color.swift; path = GraphicsTools/Color.swift; sourceTree = "<group>"; };
 		076D04631E2D22C50023ED96 /* Color+CGColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Color+CGColor.swift"; path = "GraphicsTools/Color+CGColor.swift"; sourceTree = "<group>"; };
+		076D04701E2D2D740023ED96 /* LayoutNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LayoutNode.swift; path = GraphicsTools/LayoutNode.swift; sourceTree = "<group>"; };
+		076D04731E2D2F050023ED96 /* LayoutNodeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LayoutNodeTests.swift; path = GraphicsToolsTests/LayoutNodeTests.swift; sourceTree = "<group>"; };
 		1AC915E6D64AA1A2072FAA9D /* GraphicsTools macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GraphicsTools macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C5A07620DC1BE344B2CC5D3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = GraphicsToolsTests/Info.plist; sourceTree = "<group>"; };
 		3EE4F42166106014BBC4DD96 /* GraphicsTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GraphicsTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,6 +152,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		076D046F1E2D2CA60023ED96 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				076D04701E2D2D740023ED96 /* LayoutNode.swift */,
+			);
+			name = Layout;
+			sourceTree = "<group>";
+		};
+		076D04761E2D2FE80023ED96 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				076D04601E2D1CB00023ED96 /* Color.swift */,
+				076D04631E2D22C50023ED96 /* Color+CGColor.swift */,
+			);
+			name = Color;
+			sourceTree = "<group>";
+		};
 		28D592D8D4AD3C2DE51F5183 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +180,7 @@
 		420F28E80455172199B61EA7 /* GraphicsTools */ = {
 			isa = PBXGroup;
 			children = (
+				076D046F1E2D2CA60023ED96 /* Layout */,
 				07305A4B1D0F47EE006E4085 /* Buildable.swift */,
 				07305A4D1D0F47EE006E4085 /* FrameMaking.swift */,
 				07305A4E1D0F47EE006E4085 /* PathMaking.swift */,
@@ -164,8 +188,7 @@
 				07305A4C1D0F47EE006E4085 /* CompositeShapeType.swift */,
 				07305A4F1D0F47EE006E4085 /* ShapeType.swift */,
 				0748EEBD1E25816C003F19FD /* Renderer.swift */,
-				076D04601E2D1CB00023ED96 /* Color.swift */,
-				076D04631E2D22C50023ED96 /* Color+CGColor.swift */,
+				076D04761E2D2FE80023ED96 /* Color */,
 				E73F96132868A0F651B29140 /* Supporting Files */,
 			);
 			name = GraphicsTools;
@@ -194,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				28D592D8D4AD3C2DE51F5183 /* Supporting Files */,
+				076D04731E2D2F050023ED96 /* LayoutNodeTests.swift */,
 			);
 			name = GraphicsToolsTests;
 			sourceTree = "<group>";
@@ -341,8 +365,11 @@
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0800;
 				TargetAttributes = {
+					2F46D806635EA5F6999506E1 = {
+						LastSwiftMigration = 0820;
+					};
 					A2FF81B83EBFC6672C5E5BAD = {
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0820;
 					};
 					CB47AA21D5B0EC9EDA82C7C2 = {
 						LastSwiftMigration = 0800;
@@ -393,10 +420,10 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/ArithmeticTools.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Collections.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Color.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/PathTools.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/ArithmeticTools.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/Collections.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/Color.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/PathTools.framework",
 			);
 			outputPaths = (
 			);
@@ -420,6 +447,7 @@
 				076D04611E2D1CB00023ED96 /* Color.swift in Sources */,
 				07305A521D0F47EE006E4085 /* CompositeShapeType.swift in Sources */,
 				07305A561D0F47EE006E4085 /* PathMaking.swift in Sources */,
+				076D04711E2D2D740023ED96 /* LayoutNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +464,7 @@
 				076D04621E2D1CB00023ED96 /* Color.swift in Sources */,
 				07305A531D0F47EE006E4085 /* CompositeShapeType.swift in Sources */,
 				07305A571D0F47EE006E4085 /* PathMaking.swift in Sources */,
+				076D04721E2D2D740023ED96 /* LayoutNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +472,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				076D04751E2D2F060023ED96 /* LayoutNodeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +480,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				076D04741E2D2F050023ED96 /* LayoutNodeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,7 +518,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/iOS";
 				INFOPLIST_FILE = GraphicsTools/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bean.GraphicsTools;
@@ -604,6 +635,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/iOS";
 				INFOPLIST_FILE = GraphicsToolsTests/Info.plist;
@@ -612,6 +644,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -620,6 +653,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/Mac";
@@ -629,6 +663,8 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -636,6 +672,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/iOS";
 				INFOPLIST_FILE = GraphicsToolsTests/Info.plist;
@@ -664,7 +701,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/iOS";
 				INFOPLIST_FILE = GraphicsTools/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bean.GraphicsTools;
@@ -682,6 +719,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -692,6 +730,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
