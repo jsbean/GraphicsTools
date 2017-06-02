@@ -18,7 +18,7 @@ extension CALayer {
         
         #if os(iOS)
         let path = "/Users/BEAN/\(name).pdf"
-        UIGraphicsBeginPDFContextToFile(path, self.frame, nil)
+        UIGraphicsBeginPDFContextToFile(path, self.bounds, nil)
         UIGraphicsBeginPDFPage()
         let context = UIGraphicsGetCurrentContext()!
         render(in: context)
