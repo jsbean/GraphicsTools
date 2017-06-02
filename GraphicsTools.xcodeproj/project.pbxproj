@@ -29,6 +29,14 @@
 		076D04721E2D2D740023ED96 /* LayoutNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D04701E2D2D740023ED96 /* LayoutNode.swift */; };
 		076D04741E2D2F050023ED96 /* LayoutNodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D04731E2D2F050023ED96 /* LayoutNodeTests.swift */; };
 		076D04751E2D2F060023ED96 /* LayoutNodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D04731E2D2F050023ED96 /* LayoutNodeTests.swift */; };
+		07ABA3A31EE1ACDA00190BFC /* ArithmeticTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07ABA3A11EE1ACDA00190BFC /* ArithmeticTools.framework */; };
+		07ABA3A41EE1ACDA00190BFC /* ArithmeticTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07ABA3A11EE1ACDA00190BFC /* ArithmeticTools.framework */; };
+		07ABA3A51EE1ACDA00190BFC /* Collections.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07ABA3A21EE1ACDA00190BFC /* Collections.framework */; };
+		07ABA3A61EE1ACDA00190BFC /* Collections.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07ABA3A21EE1ACDA00190BFC /* Collections.framework */; };
+		07ABA3E81EE1AFB600190BFC /* CALayer+PDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07ABA3E71EE1AFB600190BFC /* CALayer+PDF.swift */; };
+		07ABA3E91EE1AFB600190BFC /* CALayer+PDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07ABA3E71EE1AFB600190BFC /* CALayer+PDF.swift */; };
+		07ABA3EB1EE1C7FA00190BFC /* PDFTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07ABA3EA1EE1C7FA00190BFC /* PDFTests.swift */; };
+		07ABA3EC1EE1C7FA00190BFC /* PDFTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07ABA3EA1EE1C7FA00190BFC /* PDFTests.swift */; };
 		0C56CCD3163F739244E75E4D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBE41F31AC5943193DF8009F /* Cocoa.framework */; };
 		2EA995C2C248A0979BC2E6E1 /* PathTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F32459F613893A329A4CF0DE /* PathTools.framework */; };
 		3EB442612FE008F7E4E588DA /* GraphicsTools.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 55B6B4C4D85417529193D762 /* GraphicsTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -93,6 +101,10 @@
 		076D04631E2D22C50023ED96 /* Color+CGColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Color+CGColor.swift"; path = "GraphicsTools/Color+CGColor.swift"; sourceTree = "<group>"; };
 		076D04701E2D2D740023ED96 /* LayoutNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LayoutNode.swift; path = GraphicsTools/LayoutNode.swift; sourceTree = "<group>"; };
 		076D04731E2D2F050023ED96 /* LayoutNodeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LayoutNodeTests.swift; path = GraphicsToolsTests/LayoutNodeTests.swift; sourceTree = "<group>"; };
+		07ABA3A11EE1ACDA00190BFC /* ArithmeticTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArithmeticTools.framework; path = Carthage/Build/iOS/ArithmeticTools.framework; sourceTree = "<group>"; };
+		07ABA3A21EE1ACDA00190BFC /* Collections.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Collections.framework; path = Carthage/Build/iOS/Collections.framework; sourceTree = "<group>"; };
+		07ABA3E71EE1AFB600190BFC /* CALayer+PDF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CALayer+PDF.swift"; path = "GraphicsTools/CALayer+PDF.swift"; sourceTree = "<group>"; };
+		07ABA3EA1EE1C7FA00190BFC /* PDFTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PDFTests.swift; path = GraphicsToolsTests/PDFTests.swift; sourceTree = "<group>"; };
 		1AC915E6D64AA1A2072FAA9D /* GraphicsTools macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GraphicsTools macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C5A07620DC1BE344B2CC5D3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = GraphicsToolsTests/Info.plist; sourceTree = "<group>"; };
 		3EE4F42166106014BBC4DD96 /* GraphicsTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GraphicsTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,7 +125,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07ABA3A51EE1ACDA00190BFC /* Collections.framework in Frameworks */,
 				6E5AEA81D6CD7042D31B961B /* Foundation.framework in Frameworks */,
+				07ABA3A31EE1ACDA00190BFC /* ArithmeticTools.framework in Frameworks */,
 				86B45F97708C30C9BAC9E12D /* PathTools.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -122,7 +136,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07ABA3A61EE1ACDA00190BFC /* Collections.framework in Frameworks */,
 				0C56CCD3163F739244E75E4D /* Cocoa.framework in Frameworks */,
+				07ABA3A41EE1ACDA00190BFC /* ArithmeticTools.framework in Frameworks */,
 				2EA995C2C248A0979BC2E6E1 /* PathTools.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -163,6 +179,14 @@
 			name = Color;
 			sourceTree = "<group>";
 		};
+		07ABA3E61EE1AF7600190BFC /* Output */ = {
+			isa = PBXGroup;
+			children = (
+				07ABA3E71EE1AFB600190BFC /* CALayer+PDF.swift */,
+			);
+			name = Output;
+			sourceTree = "<group>";
+		};
 		28D592D8D4AD3C2DE51F5183 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +198,7 @@
 		420F28E80455172199B61EA7 /* GraphicsTools */ = {
 			isa = PBXGroup;
 			children = (
+				07ABA3E61EE1AF7600190BFC /* Output */,
 				076D046F1E2D2CA60023ED96 /* Layout */,
 				07305A4B1D0F47EE006E4085 /* Buildable.swift */,
 				07305A4D1D0F47EE006E4085 /* FrameMaking.swift */,
@@ -192,6 +217,8 @@
 			isa = PBXGroup;
 			children = (
 				F23DEF5C9360A63417596864 /* Foundation.framework */,
+				07ABA3A11EE1ACDA00190BFC /* ArithmeticTools.framework */,
+				07ABA3A21EE1ACDA00190BFC /* Collections.framework */,
 				EE62B8CA3BCAB542EB0626C8 /* PathTools.framework */,
 			);
 			name = iOS;
@@ -211,6 +238,7 @@
 			children = (
 				28D592D8D4AD3C2DE51F5183 /* Supporting Files */,
 				076D04731E2D2F050023ED96 /* LayoutNodeTests.swift */,
+				07ABA3EA1EE1C7FA00190BFC /* PDFTests.swift */,
 			);
 			name = GraphicsToolsTests;
 			sourceTree = "<group>";
@@ -303,6 +331,7 @@
 				E5E0940A69326869BD43BDAF /* Frameworks */,
 				2825C2889FAFBA5FEAFFF916 /* CopyFiles */,
 				07072ADB1D96F4D8006876C1 /* ShellScript */,
+				07ABA3ED1EE1DFD200190BFC /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -421,6 +450,19 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
+		07ABA3ED1EE1DFD200190BFC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"${SRCROOT}\"";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -430,6 +472,7 @@
 			files = (
 				07305A501D0F47EE006E4085 /* Buildable.swift in Sources */,
 				07305A541D0F47EE006E4085 /* FrameMaking.swift in Sources */,
+				07ABA3E81EE1AFB600190BFC /* CALayer+PDF.swift in Sources */,
 				0748EEBE1E25816C003F19FD /* Renderer.swift in Sources */,
 				070D41631D1030C200C02AC9 /* GraphicsContainerType.swift in Sources */,
 				076D04641E2D22C50023ED96 /* Color+CGColor.swift in Sources */,
@@ -447,6 +490,7 @@
 			files = (
 				07305A511D0F47EE006E4085 /* Buildable.swift in Sources */,
 				07305A551D0F47EE006E4085 /* FrameMaking.swift in Sources */,
+				07ABA3E91EE1AFB600190BFC /* CALayer+PDF.swift in Sources */,
 				0748EEBF1E25816C003F19FD /* Renderer.swift in Sources */,
 				070D41641D1030C200C02AC9 /* GraphicsContainerType.swift in Sources */,
 				076D04651E2D22C50023ED96 /* Color+CGColor.swift in Sources */,
@@ -462,6 +506,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07ABA3EC1EE1C7FA00190BFC /* PDFTests.swift in Sources */,
 				076D04751E2D2F060023ED96 /* LayoutNodeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -470,6 +515,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07ABA3EB1EE1C7FA00190BFC /* PDFTests.swift in Sources */,
 				076D04741E2D2F050023ED96 /* LayoutNodeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,7 +551,10 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/iOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = GraphicsTools/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
@@ -537,7 +586,10 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/Mac";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = GraphicsTools/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -567,7 +619,10 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/Mac";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = GraphicsTools/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -688,7 +743,10 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/iOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = GraphicsTools/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
