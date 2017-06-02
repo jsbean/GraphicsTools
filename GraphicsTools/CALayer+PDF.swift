@@ -9,6 +9,7 @@
 #if os(iOS)
 import UIKit
 #elseif os(OSX)
+import QuartzCore
 #endif
 
 extension CALayer {
