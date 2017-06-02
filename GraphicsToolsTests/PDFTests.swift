@@ -84,6 +84,7 @@ class PDFTests: XCTestCase {
         }
         
         viewLayer.addSublayer(container)
+        viewLayer.showTestBorder()
         viewLayer.renderToPDF(name: "testLayer")
     }
 }

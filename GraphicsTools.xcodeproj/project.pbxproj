@@ -37,6 +37,8 @@
 		07ABA3E91EE1AFB600190BFC /* CALayer+PDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07ABA3E71EE1AFB600190BFC /* CALayer+PDF.swift */; };
 		07ABA3EB1EE1C7FA00190BFC /* PDFTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07ABA3EA1EE1C7FA00190BFC /* PDFTests.swift */; };
 		07ABA3EC1EE1C7FA00190BFC /* PDFTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07ABA3EA1EE1C7FA00190BFC /* PDFTests.swift */; };
+		07ABA3F01EE1E57D00190BFC /* TestFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07ABA3EF1EE1E57D00190BFC /* TestFrame.swift */; };
+		07ABA3F11EE1E57D00190BFC /* TestFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07ABA3EF1EE1E57D00190BFC /* TestFrame.swift */; };
 		0C56CCD3163F739244E75E4D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBE41F31AC5943193DF8009F /* Cocoa.framework */; };
 		2EA995C2C248A0979BC2E6E1 /* PathTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F32459F613893A329A4CF0DE /* PathTools.framework */; };
 		3EB442612FE008F7E4E588DA /* GraphicsTools.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 55B6B4C4D85417529193D762 /* GraphicsTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -105,6 +107,7 @@
 		07ABA3A21EE1ACDA00190BFC /* Collections.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Collections.framework; path = Carthage/Build/iOS/Collections.framework; sourceTree = "<group>"; };
 		07ABA3E71EE1AFB600190BFC /* CALayer+PDF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CALayer+PDF.swift"; path = "GraphicsTools/CALayer+PDF.swift"; sourceTree = "<group>"; };
 		07ABA3EA1EE1C7FA00190BFC /* PDFTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PDFTests.swift; path = GraphicsToolsTests/PDFTests.swift; sourceTree = "<group>"; };
+		07ABA3EF1EE1E57D00190BFC /* TestFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestFrame.swift; path = GraphicsTools/TestFrame.swift; sourceTree = "<group>"; };
 		1AC915E6D64AA1A2072FAA9D /* GraphicsTools macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GraphicsTools macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C5A07620DC1BE344B2CC5D3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = GraphicsToolsTests/Info.plist; sourceTree = "<group>"; };
 		3EE4F42166106014BBC4DD96 /* GraphicsTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GraphicsTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -187,6 +190,14 @@
 			name = Output;
 			sourceTree = "<group>";
 		};
+		07ABA3EE1EE1E56600190BFC /* Testing */ = {
+			isa = PBXGroup;
+			children = (
+				07ABA3EF1EE1E57D00190BFC /* TestFrame.swift */,
+			);
+			name = Testing;
+			sourceTree = "<group>";
+		};
 		28D592D8D4AD3C2DE51F5183 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +209,7 @@
 		420F28E80455172199B61EA7 /* GraphicsTools */ = {
 			isa = PBXGroup;
 			children = (
+				07ABA3EE1EE1E56600190BFC /* Testing */,
 				07ABA3E61EE1AF7600190BFC /* Output */,
 				076D046F1E2D2CA60023ED96 /* Layout */,
 				07305A4B1D0F47EE006E4085 /* Buildable.swift */,
@@ -475,6 +487,7 @@
 				07ABA3E81EE1AFB600190BFC /* CALayer+PDF.swift in Sources */,
 				0748EEBE1E25816C003F19FD /* Renderer.swift in Sources */,
 				070D41631D1030C200C02AC9 /* GraphicsContainerType.swift in Sources */,
+				07ABA3F01EE1E57D00190BFC /* TestFrame.swift in Sources */,
 				076D04641E2D22C50023ED96 /* Color+CGColor.swift in Sources */,
 				07305A581D0F47EE006E4085 /* ShapeType.swift in Sources */,
 				076D04611E2D1CB00023ED96 /* Color.swift in Sources */,
@@ -493,6 +506,7 @@
 				07ABA3E91EE1AFB600190BFC /* CALayer+PDF.swift in Sources */,
 				0748EEBF1E25816C003F19FD /* Renderer.swift in Sources */,
 				070D41641D1030C200C02AC9 /* GraphicsContainerType.swift in Sources */,
+				07ABA3F11EE1E57D00190BFC /* TestFrame.swift in Sources */,
 				076D04651E2D22C50023ED96 /* Color+CGColor.swift in Sources */,
 				07305A591D0F47EE006E4085 /* ShapeType.swift in Sources */,
 				076D04621E2D1CB00023ED96 /* Color.swift in Sources */,
