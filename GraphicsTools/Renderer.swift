@@ -7,7 +7,7 @@
 //
 
 /// Renders its information onto the given `layer` with a given `configuration`.
-public protocol Renderer {
+public protocol Renderable {
     
     associatedtype Configuration
     associatedtype GraphicalContext

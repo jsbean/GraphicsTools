@@ -107,9 +107,6 @@
 		07ABA3751EE1AC8A00190BFC = {
 			isa = PBXGroup;
 			children = (
-				07ABA3DA1EE1AEC600190BFC /* ArithmeticTools.framework */,
-				07ABA3DB1EE1AEC600190BFC /* Collections.framework */,
-				07ABA3DC1EE1AEC600190BFC /* PathTools.framework */,
 				07ABA3B71EE1AD8400190BFC /* Frameworks */,
 				07ABA3801EE1AC8A00190BFC /* GraphicsTools Example iOS */,
 				07ABA3951EE1AC8A00190BFC /* GraphicsTools Example iOSTests */,
@@ -151,6 +148,9 @@
 		07ABA3B71EE1AD8400190BFC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				07ABA3DA1EE1AEC600190BFC /* ArithmeticTools.framework */,
+				07ABA3DB1EE1AEC600190BFC /* Collections.framework */,
+				07ABA3DC1EE1AEC600190BFC /* PathTools.framework */,
 				07ABA3AE1EE1ACE400190BFC /* GraphicsTools.framework */,
 			);
 			name = Frameworks;
