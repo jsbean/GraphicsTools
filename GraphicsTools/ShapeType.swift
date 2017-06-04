@@ -13,9 +13,7 @@ public protocol ShapeType: Buildable, PathMaking, FrameMaking { }
 
 extension ShapeType where Self: CAShapeLayer {
     
-    /**
-     Perform the build phase.
-     */
+    /// Perform the build phase.
     public func build() {
         frame = makeFrame()
         path = makePath()

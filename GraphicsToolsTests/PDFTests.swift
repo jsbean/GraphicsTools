@@ -33,7 +33,7 @@ class PDFTests: XCTestCase {
         
         let topLeftShape = CAShapeLayer()
         
-        let topLeftPath = Path.rectangle(rectangle: CGRect(x: 0, y: 0, width: 30, height: 30))
+        let topLeftPath = Path.rectangle(x: 0, y: 0, width: 30, height: 30)
         topLeftShape.path = topLeftPath.cgPath
         topLeftShape.fillColor = UIColor.gray.cgColor
         topLeftShape.lineWidth = 3
@@ -86,5 +86,35 @@ class PDFTests: XCTestCase {
         viewLayer.addSublayer(container)
         viewLayer.showTestBorder()
         viewLayer.renderToPDF(name: "testLayer")
+    }
+    
+    func testCollision() {
+        
+        let a = Path.rectangle(x: 0, y: 0, width: 100, height: 100)
+        let b = Path.rectangle(x: 50, y: 50, width: 100, height: 100)
+        
+        let shapeA = CAShapeLayer()
+        shapeA.path = a.cgPath
+        shapeA.borderWidth = 1
+        shapeA.fillColor = UIColor.clear.cgColor
+        
+        let shapeB = CAShapeLayer()
+        shapeB.path = b.cgPath
+        shapeB.borderWidth = 1
+        shapeB.fillColor = UIColor.clear.cgColor
+        
+        if a.intersects(b) {
+            shapeA.strokeColor = UIColor.red.cgColor
+            shapeB.strokeColor = UIColor.red.cgColor
+        } else {
+            shapeA.strokeColor = UIColor.black.cgColor
+            shapeB.strokeColor = UIColor.black.cgColor
+        }
+        
+        let container = CALayer()
+        container.frame = CGRect(x: 0, y: 0, width: 150, height: 150)
+        container.addSublayer(shapeA)
+        container.addSublayer(shapeB)
+        container.renderToPDF(name: "intersecting_squares")
     }
 }
