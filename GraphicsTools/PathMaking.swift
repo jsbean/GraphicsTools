@@ -20,8 +20,6 @@ public protocol PathMaking {
     
     // MARK: - Instance Methods
     
-    /**
-     Generate the path.
-     */
+    /// Generate the path.
     func makePath() -> CGPath
 }
