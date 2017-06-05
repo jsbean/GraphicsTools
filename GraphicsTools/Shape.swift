@@ -20,7 +20,8 @@ public struct Shape {
         
         /// Winding rule of `Fill`.
         public enum Rule {
-            case nonZero, evenOdd
+            case nonZero
+            case evenOdd
         }
         
         // MARK: - Instance Properties
@@ -53,7 +54,9 @@ public struct Shape {
         
         /// Style of cap of `Stroke`.
         public enum Cap {
-            case round, butt, square
+            case round
+            case butt
+            case square
         }
         
         /// Style of join of `Stroke`.
