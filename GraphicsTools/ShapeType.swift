@@ -9,6 +9,9 @@
 import QuartzCore
 
 /// Interface for simple path-based shapes.
+///
+/// - TODO: Remove dependency on `Quartz`, use GraphicsTools primitives.
+///
 public protocol ShapeType: Buildable, PathMaking, FrameMaking { }
 
 extension ShapeType where Self: CAShapeLayer {

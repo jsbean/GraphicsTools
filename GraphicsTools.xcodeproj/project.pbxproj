@@ -19,6 +19,8 @@
 		07305A571D0F47EE006E4085 /* PathMaking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07305A4E1D0F47EE006E4085 /* PathMaking.swift */; };
 		07305A581D0F47EE006E4085 /* ShapeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07305A4F1D0F47EE006E4085 /* ShapeType.swift */; };
 		07305A591D0F47EE006E4085 /* ShapeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07305A4F1D0F47EE006E4085 /* ShapeType.swift */; };
+		0741EE521EE562E70002769D /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0741EE511EE562E70002769D /* Shape.swift */; };
+		0741EE531EE562E70002769D /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0741EE511EE562E70002769D /* Shape.swift */; };
 		0748EEBE1E25816C003F19FD /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0748EEBD1E25816C003F19FD /* Renderer.swift */; };
 		0748EEBF1E25816C003F19FD /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0748EEBD1E25816C003F19FD /* Renderer.swift */; };
 		07600F911EE46F160049E8B2 /* ShapeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07600F901EE46F160049E8B2 /* ShapeTests.swift */; };
@@ -100,6 +102,7 @@
 		07305A4D1D0F47EE006E4085 /* FrameMaking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FrameMaking.swift; path = GraphicsTools/FrameMaking.swift; sourceTree = "<group>"; };
 		07305A4E1D0F47EE006E4085 /* PathMaking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PathMaking.swift; path = GraphicsTools/PathMaking.swift; sourceTree = "<group>"; };
 		07305A4F1D0F47EE006E4085 /* ShapeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShapeType.swift; path = GraphicsTools/ShapeType.swift; sourceTree = "<group>"; };
+		0741EE511EE562E70002769D /* Shape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Shape.swift; path = GraphicsTools/Shape.swift; sourceTree = "<group>"; };
 		0748EEBD1E25816C003F19FD /* Renderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Renderer.swift; path = GraphicsTools/Renderer.swift; sourceTree = "<group>"; };
 		07600F901EE46F160049E8B2 /* ShapeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShapeTests.swift; path = GraphicsToolsTests/ShapeTests.swift; sourceTree = "<group>"; };
 		076D04601E2D1CB00023ED96 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Color.swift; path = GraphicsTools/Color.swift; sourceTree = "<group>"; };
@@ -216,6 +219,7 @@
 				07ABA3E61EE1AF7600190BFC /* Output */,
 				076D046F1E2D2CA60023ED96 /* Layout */,
 				07305A4B1D0F47EE006E4085 /* Buildable.swift */,
+				0741EE511EE562E70002769D /* Shape.swift */,
 				07305A4D1D0F47EE006E4085 /* FrameMaking.swift */,
 				07305A4E1D0F47EE006E4085 /* PathMaking.swift */,
 				070D41621D1030C200C02AC9 /* GraphicsContainerType.swift */,
@@ -492,6 +496,7 @@
 				0748EEBE1E25816C003F19FD /* Renderer.swift in Sources */,
 				070D41631D1030C200C02AC9 /* GraphicsContainerType.swift in Sources */,
 				07ABA3F01EE1E57D00190BFC /* TestFrame.swift in Sources */,
+				0741EE521EE562E70002769D /* Shape.swift in Sources */,
 				076D04641E2D22C50023ED96 /* Color+CGColor.swift in Sources */,
 				07305A581D0F47EE006E4085 /* ShapeType.swift in Sources */,
 				076D04611E2D1CB00023ED96 /* Color.swift in Sources */,
@@ -511,6 +516,7 @@
 				0748EEBF1E25816C003F19FD /* Renderer.swift in Sources */,
 				070D41641D1030C200C02AC9 /* GraphicsContainerType.swift in Sources */,
 				07ABA3F11EE1E57D00190BFC /* TestFrame.swift in Sources */,
+				0741EE531EE562E70002769D /* Shape.swift in Sources */,
 				076D04651E2D22C50023ED96 /* Color+CGColor.swift in Sources */,
 				07305A591D0F47EE006E4085 /* ShapeType.swift in Sources */,
 				076D04621E2D1CB00023ED96 /* Color.swift in Sources */,

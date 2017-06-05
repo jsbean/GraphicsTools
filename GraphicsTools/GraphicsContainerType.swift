@@ -11,6 +11,9 @@ import QuartzCore
 /// Interface for graphical objects that are composites of others.
 ///
 /// > These are assumed to be a `CALayer` or `CAShapeLayer`.
+///
+/// - TODO: Remove dependency on `Quartz`, use GraphicsTools primitives.
+///
 public protocol GraphicsContainerType: Buildable, FrameMaking {
     
     // MARK: - Instance Properties
