@@ -25,11 +25,11 @@ public struct Shape {
         
         // MARK: - Instance Properties
         
-        /// Winding rule of `Fill`.
-        public let rule: Rule
-        
         /// Color of `Fill`.
         public let color: Color
+        
+        /// Winding rule of `Fill`.
+        public let rule: Rule
         
         // MARK: - Initializers
         
@@ -70,12 +70,12 @@ public struct Shape {
         
         /// Color.
         public let color: Color
-
-        /// Cap.
-        public let cap: Cap
         
         /// Join.
         public let join: Join
+
+        /// Cap.
+        public let cap: Cap
         
         /// Dashes.
         public let dashes: Dashes?
