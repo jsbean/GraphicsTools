@@ -9,6 +9,9 @@
 import QuartzCore
 
 /// Interface for graphical objects that contain other `ShapeType`.
+///
+/// - TODO: Remove dependency on `Quartz`, use GraphicsTools primitives.
+///
 public protocol CompositeShapeType: GraphicsContainerType { }
 
 extension CompositeShapeType where Self: CALayer {
