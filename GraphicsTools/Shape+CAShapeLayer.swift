@@ -19,12 +19,11 @@ public extension CAShapeLayer {
         fillRule = shape.fill.rule.cgFillRule
         
         // stroke
+        strokeColor = shape.stroke.color.cgColor
         lineCap = shape.stroke.cap.cgCap
         lineDashPattern = shape.stroke.dashes?.pattern.map { NSNumber.init(value: $0) }
-        
         lineJoin = shape.stroke.join.cgJoin
         lineWidth = CGFloat(shape.stroke.width)
-        strokeColor = shape.stroke.color.cgColor
 
         if let dashPhase = shape.stroke.dashes?.phase {
             lineDashPhase = CGFloat(dashPhase)
