@@ -40,8 +40,6 @@ public struct Text {
     
     public var frame: Rectangle {
         let deltaY = (ascent - capHeight)
-        print("deltaY: \(deltaY)")
-        //return Rectangle(x: 0, y: descent, width: 200, height: height)
         return Rectangle(x: 0, y: -deltaY, width: width, height: height)
     }
     
@@ -56,23 +54,19 @@ public struct Text {
     }
     
     public var descent: Double {
-        print("descent: \(font.descent)")
         return Double(font.descent) * em
     }
     
     public var ascent: Double {
-        print("ascent: \(font.ascent)")
         return Double(font.ascent) * em
     }
     
     public var capHeight: Double {
-        print("cap height: \(font.capHeight)")
         return Double(font.capHeight) * em
     }
     
     public var height: Double {
         let h = Double(font.unitsPerEm) * em
-        print("height: \(h)")
         return h
     }
     
@@ -100,18 +94,15 @@ public struct Text {
     let scale: Scale
     let color: Color
     
-    /// - TODO: Frame
-    /// - TODO: Output `CATextLayer` or sim. (but quarantine)
     public init(
         _ value: String,
-        font fontName: String = "Helvetica",
+        font fontName: String = "Baskerville-SemiBold",
         height: Double = 24,
         color: Color = .red
     )
     {
         self.fontName = fontName
         self.font = CGFont(fontName as CFString)!
-        print("em: \(font.unitsPerEm)")
         self.value = value
         self.scale = Scale(to: height, axis: .vertical, for: .numbersAndUpperCase)
         self.color = color
