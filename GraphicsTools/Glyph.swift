@@ -8,12 +8,12 @@
 
 import PathTools
 
-/// Model of a shape.
-public struct Shape {
+/// Model of a glyph.
+public struct Glyph {
     
     // MARK: - Nested Types
     
-    /// Configuration for the fill of `Shape`.
+    /// Configuration for the fill of `Glyph`.
     public struct Fill {
         
         // MARK: - Nested Types

@@ -10,32 +10,32 @@ import QuartzCore
 
 public extension CAShapeLayer {
     
-    public convenience init(_ shape: Shape) {
+    public convenience init(_ glyph: Glyph) {
         
         self.init()
         
         // fill
-        fillColor = shape.fill.color.cgColor
-        fillRule = shape.fill.rule.cgFillRule
+        fillColor = glyph.fill.color.cgColor
+        fillRule = glyph.fill.rule.cgFillRule
         
         // stroke
-        strokeColor = shape.stroke.color.cgColor
-        lineCap = shape.stroke.cap.cgCap
-        lineDashPattern = shape.stroke.dashes?.pattern.map { NSNumber.init(value: $0) }
-        lineJoin = shape.stroke.join.cgJoin
-        lineWidth = CGFloat(shape.stroke.width)
+        strokeColor = glyph.stroke.color.cgColor
+        lineCap = glyph.stroke.cap.cgCap
+        lineDashPattern = glyph.stroke.dashes?.pattern.map { NSNumber.init(value: $0) }
+        lineJoin = glyph.stroke.join.cgJoin
+        lineWidth = CGFloat(glyph.stroke.width)
 
-        if let dashPhase = shape.stroke.dashes?.phase {
+        if let dashPhase = glyph.stroke.dashes?.phase {
             lineDashPhase = CGFloat(dashPhase)
         }
         
-        if case .miter(let limit) = shape.stroke.join {
+        if case .miter(let limit) = glyph.stroke.join {
             miterLimit = CGFloat(limit)
         }
     }
 }
 
-private extension Shape.Fill.Rule {
+private extension Glyph.Fill.Rule {
     
     var cgFillRule: String {
         switch self {
@@ -47,7 +47,7 @@ private extension Shape.Fill.Rule {
     }
 }
 
-private extension Shape.Stroke.Cap {
+private extension Glyph.Stroke.Cap {
     
     var cgCap: String {
         switch self {
@@ -61,7 +61,7 @@ private extension Shape.Stroke.Cap {
     }
 }
 
-private extension Shape.Stroke.Join {
+private extension Glyph.Stroke.Join {
     
     var cgJoin: String {
         switch self {
