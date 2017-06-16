@@ -6,119 +6,76 @@
 //
 //
 
+import GeometryTools
 import PathTools
 
-/// Model of a glyph.
-public struct Glyph {
+/// Interface for `Glyph` values.
+public protocol GlyphProtocol {
     
-    // MARK: - Nested Types
+    /// Path of `Glyph`.
+    var path: Path { get }
     
-    /// Configuration for the fill of `Glyph`.
-    public struct Fill {
-        
-        // MARK: - Nested Types
-        
-        /// Winding rule of `Fill`.
-        public enum Rule {
-            case nonZero
-            case evenOdd
-        }
-        
-        // MARK: - Instance Properties
-        
-        /// Color of `Fill`.
-        public let color: Color
-        
-        /// Winding rule of `Fill`.
-        public let rule: Rule
-        
-        // MARK: - Initializers
-        
-        /// Creates a `Fill` with the given `color` and `rule`.
-        public init(color: Color = .red, rule: Rule = .nonZero) {
-            self.color = color
-            self.rule = rule
-        }
-    }
+    /// Fill of `Glyph`.
+    var fill: Fill { get }
     
-    /// Configuration for the stroke of `Shape`.
-    public struct Stroke {
-        
-        // MARK: - Nested Types
-        
-        /// Dash configuration of `Stroke`.
-        public struct Dashes {
-            let pattern: [Double]
-            let phase: Double
-        }
-        
-        /// Style of cap of `Stroke`.
-        public enum Cap {
-            case round
-            case butt
-            case square
-        }
-        
-        /// Style of join of `Stroke`.
-        public enum Join {
-            case miter(limit: Double)
-            case round
-            case bevel
-        }
-        
-        // MARK: - Instance Properties
-        
-        /// Width.
-        public let width: Double
-        
-        /// Color.
-        public let color: Color
-        
-        /// Join.
-        public let join: Join
+    /// Stroke of `Glyph`.
+    var stroke: Stroke { get }
+    
+    /// Frame of `Glyph` in parent coordinate space.
+    var frame: Rectangle { get }
+}
 
-        /// Cap.
-        public let cap: Cap
-        
-        /// Dashes.
-        public let dashes: Dashes?
-        
-        // MARK: - Initializers
-        
-        /// Creates a `Stroke` with the given `width`, `color`, `join`, `cap`, and `dashes`.
-        public init(
-            width: Double = 1,
-            color: Color = .red,
-            join: Join = .miter(limit: 10),
-            cap: Cap = .butt,
-            dashes: Dashes? = nil
-        )
-        {
-            self.width = width
-            self.color = color
-            self.join = join
-            self.cap = cap
-            self.dashes = dashes
-        }
+public struct Glyph: GlyphProtocol {
+    
+    public var frame: Rectangle {
+        let boundingBox = path.boundingBox
+        let x = position.x - 0.5 * boundingBox.size.width
+        let y = position.y - 0.5 * boundingBox.size.height
+        return Rectangle(origin: Point(x: x, y: y), size: boundingBox.size)
     }
     
-    // MARK: - Instance Properties
-    
-    /// Path of `Shape`.
     public let path: Path
-    
-    /// Configuration for the fill of `Shape`.
     public let fill: Fill
-    
-    /// Configuration for the stroke of `Shape`.
     public let stroke: Stroke
+    public let position: Point
+    public let anchor: Point
     
-    // MARK: - Initializers
-    
-    /// Creates a `Shape` with the given `path`, `fill` and `stroke` values.
-    public init(path: Path, fill: Fill = Fill(), stroke: Stroke = Stroke()) {
+    public init(
+        path: Path,
+        fill: Fill = Fill(),
+        stroke: Stroke = Stroke(),
+        position: Point = Point(),
+        anchor: Point? = nil
+    )
+    {
         self.path = path
         self.fill = fill
         self.stroke = stroke
+        self.position = position
+        self.anchor = anchor ?? Point(x: path.boundingBox.midX, y: path.boundingBox.midY)
     }
 }
+
+public protocol AtomicGlyph: GlyphProtocol {
+
+    /// Position of `Glyph` in parent coordinate space.
+    var position: Point { get }
+}
+
+/// Extends `AtomicGlyph` by introducing an internal relative position.
+public protocol AnchoredGlyph: AtomicGlyph {
+    
+    /// Relative point of `position` within own coordinate space.
+    var anchor: Point { get }
+}
+
+public protocol GlyphComposite { }
+public protocol ScalingGlyph: GlyphComposite { }
+
+//struct _Clef: ScalingGlyph {
+//    
+//    
+//    
+//    init(x: Double, top: Double, bottom: Double, stroke: Stroke, fill: Fill) { }
+//}
+//

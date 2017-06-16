@@ -21,8 +21,8 @@
 		07305A591D0F47EE006E4085 /* ShapeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07305A4F1D0F47EE006E4085 /* ShapeType.swift */; };
 		0741EE521EE562E70002769D /* Glyph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0741EE511EE562E70002769D /* Glyph.swift */; };
 		0741EE531EE562E70002769D /* Glyph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0741EE511EE562E70002769D /* Glyph.swift */; };
-		0741EE561EE566730002769D /* Shape+CAShapeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0741EE551EE566730002769D /* Shape+CAShapeLayer.swift */; };
-		0741EE571EE566730002769D /* Shape+CAShapeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0741EE551EE566730002769D /* Shape+CAShapeLayer.swift */; };
+		0741EE561EE566730002769D /* Glyph+CAShapeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0741EE551EE566730002769D /* Glyph+CAShapeLayer.swift */; };
+		0741EE571EE566730002769D /* Glyph+CAShapeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0741EE551EE566730002769D /* Glyph+CAShapeLayer.swift */; };
 		0744B4BE1EF01273003F9B3A /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0744B4BD1EF01273003F9B3A /* Text.swift */; };
 		0744B4BF1EF01273003F9B3A /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0744B4BD1EF01273003F9B3A /* Text.swift */; };
 		0744B4C11EF01344003F9B3A /* Alignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0744B4C01EF01344003F9B3A /* Alignment.swift */; };
@@ -51,6 +51,10 @@
 		076D04721E2D2D740023ED96 /* LayoutNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D04701E2D2D740023ED96 /* LayoutNode.swift */; };
 		076D04741E2D2F050023ED96 /* LayoutNodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D04731E2D2F050023ED96 /* LayoutNodeTests.swift */; };
 		076D04751E2D2F060023ED96 /* LayoutNodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D04731E2D2F050023ED96 /* LayoutNodeTests.swift */; };
+		0789227D1EF2E3030037C572 /* Fill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0789227C1EF2E3030037C572 /* Fill.swift */; };
+		0789227E1EF2E3030037C572 /* Fill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0789227C1EF2E3030037C572 /* Fill.swift */; };
+		078922801EF2E3130037C572 /* Stoke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0789227F1EF2E3130037C572 /* Stoke.swift */; };
+		078922811EF2E3130037C572 /* Stoke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0789227F1EF2E3130037C572 /* Stoke.swift */; };
 		07ABA3A31EE1ACDA00190BFC /* ArithmeticTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07ABA3A11EE1ACDA00190BFC /* ArithmeticTools.framework */; };
 		07ABA3A41EE1ACDA00190BFC /* ArithmeticTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07ABA3A11EE1ACDA00190BFC /* ArithmeticTools.framework */; };
 		07ABA3A51EE1ACDA00190BFC /* Collections.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07ABA3A21EE1ACDA00190BFC /* Collections.framework */; };
@@ -121,7 +125,7 @@
 		07305A4E1D0F47EE006E4085 /* PathMaking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PathMaking.swift; path = GraphicsTools/PathMaking.swift; sourceTree = "<group>"; };
 		07305A4F1D0F47EE006E4085 /* ShapeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShapeType.swift; path = GraphicsTools/ShapeType.swift; sourceTree = "<group>"; };
 		0741EE511EE562E70002769D /* Glyph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Glyph.swift; path = GraphicsTools/Glyph.swift; sourceTree = "<group>"; };
-		0741EE551EE566730002769D /* Shape+CAShapeLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Shape+CAShapeLayer.swift"; path = "GraphicsTools/Shape+CAShapeLayer.swift"; sourceTree = "<group>"; };
+		0741EE551EE566730002769D /* Glyph+CAShapeLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Glyph+CAShapeLayer.swift"; path = "GraphicsTools/Glyph+CAShapeLayer.swift"; sourceTree = "<group>"; };
 		0744B4BD1EF01273003F9B3A /* Text.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Text.swift; path = GraphicsTools/Text.swift; sourceTree = "<group>"; };
 		0744B4C01EF01344003F9B3A /* Alignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Alignment.swift; path = GraphicsTools/Alignment.swift; sourceTree = "<group>"; };
 		0744B4C31EF0154A003F9B3A /* Text+CATextLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Text+CATextLayer.swift"; path = "GraphicsTools/Text+CATextLayer.swift"; sourceTree = "<group>"; };
@@ -136,6 +140,8 @@
 		076D04631E2D22C50023ED96 /* Color+CGColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Color+CGColor.swift"; path = "GraphicsTools/Color+CGColor.swift"; sourceTree = "<group>"; };
 		076D04701E2D2D740023ED96 /* LayoutNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LayoutNode.swift; path = GraphicsTools/LayoutNode.swift; sourceTree = "<group>"; };
 		076D04731E2D2F050023ED96 /* LayoutNodeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LayoutNodeTests.swift; path = GraphicsToolsTests/LayoutNodeTests.swift; sourceTree = "<group>"; };
+		0789227C1EF2E3030037C572 /* Fill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Fill.swift; path = GraphicsTools/Fill.swift; sourceTree = "<group>"; };
+		0789227F1EF2E3130037C572 /* Stoke.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Stoke.swift; path = GraphicsTools/Stoke.swift; sourceTree = "<group>"; };
 		07ABA3A11EE1ACDA00190BFC /* ArithmeticTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArithmeticTools.framework; path = Carthage/Build/iOS/ArithmeticTools.framework; sourceTree = "<group>"; };
 		07ABA3A21EE1ACDA00190BFC /* Collections.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Collections.framework; path = Carthage/Build/iOS/Collections.framework; sourceTree = "<group>"; };
 		07ABA3E71EE1AFB600190BFC /* CALayer+PDF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CALayer+PDF.swift"; path = "GraphicsTools/CALayer+PDF.swift"; sourceTree = "<group>"; };
@@ -202,7 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				076D04631E2D22C50023ED96 /* Color+CGColor.swift */,
-				0741EE551EE566730002769D /* Shape+CAShapeLayer.swift */,
+				0741EE551EE566730002769D /* Glyph+CAShapeLayer.swift */,
 				0744B4C31EF0154A003F9B3A /* Text+CATextLayer.swift */,
 				0750C4411EF05739005840B8 /* TextBox+CALayer.swift */,
 			);
@@ -251,6 +257,8 @@
 				07305A4B1D0F47EE006E4085 /* Buildable.swift */,
 				0744B4C01EF01344003F9B3A /* Alignment.swift */,
 				0741EE511EE562E70002769D /* Glyph.swift */,
+				0789227C1EF2E3030037C572 /* Fill.swift */,
+				0789227F1EF2E3130037C572 /* Stoke.swift */,
 				07305A4D1D0F47EE006E4085 /* FrameMaking.swift */,
 				07305A4E1D0F47EE006E4085 /* PathMaking.swift */,
 				070D41621D1030C200C02AC9 /* GraphicsContainerType.swift */,
@@ -528,12 +536,13 @@
 			files = (
 				07305A501D0F47EE006E4085 /* Buildable.swift in Sources */,
 				0744B4BE1EF01273003F9B3A /* Text.swift in Sources */,
+				078922801EF2E3130037C572 /* Stoke.swift in Sources */,
 				0750C4421EF05739005840B8 /* TextBox+CALayer.swift in Sources */,
 				07305A541D0F47EE006E4085 /* FrameMaking.swift in Sources */,
 				07ABA3E81EE1AFB600190BFC /* CALayer+PDF.swift in Sources */,
 				0748EEBE1E25816C003F19FD /* Renderer.swift in Sources */,
 				070D41631D1030C200C02AC9 /* GraphicsContainerType.swift in Sources */,
-				0741EE561EE566730002769D /* Shape+CAShapeLayer.swift in Sources */,
+				0741EE561EE566730002769D /* Glyph+CAShapeLayer.swift in Sources */,
 				07ABA3F01EE1E57D00190BFC /* TestFrame.swift in Sources */,
 				0741EE521EE562E70002769D /* Glyph.swift in Sources */,
 				0744B4C11EF01344003F9B3A /* Alignment.swift in Sources */,
@@ -542,6 +551,7 @@
 				07305A581D0F47EE006E4085 /* ShapeType.swift in Sources */,
 				076D04611E2D1CB00023ED96 /* Color.swift in Sources */,
 				0750C43F1EF0549B005840B8 /* Insets.swift in Sources */,
+				0789227D1EF2E3030037C572 /* Fill.swift in Sources */,
 				0744B4C41EF0154A003F9B3A /* Text+CATextLayer.swift in Sources */,
 				07305A521D0F47EE006E4085 /* CompositeShapeType.swift in Sources */,
 				07305A561D0F47EE006E4085 /* PathMaking.swift in Sources */,
@@ -555,12 +565,13 @@
 			files = (
 				07305A511D0F47EE006E4085 /* Buildable.swift in Sources */,
 				0744B4BF1EF01273003F9B3A /* Text.swift in Sources */,
+				078922811EF2E3130037C572 /* Stoke.swift in Sources */,
 				0750C4431EF05739005840B8 /* TextBox+CALayer.swift in Sources */,
 				07305A551D0F47EE006E4085 /* FrameMaking.swift in Sources */,
 				07ABA3E91EE1AFB600190BFC /* CALayer+PDF.swift in Sources */,
 				0748EEBF1E25816C003F19FD /* Renderer.swift in Sources */,
 				070D41641D1030C200C02AC9 /* GraphicsContainerType.swift in Sources */,
-				0741EE571EE566730002769D /* Shape+CAShapeLayer.swift in Sources */,
+				0741EE571EE566730002769D /* Glyph+CAShapeLayer.swift in Sources */,
 				07ABA3F11EE1E57D00190BFC /* TestFrame.swift in Sources */,
 				0741EE531EE562E70002769D /* Glyph.swift in Sources */,
 				0744B4C21EF01344003F9B3A /* Alignment.swift in Sources */,
@@ -569,6 +580,7 @@
 				07305A591D0F47EE006E4085 /* ShapeType.swift in Sources */,
 				076D04621E2D1CB00023ED96 /* Color.swift in Sources */,
 				0750C4401EF0549B005840B8 /* Insets.swift in Sources */,
+				0789227E1EF2E3030037C572 /* Fill.swift in Sources */,
 				0744B4C51EF0154A003F9B3A /* Text+CATextLayer.swift in Sources */,
 				07305A531D0F47EE006E4085 /* CompositeShapeType.swift in Sources */,
 				07305A571D0F47EE006E4085 /* PathMaking.swift in Sources */,
