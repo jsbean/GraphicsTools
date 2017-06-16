@@ -41,7 +41,7 @@ class GlyphTests: XCTestCase {
         let xLine = CAShapeLayer()
         xLine.path = xLinePath.cgPath
         xLine.lineWidth = 1
-        xLine.strokeColor = UIColor.green.cgColor
+        xLine.strokeColor = Color.green.cgColor
         
         let yLinePath = UIBezierPath()
         yLinePath.move(to: CGPoint(x: 0, y: 70))
@@ -49,7 +49,7 @@ class GlyphTests: XCTestCase {
         let yLine = CAShapeLayer()
         yLine.path = yLinePath.cgPath
         yLine.lineWidth = 1
-        yLine.strokeColor = UIColor.green.cgColor
+        yLine.strokeColor = Color.green.cgColor
         
         let container = CALayer()
         container.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
