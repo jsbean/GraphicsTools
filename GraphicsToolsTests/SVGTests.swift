@@ -31,11 +31,11 @@ class SVGTests: XCTestCase {
     func testSquare() {
         do {
             let parser = try SVGParser(name: "square")
-            let paths = parser.parse()
+            let shapes = parser.parse()
             let container = CALayer()
             container.frame = CGRect(x: 0, y: 0, width: 618, height: 792)
-            let layers: [CAShapeLayer] = paths.map {
-                let layer = CAShapeLayer($0)
+            let layers: [CAShapeLayer] = shapes.map { path, styling in
+                let layer = CAShapeLayer(path)
                 layer.fillColor = Color.red.cgColor
                 return layer
             }
@@ -50,11 +50,11 @@ class SVGTests: XCTestCase {
     func testParseSVGLine() {
         do {
             let parser = try SVGParser(name: "line")
-            let paths = parser.parse()
+            let shapes = parser.parse()
             let container = CALayer()
             container.frame = CGRect(x: 0, y: 0, width: 618, height: 792)
-            let layers: [CAShapeLayer] = paths.map {
-                let layer = CAShapeLayer($0)
+            let layers: [CAShapeLayer] = shapes.map { path, styling in
+                let layer = CAShapeLayer(path)
                 layer.strokeColor = Color.red.cgColor
                 layer.lineWidth = 1
                 return layer
@@ -70,11 +70,11 @@ class SVGTests: XCTestCase {
     func testParseSVGCircle() {
         do {
             let parser = try SVGParser(name: "circle")
-            let paths = parser.parse()
+            let shapes = parser.parse()
             let container = CALayer()
             container.frame = CGRect(x: 0, y: 0, width: 618, height: 792)
-            let layers: [CAShapeLayer] = paths.map {
-                let layer = CAShapeLayer($0)
+            let layers: [CAShapeLayer] = shapes.map { path, styling in
+                let layer = CAShapeLayer(path)
                 layer.fillColor = Color.red.cgColor
                 return layer
             }
@@ -89,11 +89,11 @@ class SVGTests: XCTestCase {
     func testParseSVGEllipse() {
         do {
             let parser = try SVGParser(name: "ellipse")
-            let paths = parser.parse()
+            let shapes = parser.parse()
             let container = CALayer()
             container.frame = CGRect(x: 0, y: 0, width: 618, height: 792)
-            let layers: [CAShapeLayer] = paths.map {
-                let layer = CAShapeLayer($0)
+            let layers: [CAShapeLayer] = shapes.map { path, styling in
+                let layer = CAShapeLayer(path)
                 layer.fillColor = Color.red.cgColor
                 return layer
             }
@@ -108,11 +108,11 @@ class SVGTests: XCTestCase {
     func testParseSVGPolyLine() {
         do {
             let parser = try SVGParser(name: "polyline")
-            let paths = parser.parse()
+            let shapes = parser.parse()
             let container = CALayer()
             container.frame = CGRect(x: 0, y: 0, width: 618, height: 792)
-            let layers: [CAShapeLayer] = paths.map {
-                let layer = CAShapeLayer($0)
+            let layers: [CAShapeLayer] = shapes.map { path, styling in
+                let layer = CAShapeLayer(path)
                 layer.strokeColor = Color.blue.cgColor
                 layer.fillColor = nil
                 return layer
@@ -128,11 +128,11 @@ class SVGTests: XCTestCase {
     func testParseSVGPolyBezier() {
         do {
             let parser = try SVGParser(name: "polybezier")
-            let paths = parser.parse()
+            let shapes = parser.parse()
             let container = CALayer()
             container.frame = CGRect(x: 0, y: 0, width: 618, height: 792)
-            let layers: [CAShapeLayer] = paths.map {
-                let layer = CAShapeLayer($0)
+            let layers: [CAShapeLayer] = shapes.map { path, styling in
+                let layer = CAShapeLayer(path)
                 layer.strokeColor = Color.blue.cgColor
                 layer.fillColor = nil
                 return layer

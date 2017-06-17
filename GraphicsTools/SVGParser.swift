@@ -13,6 +13,8 @@ import SWXMLHash
 
 public class SVGParser {
     
+
+    
     public enum Error: Swift.Error {
         case fileNotFound(String)
         case illFormedRect(String)
@@ -33,12 +35,11 @@ public class SVGParser {
         let data = try Data(contentsOf: url)
         let svg = SWXMLHash.parse(data)
         self.svg = svg["svg"]
-        
     }
     
-    public func parse() -> [Path] {
+    public func parse() -> [(Path, Styling)] {
         
-        var result: [Path] = []
+        var result: [(Path, Styling)] = []
         for indexer in svg.children {
             
             guard let element = indexer.element else {
@@ -50,7 +51,12 @@ public class SVGParser {
                 continue
             }
             
-            result.append(path)
+            // Set default styling
+            guard let styling = Styling(svgElement: element) else {
+                continue
+            }
+            
+            result.append((path, styling))
             
             // Styling
             // TODO
@@ -58,6 +64,13 @@ public class SVGParser {
         return result
     }
 }
+
+public struct Styling {
+    let fill: Fill
+    let stroke: Stroke
+}
+
+
 
 extension Path {
     
@@ -84,12 +97,8 @@ extension PathElement {
     
     public init?(svgCommand: String, svgValues: String, previous: PathElement?) {
         
-        print("path element: init: \(svgCommand); values: \(svgValues); prev: \(previous)")
-        
         let numbers = values(from: svgValues)
-        
-        print("numbers: \(numbers)")
-        
+
         switch svgCommand {
         
         // absolute move to

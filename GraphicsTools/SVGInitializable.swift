@@ -49,7 +49,6 @@ extension Path: SVGInitializable {
                 let prev = accum.last
                 return accum + PathElement(svgCommand: command, svgValues: values, previous: prev)
             }
-            print("path elements: \(pathElements)")
             self.init(pathElements: pathElements)
             
         case "polygon":
@@ -152,5 +151,37 @@ extension Ellipse: SVGInitializable {
     }
 }
 
+extension Styling: SVGInitializable {
+    
+    init?(svgElement: XMLElement) {
+        
+        print("svgElement: \(svgElement)")
+        
+        guard
+            let fill: String = svgElement.value(ofAttribute: "fill"),
+            let stroke: String = svgElement.value(ofAttribute: "stroke")
+        else {
+            return nil
+        }
+        
+        self.init(fill: Fill(), stroke: Stroke())
+    }
+}
 
+extension Fill: SVGInitializable {
+    
+    init?(svgElement: XMLElement) {
+        
+        guard
+            let color: String = svgElement.value(ofAttribute: "fill"),
+            let rule: String = svgElement.value(ofAttribute: "fill-rule")
+        else {
+            return nil
+        }
+    }
+}
 
+extension Stroke: SVGInitializable {
+    
+    
+}
