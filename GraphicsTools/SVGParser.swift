@@ -11,18 +11,32 @@ import GeometryTools
 import PathTools
 import SWXMLHash
 
-public class SVGParser {
+// TODO: Make SVGFile (sim. to AKAudioFile)
+public struct SVGFile {
     
+    // TODO: Add location (.resources, .temp, .documents, .custom)
+    public init(name: String) throws {
+        fatalError()
+    }
+}
 
-    
+public final class SVGParser {
+
     public enum Error: Swift.Error {
         case fileNotFound(String)
         case illFormedRect(String)
     }
     
+    // Determine the best type to use here.
     let svg: XMLIndexer
+    
+    // TODO
+    public init(file: SVGFile) throws {
+        fatalError()
+    }
 
-    public init(name: String) throws  {
+    // FIXME: Update to `URL`
+    public init(name: String) throws {
         
         let bundle = Bundle(for: SVGParser.self)
         
@@ -37,40 +51,54 @@ public class SVGParser {
         self.svg = svg["svg"]
     }
     
-    public func parse() -> [(Path, Styling)] {
+    public func parse() throws -> SVG {
         
-        var result: [(Path, Styling)] = []
+        let styledPath = StyledPath()
+        
         for indexer in svg.children {
             
+            // look for group
             guard let element = indexer.element else {
+                print("no element found")
                 continue
             }
             
-            // Geometry
-            guard let path = Path(svgElement: element) else {
-                continue
-            }
-            
-            // Set default styling
-            guard let styling = Styling(svgElement: element) else {
-                continue
-            }
-            
-            result.append((path, styling))
-            
-            // Styling
-            // TODO
+            // If group: traverse
+            // Otherwise:
+            // - Get styling
+            // - If path: do the path thing
+            // - If shape: do the shape thing
         }
-        return result
+        
+        return .leaf(styledPath)
+        
+//        
+//        var result: [(Path, Styling)] = []
+//        for indexer in svg.children {
+//            
+//            guard let element = indexer.element else {
+//                continue
+//            }
+//            
+//            // Geometry
+//            guard let path = Path(svgElement: element) else {
+//                continue
+//            }
+//            
+//            // Set default styling
+//            guard let styling = Styling(svgElement: element) else {
+//                continue
+//            }
+//            
+//            print("styling: \(styling)")
+//            
+//            result.append((path, styling))
+//
+//        }
+//        
+//        return result
     }
 }
-
-public struct Styling {
-    let fill: Fill
-    let stroke: Stroke
-}
-
-
 
 extension Path {
     
@@ -79,17 +107,17 @@ extension Path {
         let elements: [PathElement] = svgCommands.reduce([]) { accum, cur in
             
             let (command, values) = cur
+            
             let element = PathElement(
                 svgCommand: command,
                 svgValues: values,
                 previous: accum.last
             )
+            
             return accum + element
         }
         
-        print("elements: \(elements)")
-        
-        return nil
+        self.init(pathElements: elements)
     }
 }
 

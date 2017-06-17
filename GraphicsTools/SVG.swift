@@ -6,18 +6,9 @@
 //
 //
 
-import Foundation
+import Collections
+import GeometryTools
+import PathTools
 
-public struct SVG {
-    
-    public struct Document {
-        
-        
-        
-        
-        public init(name: String) throws {
-            
-            
-        }
-    }
-}
+/// Composite structure composed of `StyledPath` values.
+public typealias SVG = Tree<StyledPath>

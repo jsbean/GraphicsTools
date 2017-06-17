@@ -71,6 +71,10 @@
 		0789227E1EF2E3030037C572 /* Fill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0789227C1EF2E3030037C572 /* Fill.swift */; };
 		078922801EF2E3130037C572 /* Stoke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0789227F1EF2E3130037C572 /* Stoke.swift */; };
 		078922811EF2E3130037C572 /* Stoke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0789227F1EF2E3130037C572 /* Stoke.swift */; };
+		079E69461EF5DF240093A7ED /* Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079E69451EF5DF240093A7ED /* Styling.swift */; };
+		079E69471EF5DF240093A7ED /* Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079E69451EF5DF240093A7ED /* Styling.swift */; };
+		079E69491EF5DF8F0093A7ED /* StyledPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079E69481EF5DF8F0093A7ED /* StyledPath.swift */; };
+		079E694A1EF5DF8F0093A7ED /* StyledPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079E69481EF5DF8F0093A7ED /* StyledPath.swift */; };
 		07ABA3A31EE1ACDA00190BFC /* ArithmeticTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07ABA3A11EE1ACDA00190BFC /* ArithmeticTools.framework */; };
 		07ABA3A41EE1ACDA00190BFC /* ArithmeticTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07ABA3A11EE1ACDA00190BFC /* ArithmeticTools.framework */; };
 		07ABA3A51EE1ACDA00190BFC /* Collections.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07ABA3A21EE1ACDA00190BFC /* Collections.framework */; };
@@ -222,6 +226,8 @@
 		076D04731E2D2F050023ED96 /* LayoutNodeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LayoutNodeTests.swift; path = GraphicsToolsTests/LayoutNodeTests.swift; sourceTree = "<group>"; };
 		0789227C1EF2E3030037C572 /* Fill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Fill.swift; path = GraphicsTools/Fill.swift; sourceTree = "<group>"; };
 		0789227F1EF2E3130037C572 /* Stoke.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Stoke.swift; path = GraphicsTools/Stoke.swift; sourceTree = "<group>"; };
+		079E69451EF5DF240093A7ED /* Styling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Styling.swift; path = GraphicsTools/Styling.swift; sourceTree = "<group>"; };
+		079E69481EF5DF8F0093A7ED /* StyledPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StyledPath.swift; path = GraphicsTools/StyledPath.swift; sourceTree = "<group>"; };
 		07ABA3A11EE1ACDA00190BFC /* ArithmeticTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArithmeticTools.framework; path = Carthage/Build/iOS/ArithmeticTools.framework; sourceTree = "<group>"; };
 		07ABA3A21EE1ACDA00190BFC /* Collections.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Collections.framework; path = Carthage/Build/iOS/Collections.framework; sourceTree = "<group>"; };
 		07ABA3E71EE1AFB600190BFC /* CALayer+PDF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CALayer+PDF.swift"; path = "GraphicsTools/CALayer+PDF.swift"; sourceTree = "<group>"; };
@@ -357,6 +363,8 @@
 				07305A4B1D0F47EE006E4085 /* Buildable.swift */,
 				0744B4C01EF01344003F9B3A /* Alignment.swift */,
 				0741EE511EE562E70002769D /* Glyph.swift */,
+				079E69481EF5DF8F0093A7ED /* StyledPath.swift */,
+				079E69451EF5DF240093A7ED /* Styling.swift */,
 				0789227C1EF2E3030037C572 /* Fill.swift */,
 				0789227F1EF2E3130037C572 /* Stoke.swift */,
 				07305A4D1D0F47EE006E4085 /* FrameMaking.swift */,
@@ -654,6 +662,7 @@
 			files = (
 				07305A501D0F47EE006E4085 /* Buildable.swift in Sources */,
 				0744B4BE1EF01273003F9B3A /* Text.swift in Sources */,
+				079E69461EF5DF240093A7ED /* Styling.swift in Sources */,
 				078922801EF2E3130037C572 /* Stoke.swift in Sources */,
 				0750C4421EF05739005840B8 /* TextBox+CALayer.swift in Sources */,
 				07305A541D0F47EE006E4085 /* FrameMaking.swift in Sources */,
@@ -670,6 +679,7 @@
 				076D04641E2D22C50023ED96 /* Color+CGColor.swift in Sources */,
 				07305A581D0F47EE006E4085 /* ShapeType.swift in Sources */,
 				076D04611E2D1CB00023ED96 /* Color.swift in Sources */,
+				079E69491EF5DF8F0093A7ED /* StyledPath.swift in Sources */,
 				0750C43F1EF0549B005840B8 /* Insets.swift in Sources */,
 				0789227D1EF2E3030037C572 /* Fill.swift in Sources */,
 				0744B4C41EF0154A003F9B3A /* Text+CATextLayer.swift in Sources */,
@@ -687,6 +697,7 @@
 			files = (
 				07305A511D0F47EE006E4085 /* Buildable.swift in Sources */,
 				0744B4BF1EF01273003F9B3A /* Text.swift in Sources */,
+				079E69471EF5DF240093A7ED /* Styling.swift in Sources */,
 				078922811EF2E3130037C572 /* Stoke.swift in Sources */,
 				0750C4431EF05739005840B8 /* TextBox+CALayer.swift in Sources */,
 				07305A551D0F47EE006E4085 /* FrameMaking.swift in Sources */,
@@ -703,6 +714,7 @@
 				076D04651E2D22C50023ED96 /* Color+CGColor.swift in Sources */,
 				07305A591D0F47EE006E4085 /* ShapeType.swift in Sources */,
 				076D04621E2D1CB00023ED96 /* Color.swift in Sources */,
+				079E694A1EF5DF8F0093A7ED /* StyledPath.swift in Sources */,
 				0750C4401EF0549B005840B8 /* Insets.swift in Sources */,
 				0789227E1EF2E3030037C572 /* Fill.swift in Sources */,
 				0744B4C51EF0154A003F9B3A /* Text+CATextLayer.swift in Sources */,

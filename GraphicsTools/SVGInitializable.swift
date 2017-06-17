@@ -15,55 +15,88 @@ protocol SVGInitializable {
     init?(svgElement: XMLElement)
 }
 
-extension Path: SVGInitializable {
-    
-    init?(svgElement: XMLElement) {
-        
-        switch svgElement.name {
-            
-        case "line":
-            guard let line = Line(svgElement: svgElement) else { return nil }
-            self.init(line)
-            
-        case "polyline":
-            guard let polyline = Polyline(svgElement: svgElement) else { return nil }
-            self.init(polyline)
-            
-        case "rect":
-            guard let rect = Rectangle(svgElement: svgElement) else { return nil }
-            self.init(rect)
-            
-        case "circle":
-            guard let circle = Circle(svgElement: svgElement) else { return nil }
-            self.init(circle)
-            
-        case "ellipse":
-            guard let ellipse = Ellipse(svgElement: svgElement) else { return nil }
-            self.init(ellipse)
-            
-        case "path":
-            let pathData: String = svgElement.value(ofAttribute: "d")!
-            let commands = commandStrings(from: pathData)
-            let pathElements: [PathElement] = commands.reduce([]) { accum, cur in
-                let (command, values) = cur
-                let prev = accum.last
-                return accum + PathElement(svgCommand: command, svgValues: values, previous: prev)
-            }
-            self.init(pathElements: pathElements)
-            
-        case "polygon":
-            print("polygon")
-            return nil
-            
-        case "g":
-            print("group")
-            return nil
-            
-        default:
-            return nil
-        }
-    }
-}
+
+
+//// TODO:
+//extension Path: SVGInitializable {
+//    
+//    init?(svgElement: XMLElement) {
+//        
+//        // Transforms the SVG string name to a type that can be constructed with a SVG Element
+//        // and can generate a `Path`.
+//        let map: [String: (SVGInitializable & PathRepresentable).Type] = [
+//            "line": Line.self,
+//            "polyline": Polyline.self,
+//            "rect": Rectangle.self,
+//            "circle": Circle.self,
+//            "ellipse": Ellipse.self
+//            // "polygon": Polygon.self
+//        ]
+//        
+//        if map.keys.contains(svgElement.name) {
+//            
+//            guard let element = map[svgElement.name]?.init(svgElement: svgElement) else {
+//                return nil
+//            }
+//            
+//            self = element.path
+//            return
+//        }
+//        
+//        switch svgElement.name {
+//            
+//        case "line", "polyline", "rect", "circle", "ellipse" /*"polygon"*/:
+//            
+//            guard let element = map[svgElement.name]?.init(svgElement: svgElement) else {
+//                return nil
+//            }
+//            
+//            self = element.path
+//            return
+//            
+////        case "line":
+////            guard let line = Line(svgElement: svgElement) else { return nil }
+////            self.init(line)
+////            
+////        case "polyline":
+////            guard let polyline = Polyline(svgElement: svgElement) else { return nil }
+////            self.init(polyline)
+////            
+////        case "rect":
+////            guard let rect = Rectangle(svgElement: svgElement) else { return nil }
+////            self.init(rect)
+////            
+////        case "circle":
+////            guard let circle = Circle(svgElement: svgElement) else { return nil }
+////            self.init(circle)
+////            
+////        case "ellipse":
+////            guard let ellipse = Ellipse(svgElement: svgElement) else { return nil }
+////            self.init(ellipse)
+//            
+//        case "path":
+//            let pathData: String = svgElement.value(ofAttribute: "d")!
+//            let commands = commandStrings(from: pathData)
+//            let pathElements: [PathElement] = commands.reduce([]) { accum, cur in
+//                let (command, values) = cur
+//                let prev = accum.last
+//                return accum + PathElement(svgCommand: command, svgValues: values, previous: prev)
+//            }
+//            self.init(pathElements: pathElements)
+//            
+//        case "polygon":
+//            print("polygon")
+//            return nil
+//            
+//        case "g":
+//            print("group")
+//            return nil
+//            
+//        default:
+//            return nil
+//        }
+//    }
+//}
 
 extension Line: SVGInitializable {
     
@@ -155,11 +188,9 @@ extension Styling: SVGInitializable {
     
     init?(svgElement: XMLElement) {
         
-        print("svgElement: \(svgElement)")
-        
         guard
-            let fill: String = svgElement.value(ofAttribute: "fill"),
-            let stroke: String = svgElement.value(ofAttribute: "stroke")
+            let fill = Fill(svgElement: svgElement),
+            let stroke = Stroke(svgElement: svgElement)
         else {
             return nil
         }
@@ -171,17 +202,14 @@ extension Styling: SVGInitializable {
 extension Fill: SVGInitializable {
     
     init?(svgElement: XMLElement) {
-        
-        guard
-            let color: String = svgElement.value(ofAttribute: "fill"),
-            let rule: String = svgElement.value(ofAttribute: "fill-rule")
-        else {
-            return nil
-        }
+        return nil
     }
 }
 
+
 extension Stroke: SVGInitializable {
     
-    
+    init?(svgElement: XMLElement) {
+        return nil
+    }
 }
