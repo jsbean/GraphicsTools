@@ -6,6 +6,7 @@
 //
 //
 
+import Foundation
 import Collections
 import GeometryTools
 import PathTools
@@ -17,8 +18,8 @@ internal let shapesByName: [String: (SVGInitializable & PathRepresentable).Type]
     "polyline": Polyline.self,
     "rect": Rectangle.self,
     "circle": Circle.self,
-    "ellipse": Ellipse.self
-    // TODO: "polygon": Polygon.self
+    "ellipse": Ellipse.self,
+    "polygon": Polygon.self
 ]
 
 extension Path {
@@ -43,7 +44,9 @@ extension Path {
 
 func shape(svgElement: SVGElement) throws -> Path {
     
-    guard let path = shapesByName[svgElement.name]?.init(svgElement: svgElement)?.path else {
+    guard
+        let path = try shapesByName[svgElement.name]?.init(svgElement: svgElement).path
+    else {
         throw SVG.Parser.Error.illFormedPath(svgElement)
     }
     
@@ -94,4 +97,22 @@ extension Path {
         
         self.init(pathElements: elements)
     }
+}
+
+let svgCommands = CharacterSet(charactersIn: "MmLlVvHhQqTtCcSsZz")
+
+func commandStrings(from pathString: String) -> [(String, String)] {
+    
+    var commands: [String] = []
+    
+    // FIXME: Refactor.
+    let split = pathString.unicodeScalars.split { char in
+        if svgCommands.contains(char) {
+            commands.append(String(char))
+            return true
+        }
+        return false
+    }
+    let values = split.map(String.init).filter { $0 != "" }
+    return zip(commands, values).map { $0 }
 }

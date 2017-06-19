@@ -16,6 +16,7 @@ class SVGTests: XCTestCase {
         let testFiles = [
             "line",
             "polyline",
+            "polygon",
             "square",
             "rect",
             "circle",
@@ -31,6 +32,16 @@ class SVGTests: XCTestCase {
     func testStroke() {
         do {
             let parser = try SVG.Parser(name: "stroke")
+            let svg = try parser.parse()
+            print(svg)
+        } catch {
+            print(error)
+        }
+    }
+    
+    func testPolygon() {
+        do {
+            let parser = try SVG.Parser(name: "polygon")
             let svg = try parser.parse()
             print(svg)
         } catch {

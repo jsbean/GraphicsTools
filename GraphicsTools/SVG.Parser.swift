@@ -20,11 +20,18 @@ extension SVG {
         public enum Error: Swift.Error {
             case illFormedIndexer(XMLIndexer)
             case fileNotFound(String)
-            case illFormedRect(String)
+            case illFormedLine(SVGElement)
+            case illFormedPolyline(SVGElement)
+            case illFormedRectangle(SVGElement)
+            case illFormedCircle(SVGElement)
+            case illFormedEllipse(SVGElement)
             case illFormedElement(SVGElement)
             case illFormedPath(SVGElement)
+            case illFormedPolygon(SVGElement)
             case illFormedStyling(SVGElement)
             case illFormedStyledPath(SVGElement)
+            case illFormedFill(SVGElement)
+            case illFormedStroke(SVGElement)
         }
         
         // FIXME: Determine the best type to use here.
@@ -68,7 +75,6 @@ extension SVG {
                 case _ where shapesByName.keys.contains(element.name), "path":
                     return .leaf(try StyledPath(svgElement: element))
                 
-                    
                 default:
                     print("Unsupported SVG element: \(element.name)")
                     return nil
@@ -106,32 +112,12 @@ extension SVG {
     }
 }
 
-
-let svgCommands = CharacterSet(charactersIn: "MmLlVvHhQqTtCcSsZz")
-func commandStrings(from pathString: String) -> [(String, String)] {
-    
-    var commands: [String] = []
-    
-    // FIXME: Refactor.
-    let split = pathString.unicodeScalars.split { char in
-        if svgCommands.contains(char) {
-            commands.append(String(char))
-            return true
-        }
-        return false
-    }
-    let values = split.map(String.init).filter { $0 != "" }
-    return zip(commands, values).map { $0 }
-}
-
-
-
 func parse(viewBox: String) throws -> Rectangle {
     
     let dimensions = viewBox.components(separatedBy: " ").flatMap { Double($0) }
     
     guard dimensions.count == 4 else {
-        throw SVG.Parser.Error.illFormedRect(viewBox)
+        throw Rectangle.SVGError.illFormed(dimensions)
     }
     
     return Rectangle(
@@ -141,4 +127,3 @@ func parse(viewBox: String) throws -> Rectangle {
         height: dimensions[3]
     )
 }
-

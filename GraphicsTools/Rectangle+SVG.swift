@@ -11,7 +11,7 @@ import GeometryTools
 extension Rectangle {
     
     /// Things that can go wrong when creating a `Rectangle` from an `SVG` element.
-    public enum SVGRectangleError: Swift.Error {
+    public enum SVGError: Swift.Error {
         case illFormed([Double])
     }
     
@@ -29,7 +29,7 @@ extension Rectangle {
     init(values: [Double]) throws {
         
         guard values.count == 4 else {
-            throw SVGRectangleError.illFormed(values)
+            throw SVGError.illFormed(values)
         }
         
         self.init(x: values[0], y: values[1], width: values[2], height: values[3])

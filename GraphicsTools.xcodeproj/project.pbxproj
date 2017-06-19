@@ -73,6 +73,10 @@
 		076484E81EF7E8560095FBB5 /* StyledPath+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076484E61EF7E8560095FBB5 /* StyledPath+SVG.swift */; };
 		076484EA1EF7EAA70095FBB5 /* Double+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076484E91EF7EAA70095FBB5 /* Double+SVG.swift */; };
 		076484EB1EF7EAA70095FBB5 /* Double+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076484E91EF7EAA70095FBB5 /* Double+SVG.swift */; };
+		076484ED1EF7ECD30095FBB5 /* Polygon+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076484EC1EF7ECD30095FBB5 /* Polygon+SVG.swift */; };
+		076484EE1EF7ECD30095FBB5 /* Polygon+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076484EC1EF7ECD30095FBB5 /* Polygon+SVG.swift */; };
+		076484F01EF7EE070095FBB5 /* polygon.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 076484EF1EF7EDFF0095FBB5 /* polygon.svg */; };
+		076484F11EF7EE0B0095FBB5 /* polygon.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 076484EF1EF7EDFF0095FBB5 /* polygon.svg */; };
 		076D04611E2D1CB00023ED96 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D04601E2D1CB00023ED96 /* Color.swift */; };
 		076D04621E2D1CB00023ED96 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D04601E2D1CB00023ED96 /* Color.swift */; };
 		076D04641E2D22C50023ED96 /* Color+CGColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D04631E2D22C50023ED96 /* Color+CGColor.swift */; };
@@ -162,6 +166,7 @@
 				0726DC4E1EF5458B0055B9A1 /* line.svg in CopyFiles */,
 				0726DC4F1EF5458B0055B9A1 /* polyline.svg in CopyFiles */,
 				0726DC501EF5458B0055B9A1 /* square.svg in CopyFiles */,
+				076484F01EF7EE070095FBB5 /* polygon.svg in CopyFiles */,
 				07D3A0DF1EF5621100641D15 /* polybezier.svg in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -183,6 +188,7 @@
 				0726DC581EF545900055B9A1 /* square.svg in CopyFiles */,
 				07D3A0D71EF5490900641D15 /* multiple_groups.svg in CopyFiles */,
 				07D3A0D81EF5490900641D15 /* multiple_objects.svg in CopyFiles */,
+				076484F11EF7EE0B0095FBB5 /* polygon.svg in CopyFiles */,
 				07D3A0DE1EF5620C00641D15 /* polybezier.svg in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,6 +249,8 @@
 		076484E31EF7E82D0095FBB5 /* Path+SVG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Path+SVG.swift"; path = "GraphicsTools/Path+SVG.swift"; sourceTree = "<group>"; };
 		076484E61EF7E8560095FBB5 /* StyledPath+SVG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "StyledPath+SVG.swift"; path = "GraphicsTools/StyledPath+SVG.swift"; sourceTree = "<group>"; };
 		076484E91EF7EAA70095FBB5 /* Double+SVG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Double+SVG.swift"; path = "GraphicsTools/Double+SVG.swift"; sourceTree = "<group>"; };
+		076484EC1EF7ECD30095FBB5 /* Polygon+SVG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Polygon+SVG.swift"; path = "GraphicsTools/Polygon+SVG.swift"; sourceTree = "<group>"; };
+		076484EF1EF7EDFF0095FBB5 /* polygon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = polygon.svg; sourceTree = "<group>"; };
 		076D04601E2D1CB00023ED96 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Color.swift; path = GraphicsTools/Color.swift; sourceTree = "<group>"; };
 		076D04631E2D22C50023ED96 /* Color+CGColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Color+CGColor.swift"; path = "GraphicsTools/Color+CGColor.swift"; sourceTree = "<group>"; };
 		076D04701E2D2D740023ED96 /* LayoutNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LayoutNode.swift; path = GraphicsTools/LayoutNode.swift; sourceTree = "<group>"; };
@@ -367,6 +375,7 @@
 				076484D71EF7E7610095FBB5 /* Point+SVG.swift */,
 				076484E31EF7E82D0095FBB5 /* Path+SVG.swift */,
 				076484DA1EF7E7800095FBB5 /* Rectangle+SVG.swift */,
+				076484EC1EF7ECD30095FBB5 /* Polygon+SVG.swift */,
 				076484E01EF7E7E10095FBB5 /* PathElement+SVG.swift */,
 				076484E91EF7EAA70095FBB5 /* Double+SVG.swift */,
 			);
@@ -491,6 +500,7 @@
 				0726DC461EF544CB0055B9A1 /* polyline.svg */,
 				0726DC471EF544CB0055B9A1 /* square.svg */,
 				07D3A0DD1EF5620600641D15 /* polybezier.svg */,
+				076484EF1EF7EDFF0095FBB5 /* polygon.svg */,
 				5F9BB74D0893C6E54A94EAD6 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -713,6 +723,7 @@
 				0744B4C11EF01344003F9B3A /* Alignment.swift in Sources */,
 				0750C43C1EF0546E005840B8 /* TextBox.swift in Sources */,
 				076D04641E2D22C50023ED96 /* Color+CGColor.swift in Sources */,
+				076484ED1EF7ECD30095FBB5 /* Polygon+SVG.swift in Sources */,
 				07305A581D0F47EE006E4085 /* ShapeType.swift in Sources */,
 				076D04611E2D1CB00023ED96 /* Color.swift in Sources */,
 				079E69491EF5DF8F0093A7ED /* StyledPath.swift in Sources */,
@@ -754,6 +765,7 @@
 				0744B4C21EF01344003F9B3A /* Alignment.swift in Sources */,
 				0750C43D1EF0546E005840B8 /* TextBox.swift in Sources */,
 				076D04651E2D22C50023ED96 /* Color+CGColor.swift in Sources */,
+				076484EE1EF7ECD30095FBB5 /* Polygon+SVG.swift in Sources */,
 				07305A591D0F47EE006E4085 /* ShapeType.swift in Sources */,
 				076D04621E2D1CB00023ED96 /* Color.swift in Sources */,
 				079E694A1EF5DF8F0093A7ED /* StyledPath.swift in Sources */,
