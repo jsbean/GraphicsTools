@@ -17,10 +17,10 @@ extension Polygon: SVGInitializable {
             throw SVG.Parser.Error.illFormedPolygon(svgElement)
         }
         
-        let pointStrings = pointsString.components(separatedBy: " ").filter { $0 != "" }
-        let points = pointStrings.flatMap(Point.init)
-        
-        print("points: \(points)")
+        let points = pointsString
+            .components(separatedBy: " ")
+            .filter { $0 != "" }
+            .flatMap(Point.init)
         
         self.init(vertices: points)
     }

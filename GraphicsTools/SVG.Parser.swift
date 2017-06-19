@@ -20,6 +20,7 @@ extension SVG {
         public enum Error: Swift.Error {
             case illFormedIndexer(XMLIndexer)
             case fileNotFound(String)
+            case illFormedGroup(SVGElement)
             case illFormedLine(SVGElement)
             case illFormedPolyline(SVGElement)
             case illFormedRectangle(SVGElement)
@@ -68,8 +69,7 @@ extension SVG {
                     return .branch(group, try svgData.children.flatMap(traverse))
                     
                 case "g":
-                    // TODO: get group identifier from group
-                    let group = Group(identifier: "group")
+                    let group = try Group(svgElement: element)
                     return .branch(group, try svgData.children.flatMap(traverse))
                     
                 case _ where shapesByName.keys.contains(element.name), "path":

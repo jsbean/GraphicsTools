@@ -12,3 +12,15 @@ extension SVG {
         public let identifier: String
     }
 }
+
+extension SVG.Group: SVGInitializable {
+    
+    init(svgElement: SVGElement) throws {
+        
+        guard let identifier: String = svgElement.value(ofAttribute: "id") else {
+            throw SVG.Parser.Error.illFormedGroup(svgElement)
+        }
+        
+        self.init(identifier: identifier)
+    }
+}
