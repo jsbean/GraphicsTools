@@ -83,6 +83,10 @@
 		076484F71EF801900095FBB5 /* StyledPath.Composite+CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076484F51EF801900095FBB5 /* StyledPath.Composite+CALayer.swift */; };
 		076484F91EF802EB0095FBB5 /* StyledPath.Composite+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076484F81EF802EB0095FBB5 /* StyledPath.Composite+SVG.swift */; };
 		076484FA1EF802EB0095FBB5 /* StyledPath.Composite+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076484F81EF802EB0095FBB5 /* StyledPath.Composite+SVG.swift */; };
+		076484FC1EF809E20095FBB5 /* SVG+CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076484FB1EF809E20095FBB5 /* SVG+CALayer.swift */; };
+		076484FD1EF809E20095FBB5 /* SVG+CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076484FB1EF809E20095FBB5 /* SVG+CALayer.swift */; };
+		076484FF1EF812E20095FBB5 /* ColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076484FE1EF812E20095FBB5 /* ColorTests.swift */; };
+		076485001EF812E20095FBB5 /* ColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076484FE1EF812E20095FBB5 /* ColorTests.swift */; };
 		076D04611E2D1CB00023ED96 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D04601E2D1CB00023ED96 /* Color.swift */; };
 		076D04621E2D1CB00023ED96 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D04601E2D1CB00023ED96 /* Color.swift */; };
 		076D04641E2D22C50023ED96 /* Color+CGColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D04631E2D22C50023ED96 /* Color+CGColor.swift */; };
@@ -260,6 +264,8 @@
 		076484F21EF800EF0095FBB5 /* StyledPath+CAShapeLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "StyledPath+CAShapeLayer.swift"; path = "GraphicsTools/StyledPath+CAShapeLayer.swift"; sourceTree = "<group>"; };
 		076484F51EF801900095FBB5 /* StyledPath.Composite+CALayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "StyledPath.Composite+CALayer.swift"; path = "GraphicsTools/StyledPath.Composite+CALayer.swift"; sourceTree = "<group>"; };
 		076484F81EF802EB0095FBB5 /* StyledPath.Composite+SVG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "StyledPath.Composite+SVG.swift"; path = "GraphicsTools/StyledPath.Composite+SVG.swift"; sourceTree = "<group>"; };
+		076484FB1EF809E20095FBB5 /* SVG+CALayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SVG+CALayer.swift"; path = "GraphicsTools/SVG+CALayer.swift"; sourceTree = "<group>"; };
+		076484FE1EF812E20095FBB5 /* ColorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorTests.swift; path = GraphicsToolsTests/ColorTests.swift; sourceTree = "<group>"; };
 		076D04601E2D1CB00023ED96 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Color.swift; path = GraphicsTools/Color.swift; sourceTree = "<group>"; };
 		076D04631E2D22C50023ED96 /* Color+CGColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Color+CGColor.swift"; path = "GraphicsTools/Color+CGColor.swift"; sourceTree = "<group>"; };
 		076D04701E2D2D740023ED96 /* LayoutNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LayoutNode.swift; path = GraphicsTools/LayoutNode.swift; sourceTree = "<group>"; };
@@ -342,6 +348,7 @@
 			isa = PBXGroup;
 			children = (
 				076D04631E2D22C50023ED96 /* Color+CGColor.swift */,
+				076484FB1EF809E20095FBB5 /* SVG+CALayer.swift */,
 				076484F21EF800EF0095FBB5 /* StyledPath+CAShapeLayer.swift */,
 				076484F51EF801900095FBB5 /* StyledPath.Composite+CALayer.swift */,
 				0741EE551EE566730002769D /* Glyph+CAShapeLayer.swift */,
@@ -462,6 +469,7 @@
 				07ABA3EA1EE1C7FA00190BFC /* PDFTests.swift */,
 				07600F901EE46F160049E8B2 /* GlyphTests.swift */,
 				07B8E2B81EF442AD00C9EF18 /* SVGTests.swift */,
+				076484FE1EF812E20095FBB5 /* ColorTests.swift */,
 			);
 			name = GraphicsToolsTests;
 			sourceTree = "<group>";
@@ -744,6 +752,7 @@
 				0750C43F1EF0549B005840B8 /* Insets.swift in Sources */,
 				0789227D1EF2E3030037C572 /* Fill.swift in Sources */,
 				076484F91EF802EB0095FBB5 /* StyledPath.Composite+SVG.swift in Sources */,
+				076484FC1EF809E20095FBB5 /* SVG+CALayer.swift in Sources */,
 				0744B4C41EF0154A003F9B3A /* Text+CATextLayer.swift in Sources */,
 				07305A521D0F47EE006E4085 /* CompositeShapeType.swift in Sources */,
 				07305A561D0F47EE006E4085 /* PathMaking.swift in Sources */,
@@ -789,6 +798,7 @@
 				0750C4401EF0549B005840B8 /* Insets.swift in Sources */,
 				0789227E1EF2E3030037C572 /* Fill.swift in Sources */,
 				076484FA1EF802EB0095FBB5 /* StyledPath.Composite+SVG.swift in Sources */,
+				076484FD1EF809E20095FBB5 /* SVG+CALayer.swift in Sources */,
 				0744B4C51EF0154A003F9B3A /* Text+CATextLayer.swift in Sources */,
 				07305A531D0F47EE006E4085 /* CompositeShapeType.swift in Sources */,
 				07305A571D0F47EE006E4085 /* PathMaking.swift in Sources */,
@@ -807,6 +817,7 @@
 				0744B4CB1EF01A53003F9B3A /* TextTests.swift in Sources */,
 				0750C4461EF05763005840B8 /* TextBoxTests.swift in Sources */,
 				07B8E2BA1EF442AD00C9EF18 /* SVGTests.swift in Sources */,
+				076485001EF812E20095FBB5 /* ColorTests.swift in Sources */,
 				076D04751E2D2F060023ED96 /* LayoutNodeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -820,6 +831,7 @@
 				0744B4CA1EF01A53003F9B3A /* TextTests.swift in Sources */,
 				0750C4451EF05763005840B8 /* TextBoxTests.swift in Sources */,
 				07B8E2B91EF442AD00C9EF18 /* SVGTests.swift in Sources */,
+				076484FF1EF812E20095FBB5 /* ColorTests.swift in Sources */,
 				076D04741E2D2F050023ED96 /* LayoutNodeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

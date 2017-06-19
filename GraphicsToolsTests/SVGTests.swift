@@ -43,8 +43,11 @@ class SVGTests: XCTestCase {
         do {
             let parser = try SVG.Parser(name: "polygon")
             let svg = try parser.parse()
-            
             print(svg)
+
+            let layer = CALayer(svg)
+            layer.renderToPDF(name: "polygon")
+            
         } catch {
             print(error)
         }
@@ -205,13 +208,14 @@ class SVGTests: XCTestCase {
 //        }
 //    }
 //    
-//    func testParseSVGMultipleGroups() {
-//        do {
-//            let parser = try SVGParser(name: "multiple_groups")
-//            let svg = try parser.parse()
-//            print(svg)
-//        } catch {
-//            
-//        }
-//    }
+    func testParseSVGMultipleGroups() {
+        do {
+            let parser = try SVG.Parser(name: "multiple_groups")
+            let svg = try parser.parse()
+            let layer = CALayer(svg)
+            layer.renderToPDF(name: "muliple_groups")
+        } catch {
+            
+        }
+    }
 }
