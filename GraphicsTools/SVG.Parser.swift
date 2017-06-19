@@ -15,6 +15,7 @@ public typealias SVGElement = SWXMLHash.XMLElement
 
 extension SVG {
     
+    // FIXME: Make private. Expose only `SVG.init`
     public final class Parser {
         
         public enum Error: Swift.Error {
@@ -38,8 +39,7 @@ extension SVG {
         // FIXME: Determine the best type to use here.
         let svg: XMLIndexer
         
-        // FIXME: Update to `URL`
-        public init(name: String) throws {
+        public convenience init(name: String) throws {
             
             let bundle = Bundle(for: Parser.self)
             
@@ -48,7 +48,11 @@ extension SVG {
             else {
                 throw Error.fileNotFound(name)
             }
-            
+
+            try self.init(url: url)
+        }
+        
+        public init(url: URL) throws {
             let data = try Data(contentsOf: url)
             let svg = SWXMLHash.parse(data)
             self.svg = svg["svg"]

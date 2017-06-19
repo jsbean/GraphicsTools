@@ -15,23 +15,21 @@ public struct Color {
     public static let green = Color(red: 0, green: 1, blue: 0, alpha: 1)
     public static let blue = Color(red: 0, green: 0, blue: 1, alpha: 1)
 
-    internal let redComponent: Double
-    internal let greenComponent: Double
-    internal let blueComponent: Double
-    internal let alphaComponent: Double
+    public struct Components {
+        public let red: Double
+        public let green: Double
+        public let blue: Double
+        public let alpha: Double
+    }
+    
+    public let components: Components
 
     public init(red: Double, green: Double, blue: Double, alpha: Double = 1) {
-        self.redComponent = red
-        self.greenComponent = green
-        self.blueComponent = blue
-        self.alphaComponent = alpha
+        self.components = Components(red: red, green: green, blue: blue, alpha: alpha)
     }
     
     public init(gray: Double, alpha: Double) {
-        self.redComponent = gray
-        self.greenComponent = gray
-        self.blueComponent = gray
-        self.alphaComponent = alpha
+        self.init(red: gray, green: gray, blue: gray, alpha: alpha)
     }
     
     public init(red: Int, green: Int, blue: Int, alpha: Double = 1) {
@@ -56,10 +54,7 @@ public struct Color {
 
         let hexString = hex.droppingHash
         
-        guard
-            hexString.characters.count == 6,
-            let hex = Int(hex, radix: 16)
-        else {
+        guard let hex = Int(hexString, radix: 16) else {
             return nil
         }
         
@@ -71,7 +66,7 @@ extension String {
     
     var droppingHash: String {
 
-        guard characters.first != "#" else {
+        guard characters.first == "#" else {
             return self
         }
         
@@ -80,13 +75,19 @@ extension String {
 }
 
 extension Color: Equatable {
-    
     public static func == (lhs: Color, rhs: Color) -> Bool {
+        return lhs.components == rhs.components
+    }
+}
+
+extension Color.Components: Equatable {
+    
+    public static func == (lhs: Color.Components, rhs: Color.Components) -> Bool {
         return (
-            lhs.redComponent == rhs.redComponent &&
-            lhs.greenComponent == rhs.greenComponent &&
-            lhs.blueComponent == rhs.blueComponent &&
-            lhs.alphaComponent == rhs.alphaComponent
+            lhs.red == rhs.red &&
+            lhs.green == rhs.green &&
+            lhs.blue == rhs.blue &&
+            lhs.alpha == rhs.alpha
         )
     }
 }

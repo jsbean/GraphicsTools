@@ -9,8 +9,8 @@
 /// Composition of `Fill` and `Stroke`.
 public struct Styling {
     
-    let fill: Fill
-    let stroke: Stroke
+    public let fill: Fill
+    public let stroke: Stroke
     
     public init(fill: Fill = Fill(), stroke: Stroke = Stroke()) {
         self.fill = fill

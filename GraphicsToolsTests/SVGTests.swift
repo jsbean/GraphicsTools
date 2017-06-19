@@ -43,14 +43,29 @@ class SVGTests: XCTestCase {
         do {
             let parser = try SVG.Parser(name: "polygon")
             let svg = try parser.parse()
-            print(svg)
-
             let layer = CALayer(svg)
             layer.renderToPDF(name: "polygon")
-            
         } catch {
             print(error)
         }
+    }
+    
+    func testFillStrokeOpacity() {
+        do {
+            let svg = try SVG(name: "fill_stroke_opacity")
+            let opacity = svg.structure.leaves.first!.styling.stroke.color.components.alpha
+            print("stroke opacity: \(opacity)")
+            let layer = CALayer(svg)
+            layer.renderToPDF(name: "fill_stroke_opacity")
+        } catch {
+            print(error)
+        }
+    }
+    
+    func testHex() {
+        let hex = "FFFFFF"
+        let int = Int(hex, radix: 16)
+        print(int)
     }
     
 //    func testSquare() {
@@ -208,14 +223,41 @@ class SVGTests: XCTestCase {
 //        }
 //    }
 //    
-    func testParseSVGMultipleGroups() {
+    
+    func testParseSVGPolybezier() {
         do {
-            let parser = try SVG.Parser(name: "multiple_groups")
-            let svg = try parser.parse()
+            let svg = try SVG(name: "polybezier")
             let layer = CALayer(svg)
-            layer.renderToPDF(name: "muliple_groups")
+            layer.renderToPDF(name: "polybezier")
         } catch {
             
+        }
+    }
+    
+    func testParseSVGMultipleGroups() {
+        do {
+            let svg = try SVG(name: "multiple_groups")
+            let layer = CALayer(svg)
+            layer.renderToPDF(name: "multiple_groups")
+        } catch {
+            
+        }
+    }
+    
+    func testParseSVGColorsOpacityOrdering() {
+        do {
+            let svg = try SVG(name: "colors_opacity")
+            let layer = CALayer(svg)
+            layer.renderToPDF(name: "colors_opacity")
+        } catch {
+            
+        }
+    }
+    
+    func testMeasureSVGMultipleGroups() {
+        measure {
+            let svg = try! SVG(name: "multiple_groups")
+            //let layer = CALayer(svg)
         }
     }
 }

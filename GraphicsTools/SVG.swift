@@ -13,20 +13,32 @@ import PathTools
 
 public struct SVG {
     
+    /// Composite structure of `SVG.Group` values containing `StyledPath` values.
     public typealias Structure = Tree<Group,StyledPath>
     
-    public enum BaseDirectory {
-        case documents
-        case resources
-    }
-    
+    /// View rectangle.
     public let viewBox: Rectangle
     
     /// Composite structure composed of `StyledPath` values.
     public let structure: Structure
     
+    // MARK: - Initializers
+    
+    /// Creates an `SVG` model with the given `viewBox` and `structure`.
     public init(viewBox: Rectangle, structure: Structure) {
         self.viewBox = viewBox
         self.structure = structure
+    }
+    
+    /// Creates an `SVG` model for a file at the given `url`.
+    public init(url: URL) throws {
+        let parser = try Parser(url: url)
+        self = try parser.parse()
+    }
+    
+    /// Creates an `SVG` model for a file with the given `name` in the resources bundle.
+    public init(name: String) throws {
+        let parser = try Parser(name: name)
+        self = try parser.parse()
     }
 }

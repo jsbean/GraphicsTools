@@ -8,6 +8,23 @@
 
 import GeometryTools
 
+extension Rectangle: SVGInitializable {
+    
+    init(svgElement: SVGElement) throws {
+        
+        guard
+            let x: Double = svgElement.value(ofAttribute: "x"),
+            let y: Double = svgElement.value(ofAttribute: "y"),
+            let width: Double = svgElement.value(ofAttribute: "width"),
+            let height: Double = svgElement.value(ofAttribute: "height")
+        else {
+            throw SVG.Parser.Error.illFormedRectangle(svgElement)
+        }
+        
+        self.init(origin: Point(x: x, y: y), size: Size(width: width, height: height))
+    }
+}
+
 extension Rectangle {
     
     /// Things that can go wrong when creating a `Rectangle` from an `SVG` element.
