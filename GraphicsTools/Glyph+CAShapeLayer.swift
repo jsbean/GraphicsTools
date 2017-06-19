@@ -38,7 +38,7 @@ public extension CAShapeLayer {
     }
 }
 
-private extension Fill.Rule {
+internal extension Fill.Rule {
     
     var cgFillRule: String {
         switch self {
@@ -50,7 +50,7 @@ private extension Fill.Rule {
     }
 }
 
-private extension Stroke.Cap {
+internal extension Stroke.Cap {
     
     var cgCap: String {
         switch self {
@@ -64,7 +64,7 @@ private extension Stroke.Cap {
     }
 }
 
-private extension Stroke.Join {
+internal extension Stroke.Join {
     
     var cgJoin: String {
         switch self {

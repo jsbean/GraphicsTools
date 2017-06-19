@@ -13,7 +13,7 @@ extension StyledPath {
     
     init(svgElement: SVGElement) throws {
         let path = try Path.makePath(svgElement: svgElement)
-        // FIXME: Styling
-        self.init(path: path)
+        // FIXME: Extract styling
+        self.init(path: path, styling: Styling())
     }
 }

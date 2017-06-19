@@ -77,6 +77,12 @@
 		076484EE1EF7ECD30095FBB5 /* Polygon+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076484EC1EF7ECD30095FBB5 /* Polygon+SVG.swift */; };
 		076484F01EF7EE070095FBB5 /* polygon.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 076484EF1EF7EDFF0095FBB5 /* polygon.svg */; };
 		076484F11EF7EE0B0095FBB5 /* polygon.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 076484EF1EF7EDFF0095FBB5 /* polygon.svg */; };
+		076484F31EF800EF0095FBB5 /* StyledPath+CAShapeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076484F21EF800EF0095FBB5 /* StyledPath+CAShapeLayer.swift */; };
+		076484F41EF800EF0095FBB5 /* StyledPath+CAShapeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076484F21EF800EF0095FBB5 /* StyledPath+CAShapeLayer.swift */; };
+		076484F61EF801900095FBB5 /* StyledPath.Composite+CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076484F51EF801900095FBB5 /* StyledPath.Composite+CALayer.swift */; };
+		076484F71EF801900095FBB5 /* StyledPath.Composite+CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076484F51EF801900095FBB5 /* StyledPath.Composite+CALayer.swift */; };
+		076484F91EF802EB0095FBB5 /* StyledPath.Composite+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076484F81EF802EB0095FBB5 /* StyledPath.Composite+SVG.swift */; };
+		076484FA1EF802EB0095FBB5 /* StyledPath.Composite+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076484F81EF802EB0095FBB5 /* StyledPath.Composite+SVG.swift */; };
 		076D04611E2D1CB00023ED96 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D04601E2D1CB00023ED96 /* Color.swift */; };
 		076D04621E2D1CB00023ED96 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D04601E2D1CB00023ED96 /* Color.swift */; };
 		076D04641E2D22C50023ED96 /* Color+CGColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D04631E2D22C50023ED96 /* Color+CGColor.swift */; };
@@ -251,6 +257,9 @@
 		076484E91EF7EAA70095FBB5 /* Double+SVG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Double+SVG.swift"; path = "GraphicsTools/Double+SVG.swift"; sourceTree = "<group>"; };
 		076484EC1EF7ECD30095FBB5 /* Polygon+SVG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Polygon+SVG.swift"; path = "GraphicsTools/Polygon+SVG.swift"; sourceTree = "<group>"; };
 		076484EF1EF7EDFF0095FBB5 /* polygon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = polygon.svg; sourceTree = "<group>"; };
+		076484F21EF800EF0095FBB5 /* StyledPath+CAShapeLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "StyledPath+CAShapeLayer.swift"; path = "GraphicsTools/StyledPath+CAShapeLayer.swift"; sourceTree = "<group>"; };
+		076484F51EF801900095FBB5 /* StyledPath.Composite+CALayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "StyledPath.Composite+CALayer.swift"; path = "GraphicsTools/StyledPath.Composite+CALayer.swift"; sourceTree = "<group>"; };
+		076484F81EF802EB0095FBB5 /* StyledPath.Composite+SVG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "StyledPath.Composite+SVG.swift"; path = "GraphicsTools/StyledPath.Composite+SVG.swift"; sourceTree = "<group>"; };
 		076D04601E2D1CB00023ED96 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Color.swift; path = GraphicsTools/Color.swift; sourceTree = "<group>"; };
 		076D04631E2D22C50023ED96 /* Color+CGColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Color+CGColor.swift"; path = "GraphicsTools/Color+CGColor.swift"; sourceTree = "<group>"; };
 		076D04701E2D2D740023ED96 /* LayoutNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LayoutNode.swift; path = GraphicsTools/LayoutNode.swift; sourceTree = "<group>"; };
@@ -333,6 +342,8 @@
 			isa = PBXGroup;
 			children = (
 				076D04631E2D22C50023ED96 /* Color+CGColor.swift */,
+				076484F21EF800EF0095FBB5 /* StyledPath+CAShapeLayer.swift */,
+				076484F51EF801900095FBB5 /* StyledPath.Composite+CALayer.swift */,
 				0741EE551EE566730002769D /* Glyph+CAShapeLayer.swift */,
 				0744B4C31EF0154A003F9B3A /* Text+CATextLayer.swift */,
 				0750C4411EF05739005840B8 /* TextBox+CALayer.swift */,
@@ -372,6 +383,7 @@
 				07B8E2AD1EF4404300C9EF18 /* SVG.Parser.swift */,
 				07D3A0F51EF58AA200641D15 /* SVGInitializable.swift */,
 				076484E61EF7E8560095FBB5 /* StyledPath+SVG.swift */,
+				076484F81EF802EB0095FBB5 /* StyledPath.Composite+SVG.swift */,
 				076484D71EF7E7610095FBB5 /* Point+SVG.swift */,
 				076484E31EF7E82D0095FBB5 /* Path+SVG.swift */,
 				076484DA1EF7E7800095FBB5 /* Rectangle+SVG.swift */,
@@ -707,6 +719,7 @@
 				076484E41EF7E82D0095FBB5 /* Path+SVG.swift in Sources */,
 				0744B4BE1EF01273003F9B3A /* Text.swift in Sources */,
 				076484DB1EF7E7800095FBB5 /* Rectangle+SVG.swift in Sources */,
+				076484F31EF800EF0095FBB5 /* StyledPath+CAShapeLayer.swift in Sources */,
 				079E69461EF5DF240093A7ED /* Styling.swift in Sources */,
 				078922801EF2E3130037C572 /* Stoke.swift in Sources */,
 				0750C4421EF05739005840B8 /* TextBox+CALayer.swift in Sources */,
@@ -727,8 +740,10 @@
 				07305A581D0F47EE006E4085 /* ShapeType.swift in Sources */,
 				076D04611E2D1CB00023ED96 /* Color.swift in Sources */,
 				079E69491EF5DF8F0093A7ED /* StyledPath.swift in Sources */,
+				076484F61EF801900095FBB5 /* StyledPath.Composite+CALayer.swift in Sources */,
 				0750C43F1EF0549B005840B8 /* Insets.swift in Sources */,
 				0789227D1EF2E3030037C572 /* Fill.swift in Sources */,
+				076484F91EF802EB0095FBB5 /* StyledPath.Composite+SVG.swift in Sources */,
 				0744B4C41EF0154A003F9B3A /* Text+CATextLayer.swift in Sources */,
 				07305A521D0F47EE006E4085 /* CompositeShapeType.swift in Sources */,
 				07305A561D0F47EE006E4085 /* PathMaking.swift in Sources */,
@@ -749,6 +764,7 @@
 				076484E51EF7E82D0095FBB5 /* Path+SVG.swift in Sources */,
 				0744B4BF1EF01273003F9B3A /* Text.swift in Sources */,
 				076484DC1EF7E7800095FBB5 /* Rectangle+SVG.swift in Sources */,
+				076484F41EF800EF0095FBB5 /* StyledPath+CAShapeLayer.swift in Sources */,
 				079E69471EF5DF240093A7ED /* Styling.swift in Sources */,
 				078922811EF2E3130037C572 /* Stoke.swift in Sources */,
 				0750C4431EF05739005840B8 /* TextBox+CALayer.swift in Sources */,
@@ -769,8 +785,10 @@
 				07305A591D0F47EE006E4085 /* ShapeType.swift in Sources */,
 				076D04621E2D1CB00023ED96 /* Color.swift in Sources */,
 				079E694A1EF5DF8F0093A7ED /* StyledPath.swift in Sources */,
+				076484F71EF801900095FBB5 /* StyledPath.Composite+CALayer.swift in Sources */,
 				0750C4401EF0549B005840B8 /* Insets.swift in Sources */,
 				0789227E1EF2E3030037C572 /* Fill.swift in Sources */,
+				076484FA1EF802EB0095FBB5 /* StyledPath.Composite+SVG.swift in Sources */,
 				0744B4C51EF0154A003F9B3A /* Text+CATextLayer.swift in Sources */,
 				07305A531D0F47EE006E4085 /* CompositeShapeType.swift in Sources */,
 				07305A571D0F47EE006E4085 /* PathMaking.swift in Sources */,

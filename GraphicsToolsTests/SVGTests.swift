@@ -43,6 +43,7 @@ class SVGTests: XCTestCase {
         do {
             let parser = try SVG.Parser(name: "polygon")
             let svg = try parser.parse()
+            
             print(svg)
         } catch {
             print(error)
