@@ -28,6 +28,16 @@ class SVGTests: XCTestCase {
         ]
     }
     
+    func testStroke() {
+        do {
+            let parser = try SVG.Parser(name: "stroke")
+            let svg = try parser.parse()
+            print(svg)
+        } catch {
+            print(error)
+        }
+    }
+    
 //    func testSquare() {
 //        do {
 //            let parser = try SVGParser(name: "square")
@@ -145,43 +155,51 @@ class SVGTests: XCTestCase {
 //        }
 //    }
     
-    func testParseSVGMultipleGroups() {
-        
-        let testFiles = [
-            "line",
-            "polyline",
-            "square",
-            "rect",
-            "circle",
-            "ellipse",
-            "curve1",
-            "curve2",
-            "multiple_objects",
-            "multiple_groups",
-            "polybezier"
-        ]
-        
-        for name in testFiles {
-            do {
-                let parser = try SVGParser(name: name)
-                try parser.parse()
-                //            let shapes = parser.parse()
-                //            let container = CALayer()
-                //            container.frame = CGRect(x: 0, y: 0, width: 618, height: 792)
-                //            let layers: [CAShapeLayer] = shapes.map { path, styling in
-                //                let layer = CAShapeLayer(path)
-                //                layer.strokeColor = Color.blue.cgColor
-                //                layer.fillColor = nil
-                //                return layer
-                //            }
-                //
-                //            layers.forEach { container.addSublayer($0) }
-                //            container.renderToPDF(name: "svg_multiple_groups")
-            } catch {
-                
-            }
-        }
-        
-        
-    }
+//    func testParseSVGAllTestFiles() {
+//        
+//        let testFiles = [
+//            "line",
+//            "polyline",
+//            "square",
+//            "rect",
+//            "circle",
+//            "ellipse",
+//            "curve1",
+//            "curve2",
+//            "multiple_objects",
+//            "multiple_groups",
+//            "polybezier"
+//        ]
+//        
+//        for name in testFiles {
+//            do {
+//                let parser = try SVGParser(name: name)
+//                try parser.parse()
+//                //            let shapes = parser.parse()
+//                //            let container = CALayer()
+//                //            container.frame = CGRect(x: 0, y: 0, width: 618, height: 792)
+//                //            let layers: [CAShapeLayer] = shapes.map { path, styling in
+//                //                let layer = CAShapeLayer(path)
+//                //                layer.strokeColor = Color.blue.cgColor
+//                //                layer.fillColor = nil
+//                //                return layer
+//                //            }
+//                //
+//                //            layers.forEach { container.addSublayer($0) }
+//                //            container.renderToPDF(name: "svg_multiple_groups")
+//            } catch {
+//                
+//            }
+//        }
+//    }
+//    
+//    func testParseSVGMultipleGroups() {
+//        do {
+//            let parser = try SVGParser(name: "multiple_groups")
+//            let svg = try parser.parse()
+//            print(svg)
+//        } catch {
+//            
+//        }
+//    }
 }

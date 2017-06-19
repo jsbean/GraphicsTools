@@ -59,6 +59,20 @@
 		0750C4461EF05763005840B8 /* TextBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0750C4441EF05763005840B8 /* TextBoxTests.swift */; };
 		07600F911EE46F160049E8B2 /* GlyphTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07600F901EE46F160049E8B2 /* GlyphTests.swift */; };
 		07600F921EE46F160049E8B2 /* GlyphTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07600F901EE46F160049E8B2 /* GlyphTests.swift */; };
+		076484D51EF7DA490095FBB5 /* SVG.Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076484D41EF7DA490095FBB5 /* SVG.Group.swift */; };
+		076484D61EF7DA490095FBB5 /* SVG.Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076484D41EF7DA490095FBB5 /* SVG.Group.swift */; };
+		076484D81EF7E7610095FBB5 /* Point+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076484D71EF7E7610095FBB5 /* Point+SVG.swift */; };
+		076484D91EF7E7610095FBB5 /* Point+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076484D71EF7E7610095FBB5 /* Point+SVG.swift */; };
+		076484DB1EF7E7800095FBB5 /* Rectangle+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076484DA1EF7E7800095FBB5 /* Rectangle+SVG.swift */; };
+		076484DC1EF7E7800095FBB5 /* Rectangle+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076484DA1EF7E7800095FBB5 /* Rectangle+SVG.swift */; };
+		076484E11EF7E7E10095FBB5 /* PathElement+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076484E01EF7E7E10095FBB5 /* PathElement+SVG.swift */; };
+		076484E21EF7E7E10095FBB5 /* PathElement+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076484E01EF7E7E10095FBB5 /* PathElement+SVG.swift */; };
+		076484E41EF7E82D0095FBB5 /* Path+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076484E31EF7E82D0095FBB5 /* Path+SVG.swift */; };
+		076484E51EF7E82D0095FBB5 /* Path+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076484E31EF7E82D0095FBB5 /* Path+SVG.swift */; };
+		076484E71EF7E8560095FBB5 /* StyledPath+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076484E61EF7E8560095FBB5 /* StyledPath+SVG.swift */; };
+		076484E81EF7E8560095FBB5 /* StyledPath+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076484E61EF7E8560095FBB5 /* StyledPath+SVG.swift */; };
+		076484EA1EF7EAA70095FBB5 /* Double+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076484E91EF7EAA70095FBB5 /* Double+SVG.swift */; };
+		076484EB1EF7EAA70095FBB5 /* Double+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076484E91EF7EAA70095FBB5 /* Double+SVG.swift */; };
 		076D04611E2D1CB00023ED96 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D04601E2D1CB00023ED96 /* Color.swift */; };
 		076D04621E2D1CB00023ED96 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D04601E2D1CB00023ED96 /* Color.swift */; };
 		076D04641E2D22C50023ED96 /* Color+CGColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D04631E2D22C50023ED96 /* Color+CGColor.swift */; };
@@ -75,6 +89,8 @@
 		079E69471EF5DF240093A7ED /* Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079E69451EF5DF240093A7ED /* Styling.swift */; };
 		079E69491EF5DF8F0093A7ED /* StyledPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079E69481EF5DF8F0093A7ED /* StyledPath.swift */; };
 		079E694A1EF5DF8F0093A7ED /* StyledPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079E69481EF5DF8F0093A7ED /* StyledPath.swift */; };
+		079E694C1EF674600093A7ED /* stroke.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079E694B1EF674570093A7ED /* stroke.svg */; };
+		079E694D1EF674630093A7ED /* stroke.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079E694B1EF674570093A7ED /* stroke.svg */; };
 		07ABA3A31EE1ACDA00190BFC /* ArithmeticTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07ABA3A11EE1ACDA00190BFC /* ArithmeticTools.framework */; };
 		07ABA3A41EE1ACDA00190BFC /* ArithmeticTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07ABA3A11EE1ACDA00190BFC /* ArithmeticTools.framework */; };
 		07ABA3A51EE1ACDA00190BFC /* Collections.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07ABA3A21EE1ACDA00190BFC /* Collections.framework */; };
@@ -87,8 +103,8 @@
 		07ABA3F11EE1E57D00190BFC /* TestFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07ABA3EF1EE1E57D00190BFC /* TestFrame.swift */; };
 		07B8E2AB1EF4403600C9EF18 /* SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B8E2AA1EF4403600C9EF18 /* SVG.swift */; };
 		07B8E2AC1EF4403600C9EF18 /* SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B8E2AA1EF4403600C9EF18 /* SVG.swift */; };
-		07B8E2AE1EF4404300C9EF18 /* SVGParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B8E2AD1EF4404300C9EF18 /* SVGParser.swift */; };
-		07B8E2AF1EF4404300C9EF18 /* SVGParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B8E2AD1EF4404300C9EF18 /* SVGParser.swift */; };
+		07B8E2AE1EF4404300C9EF18 /* SVG.Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B8E2AD1EF4404300C9EF18 /* SVG.Parser.swift */; };
+		07B8E2AF1EF4404300C9EF18 /* SVG.Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B8E2AD1EF4404300C9EF18 /* SVG.Parser.swift */; };
 		07B8E2B91EF442AD00C9EF18 /* SVGTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B8E2B81EF442AD00C9EF18 /* SVGTests.swift */; };
 		07B8E2BA1EF442AD00C9EF18 /* SVGTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B8E2B81EF442AD00C9EF18 /* SVGTests.swift */; };
 		07D3A0D71EF5490900641D15 /* multiple_groups.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 07D3A0D51EF548FB00641D15 /* multiple_groups.svg */; };
@@ -97,8 +113,6 @@
 		07D3A0DC1EF5491B00641D15 /* multiple_objects.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 07D3A0D61EF548FB00641D15 /* multiple_objects.svg */; };
 		07D3A0DE1EF5620C00641D15 /* polybezier.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 07D3A0DD1EF5620600641D15 /* polybezier.svg */; };
 		07D3A0DF1EF5621100641D15 /* polybezier.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 07D3A0DD1EF5620600641D15 /* polybezier.svg */; };
-		07D3A0E11EF5644500641D15 /* SVGPathParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D3A0E01EF5644500641D15 /* SVGPathParser.swift */; };
-		07D3A0E21EF5644500641D15 /* SVGPathParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D3A0E01EF5644500641D15 /* SVGPathParser.swift */; };
 		07D3A0F61EF58AA200641D15 /* SVGInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D3A0F51EF58AA200641D15 /* SVGInitializable.swift */; };
 		07D3A0F71EF58AA200641D15 /* SVGInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D3A0F51EF58AA200641D15 /* SVGInitializable.swift */; };
 		0C56CCD3163F739244E75E4D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBE41F31AC5943193DF8009F /* Cocoa.framework */; };
@@ -137,6 +151,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
+				079E694D1EF674630093A7ED /* stroke.svg in CopyFiles */,
 				07D3A0DB1EF5491B00641D15 /* multiple_groups.svg in CopyFiles */,
 				07D3A0DC1EF5491B00641D15 /* multiple_objects.svg in CopyFiles */,
 				0726DC491EF5458B0055B9A1 /* rect.svg in CopyFiles */,
@@ -157,6 +172,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
+				079E694C1EF674600093A7ED /* stroke.svg in CopyFiles */,
 				0726DC511EF545900055B9A1 /* rect.svg in CopyFiles */,
 				0726DC521EF545900055B9A1 /* circle.svg in CopyFiles */,
 				0726DC531EF545900055B9A1 /* curve1.svg in CopyFiles */,
@@ -220,6 +236,13 @@
 		0750C4411EF05739005840B8 /* TextBox+CALayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "TextBox+CALayer.swift"; path = "GraphicsTools/TextBox+CALayer.swift"; sourceTree = "<group>"; };
 		0750C4441EF05763005840B8 /* TextBoxTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextBoxTests.swift; path = GraphicsToolsTests/TextBoxTests.swift; sourceTree = "<group>"; };
 		07600F901EE46F160049E8B2 /* GlyphTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GlyphTests.swift; path = GraphicsToolsTests/GlyphTests.swift; sourceTree = "<group>"; };
+		076484D41EF7DA490095FBB5 /* SVG.Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SVG.Group.swift; path = GraphicsTools/SVG.Group.swift; sourceTree = "<group>"; };
+		076484D71EF7E7610095FBB5 /* Point+SVG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Point+SVG.swift"; path = "GraphicsTools/Point+SVG.swift"; sourceTree = "<group>"; };
+		076484DA1EF7E7800095FBB5 /* Rectangle+SVG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Rectangle+SVG.swift"; path = "GraphicsTools/Rectangle+SVG.swift"; sourceTree = "<group>"; };
+		076484E01EF7E7E10095FBB5 /* PathElement+SVG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "PathElement+SVG.swift"; path = "GraphicsTools/PathElement+SVG.swift"; sourceTree = "<group>"; };
+		076484E31EF7E82D0095FBB5 /* Path+SVG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Path+SVG.swift"; path = "GraphicsTools/Path+SVG.swift"; sourceTree = "<group>"; };
+		076484E61EF7E8560095FBB5 /* StyledPath+SVG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "StyledPath+SVG.swift"; path = "GraphicsTools/StyledPath+SVG.swift"; sourceTree = "<group>"; };
+		076484E91EF7EAA70095FBB5 /* Double+SVG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Double+SVG.swift"; path = "GraphicsTools/Double+SVG.swift"; sourceTree = "<group>"; };
 		076D04601E2D1CB00023ED96 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Color.swift; path = GraphicsTools/Color.swift; sourceTree = "<group>"; };
 		076D04631E2D22C50023ED96 /* Color+CGColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Color+CGColor.swift"; path = "GraphicsTools/Color+CGColor.swift"; sourceTree = "<group>"; };
 		076D04701E2D2D740023ED96 /* LayoutNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LayoutNode.swift; path = GraphicsTools/LayoutNode.swift; sourceTree = "<group>"; };
@@ -228,18 +251,18 @@
 		0789227F1EF2E3130037C572 /* Stoke.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Stoke.swift; path = GraphicsTools/Stoke.swift; sourceTree = "<group>"; };
 		079E69451EF5DF240093A7ED /* Styling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Styling.swift; path = GraphicsTools/Styling.swift; sourceTree = "<group>"; };
 		079E69481EF5DF8F0093A7ED /* StyledPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StyledPath.swift; path = GraphicsTools/StyledPath.swift; sourceTree = "<group>"; };
+		079E694B1EF674570093A7ED /* stroke.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = stroke.svg; sourceTree = "<group>"; };
 		07ABA3A11EE1ACDA00190BFC /* ArithmeticTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArithmeticTools.framework; path = Carthage/Build/iOS/ArithmeticTools.framework; sourceTree = "<group>"; };
 		07ABA3A21EE1ACDA00190BFC /* Collections.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Collections.framework; path = Carthage/Build/iOS/Collections.framework; sourceTree = "<group>"; };
 		07ABA3E71EE1AFB600190BFC /* CALayer+PDF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CALayer+PDF.swift"; path = "GraphicsTools/CALayer+PDF.swift"; sourceTree = "<group>"; };
 		07ABA3EA1EE1C7FA00190BFC /* PDFTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PDFTests.swift; path = GraphicsToolsTests/PDFTests.swift; sourceTree = "<group>"; };
 		07ABA3EF1EE1E57D00190BFC /* TestFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestFrame.swift; path = GraphicsTools/TestFrame.swift; sourceTree = "<group>"; };
 		07B8E2AA1EF4403600C9EF18 /* SVG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SVG.swift; path = GraphicsTools/SVG.swift; sourceTree = "<group>"; };
-		07B8E2AD1EF4404300C9EF18 /* SVGParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SVGParser.swift; path = GraphicsTools/SVGParser.swift; sourceTree = "<group>"; };
+		07B8E2AD1EF4404300C9EF18 /* SVG.Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SVG.Parser.swift; path = GraphicsTools/SVG.Parser.swift; sourceTree = "<group>"; };
 		07B8E2B81EF442AD00C9EF18 /* SVGTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SVGTests.swift; path = GraphicsToolsTests/SVGTests.swift; sourceTree = "<group>"; };
 		07D3A0D51EF548FB00641D15 /* multiple_groups.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = multiple_groups.svg; sourceTree = "<group>"; };
 		07D3A0D61EF548FB00641D15 /* multiple_objects.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = multiple_objects.svg; sourceTree = "<group>"; };
 		07D3A0DD1EF5620600641D15 /* polybezier.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = polybezier.svg; sourceTree = "<group>"; };
-		07D3A0E01EF5644500641D15 /* SVGPathParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SVGPathParser.swift; path = GraphicsTools/SVGPathParser.swift; sourceTree = "<group>"; };
 		07D3A0F51EF58AA200641D15 /* SVGInitializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SVGInitializable.swift; path = GraphicsTools/SVGInitializable.swift; sourceTree = "<group>"; };
 		1AC915E6D64AA1A2072FAA9D /* GraphicsTools macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GraphicsTools macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C5A07620DC1BE344B2CC5D3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = GraphicsToolsTests/Info.plist; sourceTree = "<group>"; };
@@ -337,9 +360,15 @@
 			isa = PBXGroup;
 			children = (
 				07B8E2AA1EF4403600C9EF18 /* SVG.swift */,
-				07B8E2AD1EF4404300C9EF18 /* SVGParser.swift */,
+				076484D41EF7DA490095FBB5 /* SVG.Group.swift */,
+				07B8E2AD1EF4404300C9EF18 /* SVG.Parser.swift */,
 				07D3A0F51EF58AA200641D15 /* SVGInitializable.swift */,
-				07D3A0E01EF5644500641D15 /* SVGPathParser.swift */,
+				076484E61EF7E8560095FBB5 /* StyledPath+SVG.swift */,
+				076484D71EF7E7610095FBB5 /* Point+SVG.swift */,
+				076484E31EF7E82D0095FBB5 /* Path+SVG.swift */,
+				076484DA1EF7E7800095FBB5 /* Rectangle+SVG.swift */,
+				076484E01EF7E7E10095FBB5 /* PathElement+SVG.swift */,
+				076484E91EF7EAA70095FBB5 /* Double+SVG.swift */,
 			);
 			name = SVG;
 			sourceTree = "<group>";
@@ -450,6 +479,7 @@
 		E73F96132868A0F651B29140 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				079E694B1EF674570093A7ED /* stroke.svg */,
 				07D3A0D51EF548FB00641D15 /* multiple_groups.svg */,
 				07D3A0D61EF548FB00641D15 /* multiple_objects.svg */,
 				0726DC481EF5451E0055B9A1 /* rect.svg */,
@@ -660,16 +690,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				076484E71EF7E8560095FBB5 /* StyledPath+SVG.swift in Sources */,
+				076484D51EF7DA490095FBB5 /* SVG.Group.swift in Sources */,
 				07305A501D0F47EE006E4085 /* Buildable.swift in Sources */,
+				076484E11EF7E7E10095FBB5 /* PathElement+SVG.swift in Sources */,
+				076484E41EF7E82D0095FBB5 /* Path+SVG.swift in Sources */,
 				0744B4BE1EF01273003F9B3A /* Text.swift in Sources */,
+				076484DB1EF7E7800095FBB5 /* Rectangle+SVG.swift in Sources */,
 				079E69461EF5DF240093A7ED /* Styling.swift in Sources */,
 				078922801EF2E3130037C572 /* Stoke.swift in Sources */,
 				0750C4421EF05739005840B8 /* TextBox+CALayer.swift in Sources */,
 				07305A541D0F47EE006E4085 /* FrameMaking.swift in Sources */,
+				076484EA1EF7EAA70095FBB5 /* Double+SVG.swift in Sources */,
 				07ABA3E81EE1AFB600190BFC /* CALayer+PDF.swift in Sources */,
 				0748EEBE1E25816C003F19FD /* Renderer.swift in Sources */,
+				076484D81EF7E7610095FBB5 /* Point+SVG.swift in Sources */,
 				070D41631D1030C200C02AC9 /* GraphicsContainerType.swift in Sources */,
-				07D3A0E11EF5644500641D15 /* SVGPathParser.swift in Sources */,
 				0741EE561EE566730002769D /* Glyph+CAShapeLayer.swift in Sources */,
 				07ABA3F01EE1E57D00190BFC /* TestFrame.swift in Sources */,
 				0741EE521EE562E70002769D /* Glyph.swift in Sources */,
@@ -687,7 +723,7 @@
 				07305A561D0F47EE006E4085 /* PathMaking.swift in Sources */,
 				076D04711E2D2D740023ED96 /* LayoutNode.swift in Sources */,
 				07B8E2AB1EF4403600C9EF18 /* SVG.swift in Sources */,
-				07B8E2AE1EF4404300C9EF18 /* SVGParser.swift in Sources */,
+				07B8E2AE1EF4404300C9EF18 /* SVG.Parser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -695,16 +731,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				076484E81EF7E8560095FBB5 /* StyledPath+SVG.swift in Sources */,
+				076484D61EF7DA490095FBB5 /* SVG.Group.swift in Sources */,
 				07305A511D0F47EE006E4085 /* Buildable.swift in Sources */,
+				076484E21EF7E7E10095FBB5 /* PathElement+SVG.swift in Sources */,
+				076484E51EF7E82D0095FBB5 /* Path+SVG.swift in Sources */,
 				0744B4BF1EF01273003F9B3A /* Text.swift in Sources */,
+				076484DC1EF7E7800095FBB5 /* Rectangle+SVG.swift in Sources */,
 				079E69471EF5DF240093A7ED /* Styling.swift in Sources */,
 				078922811EF2E3130037C572 /* Stoke.swift in Sources */,
 				0750C4431EF05739005840B8 /* TextBox+CALayer.swift in Sources */,
 				07305A551D0F47EE006E4085 /* FrameMaking.swift in Sources */,
+				076484EB1EF7EAA70095FBB5 /* Double+SVG.swift in Sources */,
 				07ABA3E91EE1AFB600190BFC /* CALayer+PDF.swift in Sources */,
 				0748EEBF1E25816C003F19FD /* Renderer.swift in Sources */,
+				076484D91EF7E7610095FBB5 /* Point+SVG.swift in Sources */,
 				070D41641D1030C200C02AC9 /* GraphicsContainerType.swift in Sources */,
-				07D3A0E21EF5644500641D15 /* SVGPathParser.swift in Sources */,
 				0741EE571EE566730002769D /* Glyph+CAShapeLayer.swift in Sources */,
 				07ABA3F11EE1E57D00190BFC /* TestFrame.swift in Sources */,
 				0741EE531EE562E70002769D /* Glyph.swift in Sources */,
@@ -722,7 +764,7 @@
 				07305A571D0F47EE006E4085 /* PathMaking.swift in Sources */,
 				076D04721E2D2D740023ED96 /* LayoutNode.swift in Sources */,
 				07B8E2AC1EF4403600C9EF18 /* SVG.swift in Sources */,
-				07B8E2AF1EF4404300C9EF18 /* SVGParser.swift in Sources */,
+				07B8E2AF1EF4404300C9EF18 /* SVG.Parser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

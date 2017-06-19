@@ -15,8 +15,6 @@ protocol SVGInitializable {
     init?(svgElement: XMLElement)
 }
 
-
-
 //// TODO:
 //extension Path: SVGInitializable {
 //    
@@ -195,21 +193,29 @@ extension Styling: SVGInitializable {
             return nil
         }
         
-        self.init(fill: Fill(), stroke: Stroke())
+        self.init(fill: fill, stroke: stroke)
     }
 }
 
 extension Fill: SVGInitializable {
     
     init?(svgElement: XMLElement) {
-        return nil
+        let color: String = svgElement.value(ofAttribute: "fill") ?? "#FFFFFF"
+        let rule: String = svgElement.value(ofAttribute: "fill-rule") ?? "nonZero"
+        self.init(color: Color.red, rule: .nonZero)
     }
 }
-
 
 extension Stroke: SVGInitializable {
     
     init?(svgElement: XMLElement) {
-        return nil
+
+        let color: String = svgElement.value(ofAttribute: "stroke") ?? "#FFFFFF"
+        let opacity: Double = svgElement.value(ofAttribute: "opacity") ?? 1
+        let width: Double = svgElement.value(ofAttribute: "stroke-width") ?? 1
+        let miter: Double = svgElement.value(ofAttribute: "miter-limit") ?? 10
+        let lineJoinString: String = svgElement.value(ofAttribute: "stroke-linejoin") ?? "butt"
+        
+        self.init(width: width, color: .red, join: .miter(limit: 10), cap: .butt, dashes: nil)
     }
 }

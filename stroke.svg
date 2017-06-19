@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="612px" height="792px" viewBox="0 0 612 792" enable-background="new 0 0 612 792" xml:space="preserve">
+<line fill="#FFFFFF" stroke="#231F20" stroke-width="3" stroke-miterlimit="10" x1="42.291" y1="38.557" x2="160.013" y2="38.557"/>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="42.291" y1="334.7593" x2="160.0127" y2="334.7593">
+	<stop  offset="0" style="stop-color:#FFFFFF"/>
+	<stop  offset="1" style="stop-color:#000000"/>
+</linearGradient>
+<line fill="#FFFFFF" stroke="url(#SVGID_1_)" stroke-width="3" stroke-miterlimit="10" x1="42.291" y1="334.759" x2="160.013" y2="334.759"/>
+<polyline fill="#FFFFFF" stroke="#231F20" stroke-width="3" stroke-linejoin="round" stroke-miterlimit="10" points="42.291,82.861 
+	160.013,82.861 42.291,117.038 160.013,117.038 "/>
+<polyline opacity="0.3" fill="#FFFFFF" stroke="#231F20" stroke-width="3" stroke-linejoin="round" stroke-miterlimit="10" points="
+	42.291,385.392 160.013,385.392 42.291,419.569 160.013,419.569 "/>
+<polyline fill="#FFFFFF" stroke="#231F20" stroke-width="3" stroke-linejoin="bevel" stroke-miterlimit="10" points="
+	42.291,153.747 160.013,191.722 51.152,222.101 160.013,275.266 "/>
+</svg>

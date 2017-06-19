@@ -18,7 +18,7 @@ public struct Stroke {
     }
     
     /// Style of cap of `Stroke`.
-    public enum Cap {
+    public enum Cap: String {
         case round
         case butt
         case square

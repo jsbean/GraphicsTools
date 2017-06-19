@@ -14,7 +14,7 @@ public struct Fill {
     // MARK: - Nested Types
     
     /// Winding rule of `Fill`.
-    public enum Rule {
+    public enum Rule: String {
         case nonZero
         case evenOdd
     }
