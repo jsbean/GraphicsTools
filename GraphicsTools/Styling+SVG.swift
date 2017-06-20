@@ -16,39 +16,6 @@ extension Styling: SVGInitializable {
     }
 }
 
-extension Fill: SVGInitializable {
-    
-    init(svgElement: SVGElement) throws {
-        
-        func color(_ svgElement: SVGElement) throws -> Color {
-            
-            let colorString: String = svgElement.value(ofAttribute: "fill") ?? "#000000"
-
-            let opacity: Double = svgElement.value(ofAttribute: "fill-opacity")
-                ?? svgElement.value(ofAttribute: "opacity")
-                ?? 1
-            
-            guard let color = Color(hex: colorString, alpha: opacity) else {
-                throw SVG.Parser.Error.illFormedFill(svgElement)
-            }
-            
-            return color
-        }
-        
-        func rule(_ svgElement: SVGElement) throws -> Fill.Rule {
-            
-            let ruleString: String = svgElement.value(ofAttribute: "fill-rule") ?? "nonZero"
-            
-            guard let rule = Fill.Rule(rawValue: ruleString) else {
-                throw SVG.Parser.Error.illFormedFill(svgElement)
-            }
-            
-            return rule
-        }
-        
-        self.init(color: try color(svgElement), rule: try rule(svgElement))
-    }
-}
 
 extension Stroke: SVGInitializable {
     
@@ -85,6 +52,7 @@ extension Stroke: SVGInitializable {
 extension Stroke.Join: SVGInitializable {
     
     init(svgElement: SVGElement) throws {
+        
         let lineJoinString: String = svgElement.value(ofAttribute: "stroke-linejoin")
             ?? "miter"
         
