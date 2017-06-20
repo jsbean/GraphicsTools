@@ -137,6 +137,8 @@
 		07B8E2BA1EF442AD00C9EF18 /* SVGTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B8E2B81EF442AD00C9EF18 /* SVGTests.swift */; };
 		07D118051EF948A500BCE6C9 /* Fill+SVGInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D118041EF948A500BCE6C9 /* Fill+SVGInitializable.swift */; };
 		07D118061EF948A500BCE6C9 /* Fill+SVGInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D118041EF948A500BCE6C9 /* Fill+SVGInitializable.swift */; };
+		07D118081EF948EC00BCE6C9 /* Stroke+SVGInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D118071EF948EC00BCE6C9 /* Stroke+SVGInitializable.swift */; };
+		07D118091EF948EC00BCE6C9 /* Stroke+SVGInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D118071EF948EC00BCE6C9 /* Stroke+SVGInitializable.swift */; };
 		07D3A0D71EF5490900641D15 /* multiple_groups.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 07D3A0D51EF548FB00641D15 /* multiple_groups.svg */; };
 		07D3A0D81EF5490900641D15 /* multiple_objects.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 07D3A0D61EF548FB00641D15 /* multiple_objects.svg */; };
 		07D3A0DB1EF5491B00641D15 /* multiple_groups.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 07D3A0D51EF548FB00641D15 /* multiple_groups.svg */; };
@@ -311,6 +313,7 @@
 		07B8E2AD1EF4404300C9EF18 /* SVG.Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SVG.Parser.swift; path = GraphicsTools/SVG.Parser.swift; sourceTree = "<group>"; };
 		07B8E2B81EF442AD00C9EF18 /* SVGTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SVGTests.swift; path = GraphicsToolsTests/SVGTests.swift; sourceTree = "<group>"; };
 		07D118041EF948A500BCE6C9 /* Fill+SVGInitializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Fill+SVGInitializable.swift"; path = "GraphicsTools/Fill+SVGInitializable.swift"; sourceTree = "<group>"; };
+		07D118071EF948EC00BCE6C9 /* Stroke+SVGInitializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Stroke+SVGInitializable.swift"; path = "GraphicsTools/Stroke+SVGInitializable.swift"; sourceTree = "<group>"; };
 		07D3A0D51EF548FB00641D15 /* multiple_groups.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = multiple_groups.svg; sourceTree = "<group>"; };
 		07D3A0D61EF548FB00641D15 /* multiple_objects.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = multiple_objects.svg; sourceTree = "<group>"; };
 		07D3A0DD1EF5620600641D15 /* polybezier.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = polybezier.svg; sourceTree = "<group>"; };
@@ -424,6 +427,7 @@
 				076484F81EF802EB0095FBB5 /* StyledPath.Composite+SVG.swift */,
 				076485111EF817870095FBB5 /* Styling+SVG.swift */,
 				07D118041EF948A500BCE6C9 /* Fill+SVGInitializable.swift */,
+				07D118071EF948EC00BCE6C9 /* Stroke+SVGInitializable.swift */,
 			);
 			name = StyledPath;
 			sourceTree = "<group>";
@@ -794,6 +798,7 @@
 				076484E11EF7E7E10095FBB5 /* PathElement+SVG.swift in Sources */,
 				076484E41EF7E82D0095FBB5 /* Path+SVG.swift in Sources */,
 				076485121EF817870095FBB5 /* Styling+SVG.swift in Sources */,
+				07D118081EF948EC00BCE6C9 /* Stroke+SVGInitializable.swift in Sources */,
 				0744B4BE1EF01273003F9B3A /* Text.swift in Sources */,
 				076484DB1EF7E7800095FBB5 /* Rectangle+SVG.swift in Sources */,
 				076484F31EF800EF0095FBB5 /* StyledPath+CAShapeLayer.swift in Sources */,
@@ -846,6 +851,7 @@
 				076484E21EF7E7E10095FBB5 /* PathElement+SVG.swift in Sources */,
 				076484E51EF7E82D0095FBB5 /* Path+SVG.swift in Sources */,
 				076485131EF817870095FBB5 /* Styling+SVG.swift in Sources */,
+				07D118091EF948EC00BCE6C9 /* Stroke+SVGInitializable.swift in Sources */,
 				0744B4BF1EF01273003F9B3A /* Text.swift in Sources */,
 				076484DC1EF7E7800095FBB5 /* Rectangle+SVG.swift in Sources */,
 				076484F41EF800EF0095FBB5 /* StyledPath+CAShapeLayer.swift in Sources */,
