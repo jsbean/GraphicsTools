@@ -8,7 +8,7 @@
 
 import GeometryTools
 
-extension Line: SVGInitializable {
+extension Line.Segment: SVGInitializable {
     
     init(svgElement: SVGElement) throws {
         

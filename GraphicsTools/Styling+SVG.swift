@@ -23,9 +23,7 @@ extension Fill: SVGInitializable {
         func color(_ svgElement: SVGElement) throws -> Color {
             
             let colorString: String = svgElement.value(ofAttribute: "fill") ?? "#000000"
-            
-            print("color string: \(colorString)")
-            
+
             let opacity: Double = svgElement.value(ofAttribute: "fill-opacity")
                 ?? svgElement.value(ofAttribute: "opacity")
                 ?? 1
@@ -56,6 +54,7 @@ extension Stroke: SVGInitializable {
     
     init(svgElement: SVGElement) throws {
         
+        /// Make initializer on `Color`
         func color(_ svgElement: SVGElement) throws -> Color {
             
             let colorString: String = svgElement.value(ofAttribute: "stroke") ?? "#000000"
@@ -71,6 +70,7 @@ extension Stroke: SVGInitializable {
             return color
         }
         
+        /// Make initializer on `Join`
         func join(_ svgElement: SVGElement) throws -> Join {
             
             let lineJoinString: String = svgElement.value(ofAttribute: "stroke-linejoin")

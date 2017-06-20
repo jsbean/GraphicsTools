@@ -13,7 +13,7 @@ import GraphicsTools
 
 extension Path {
     
-    init(_ line: Line) {
+    init(_ line: Line.Segment) {
         self.init([BezierCurve(start: line.start, end: line.end)])
     }
 }

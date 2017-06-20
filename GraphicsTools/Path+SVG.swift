@@ -14,7 +14,7 @@ import PathTools
 // Map names to shape types which can be initialized by an svg element, and can
 // be represented as `Path` values.
 internal let shapesByName: [String: (SVGInitializable & PathRepresentable).Type] = [
-    "line": Line.self,
+    "line": Line.Segment.self,
     "polyline": Polyline.self,
     "rect": Rectangle.self,
     "circle": Circle.self,
