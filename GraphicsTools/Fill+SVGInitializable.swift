@@ -25,7 +25,10 @@ extension Fill: SVGInitializable {
             return color
         }
         
-        self.init(color: try color(svgElement), rule: try Fill.Rule(svgElement: svgElement))
+        self.init(
+            color: try Color.makeColor(svgElement: svgElement, for: .fill),
+            rule: try Fill.Rule(svgElement: svgElement)
+        )
     }
 }
 
