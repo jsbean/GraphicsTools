@@ -70,33 +70,34 @@ extension Stroke: SVGInitializable {
             return color
         }
         
-        /// Make initializer on `Join`
-        func join(_ svgElement: SVGElement) throws -> Join {
-            
-            let lineJoinString: String = svgElement.value(ofAttribute: "stroke-linejoin")
-                ?? "miter"
-            
-            switch lineJoinString {
-            case "round":
-                return .round
-            case "bevel":
-                return .bevel
-            case "miter":
-                let limit: Double = svgElement.value(ofAttribute: "miter-limit") ?? 10
-                return .miter(limit: limit)
-            default:
-                throw SVG.Parser.Error.illFormedFill(svgElement)
-            }
-        }
-        
         let width: Double = svgElement.value(ofAttribute: "stroke-width") ?? 1
         
         self.init(
             width: width,
             color: try color(svgElement),
-            join: try join(svgElement),
+            join: try Stroke.Join(svgElement: svgElement),
             cap: .butt,
             dashes: nil
         )
+    }
+}
+
+extension Stroke.Join: SVGInitializable {
+    
+    init(svgElement: SVGElement) throws {
+        let lineJoinString: String = svgElement.value(ofAttribute: "stroke-linejoin")
+            ?? "miter"
+        
+        switch lineJoinString {
+        case "round":
+            self = .round
+        case "bevel":
+            self = .bevel
+        case "miter":
+            let limit: Double = svgElement.value(ofAttribute: "miter-limit") ?? 10
+            self = .miter(limit: limit)
+        default:
+            throw SVG.Parser.Error.illFormedFill(svgElement)
+        }
     }
 }
