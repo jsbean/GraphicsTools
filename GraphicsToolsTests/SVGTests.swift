@@ -234,6 +234,26 @@ class SVGTests: XCTestCase {
         }
     }
     
+    func testParseSVGCurve1() {
+        do {
+            let svg = try SVG(name: "curve1")
+            let layer = CALayer(svg)
+            layer.renderToPDF(name: "curve1")
+        } catch {
+            
+        }
+    }
+    
+    func testParseSVGCurve2() {
+        do {
+            let svg = try SVG(name: "curve2")
+            let layer = CALayer(svg)
+            layer.renderToPDF(name: "curve2")
+        } catch {
+            
+        }
+    }
+    
     func testParseSVGMultipleGroups() {
         do {
             let svg = try SVG(name: "multiple_groups")

@@ -1,5 +1,5 @@
 github "dn-m/Collections" "2204ce037eead6d5f159123564df4a779115b96b"
 github "jsbean/SWXMLHash" "3.0.4"
 github "dn-m/ArithmeticTools" "0.13.4"
-github "dn-m/GeometryTools" "0.6"
+github "dn-m/GeometryTools" "0.6.4"
 github "dn-m/PathTools" "0.9"

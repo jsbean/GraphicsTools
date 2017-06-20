@@ -71,15 +71,62 @@ extension PathElement {
             
         // absolute quad smooth
         case "T":
-            return nil
+            
+            // The spec says to make assumptions
+            guard let previous = previous else {
+                return nil
+            }
+            
+            switch previous {
+                
+            case let .quadCurve(end, control):
+                let segment = Line.Segment(start: control, end: end)
+                let ray = Line.Ray(segment)
+                let newControl = ray.point(at: segment.length * 2)
+                let destination = Point(x: numbers[0], y: numbers[1])
+                self = .quadCurve(destination, newControl)
+
+            case let .curve(end, _, control2):
+                let segment = Line.Segment(start: control2, end: end)
+                let ray = Line.Ray(segment)
+                let newControl = ray.point(at: segment.length * 2)
+                let destination = Point(x: numbers[0], y: numbers[1])
+                self = .quadCurve(destination, newControl)
+                
+            default:
+                return nil
+            }
             
         // relative quad smooth
         case "t":
-            return nil
+            
+            // The spec says to make assumptions
+            guard let previous = previous, let ref = previous.point else {
+                return nil
+            }
+            
+            switch previous {
+                
+            case let .quadCurve(end, control):
+                let segment = Line.Segment(start: control, end: end)
+                let ray = Line.Ray(segment)
+                let newControl = ray.point(at: segment.length * 2)
+                let destination = Point(x: numbers[0], y: numbers[1]) + ref
+                self = .quadCurve(destination, newControl)
+                
+            case let .curve(end, _, control2):
+                let segment = Line.Segment(start: control2, end: end)
+                let ray = Line.Ray(segment)
+                let newControl = ray.point(at: segment.length * 2)
+                let destination = Point(x: numbers[0], y: numbers[1]) + ref
+                self = .quadCurve(destination, newControl)
+                
+            default:
+                return nil
+            }
             
         // absolute cubic broken
         case "C":
-            // x1 y1 x2 y2 x y
             let control1 = Point(x: numbers[0], y: numbers[1])
             let control2 = Point(x: numbers[2], y: numbers[3])
             let destination = Point(x: numbers[4], y: numbers[5])
@@ -87,21 +134,75 @@ extension PathElement {
             
         // relative cubic broken
         case "c":
-            // x1 y1 x2 y2 x y
-            guard let ref = previous?.point else { return nil }
+            
+            guard let ref = previous?.point else {
+                return nil
+            }
+
             let control1 = Point(x: numbers[0], y: numbers[1]) + ref
             let control2 = Point(x: numbers[2], y: numbers[3]) + ref
             let destination = Point(x: numbers[4], y: numbers[5]) + ref
             self = .curve(destination, control1, control2)
-            return nil
             
         // absolute cubic smooth
         case "S":
-            return nil
+            
+            // The spec says to make assumptions
+            guard let previous = previous else {
+                return nil
+            }
+            
+            switch previous {
+                
+            case let .quadCurve(end, control):
+                let segment = Line.Segment(start: control, end: end)
+                let ray = Line.Ray(segment)
+                let control1 = ray.point(at: segment.length * 2)
+                let control2 = Point(x: numbers[0], y: numbers[1])
+                let destination = Point(x: numbers[2], y: numbers[3])
+                self = .curve(destination, control1, control2)
+                
+            case let .curve(end, _, control2):
+                let segment = Line.Segment(start: control2, end: end)
+                let ray = Line.Ray(segment)
+                let control1 = ray.point(at: segment.length * 2)
+                let control2 = Point(x: numbers[0], y: numbers[1])
+                let destination = Point(x: numbers[2], y: numbers[3])
+                self = .curve(destination, control1, control2)
+                
+            default:
+                return nil
+            }
             
         // relative cubic smooth
         case "s":
-            return nil
+            
+            // The spec says to make assumptions
+            guard let previous = previous, let ref = previous.point else {
+                return nil
+            }
+            
+            switch previous {
+                
+            case let .quadCurve(end, control):
+                let segment = Line.Segment(start: control, end: end)
+                let ray = Line.Ray(segment)
+                let control1 = ray.point(at: segment.length * 2)
+                let control2 = Point(x: numbers[0], y: numbers[1]) + ref
+                let destination = Point(x: numbers[2], y: numbers[3]) + ref
+                self = .curve(destination, control1, control2)
+                
+            case let .curve(end, _, control2):
+                let segment = Line.Segment(start: control2, end: end)
+                let ray = Line.Ray(segment)
+                let destination = Point(x: numbers[2], y: numbers[3]) + ref
+                let control1 = ray.point(at: 2 * segment.length)
+                let control2 = Point(x: numbers[0], y: numbers[1]) + ref
+                self = .curve(destination, control1, control2)
+                
+            default:
+                return nil
+            }
             
         // absolute close
         case "Z", "z":
