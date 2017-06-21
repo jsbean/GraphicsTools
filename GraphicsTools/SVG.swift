@@ -13,6 +13,17 @@ import PathTools
 
 public struct SVG {
     
+    // Map names to shape types which can be initialized by an svg element, and can
+    // be represented as `Path` values.
+    static let shapesByName: [String: (SVGInitializable & PathRepresentable).Type] = [
+        "line": Line.Segment.self,
+        "polyline": Polyline.self,
+        "rect": Rectangle.self,
+        "circle": Circle.self,
+        "ellipse": Ellipse.self,
+        "polygon": Polygon.self
+    ]
+    
     /// Composite structure of `SVG.Group` values containing `StyledPath` values.
     public typealias Structure = Tree<Group,StyledPath>
     

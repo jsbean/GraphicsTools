@@ -9,6 +9,11 @@
 import GeometryTools
 import PathTools
 
+enum Coordinate {
+    case absolute
+    case relative
+}
+
 extension PathElement {
     
     public init?(svgCommand: String, svgValues: String, previous: PathElement?) {
@@ -72,21 +77,19 @@ extension PathElement {
         // absolute quad smooth
         case "T":
             
-            // The spec says to make assumptions
             guard
                 let previous = previous,
                 let control = smoothControlPoint(for: previous)
             else {
                 return nil
             }
-                        
+            
             let destination = Point(x: numbers[0], y: numbers[1])
             self = .quadCurve(destination, control)
             
         // relative quad smooth
         case "t":
             
-            // The spec says to make assumptions
             guard
                 let previous = previous,
                 let ref = previous.point,

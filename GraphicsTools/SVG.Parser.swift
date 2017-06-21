@@ -60,6 +60,16 @@ extension SVG {
         
         public func parse() throws -> SVG {
             
+            func root(svgData: XMLIndexer) throws -> SVG.Structure {
+                let group = Group(identifier: "root")
+                return .branch(group, try svgData.children.flatMap(traverse))
+            }
+            
+            func group(svgData: XMLIndexer) throws -> SVG.Structure {
+                let group = try Group(svgElement: svgData.element!)
+                return .branch(group, try svgData.children.flatMap(traverse))
+            }
+            
             func traverse(_ svgData: XMLIndexer) throws -> SVG.Structure? {
                 
                 guard let element = svgData.element else {
@@ -69,14 +79,12 @@ extension SVG {
                 switch element.name {
                     
                 case "svg":
-                    let group = Group(identifier: "root")
-                    return .branch(group, try svgData.children.flatMap(traverse))
+                    return try root(svgData: svgData)
                     
                 case "g":
-                    let group = try Group(svgElement: element)
-                    return .branch(group, try svgData.children.flatMap(traverse))
+                    return try group(svgData: svgData)
                     
-                case _ where shapesByName.keys.contains(element.name), "path":
+                case shapesByName.keys, "path":
                     return .leaf(try StyledPath(svgElement: element))
                 
                 default:
@@ -128,4 +136,10 @@ func parse(viewBox: String) throws -> Rectangle {
         width: dimensions[2],
         height: dimensions[3]
     )
+}
+
+func ~= <T: Equatable, S: Sequence> (array: S, value: T) -> Bool
+    where S.Iterator.Element == T
+{
+    return array.contains(value)
 }

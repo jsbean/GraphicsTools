@@ -11,17 +11,6 @@ import Collections
 import GeometryTools
 import PathTools
 
-// Map names to shape types which can be initialized by an svg element, and can
-// be represented as `Path` values.
-internal let shapesByName: [String: (SVGInitializable & PathRepresentable).Type] = [
-    "line": Line.Segment.self,
-    "polyline": Polyline.self,
-    "rect": Rectangle.self,
-    "circle": Circle.self,
-    "ellipse": Ellipse.self,
-    "polygon": Polygon.self
-]
-
 extension Path {
     
     static func makePath(svgElement: SVGElement) throws -> Path {
@@ -32,7 +21,7 @@ extension Path {
             return try polybezier(svgElement: svgElement)
             
         // Parse default shape types
-        case _ where shapesByName.keys.contains(svgElement.name):
+        case _ where SVG.shapesByName.keys.contains(svgElement.name):
             return try shape(svgElement: svgElement)
             
         // Non-path data!
@@ -45,7 +34,7 @@ extension Path {
 func shape(svgElement: SVGElement) throws -> Path {
     
     guard
-        let path = try shapesByName[svgElement.name]?.init(svgElement: svgElement).path
+        let path = try SVG.shapesByName[svgElement.name]?.init(svgElement: svgElement).path
     else {
         throw SVG.Parser.Error.illFormedPath(svgElement)
     }
