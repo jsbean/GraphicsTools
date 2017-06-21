@@ -66,20 +66,33 @@ private func polybezier(svgElement: SVGElement) throws -> Path {
     return Path(pathElements: pathElements)
 }
 
-let svgCommands = CharacterSet(charactersIn: "MmLlVvHhQqTtCcSsZz")
+private let svgCommands = CharacterSet(charactersIn: "MmLlVvHhQqTtCcSsZz")
 
-func commandStrings(from pathString: String) -> [(String, String)] {
+private func commandStrings(from pathString: String) -> [(String, String)] {
     
     var commands: [String] = []
+    var values: [String] = []
     
-    // FIXME: Refactor
-    let split = pathString.unicodeScalars.split { char in
-        if svgCommands.contains(char) {
-            commands.append(String(char))
-            return true
+    var commandStart: Int?
+    for (s,scalar) in pathString.unicodeScalars.enumerated() {
+        switch scalar {
+        case svgCommands:
+            commands.append(String(scalar))
+            if let commandStart = commandStart {
+                values.append(pathString[commandStart ..< s])
+            }
+            commandStart = s + 1
+        default:
+            break
         }
-        return false
     }
-    let values = split.map(String.init).filter { $0 != "" }
-    return zip(commands, values).map { $0 }
+
+    return zip(commands, values.filter { $0 != "" }).map { $0 }
+}
+
+/// - TODO: Move to `dn-m/Collections`.
+public func ~= <T: Equatable, S: SetAlgebra> (array: S, value: T) -> Bool
+    where S.Element == T
+{
+    return array.contains(value)
 }
