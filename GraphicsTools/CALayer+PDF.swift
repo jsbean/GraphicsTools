@@ -17,17 +17,16 @@ extension CALayer {
     public func renderToPDF(name: String) {
 
         let margin: CGFloat = 20
+        let path = "/Users/BEAN/\(name).pdf"
+        
+        let pageFrame = CGRect(
+            x: 0,
+            y: 0,
+            width: bounds.width + 2 * margin,
+            height: bounds.height + 2 * margin
+        )
         
         #if os(iOS)
-            
-            let path = "/Users/BEAN/\(name).pdf"
-            
-            let pageFrame = CGRect(
-                x: 0,
-                y: 0,
-                width: bounds.width + 2 * margin,
-                height: bounds.height + 2 * margin
-            )
             
             UIGraphicsBeginPDFContextToFile(path, pageFrame, nil)
             UIGraphicsBeginPDFPage()
@@ -37,8 +36,11 @@ extension CALayer {
             UIGraphicsEndPDFContext()
         
         #elseif os(OSX)
+         
             
             print("osx")
+            
+            
         
         #endif
     }

@@ -1,1 +1,4 @@
+github "dn-m/Collections" "leaf-branch-types"
+github "dn-m/GeometryTools"
 github "dn-m/PathTools"
+github "jsbean/SWXMLHash"

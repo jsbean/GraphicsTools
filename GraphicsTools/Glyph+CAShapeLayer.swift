@@ -1,5 +1,5 @@
 //
-//  Shape+CAShapeLayer.swift
+//  Glyph+CAShapeLayer.swift
 //  GraphicsTools
 //
 //  Created by James Bean on 6/5/17.
@@ -10,9 +10,12 @@ import QuartzCore
 
 public extension CAShapeLayer {
     
-    public convenience init(_ glyph: Glyph) {
+    public convenience init <G: GlyphProtocol> (_ glyph: G) {
         
-        self.init()
+        self.init(glyph.path)
+        
+        // frame
+        frame = CGRect(glyph.frame)
         
         // fill
         fillColor = glyph.fill.color.cgColor
@@ -35,7 +38,7 @@ public extension CAShapeLayer {
     }
 }
 
-private extension Glyph.Fill.Rule {
+internal extension Fill.Rule {
     
     var cgFillRule: String {
         switch self {
@@ -47,7 +50,7 @@ private extension Glyph.Fill.Rule {
     }
 }
 
-private extension Glyph.Stroke.Cap {
+internal extension Stroke.Cap {
     
     var cgCap: String {
         switch self {
@@ -61,7 +64,7 @@ private extension Glyph.Stroke.Cap {
     }
 }
 
-private extension Glyph.Stroke.Join {
+internal extension Stroke.Join {
     
     var cgJoin: String {
         switch self {

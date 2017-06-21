@@ -57,7 +57,7 @@ class TextTests: XCTestCase {
 //        layer.renderToPDF(name: "textByHeight")
 //    }
     
-    func testTextConstrainedForNumbersAndUpperCase() {
+    func DISABLED_testTextConstrainedForNumbersAndUpperCase() {
 
         #if os(iOS)
             func printFonts() {
