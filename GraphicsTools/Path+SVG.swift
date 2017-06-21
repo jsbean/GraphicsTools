@@ -89,10 +89,3 @@ private func commandStrings(from pathString: String) -> [(String, String)] {
 
     return zip(commands, values).map { $0 }
 }
-
-/// - TODO: Move to `dn-m/Collections`.
-public func ~= <T: Equatable, S: SetAlgebra> (array: S, value: T) -> Bool
-    where S.Element == T
-{
-    return array.contains(value)
-}

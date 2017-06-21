@@ -141,10 +141,3 @@ func parse(viewBox: String) throws -> Rectangle {
         height: dimensions[3]
     )
 }
-
-/// - TODO: Move to `dn-m/Collections`.
-public func ~= <T: Equatable, S: Sequence> (array: S, value: T) -> Bool
-    where S.Iterator.Element == T
-{
-    return array.contains(value)
-}
