@@ -32,18 +32,16 @@ extension Path: SVGInitializable {
     }
 }
 
-func shape(svgElement: SVGElement) throws -> Path {
+private func shape(svgElement: SVGElement) throws -> Path {
     
-    guard
-        let path = try SVG.shapesByName[svgElement.name]?.init(svgElement: svgElement).path
-    else {
+    guard let shape = SVG.shapesByName[svgElement.name] else {
         throw SVG.Parser.Error.illFormedPath(svgElement)
     }
     
-    return path
+    return try shape.init(svgElement: svgElement).path
 }
 
-func polybezier(svgElement: SVGElement) throws -> Path {
+private func polybezier(svgElement: SVGElement) throws -> Path {
     
     guard let pathData: String = svgElement.value(ofAttribute: "d") else {
         throw SVG.Parser.Error.illFormedPath(svgElement)
