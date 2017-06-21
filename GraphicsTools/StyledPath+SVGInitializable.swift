@@ -13,7 +13,7 @@ extension StyledPath {
     
     init(svgElement: SVGElement) throws {
         self.init(
-            path: try Path.makePath(svgElement: svgElement),
+            path: try Path(svgElement: svgElement),
             styling: try Styling(svgElement: svgElement)
         )
     }

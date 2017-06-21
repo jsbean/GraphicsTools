@@ -11,11 +11,6 @@ import GeometryTools
 import PathTools
 import QuartzCore
 
-// FIXME: Use extension StyledPath.Composite { } when / if Swift allows it.
-extension Tree where Branch == StyledPath.Group, Leaf == StyledPath {
-    
-}
-
 extension StyledPath.Group {
     
     init(_ svgGroup: SVG.Group) {

@@ -14,4 +14,3 @@ import PathTools
 protocol SVGInitializable {
     init(svgElement: SVGElement) throws
 }
-

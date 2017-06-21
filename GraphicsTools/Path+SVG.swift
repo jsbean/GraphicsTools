@@ -11,18 +11,19 @@ import Collections
 import GeometryTools
 import PathTools
 
-extension Path {
+extension Path: SVGInitializable {
     
-    static func makePath(svgElement: SVGElement) throws -> Path {
+    init(svgElement: SVGElement) throws {
+        
         switch svgElement.name {
             
         // Parse path data for lines, quad curves, and cubic curves.
         case "path":
-            return try polybezier(svgElement: svgElement)
+            self = try polybezier(svgElement: svgElement)
             
         // Parse default shape types
-        case _ where SVG.shapesByName.keys.contains(svgElement.name):
-            return try shape(svgElement: svgElement)
+        case SVG.shapesByName.keys:
+            self = try shape(svgElement: svgElement)
             
         // Non-path data!
         default:
@@ -94,7 +95,7 @@ func commandStrings(from pathString: String) -> [(String, String)] {
     
     var commands: [String] = []
     
-    // FIXME: Refactor.
+    // FIXME: Refactor
     let split = pathString.unicodeScalars.split { char in
         if svgCommands.contains(char) {
             commands.append(String(char))

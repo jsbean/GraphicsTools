@@ -70,6 +70,10 @@ extension SVG {
                 return .branch(group, try svgData.children.flatMap(traverse))
             }
             
+            func path(svgData: XMLIndexer) throws -> SVG.Structure {
+                return .leaf(try StyledPath(svgElement: svgData.element!))
+            }
+            
             func traverse(_ svgData: XMLIndexer) throws -> SVG.Structure? {
                 
                 guard let element = svgData.element else {
@@ -85,7 +89,7 @@ extension SVG {
                     return try group(svgData: svgData)
                     
                 case shapesByName.keys, "path":
-                    return .leaf(try StyledPath(svgElement: element))
+                    return try path(svgData: svgData)
                 
                 default:
                     print("Unsupported SVG element: \(element.name)")
@@ -138,7 +142,8 @@ func parse(viewBox: String) throws -> Rectangle {
     )
 }
 
-func ~= <T: Equatable, S: Sequence> (array: S, value: T) -> Bool
+/// - TODO: Move to `dn-m/Collections`.
+public func ~= <T: Equatable, S: Sequence> (array: S, value: T) -> Bool
     where S.Iterator.Element == T
 {
     return array.contains(value)
