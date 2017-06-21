@@ -87,7 +87,7 @@ private func commandStrings(from pathString: String) -> [(String, String)] {
         }
     }
 
-    return zip(commands, values.filter { $0 != "" }).map { $0 }
+    return zip(commands, values).map { $0 }
 }
 
 /// - TODO: Move to `dn-m/Collections`.
