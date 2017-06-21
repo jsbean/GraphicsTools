@@ -16,7 +16,7 @@ public typealias SVGElement = SWXMLHash.XMLElement
 extension SVG {
     
     // FIXME: Make private. Expose only `SVG.init`
-    public final class Parser {
+    internal final class Parser {
         
         public enum Error: Swift.Error {
             case illFormedIndexer(XMLIndexer)
@@ -85,16 +85,14 @@ extension SVG {
                 }
             }
             
-            guard let elements = try traverse(svg) else {
+            guard let structure = try traverse(svg) else {
                 throw Error.illFormedIndexer(svg)
             }
             
-            let viewBox = try svgInformation(from: svg.element!)
-            
-            return SVG(viewBox: viewBox, structure: elements)
+            return SVG(viewBox: try viewBox(from: svg.element!), structure: structure)
         }
         
-        func svgInformation(from svgElement: XMLElement) throws -> Rectangle {
+        func viewBox(from svgElement: XMLElement) throws -> Rectangle {
             
             guard svgElement.name == "svg" else {
                 throw Error.illFormedElement(svgElement)

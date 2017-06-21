@@ -178,31 +178,17 @@ extension PathElement {
         case "s":
             
             // The spec says to make assumptions
-            guard let previous = previous, let ref = previous.point else {
+            guard
+                let previous = previous,
+                let ref = previous.point,
+                let control1 = smoothControlPoint(for: previous)
+            else {
                 return nil
             }
             
-            switch previous {
-                
-            case let .quadCurve(end, control):
-                let segment = Line.Segment(start: control, end: end)
-                let ray = Line.Ray(segment)
-                let control1 = ray.point(at: segment.length * 2)
-                let control2 = Point(x: numbers[0], y: numbers[1]) + ref
-                let destination = Point(x: numbers[2], y: numbers[3]) + ref
-                self = .curve(destination, control1, control2)
-                
-            case let .curve(end, _, control2):
-                let segment = Line.Segment(start: control2, end: end)
-                let ray = Line.Ray(segment)
-                let destination = Point(x: numbers[2], y: numbers[3]) + ref
-                let control1 = ray.point(at: 2 * segment.length)
-                let control2 = Point(x: numbers[0], y: numbers[1]) + ref
-                self = .curve(destination, control1, control2)
-                
-            default:
-                return nil
-            }
+            let control2 = Point(x: numbers[0], y: numbers[1]) + ref
+            let destination = Point(x: numbers[2], y: numbers[3]) + ref
+            self = .curve(destination, control1, control2)
             
         // absolute close
         case "Z", "z":
@@ -211,5 +197,23 @@ extension PathElement {
         default:
             return nil
         }
+    }
+}
+
+func smoothControlPoint(for pathElement: PathElement) -> Point? {
+    
+    func pointReflected(from control: Point, over end: Point) -> Point {
+        let segment = Line.Segment(start: control, end: end)
+        let ray = Line.Ray(segment)
+        return ray.point(at: segment.length * 2)
+    }
+    
+    switch pathElement {
+    case let .quadCurve(end, control):
+        return pointReflected(from: control, over: end)
+    case let .curve(end, _, control2):
+        return pointReflected(from: control2, over: end)
+    default:
+        return nil
     }
 }
