@@ -148,31 +148,16 @@ extension PathElement {
         case "S":
             
             // The spec says to make assumptions
-            guard let previous = previous else {
+            guard
+                let previous = previous,
+                let control1 = smoothControlPoint(for: previous)
+            else {
                 return nil
             }
             
-            switch previous {
-                
-            case let .quadCurve(end, control):
-                let segment = Line.Segment(start: control, end: end)
-                let ray = Line.Ray(segment)
-                let control1 = ray.point(at: segment.length * 2)
-                let control2 = Point(x: numbers[0], y: numbers[1])
-                let destination = Point(x: numbers[2], y: numbers[3])
-                self = .curve(destination, control1, control2)
-                
-            case let .curve(end, _, control2):
-                let segment = Line.Segment(start: control2, end: end)
-                let ray = Line.Ray(segment)
-                let control1 = ray.point(at: segment.length * 2)
-                let control2 = Point(x: numbers[0], y: numbers[1])
-                let destination = Point(x: numbers[2], y: numbers[3])
-                self = .curve(destination, control1, control2)
-                
-            default:
-                return nil
-            }
+            let control2 = Point(x: numbers[0], y: numbers[1])
+            let destination = Point(x: numbers[2], y: numbers[3])
+            self = .curve(destination, control1, control2)
             
         // relative cubic smooth
         case "s":
