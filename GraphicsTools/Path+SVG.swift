@@ -66,27 +66,6 @@ private func polybezier(svgElement: SVGElement) throws -> Path {
     return Path(pathElements: pathElements)
 }
 
-extension Path {
-    
-    init?(svgCommands: [(String, String)]) {
-        
-        let elements: [PathElement] = svgCommands.reduce([]) { accum, cur in
-            
-            let (command, values) = cur
-            
-            let element = PathElement(
-                svgCommand: command,
-                svgValues: values,
-                previous: accum.last
-            )
-            
-            return accum + element
-        }
-        
-        self.init(pathElements: elements)
-    }
-}
-
 let svgCommands = CharacterSet(charactersIn: "MmLlVvHhQqTtCcSsZz")
 
 func commandStrings(from pathString: String) -> [(String, String)] {
