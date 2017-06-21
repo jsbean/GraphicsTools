@@ -9,7 +9,7 @@
 import GeometryTools
 import PathTools
 
-enum Coordinate {
+enum Coordinates {
     case absolute
     case relative
 }
@@ -18,147 +18,169 @@ extension PathElement {
     
     public init?(svgCommand: String, svgValues: String, previous: PathElement?) {
         
-        let numbers = values(from: svgValues)
+        func pathElement(
+            using builder: PathElementBuilder,
+            in coordinates: Coordinates
+        ) -> PathElement
+        {
+            return builder(values(from: svgValues), coordinates, previous)
+        }
         
         switch svgCommand {
-            
-        // absolute move to
-        case "M":
-            self = .move(Point(x: numbers[0], y: numbers[1]))
-            
-        // relative move to
-        case "m":
-            guard let ref = previous?.point else { return nil }
-            self = .move(Point(x: numbers[0], y: numbers[1]) + ref)
-            
-        // absolute line to
-        case "L":
-            self = .line(Point(x: numbers[0], y: numbers[1]))
-            
-        // relative line to
-        case "l":
-            guard let ref = previous?.point else { return nil }
-            self = .line(Point(x: numbers[0], y: numbers[1]) + ref)
-            
-        // absolute line vertical
-        case "V":
-            guard let ref = previous?.point else { return nil }
-            self = .line(Point(x: ref.x, y: numbers[0]))
-            
-        // relative line vertical
-        case "v":
-            guard let ref = previous?.point else { return nil }
-            self = .line(Point(x: ref.x, y: numbers[0] + ref.y))
-            
-        // absolute line horizontal
-        case "H":
-            guard let ref = previous?.point else { return nil }
-            self = .line(Point(x: numbers[0], y: ref.y))
-            
-        case "h": // relative line horizontal
-            guard let ref = previous?.point else { return nil }
-            self = .line(Point(x: numbers[0] + ref.x, y: ref.y))
-            
-        // absolute quad broken
-        case "Q":
-            // x1 y1 x y
-            let control = Point(x: numbers[0], y: numbers[1])
-            let destination = Point(x: numbers[2], y: numbers[3])
-            self = .quadCurve(destination, control)
-            
-        // relative quad broken
-        case "q":
-            // x1 y1 x y
-            guard let ref = previous?.point else { return nil }
-            let control = Point(x: numbers[0], y: numbers[1]) + ref
-            let destination = Point(x: numbers[2], y: numbers[3]) + ref
-            self = .quadCurve(destination, control)
-            
-        // absolute quad smooth
-        case "T":
-            
-            guard
-                let previous = previous,
-                let control = smoothControlPoint(for: previous)
-            else {
-                return nil
-            }
-            
-            let destination = Point(x: numbers[0], y: numbers[1])
-            self = .quadCurve(destination, control)
-            
-        // relative quad smooth
-        case "t":
-            
-            guard
-                let previous = previous,
-                let ref = previous.point,
-                let control = smoothControlPoint(for: previous)
-            else {
-                return nil
-            }
-            
-            let destination = Point(x: numbers[0], y: numbers[1]) + ref
-            self = .quadCurve(destination, control)
-            
-        // absolute cubic broken
-        case "C":
-            let control1 = Point(x: numbers[0], y: numbers[1])
-            let control2 = Point(x: numbers[2], y: numbers[3])
-            let destination = Point(x: numbers[4], y: numbers[5])
-            self = .curve(destination, control1, control2)
-            
-        // relative cubic broken
-        case "c":
-            
-            guard let ref = previous?.point else {
-                return nil
-            }
-
-            let control1 = Point(x: numbers[0], y: numbers[1]) + ref
-            let control2 = Point(x: numbers[2], y: numbers[3]) + ref
-            let destination = Point(x: numbers[4], y: numbers[5]) + ref
-            self = .curve(destination, control1, control2)
-            
-        // absolute cubic smooth
-        case "S":
-            
-            // The spec says to make assumptions
-            guard
-                let previous = previous,
-                let control1 = smoothControlPoint(for: previous)
-            else {
-                return nil
-            }
-            
-            let control2 = Point(x: numbers[0], y: numbers[1])
-            let destination = Point(x: numbers[2], y: numbers[3])
-            self = .curve(destination, control1, control2)
-            
-        // relative cubic smooth
-        case "s":
-            
-            // The spec says to make assumptions
-            guard
-                let previous = previous,
-                let ref = previous.point,
-                let control1 = smoothControlPoint(for: previous)
-            else {
-                return nil
-            }
-            
-            let control2 = Point(x: numbers[0], y: numbers[1]) + ref
-            let destination = Point(x: numbers[2], y: numbers[3]) + ref
-            self = .curve(destination, control1, control2)
-            
-        // absolute close
         case "Z", "z":
             self = .close
-            
+        case builderAndCoordinatesByCommand.keys:
+            let (builder, coordinates) = builderAndCoordinatesByCommand[svgCommand]!
+            self = pathElement(using: builder, in: coordinates)
         default:
             return nil
         }
     }
+}
+
+private typealias PathElementBuilder = ([Double], Coordinates, PathElement?) -> PathElement
+
+private let builderAndCoordinatesByCommand: [String: (PathElementBuilder, Coordinates)] = [
+    "M": (move, .absolute),
+    "m": (move, .relative),
+    "L": (line, .absolute),
+    "l": (line, .relative),
+    "V": (vertical, .absolute),
+    "v": (vertical, .relative),
+    "H": (horizontal, .absolute),
+    "h": (horizontal, .relative),
+    "Q": (quadraticBroken, .absolute),
+    "q": (quadraticBroken, .relative),
+    "T": (quadraticSmooth, .absolute),
+    "t": (quadraticSmooth, .relative),
+    "C": (cubicBroken, .absolute),
+    "c": (cubicBroken, .relative),
+    "S": (cubicSmooth, .absolute),
+    "s": (cubicSmooth, .relative),
+    "Z": (close, .absolute),
+    "z": (close, .relative)
+]
+
+// MARK: - Command builders
+
+private func move(values: [Double], coordinates: Coordinates, previous: PathElement?)
+    -> PathElement
+{
+    let ref = coordinates == .relative ? previous?.point ?? Point() : Point()
+    return .move(Point(x: values[0], y: values[1]) + ref)
+}
+
+private func line(values: [Double], coordinates: Coordinates, previous: PathElement?)
+    -> PathElement
+{
+    let ref = coordinates == .relative ? previous?.point ?? Point() : Point()
+    return .line(Point(x: values[0], y: values[1]) + ref)
+}
+
+private func vertical(values: [Double], coordinates: Coordinates, previous: PathElement?)
+    -> PathElement
+{
+    let prev = previous?.point ?? Point()
+    let ref = coordinates == .relative ? prev : Point()
+    return .line(Point(x: prev.x, y: values[0] + ref.y))
+}
+
+private func horizontal(values: [Double], coordinates: Coordinates, previous: PathElement?)
+    -> PathElement
+{
+    let prev = previous?.point ?? Point()
+    let ref = coordinates == .relative ? prev : Point()
+    return .line(Point(x: values[0] + ref.x, y: prev.y))
+}
+
+private func cubicSmooth(values: [Double], in coordinates: Coordinates, previous: PathElement?)
+    -> PathElement
+{
+    return cubic(values: values, in: coordinates, smooth: true, previous: previous)
+}
+
+private func cubicBroken(values: [Double], in coordinates: Coordinates, previous: PathElement?)
+    -> PathElement
+{
+    return cubic(values: values, in: coordinates, smooth: false, previous: previous)
+}
+
+private func cubic(
+    values: [Double],
+    in coordinates: Coordinates,
+    smooth: Bool = false,
+    previous: PathElement?
+) -> PathElement
+{
+ 
+    let ref = referencePoint(in: coordinates, from: previous)
+    let control1: Point
+    let control2: Point
+    let destination: Point
+    
+    if smooth {
+        control1 = smoothControlPoint(for: previous!)!
+        control2 = Point(x: values[0], y: values[1]) + ref
+        destination = Point(x: values[2], y: values[3]) + ref
+    } else {
+        control1 = Point(x: values[0], y: values[1]) + ref
+        control2 = Point(x: values[2], y: values[3]) + ref
+        destination = Point(x: values[4], y: values[5]) + ref
+    }
+
+    return .curve(destination, control1, control2)
+}
+
+private func quadraticSmooth(
+    values: [Double],
+    in coordinates: Coordinates,
+    previous: PathElement?
+) -> PathElement
+{
+    return quadratic(values: values, in: coordinates, smooth: true, previous: previous)
+}
+
+private func quadraticBroken(
+    values: [Double],
+    in coordinates: Coordinates,
+    previous: PathElement?
+) -> PathElement
+{
+    return quadratic(values: values, in: coordinates, smooth: false, previous: previous)
+}
+
+func quadratic(
+    values: [Double],
+    in coordinates: Coordinates,
+    smooth: Bool = false,
+    previous: PathElement?
+) -> PathElement
+{
+    let ref = referencePoint(in: coordinates, from: previous)
+    let control: Point
+    let destination: Point
+
+    if smooth {
+        control = smoothControlPoint(for: previous!)!
+        destination = Point(x: values[0], y: values[1]) + ref
+    } else {
+        control = Point(x: values[0], y: values[1]) + ref
+        destination = Point(x: values[2], y: values[3]) + ref
+    }
+    
+    return .quadCurve(destination, control)
+}
+
+func close(values: [Double], in coordinates: Coordinates, previous: PathElement?)
+    -> PathElement
+{
+    return .close
+}
+
+// MARK: - Helpers
+
+func referencePoint(in coordinates: Coordinates, from previous: PathElement?) -> Point {
+    return coordinates == .relative ? previous?.point ?? Point() : Point()
 }
 
 func smoothControlPoint(for pathElement: PathElement) -> Point? {
