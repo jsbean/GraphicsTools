@@ -34,9 +34,9 @@ extension GraphicsContainerType where Self: CALayer {
     
     /// Perform the build phase.
     public func build() {
-        frame = makeFrame()
         createComponents()
         commitComponents()
+        frame = makeFrame()
     }
     
     /// Commit the components as sublayers.
