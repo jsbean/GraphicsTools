@@ -1,5 +1,5 @@
 //
-//  Renderer.swift
+//  Renderable.swift
 //  GraphicsTools
 //
 //  Created by James Bean on 1/10/17.
@@ -7,7 +7,7 @@
 //
 
 /// Renders its information onto the given `layer` with a given `configuration`.
-public protocol Renderer {
+public protocol Renderable {
     
     associatedtype Configuration
     associatedtype GraphicalContext
