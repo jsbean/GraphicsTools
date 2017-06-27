@@ -6,17 +6,10 @@
 //
 //
 
-import Collections
 import GeometryTools
 import PathTools
 
 public struct StyledPath {
-    
-    public struct Group {
-        let identifier: String
-    }
-    
-    public typealias Composite = Tree<Group,StyledPath>
     
     public let frame: Rectangle
     public let path: Path

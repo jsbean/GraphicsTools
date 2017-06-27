@@ -9,9 +9,6 @@
 /// Type which can be configured by its own `Configuration` type.
 public protocol Renderable {
     
-    /// Type-specific configuration.
-    associatedtype Configuration
-    
-    /// Converts type into a `ConfiguredRenderable`, ready to be converted into a `StyledPath`.
-    func render(with configuration: Configuration) -> ConfiguredRenderable
+    /// `StyledPath.Composite`-representation of `Renderable`-conforming type.
+    var rendered: StyledPath.Composite { get }
 }

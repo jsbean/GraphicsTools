@@ -35,6 +35,8 @@
 		07305A571D0F47EE006E4085 /* PathMaking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07305A4E1D0F47EE006E4085 /* PathMaking.swift */; };
 		07305A581D0F47EE006E4085 /* ShapeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07305A4F1D0F47EE006E4085 /* ShapeType.swift */; };
 		07305A591D0F47EE006E4085 /* ShapeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07305A4F1D0F47EE006E4085 /* ShapeType.swift */; };
+		073A6F101F02A90700AEFA5D /* RenderableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A6F0F1F02A90700AEFA5D /* RenderableTests.swift */; };
+		073A6F111F02A90700AEFA5D /* RenderableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A6F0F1F02A90700AEFA5D /* RenderableTests.swift */; };
 		0741EE521EE562E70002769D /* Glyph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0741EE511EE562E70002769D /* Glyph.swift */; };
 		0741EE531EE562E70002769D /* Glyph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0741EE511EE562E70002769D /* Glyph.swift */; };
 		0741EE561EE566730002769D /* Glyph+CAShapeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0741EE551EE566730002769D /* Glyph+CAShapeLayer.swift */; };
@@ -101,6 +103,8 @@
 		076485161EF818830095FBB5 /* fill_stroke_opacity.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 076485141EF818750095FBB5 /* fill_stroke_opacity.svg */; };
 		076485181EF839DB0095FBB5 /* colors_opacity.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 076485171EF839D40095FBB5 /* colors_opacity.svg */; };
 		076485191EF839DF0095FBB5 /* colors_opacity.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 076485171EF839D40095FBB5 /* colors_opacity.svg */; };
+		0767156A1F029F980073AA6F /* StyledPath.Composite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076715691F029F980073AA6F /* StyledPath.Composite.swift */; };
+		0767156B1F029F980073AA6F /* StyledPath.Composite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076715691F029F980073AA6F /* StyledPath.Composite.swift */; };
 		076D04611E2D1CB00023ED96 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D04601E2D1CB00023ED96 /* Color.swift */; };
 		076D04621E2D1CB00023ED96 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D04601E2D1CB00023ED96 /* Color.swift */; };
 		076D04641E2D22C50023ED96 /* Color+CGColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D04631E2D22C50023ED96 /* Color+CGColor.swift */; };
@@ -151,8 +155,6 @@
 		07D3A0F71EF58AA200641D15 /* SVGInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D3A0F51EF58AA200641D15 /* SVGInitializable.swift */; };
 		07E8F2221F02939800493E47 /* Renderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E8F2211F02939800493E47 /* Renderable.swift */; };
 		07E8F2231F02939800493E47 /* Renderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E8F2211F02939800493E47 /* Renderable.swift */; };
-		07E8F2261F0294FE00493E47 /* ConfiguredRenderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E8F2251F0294FE00493E47 /* ConfiguredRenderable.swift */; };
-		07E8F2271F0294FE00493E47 /* ConfiguredRenderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E8F2251F0294FE00493E47 /* ConfiguredRenderable.swift */; };
 		07E8F2291F02951900493E47 /* CompositeRenderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E8F2281F02951900493E47 /* CompositeRenderable.swift */; };
 		07E8F22A1F02951900493E47 /* CompositeRenderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E8F2281F02951900493E47 /* CompositeRenderable.swift */; };
 		0C56CCD3163F739244E75E4D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBE41F31AC5943193DF8009F /* Cocoa.framework */; };
@@ -270,6 +272,7 @@
 		07305A4D1D0F47EE006E4085 /* FrameMaking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FrameMaking.swift; path = GraphicsTools/FrameMaking.swift; sourceTree = "<group>"; };
 		07305A4E1D0F47EE006E4085 /* PathMaking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PathMaking.swift; path = GraphicsTools/PathMaking.swift; sourceTree = "<group>"; };
 		07305A4F1D0F47EE006E4085 /* ShapeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShapeType.swift; path = GraphicsTools/ShapeType.swift; sourceTree = "<group>"; };
+		073A6F0F1F02A90700AEFA5D /* RenderableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RenderableTests.swift; path = GraphicsToolsTests/RenderableTests.swift; sourceTree = "<group>"; };
 		0741EE511EE562E70002769D /* Glyph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Glyph.swift; path = GraphicsTools/Glyph.swift; sourceTree = "<group>"; };
 		0741EE551EE566730002769D /* Glyph+CAShapeLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Glyph+CAShapeLayer.swift"; path = "GraphicsTools/Glyph+CAShapeLayer.swift"; sourceTree = "<group>"; };
 		0744B4BD1EF01273003F9B3A /* Text.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Text.swift; path = GraphicsTools/Text.swift; sourceTree = "<group>"; };
@@ -303,6 +306,7 @@
 		076485111EF817870095FBB5 /* Styling+SVGInitializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Styling+SVGInitializable.swift"; path = "GraphicsTools/Styling+SVGInitializable.swift"; sourceTree = "<group>"; };
 		076485141EF818750095FBB5 /* fill_stroke_opacity.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = fill_stroke_opacity.svg; sourceTree = "<group>"; };
 		076485171EF839D40095FBB5 /* colors_opacity.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = colors_opacity.svg; sourceTree = "<group>"; };
+		076715691F029F980073AA6F /* StyledPath.Composite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StyledPath.Composite.swift; path = GraphicsTools/StyledPath.Composite.swift; sourceTree = "<group>"; };
 		076D04601E2D1CB00023ED96 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Color.swift; path = GraphicsTools/Color.swift; sourceTree = "<group>"; };
 		076D04631E2D22C50023ED96 /* Color+CGColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Color+CGColor.swift"; path = "GraphicsTools/Color+CGColor.swift"; sourceTree = "<group>"; };
 		076D04701E2D2D740023ED96 /* LayoutNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LayoutNode.swift; path = GraphicsTools/LayoutNode.swift; sourceTree = "<group>"; };
@@ -328,7 +332,6 @@
 		07D3A0D61EF548FB00641D15 /* multiple_objects.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = multiple_objects.svg; sourceTree = "<group>"; };
 		07D3A0F51EF58AA200641D15 /* SVGInitializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SVGInitializable.swift; path = GraphicsTools/SVGInitializable.swift; sourceTree = "<group>"; };
 		07E8F2211F02939800493E47 /* Renderable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Renderable.swift; path = GraphicsTools/Renderable.swift; sourceTree = "<group>"; };
-		07E8F2251F0294FE00493E47 /* ConfiguredRenderable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConfiguredRenderable.swift; path = GraphicsTools/ConfiguredRenderable.swift; sourceTree = "<group>"; };
 		07E8F2281F02951900493E47 /* CompositeRenderable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompositeRenderable.swift; path = GraphicsTools/CompositeRenderable.swift; sourceTree = "<group>"; };
 		1AC915E6D64AA1A2072FAA9D /* GraphicsTools macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GraphicsTools macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C5A07620DC1BE344B2CC5D3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = GraphicsToolsTests/Info.plist; sourceTree = "<group>"; };
@@ -501,7 +504,6 @@
 			isa = PBXGroup;
 			children = (
 				07E8F2211F02939800493E47 /* Renderable.swift */,
-				07E8F2251F0294FE00493E47 /* ConfiguredRenderable.swift */,
 				07E8F2281F02951900493E47 /* CompositeRenderable.swift */,
 			);
 			name = Renderable;
@@ -529,6 +531,7 @@
 				0744B4C01EF01344003F9B3A /* Alignment.swift */,
 				0741EE511EE562E70002769D /* Glyph.swift */,
 				079E69481EF5DF8F0093A7ED /* StyledPath.swift */,
+				076715691F029F980073AA6F /* StyledPath.Composite.swift */,
 				079E69451EF5DF240093A7ED /* Styling.swift */,
 				0789227C1EF2E3030037C572 /* Fill.swift */,
 				0789227F1EF2E3130037C572 /* Stoke.swift */,
@@ -570,6 +573,7 @@
 				0750C4441EF05763005840B8 /* TextBoxTests.swift */,
 				07ABA3EA1EE1C7FA00190BFC /* PDFTests.swift */,
 				07600F901EE46F160049E8B2 /* GlyphTests.swift */,
+				073A6F0F1F02A90700AEFA5D /* RenderableTests.swift */,
 				07B8E2B81EF442AD00C9EF18 /* SVGTests.swift */,
 				076484FE1EF812E20095FBB5 /* ColorTests.swift */,
 			);
@@ -849,7 +853,7 @@
 				07ABA3F01EE1E57D00190BFC /* TestFrame.swift in Sources */,
 				0741EE521EE562E70002769D /* Glyph.swift in Sources */,
 				076485031EF8140B0095FBB5 /* Line+SVG.swift in Sources */,
-				07E8F2261F0294FE00493E47 /* ConfiguredRenderable.swift in Sources */,
+				0767156A1F029F980073AA6F /* StyledPath.Composite.swift in Sources */,
 				076485061EF814320095FBB5 /* Polyline+SVG.swift in Sources */,
 				07D3A0F61EF58AA200641D15 /* SVGInitializable.swift in Sources */,
 				0744B4C11EF01344003F9B3A /* Alignment.swift in Sources */,
@@ -906,7 +910,7 @@
 				07ABA3F11EE1E57D00190BFC /* TestFrame.swift in Sources */,
 				0741EE531EE562E70002769D /* Glyph.swift in Sources */,
 				076485041EF8140B0095FBB5 /* Line+SVG.swift in Sources */,
-				07E8F2271F0294FE00493E47 /* ConfiguredRenderable.swift in Sources */,
+				0767156B1F029F980073AA6F /* StyledPath.Composite.swift in Sources */,
 				076485071EF814320095FBB5 /* Polyline+SVG.swift in Sources */,
 				07D3A0F71EF58AA200641D15 /* SVGInitializable.swift in Sources */,
 				0744B4C21EF01344003F9B3A /* Alignment.swift in Sources */,
@@ -945,6 +949,7 @@
 				07B8E2BA1EF442AD00C9EF18 /* SVGTests.swift in Sources */,
 				076485001EF812E20095FBB5 /* ColorTests.swift in Sources */,
 				076D04751E2D2F060023ED96 /* LayoutNodeTests.swift in Sources */,
+				073A6F111F02A90700AEFA5D /* RenderableTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -959,6 +964,7 @@
 				07B8E2B91EF442AD00C9EF18 /* SVGTests.swift in Sources */,
 				076484FF1EF812E20095FBB5 /* ColorTests.swift in Sources */,
 				076D04741E2D2F050023ED96 /* LayoutNodeTests.swift in Sources */,
+				073A6F101F02A90700AEFA5D /* RenderableTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
