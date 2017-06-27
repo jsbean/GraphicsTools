@@ -149,6 +149,12 @@
 		07D3A0DC1EF5491B00641D15 /* multiple_objects.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 07D3A0D61EF548FB00641D15 /* multiple_objects.svg */; };
 		07D3A0F61EF58AA200641D15 /* SVGInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D3A0F51EF58AA200641D15 /* SVGInitializable.swift */; };
 		07D3A0F71EF58AA200641D15 /* SVGInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D3A0F51EF58AA200641D15 /* SVGInitializable.swift */; };
+		07E8F2221F02939800493E47 /* Renderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E8F2211F02939800493E47 /* Renderable.swift */; };
+		07E8F2231F02939800493E47 /* Renderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E8F2211F02939800493E47 /* Renderable.swift */; };
+		07E8F2261F0294FE00493E47 /* ConfiguredRenderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E8F2251F0294FE00493E47 /* ConfiguredRenderable.swift */; };
+		07E8F2271F0294FE00493E47 /* ConfiguredRenderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E8F2251F0294FE00493E47 /* ConfiguredRenderable.swift */; };
+		07E8F2291F02951900493E47 /* CompositeRenderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E8F2281F02951900493E47 /* CompositeRenderable.swift */; };
+		07E8F22A1F02951900493E47 /* CompositeRenderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E8F2281F02951900493E47 /* CompositeRenderable.swift */; };
 		0C56CCD3163F739244E75E4D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBE41F31AC5943193DF8009F /* Cocoa.framework */; };
 		2EA995C2C248A0979BC2E6E1 /* PathTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F32459F613893A329A4CF0DE /* PathTools.framework */; };
 		3EB442612FE008F7E4E588DA /* GraphicsTools.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 55B6B4C4D85417529193D762 /* GraphicsTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -321,6 +327,9 @@
 		07D3A0D51EF548FB00641D15 /* multiple_groups.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = multiple_groups.svg; sourceTree = "<group>"; };
 		07D3A0D61EF548FB00641D15 /* multiple_objects.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = multiple_objects.svg; sourceTree = "<group>"; };
 		07D3A0F51EF58AA200641D15 /* SVGInitializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SVGInitializable.swift; path = GraphicsTools/SVGInitializable.swift; sourceTree = "<group>"; };
+		07E8F2211F02939800493E47 /* Renderable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Renderable.swift; path = GraphicsTools/Renderable.swift; sourceTree = "<group>"; };
+		07E8F2251F0294FE00493E47 /* ConfiguredRenderable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConfiguredRenderable.swift; path = GraphicsTools/ConfiguredRenderable.swift; sourceTree = "<group>"; };
+		07E8F2281F02951900493E47 /* CompositeRenderable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompositeRenderable.swift; path = GraphicsTools/CompositeRenderable.swift; sourceTree = "<group>"; };
 		1AC915E6D64AA1A2072FAA9D /* GraphicsTools macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GraphicsTools macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C5A07620DC1BE344B2CC5D3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = GraphicsToolsTests/Info.plist; sourceTree = "<group>"; };
 		3EE4F42166106014BBC4DD96 /* GraphicsTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GraphicsTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -436,6 +445,19 @@
 			name = StyledPath;
 			sourceTree = "<group>";
 		};
+		076715651F0299190073AA6F /* Old Protocols (to be deprecated) */ = {
+			isa = PBXGroup;
+			children = (
+				07305A4B1D0F47EE006E4085 /* Buildable.swift */,
+				07305A4D1D0F47EE006E4085 /* FrameMaking.swift */,
+				07305A4E1D0F47EE006E4085 /* PathMaking.swift */,
+				070D41621D1030C200C02AC9 /* GraphicsContainerType.swift */,
+				07305A4C1D0F47EE006E4085 /* CompositeShapeType.swift */,
+				07305A4F1D0F47EE006E4085 /* ShapeType.swift */,
+			);
+			name = "Old Protocols (to be deprecated)";
+			sourceTree = "<group>";
+		};
 		076D046F1E2D2CA60023ED96 /* Layout */ = {
 			isa = PBXGroup;
 			children = (
@@ -475,6 +497,16 @@
 			name = SVG;
 			sourceTree = "<group>";
 		};
+		07E8F2241F0294EF00493E47 /* Renderable */ = {
+			isa = PBXGroup;
+			children = (
+				07E8F2211F02939800493E47 /* Renderable.swift */,
+				07E8F2251F0294FE00493E47 /* ConfiguredRenderable.swift */,
+				07E8F2281F02951900493E47 /* CompositeRenderable.swift */,
+			);
+			name = Renderable;
+			sourceTree = "<group>";
+		};
 		28D592D8D4AD3C2DE51F5183 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -491,20 +523,16 @@
 				07ABA3EE1EE1E56600190BFC /* Testing */,
 				07ABA3E61EE1AF7600190BFC /* Output */,
 				076D046F1E2D2CA60023ED96 /* Layout */,
-				07305A4B1D0F47EE006E4085 /* Buildable.swift */,
+				076715651F0299190073AA6F /* Old Protocols (to be deprecated) */,
+				07E8F2241F0294EF00493E47 /* Renderable */,
+				076D04601E2D1CB00023ED96 /* Color.swift */,
 				0744B4C01EF01344003F9B3A /* Alignment.swift */,
 				0741EE511EE562E70002769D /* Glyph.swift */,
 				079E69481EF5DF8F0093A7ED /* StyledPath.swift */,
 				079E69451EF5DF240093A7ED /* Styling.swift */,
 				0789227C1EF2E3030037C572 /* Fill.swift */,
 				0789227F1EF2E3130037C572 /* Stoke.swift */,
-				07305A4D1D0F47EE006E4085 /* FrameMaking.swift */,
-				07305A4E1D0F47EE006E4085 /* PathMaking.swift */,
-				070D41621D1030C200C02AC9 /* GraphicsContainerType.swift */,
-				07305A4C1D0F47EE006E4085 /* CompositeShapeType.swift */,
-				07305A4F1D0F47EE006E4085 /* ShapeType.swift */,
 				0748EEBD1E25816C003F19FD /* Renderer.swift */,
-				076D04601E2D1CB00023ED96 /* Color.swift */,
 				0744B4BD1EF01273003F9B3A /* Text.swift */,
 				0750C43B1EF0546E005840B8 /* TextBox.swift */,
 				0750C43E1EF0549B005840B8 /* Insets.swift */,
@@ -809,8 +837,10 @@
 				079E69461EF5DF240093A7ED /* Styling.swift in Sources */,
 				078922801EF2E3130037C572 /* Stoke.swift in Sources */,
 				0750C4421EF05739005840B8 /* TextBox+CALayer.swift in Sources */,
+				07E8F2291F02951900493E47 /* CompositeRenderable.swift in Sources */,
 				07305A541D0F47EE006E4085 /* FrameMaking.swift in Sources */,
 				076484EA1EF7EAA70095FBB5 /* Double+SVG.swift in Sources */,
+				07E8F2221F02939800493E47 /* Renderable.swift in Sources */,
 				07ABA3E81EE1AFB600190BFC /* CALayer+PDF.swift in Sources */,
 				0748EEBE1E25816C003F19FD /* Renderer.swift in Sources */,
 				076484D81EF7E7610095FBB5 /* Point+SVG.swift in Sources */,
@@ -819,6 +849,7 @@
 				07ABA3F01EE1E57D00190BFC /* TestFrame.swift in Sources */,
 				0741EE521EE562E70002769D /* Glyph.swift in Sources */,
 				076485031EF8140B0095FBB5 /* Line+SVG.swift in Sources */,
+				07E8F2261F0294FE00493E47 /* ConfiguredRenderable.swift in Sources */,
 				076485061EF814320095FBB5 /* Polyline+SVG.swift in Sources */,
 				07D3A0F61EF58AA200641D15 /* SVGInitializable.swift in Sources */,
 				0744B4C11EF01344003F9B3A /* Alignment.swift in Sources */,
@@ -863,8 +894,10 @@
 				079E69471EF5DF240093A7ED /* Styling.swift in Sources */,
 				078922811EF2E3130037C572 /* Stoke.swift in Sources */,
 				0750C4431EF05739005840B8 /* TextBox+CALayer.swift in Sources */,
+				07E8F22A1F02951900493E47 /* CompositeRenderable.swift in Sources */,
 				07305A551D0F47EE006E4085 /* FrameMaking.swift in Sources */,
 				076484EB1EF7EAA70095FBB5 /* Double+SVG.swift in Sources */,
+				07E8F2231F02939800493E47 /* Renderable.swift in Sources */,
 				07ABA3E91EE1AFB600190BFC /* CALayer+PDF.swift in Sources */,
 				0748EEBF1E25816C003F19FD /* Renderer.swift in Sources */,
 				076484D91EF7E7610095FBB5 /* Point+SVG.swift in Sources */,
@@ -873,6 +906,7 @@
 				07ABA3F11EE1E57D00190BFC /* TestFrame.swift in Sources */,
 				0741EE531EE562E70002769D /* Glyph.swift in Sources */,
 				076485041EF8140B0095FBB5 /* Line+SVG.swift in Sources */,
+				07E8F2271F0294FE00493E47 /* ConfiguredRenderable.swift in Sources */,
 				076485071EF814320095FBB5 /* Polyline+SVG.swift in Sources */,
 				07D3A0F71EF58AA200641D15 /* SVGInitializable.swift in Sources */,
 				0744B4C21EF01344003F9B3A /* Alignment.swift in Sources */,
