@@ -20,6 +20,7 @@ extension CompositeShapeType where Self: CALayer {
     
     /// Perform the build phase.
     public func build() {
+        print("CompositeShapeType is deprecated in 0.6")
         frame = makeFrame()
         createComponents()
         commitComponents()
@@ -27,6 +28,7 @@ extension CompositeShapeType where Self: CALayer {
 
     /// Commit the components as sublayers.
     public func commitComponents() {
+        print("CompositeShapeType is deprecated in 0.6")
         components.forEach(addSublayer)
     }
 }

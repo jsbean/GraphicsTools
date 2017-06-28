@@ -18,6 +18,7 @@ extension ShapeType where Self: CAShapeLayer {
     
     /// Perform the build phase.
     public func build() {
+        print("ShapeType is deprecated in 0.6")
         frame = makeFrame()
         path = makePath()
     }
