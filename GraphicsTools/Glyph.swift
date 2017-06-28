@@ -71,11 +71,3 @@ public protocol AnchoredGlyph: AtomicGlyph {
 
 public protocol GlyphComposite { }
 public protocol ScalingGlyph: GlyphComposite { }
-
-//struct _Clef: ScalingGlyph {
-//    
-//    
-//    
-//    init(x: Double, top: Double, bottom: Double, stroke: Stroke, fill: Fill) { }
-//}
-//
