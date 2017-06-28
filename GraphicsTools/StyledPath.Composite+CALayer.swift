@@ -10,7 +10,7 @@ import QuartzCore
 
 extension CALayer {
     
-    convenience init(_ composite: StyledPath.Composite) {
+    public convenience init(_ composite: StyledPath.Composite) {
 
         func traverse(_ composite: StyledPath.Composite) {
             switch composite {
