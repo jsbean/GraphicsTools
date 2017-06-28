@@ -11,7 +11,12 @@ import Collections
 extension StyledPath {
     
     public struct Group {
-        let identifier: String
+        
+        public let identifier: String
+        
+        public init(identifier: String = "root") {
+            self.identifier = identifier
+        }
     }
     
     public typealias Composite = Tree<Group,StyledPath>
