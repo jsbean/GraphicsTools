@@ -52,8 +52,8 @@ public struct Stroke {
     
     /// Creates a `Stroke` with the given `width`, `color`, `join`, `cap`, and `dashes`.
     public init(
-        width: Double = 1,
-        color: Color = .red,
+        width: Double = 0,
+        color: Color = Color(gray: 0, alpha: 1),
         join: Join = .miter(limit: 10),
         cap: Cap = .butt,
         dashes: Dashes? = nil
