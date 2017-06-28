@@ -26,7 +26,8 @@ class GlyphTests: XCTestCase {
         let layer = CAShapeLayer(glyph)
         layer.renderToPDF(name: "square_glyph")
     }
-    
+
+    #if os(iOS)
     func testSquarePositionedGlyph() {
         let square = Path.rectangle(x: 0, y: 0, width: 10, height: 10)
         let glyph = Glyph(path: square, position: Point(x: 30, y: 70))
@@ -58,6 +59,7 @@ class GlyphTests: XCTestCase {
         container.addSublayer(layer)
         container.renderToPDF(name: "square_positioned")
     }
+    #endif
 
     func testSquare() {
         let square = Path.square(center: Point(x: 20, y: 20), width: 40)
