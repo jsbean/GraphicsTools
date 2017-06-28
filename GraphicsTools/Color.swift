@@ -28,7 +28,12 @@ public struct Color {
         self.components = Components(red: red, green: green, blue: blue, alpha: alpha)
     }
     
+    public init(white: Double, alpha: Double = 1) {
+        self.init(red: white, green: white, blue: white, alpha: alpha)
+    }
+    
     public init(gray: Double, alpha: Double) {
+        print("init(gray:alpha:) is deprecated in 0.7. Use init(white:alpha:) instead.")
         self.init(red: gray, green: gray, blue: gray, alpha: alpha)
     }
     
