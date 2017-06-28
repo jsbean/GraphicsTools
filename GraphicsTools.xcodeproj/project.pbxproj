@@ -61,6 +61,8 @@
 		0750C4461EF05763005840B8 /* TextBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0750C4441EF05763005840B8 /* TextBoxTests.swift */; };
 		07600F911EE46F160049E8B2 /* GlyphTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07600F901EE46F160049E8B2 /* GlyphTests.swift */; };
 		07600F921EE46F160049E8B2 /* GlyphTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07600F901EE46F160049E8B2 /* GlyphTests.swift */; };
+		076200A01F03D5C300D62726 /* StyledPathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762009F1F03D5C300D62726 /* StyledPathTests.swift */; };
+		076200A11F03D5C300D62726 /* StyledPathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762009F1F03D5C300D62726 /* StyledPathTests.swift */; };
 		076484D51EF7DA490095FBB5 /* SVG.Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076484D41EF7DA490095FBB5 /* SVG.Group.swift */; };
 		076484D61EF7DA490095FBB5 /* SVG.Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076484D41EF7DA490095FBB5 /* SVG.Group.swift */; };
 		076484D81EF7E7610095FBB5 /* Point+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076484D71EF7E7610095FBB5 /* Point+SVG.swift */; };
@@ -285,6 +287,7 @@
 		0750C4411EF05739005840B8 /* TextBox+CALayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "TextBox+CALayer.swift"; path = "GraphicsTools/TextBox+CALayer.swift"; sourceTree = "<group>"; };
 		0750C4441EF05763005840B8 /* TextBoxTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextBoxTests.swift; path = GraphicsToolsTests/TextBoxTests.swift; sourceTree = "<group>"; };
 		07600F901EE46F160049E8B2 /* GlyphTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GlyphTests.swift; path = GraphicsToolsTests/GlyphTests.swift; sourceTree = "<group>"; };
+		0762009F1F03D5C300D62726 /* StyledPathTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StyledPathTests.swift; path = GraphicsTools/StyledPathTests.swift; sourceTree = "<group>"; };
 		076484D41EF7DA490095FBB5 /* SVG.Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SVG.Group.swift; path = GraphicsTools/SVG.Group.swift; sourceTree = "<group>"; };
 		076484D71EF7E7610095FBB5 /* Point+SVG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Point+SVG.swift"; path = "GraphicsTools/Point+SVG.swift"; sourceTree = "<group>"; };
 		076484DA1EF7E7800095FBB5 /* Rectangle+SVG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Rectangle+SVG.swift"; path = "GraphicsTools/Rectangle+SVG.swift"; sourceTree = "<group>"; };
@@ -576,6 +579,7 @@
 				073A6F0F1F02A90700AEFA5D /* RenderableTests.swift */,
 				07B8E2B81EF442AD00C9EF18 /* SVGTests.swift */,
 				076484FE1EF812E20095FBB5 /* ColorTests.swift */,
+				0762009F1F03D5C300D62726 /* StyledPathTests.swift */,
 			);
 			name = GraphicsToolsTests;
 			sourceTree = "<group>";
@@ -948,6 +952,7 @@
 				0750C4461EF05763005840B8 /* TextBoxTests.swift in Sources */,
 				07B8E2BA1EF442AD00C9EF18 /* SVGTests.swift in Sources */,
 				076485001EF812E20095FBB5 /* ColorTests.swift in Sources */,
+				076200A11F03D5C300D62726 /* StyledPathTests.swift in Sources */,
 				076D04751E2D2F060023ED96 /* LayoutNodeTests.swift in Sources */,
 				073A6F111F02A90700AEFA5D /* RenderableTests.swift in Sources */,
 			);
@@ -963,6 +968,7 @@
 				0750C4451EF05763005840B8 /* TextBoxTests.swift in Sources */,
 				07B8E2B91EF442AD00C9EF18 /* SVGTests.swift in Sources */,
 				076484FF1EF812E20095FBB5 /* ColorTests.swift in Sources */,
+				076200A01F03D5C300D62726 /* StyledPathTests.swift in Sources */,
 				076D04741E2D2F050023ED96 /* LayoutNodeTests.swift in Sources */,
 				073A6F101F02A90700AEFA5D /* RenderableTests.swift in Sources */,
 			);
