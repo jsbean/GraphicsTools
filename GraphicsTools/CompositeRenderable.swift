@@ -10,6 +10,7 @@ import PathTools
 
 /// Type which represents a composite of `ConfiguredRenderable`-type values.
 public protocol CompositeRenderable: Renderable {
+    var rendered: StyledPath.Composite { get }
     var components: [Renderable] { get }
 }
 
