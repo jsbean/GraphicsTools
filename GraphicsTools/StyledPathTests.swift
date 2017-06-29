@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import PathTools
 import GraphicsTools
 
 class StyledPathTests: XCTestCase {

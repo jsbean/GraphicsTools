@@ -10,12 +10,13 @@ import PathTools
 
 /// Type which represents a composite of `ConfiguredRenderable`-type values.
 public protocol CompositeRenderable: Renderable {
-    var renderables: [Renderable] { get }
+    var rendered: StyledPath.Composite { get }
+    var components: [Renderable] { get }
 }
 
 extension CompositeRenderable {
     
-    public func render() -> StyledPath.Composite {
-        return .branch(StyledPath.Group(identifier: "root"), renderables.map { $0.rendered })
+    public var rendered: StyledPath.Composite {
+        return .branch(StyledPath.Group("root"), components.map { $0.rendered })
     }
 }

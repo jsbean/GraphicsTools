@@ -7,15 +7,18 @@
 //
 
 import Collections
+import GeometryTools
 
 extension StyledPath {
     
     public struct Group {
         
         public let identifier: String
+        public let frame: Rectangle
         
-        public init(identifier: String = "root") {
+        public init(_ identifier: String = "root", frame: Rectangle = .zero) {
             self.identifier = identifier
+            self.frame = frame
         }
     }
     

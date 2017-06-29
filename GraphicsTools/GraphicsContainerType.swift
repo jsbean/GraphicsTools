@@ -34,7 +34,7 @@ extension GraphicsContainerType where Self: CALayer {
     
     /// Perform the build phase.
     public func build() {
-        print("GraphicsContainerType is deprecated in 0.6")
+        print("GraphicsContainerType is deprecated in GraphicsTools 0.6")
         createComponents()
         commitComponents()
         frame = makeFrame()
@@ -42,7 +42,7 @@ extension GraphicsContainerType where Self: CALayer {
     
     /// Commit the components as sublayers.
     public func commitComponents() {
-        print("GraphicsContainerType is deprecated in 0.6")
+        print("GraphicsContainerType is deprecated in GraphicsTools 0.6")
         components.forEach(addSublayer)
     }
 }
