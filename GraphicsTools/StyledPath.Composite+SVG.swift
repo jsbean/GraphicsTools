@@ -14,6 +14,6 @@ import QuartzCore
 extension StyledPath.Group {
     
     init(_ svgGroup: SVG.Group) {
-        self.init(identifier: svgGroup.identifier)
+        self.init(svgGroup.identifier)
     }
 }
