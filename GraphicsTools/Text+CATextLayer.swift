@@ -22,7 +22,6 @@ extension CATextLayer {
         string = text.value
         font = text.font
         fontSize = CGFloat(text.fontSize)
-        print("FONT SIZE: \(fontSize)")
         foregroundColor = text.color.cgColor
         contentsScale = scale
     }

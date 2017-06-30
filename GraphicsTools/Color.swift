@@ -29,7 +29,7 @@ public struct Color {
     }
     
     public init(gray: Double, alpha: Double) {
-        print("init(gray:alpha:) is deprecated in 0.7. Use init(white:alpha:) instead.")
+        print("init(gray:alpha:) is deprecated in GraphicsTools 0.7. Use init(white:alpha:) instead.")
         self.init(red: gray, green: gray, blue: gray, alpha: alpha)
     }
     

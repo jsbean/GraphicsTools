@@ -11,8 +11,6 @@ import QuartzCore
 extension CALayer {
     
     public convenience init(_ svg: SVG) {
-        self.init()
-        frame = CGRect(svg.viewBox)
-        svg.structure.leaves.map(CAShapeLayer.init).forEach(addSublayer)
+        self.init(StyledPath.Composite(svg))
     }
 }

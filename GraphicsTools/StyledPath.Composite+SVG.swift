@@ -17,3 +17,39 @@ extension StyledPath.Group {
         self.init(svgGroup.identifier)
     }
 }
+
+// TODO: Use extension StyledPath.Composite when Swift allows it
+extension Tree where Branch == StyledPath.Group, Leaf == StyledPath {
+    
+    /// Creates a `StyledPath.Composite` with the given `svg`.
+    public init(_ svg: SVG) {
+        
+        // Transform SVG structure in StyledPath.Composite
+        let structure: StyledPath.Composite = .init(svg.structure)
+        
+        // Normalize frame
+        let boundingBox = structure.leaves.map { $0.path.axisAlignedBoundingBox }.sum
+        let ref = boundingBox.origin
+        let translated: StyledPath.Composite = structure.mapLeaves { styledPath in
+            let path = styledPath.path.translatedBy(x: -ref.x, y: -ref.y)
+            return StyledPath(frame: styledPath.frame, path: path, styling: styledPath.styling)
+        }
+        
+        // Create root group
+        let frame = Rectangle(size: boundingBox.size)
+        let root = StyledPath.Group("root", frame: frame)
+        
+        // Initialize
+        self = .branch(root, [translated])
+    }
+    
+    internal init(_ svg: SVG.Structure) {
+        switch svg {
+        case .leaf(let styledPath):
+            self = .leaf(styledPath)
+        case .branch(let group, let trees):
+            let group = StyledPath.Group(group)
+            self = .branch(group, trees.map { .init($0) })
+        }
+    }
+}

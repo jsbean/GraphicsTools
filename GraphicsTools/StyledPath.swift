@@ -16,7 +16,7 @@ public struct StyledPath {
     public let styling: Styling
     
     public init(
-        frame: Rectangle = .unit,
+        frame: Rectangle = .zero,
         path: Path = .unit,
         styling: Styling = Styling()
     )

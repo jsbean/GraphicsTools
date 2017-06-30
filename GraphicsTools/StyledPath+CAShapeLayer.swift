@@ -13,16 +13,10 @@ extension CAShapeLayer {
     public convenience init (_ styledPath: StyledPath) {
         
         self.init(styledPath.path)
-        // frame
         frame = CGRect(styledPath.frame)
-        
         let styling = styledPath.styling
-        
-        // fill
         fillColor = styling.fill.color.cgColor
         fillRule = styling.fill.rule.cgFillRule
-        
-        // stroke
         strokeColor = styling.stroke.color.cgColor
         lineCap = styling.stroke.cap.cgCap
         lineDashPattern = styling.stroke.dashes?.pattern.map { NSNumber.init(value: $0) }
@@ -38,3 +32,44 @@ extension CAShapeLayer {
         }
     }
 }
+
+internal extension Fill.Rule {
+    
+    var cgFillRule: String {
+        switch self {
+        case .nonZero:
+            return kCAFillRuleNonZero
+        case .evenOdd:
+            return kCAFillRuleEvenOdd
+        }
+    }
+}
+
+internal extension Stroke.Cap {
+    
+    var cgCap: String {
+        switch self {
+        case .butt:
+            return kCALineCapButt
+        case .round:
+            return kCALineCapRound
+        case .square:
+            return kCALineCapSquare
+        }
+    }
+}
+
+internal extension Stroke.Join {
+    
+    var cgJoin: String {
+        switch self {
+        case .miter:
+            return kCALineJoinMiter
+        case .bevel:
+            return kCALineJoinBevel
+        case .round:
+            return kCALineJoinRound
+        }
+    }
+}
+

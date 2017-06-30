@@ -25,13 +25,15 @@ class SVGTests: XCTestCase {
             "curve2",
             "multiple_objects",
             "multiple_groups",
-            "polybezier"
+            "polybezier",
+            "bbox"
         ]
         
         for name in testFiles {
             do {
                 let svg = try SVG(name: name)
-                let layer = CALayer(svg)
+                let path = StyledPath.Composite(svg)
+                let layer = CALayer(path)
                 layer.renderToPDF(name: name)
             } catch {
                 print(error)

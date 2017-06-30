@@ -7,6 +7,7 @@
 //
 
 import QuartzCore
+import GeometryTools
 
 extension CALayer {
     
@@ -20,14 +21,22 @@ extension CALayer {
             case .branch(let group, let trees):
                 let layer = CALayer()
                 layer.frame = CGRect(group.frame)
-                trees.forEach {
-                    layer.addSublayer(traverse($0, building: layer))
-                }
+                trees.forEach { layer.addSublayer(traverse($0, building: layer)) }
                 return layer
             }
         }
         
+        var frame: Rectangle {
+            switch composite {
+            case .leaf(let styledPath):
+                return styledPath.path.axisAlignedBoundingBox
+            case .branch(let group, _):
+                return group.frame
+            }
+        }
+
         self.init()
+        self.frame = CGRect(origin: .zero, size: CGSize(frame.size))
         self.addSublayer(traverse(composite, building: self))
     }
 }
