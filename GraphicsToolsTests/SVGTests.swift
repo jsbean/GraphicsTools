@@ -40,4 +40,16 @@ class SVGTests: XCTestCase {
             }
         }
     }
+
+    func testScaleSVG() {
+
+        do {
+            let svg = try SVG(name: "bbox")
+            let path = StyledPath.Composite(svg, height: 1000)
+            let layer = CALayer(path)
+            layer.renderToPDF(name: "bbox_scale_to_height")
+        } catch {
+            print(error)
+        }
+    }
 }
