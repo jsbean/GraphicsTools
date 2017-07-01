@@ -42,7 +42,7 @@ extension Tree where Branch == StyledPath.Group, Leaf == StyledPath {
         self = .branch(root, [translated])
     }
 
-    /// Creates a `StyledPath.Composite` with the given `svg`.
+    /// Creates a `StyledPath.Composite` with the given `svg`, scaled to the given `height`.
     public init(_ svg: SVG, height: Double) {
 
         // Transform SVG structure in StyledPath.Composite
@@ -65,6 +65,7 @@ extension Tree where Branch == StyledPath.Group, Leaf == StyledPath {
         self = .branch(root, [translated])
     }
 
+    /// Creates a `StyledPath.Composite` with the given `svg`, scaled to the given `width`.
     public init(_ svg: SVG, width: Double) {
 
         // Transform SVG structure in StyledPath.Composite
