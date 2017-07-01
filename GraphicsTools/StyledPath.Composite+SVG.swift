@@ -19,6 +19,7 @@ extension StyledPath.Group {
 }
 
 // TODO: Use extension StyledPath.Composite when Swift allows it
+// TODO: Refactor to keep DRY.
 extension Tree where Branch == StyledPath.Group, Leaf == StyledPath {
     
     /// Creates a `StyledPath.Composite` with the given `svg`.
@@ -31,19 +32,7 @@ extension Tree where Branch == StyledPath.Group, Leaf == StyledPath {
         let boundingBox = structure.leaves.map { $0.path.axisAlignedBoundingBox }.sum
         let ref = boundingBox.origin
         let translated: StyledPath.Composite = structure.mapLeaves { styledPath in
-
-            // TODO: Use styledPath.translated(by: -ref) when available, requiring:
-            // - point operator
-            // - rectangle translated by
-            // - styledPath translated by
-
-//            let frame = Rectangle(
-//                origin: styledPath.frame.origin.translatedBy(x: -ref.x, y: -ref.y),
-//                size: styledPath.frame.size
-//            )
-
             let path = styledPath.path.translatedBy(x: -ref.x, y: -ref.y)
-
             return StyledPath(frame: styledPath.frame, path: path, styling: styledPath.styling)
         }
         
@@ -54,10 +43,6 @@ extension Tree where Branch == StyledPath.Group, Leaf == StyledPath {
         // Initialize
         self = .branch(root, [translated])
     }
-
-    // TODO: init(_ svg: SVG, width: Double)
-
-    // TODO: init(_ svg: SVG, height: Double)
 
     /// Creates a `StyledPath.Composite` with the given `svg`.
     public init(_ svg: SVG, height: Double) {
@@ -76,6 +61,46 @@ extension Tree where Branch == StyledPath.Group, Leaf == StyledPath {
                 .scaled(by: proportion)
 
             
+            let fill = styledPath.styling.fill
+            let stroke = styledPath.styling.stroke
+
+            let newStroke = Stroke(
+                width: stroke.width * proportion,
+                color: stroke.color,
+                join: stroke.join,
+                cap: stroke.cap,
+                dashes: stroke.dashes
+            )
+
+            let styling = Styling(fill: fill, stroke: newStroke)
+            return StyledPath(frame: styledPath.frame, path: path, styling: styling)
+        }
+
+        // Create root group
+        let scaledBoundingBox = boundingBox.scaled(by: proportion, around: .origin)
+        let frame = Rectangle(size: scaledBoundingBox.size)
+        let root = StyledPath.Group("root", frame: frame)
+
+        // Initialize
+        self = .branch(root, [translated])
+    }
+
+    public init(_ svg: SVG, width: Double) {
+
+        // Transform SVG structure in StyledPath.Composite
+        let structure: StyledPath.Composite = .init(svg.structure)
+
+        // Normalize frame
+        let boundingBox = structure.leaves.map { $0.path.axisAlignedBoundingBox }.sum
+        let proportion = width / boundingBox.size.height
+        let ref = boundingBox.origin
+        let translated: StyledPath.Composite = structure.mapLeaves { styledPath in
+
+            let path = styledPath.path
+                .translatedBy(x: -ref.x, y: -ref.y)
+                .scaled(by: proportion)
+
+
             let fill = styledPath.styling.fill
             let stroke = styledPath.styling.stroke
 
