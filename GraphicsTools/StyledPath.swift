@@ -33,7 +33,7 @@ extension StyledPath {
         return StyledPath(path: path.translated(by: point), styling: styling)
     }
 
-    public func scaled(by value: Double, around anchor: Rectangle.ScaleAnchor) -> StyledPath {
+    public func scaled(by value: Double) -> StyledPath {
 
         let fill = styling.fill
         let stroke = styling.stroke

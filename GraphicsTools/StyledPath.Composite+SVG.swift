@@ -32,9 +32,7 @@ extension Tree where Branch == StyledPath.Group, Leaf == StyledPath {
         // Normalize frame
         let boundingBox = structure.leaves.map { $0.path.axisAlignedBoundingBox }.sum
         let ref = boundingBox.origin
-        let translated: StyledPath.Composite = structure.mapLeaves { styledPath in
-            return styledPath.translated(by: -ref)
-        }
+        let translated = structure.mapLeaves { $0.translated(by: -ref) }
         
         // Create root group
         let frame = Rectangle(size: boundingBox.size)
@@ -54,25 +52,8 @@ extension Tree where Branch == StyledPath.Group, Leaf == StyledPath {
         let boundingBox = structure.leaves.map { $0.path.axisAlignedBoundingBox }.sum
         let proportion = height / boundingBox.size.height
         let ref = boundingBox.origin
-        let translated: StyledPath.Composite = structure.mapLeaves { styledPath in
-
-            let path = styledPath.path
-                .translated(by: -ref)
-                .scaled(by: proportion)
-
-            let fill = styledPath.styling.fill
-            let stroke = styledPath.styling.stroke
-
-            let newStroke = Stroke(
-                width: stroke.width * proportion,
-                color: stroke.color,
-                join: stroke.join,
-                cap: stroke.cap,
-                dashes: stroke.dashes
-            )
-
-            let styling = Styling(fill: fill, stroke: newStroke)
-            return StyledPath(frame: styledPath.frame, path: path, styling: styling)
+        let translated = structure.mapLeaves { styledPath in
+            return styledPath.translated(by: -ref).scaled(by: proportion)
         }
 
         // Create root group
@@ -93,25 +74,8 @@ extension Tree where Branch == StyledPath.Group, Leaf == StyledPath {
         let boundingBox = structure.leaves.map { $0.path.axisAlignedBoundingBox }.sum
         let proportion = width / boundingBox.size.height
         let ref = boundingBox.origin
-        let translated: StyledPath.Composite = structure.mapLeaves { styledPath in
-
-            let path = styledPath.path
-                .translated(by: -ref)
-                .scaled(by: proportion)
-
-            let fill = styledPath.styling.fill
-            let stroke = styledPath.styling.stroke
-
-            let newStroke = Stroke(
-                width: stroke.width * proportion,
-                color: stroke.color,
-                join: stroke.join,
-                cap: stroke.cap,
-                dashes: stroke.dashes
-            )
-
-            let styling = Styling(fill: fill, stroke: newStroke)
-            return StyledPath(frame: styledPath.frame, path: path, styling: styling)
+        let translated = structure.mapLeaves { styledPath in
+            return styledPath.translated(by: -ref).scaled(by: proportion)
         }
 
         // Create root group
