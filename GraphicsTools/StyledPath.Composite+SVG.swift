@@ -61,7 +61,6 @@ extension Tree where Branch == StyledPath.Group, Leaf == StyledPath {
                 .translated(by: -ref)
                 .scaled(by: proportion)
 
-            
             let fill = styledPath.styling.fill
             let stroke = styledPath.styling.stroke
 
@@ -100,7 +99,6 @@ extension Tree where Branch == StyledPath.Group, Leaf == StyledPath {
             let path = styledPath.path
                 .translated(by: -ref)
                 .scaled(by: proportion)
-
 
             let fill = styledPath.styling.fill
             let stroke = styledPath.styling.stroke
