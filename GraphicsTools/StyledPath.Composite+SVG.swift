@@ -33,8 +33,7 @@ extension Tree where Branch == StyledPath.Group, Leaf == StyledPath {
         let boundingBox = structure.leaves.map { $0.path.axisAlignedBoundingBox }.sum
         let ref = boundingBox.origin
         let translated: StyledPath.Composite = structure.mapLeaves { styledPath in
-            let path = styledPath.path.translated(by: -ref)
-            return StyledPath(frame: styledPath.frame, path: path, styling: styledPath.styling)
+            return styledPath.translated(by: -ref)
         }
         
         // Create root group
