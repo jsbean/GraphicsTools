@@ -27,12 +27,13 @@ extension Tree where Branch == StyledPath.Group, Leaf == StyledPath {
         
         // Transform SVG structure in StyledPath.Composite
         let structure: StyledPath.Composite = .init(svg.structure)
-        
+
+        // TODO: Move this all to StyledPath.Composite.init
         // Normalize frame
         let boundingBox = structure.leaves.map { $0.path.axisAlignedBoundingBox }.sum
         let ref = boundingBox.origin
         let translated: StyledPath.Composite = structure.mapLeaves { styledPath in
-            let path = styledPath.path.translatedBy(x: -ref.x, y: -ref.y)
+            let path = styledPath.path.translated(by: -ref)
             return StyledPath(frame: styledPath.frame, path: path, styling: styledPath.styling)
         }
         
@@ -57,7 +58,7 @@ extension Tree where Branch == StyledPath.Group, Leaf == StyledPath {
         let translated: StyledPath.Composite = structure.mapLeaves { styledPath in
 
             let path = styledPath.path
-                .translatedBy(x: -ref.x, y: -ref.y)
+                .translated(by: -ref)
                 .scaled(by: proportion)
 
             
@@ -97,7 +98,7 @@ extension Tree where Branch == StyledPath.Group, Leaf == StyledPath {
         let translated: StyledPath.Composite = structure.mapLeaves { styledPath in
 
             let path = styledPath.path
-                .translatedBy(x: -ref.x, y: -ref.y)
+                .translated(by: -ref)
                 .scaled(by: proportion)
 
 
