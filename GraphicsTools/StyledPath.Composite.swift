@@ -33,7 +33,7 @@ extension Tree where Branch == StyledPath.Group, Leaf == StyledPath {
         case .leaf(let styledPath):
             return styledPath.path.axisAlignedBoundingBox.translated(by: -styledPath.frame.origin)
         case let .branch(group, trees):
-            return trees.map { $0.axisAlignedBoundingBox }.sum
+            return trees.map { $0.axisAlignedBoundingBox }.sum.translated(by: -group.frame.origin)
         }
     }
 }
