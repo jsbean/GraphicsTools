@@ -6,6 +6,8 @@
 //
 //
 
+import ArithmeticTools
+import GeometryTools
 import PathTools
 
 /// Type which represents a composite of `ConfiguredRenderable`-type values.
@@ -17,6 +19,19 @@ public protocol CompositeRenderable: Renderable {
 extension CompositeRenderable {
     
     public var rendered: StyledPath.Composite {
-        return .branch(StyledPath.Group("root"), components.map { $0.rendered })
+
+        let paths = components.map { $0.rendered }
+
+        let frame = paths
+            .lazy
+            .flatMap { $0.leaves.map { $0.path.axisAlignedBoundingBox } }
+            .sum
+
+        let translated = paths
+            .flatMap { $0.leaves.map { $0.translated(by: -2 * frame.origin) } }
+            .map { StyledPath.Composite.leaf($0) }
+
+        // FIXME: For now, flatten everything, assume that each sub-group's frame is `.zero`
+        return .branch(StyledPath.Group("root", frame: frame), translated)
     }
 }

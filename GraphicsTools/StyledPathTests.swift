@@ -7,10 +7,10 @@
 //
 
 import XCTest
+import GeometryTools
 import PathTools
 import GraphicsTools
 
 class StyledPathTests: XCTestCase {
-    
-    // TODO
+
 }
