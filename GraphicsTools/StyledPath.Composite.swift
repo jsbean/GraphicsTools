@@ -31,7 +31,7 @@ extension Tree where Branch == StyledPath.Group, Leaf == StyledPath {
     public var axisAlignedBoundingBox: Rectangle {
         switch self {
         case .leaf(let styledPath):
-            return styledPath.path.axisAlignedBoundingBox
+            return styledPath.path.axisAlignedBoundingBox.translated(by: -styledPath.frame.origin)
         case .branch:
             fatalError()
         }
