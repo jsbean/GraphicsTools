@@ -7,6 +7,7 @@
 //
 
 import Collections
+import ArithmeticTools
 
 /// Structure representing a color.
 public struct Color {
@@ -241,4 +242,17 @@ extension Color {
     public static let whiteSmoke = Color(hex: 0xF5F5F5, alpha: 1)
     public static let yellow = Color(hex: 0xFFFF00, alpha: 1)
     public static let yellowGreen = Color(hex: 0x9ACD32, alpha: 1)
+}
+
+extension Color: CustomStringConvertible {
+
+    public var description: String {
+        var result = "("
+        result += "r: \(components.red.formatted(digits: 2)), "
+        result += "g: \(components.green.formatted(digits: 2)), "
+        result += "b: \(components.blue.formatted(digits: 2)), "
+        result += "a: \(components.alpha.formatted(digits: 2))"
+        result += ")"
+        return result
+    }
 }

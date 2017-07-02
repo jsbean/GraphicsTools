@@ -6,8 +6,6 @@
 //
 //
 
-import Foundation
-
 /// Configuration for the fill of `Glyph`.
 public struct Fill {
     
@@ -33,5 +31,19 @@ public struct Fill {
     public init(color: Color = .black, rule: Rule = .nonZero) {
         self.color = color
         self.rule = rule
+    }
+}
+
+extension Fill: CustomStringConvertible {
+
+    public var description: String {
+        return "\(color), rule: \(rule)"
+    }
+}
+
+extension Fill.Rule: CustomStringConvertible {
+
+    public var description: String {
+        return rawValue
     }
 }
