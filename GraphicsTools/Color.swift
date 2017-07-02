@@ -242,3 +242,10 @@ extension Color {
     public static let yellow = Color(hex: 0xFFFF00, alpha: 1)
     public static let yellowGreen = Color(hex: 0x9ACD32, alpha: 1)
 }
+
+extension Color: CustomStringConvertible {
+
+    public var description: String {
+        return "(r: \(components.red), g: \(components.green), b: \(components.blue), a: \(components.alpha))"
+    }
+}

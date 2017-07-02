@@ -66,3 +66,31 @@ public struct Stroke {
         self.dashes = dashes
     }
 }
+
+extension Stroke: CustomStringConvertible {
+
+    public var description: String {
+        return "\(width), \(color), join: \(join), cap: \(cap)"
+    }
+}
+
+extension Stroke.Cap: CustomStringConvertible {
+
+    public var description: String {
+        return rawValue
+    }
+}
+
+extension Stroke.Join: CustomStringConvertible {
+
+    public var description: String {
+        switch self {
+        case .round:
+            return "round"
+        case .bevel:
+            return "bevel"
+        case .miter(let limit):
+            return "miter w/ limit: \(limit)"
+        }
+    }
+}
