@@ -28,7 +28,7 @@ extension CompositeRenderable {
             .sum
 
         let translated = paths
-            .flatMap { $0.leaves.map { $0.translated(by: -2 * frame.origin) } }
+            .flatMap { $0.leaves.map { $0.translated(by: Point()) } }
             .map { StyledPath.Composite.leaf($0) }
 
         print("bbox: \(frame)")
