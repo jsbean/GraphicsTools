@@ -12,5 +12,5 @@ import PathTools
 import GraphicsTools
 
 class StyledPathTests: XCTestCase {
-    
+
 }
