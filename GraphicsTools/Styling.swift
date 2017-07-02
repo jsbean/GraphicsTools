@@ -17,3 +17,12 @@ public struct Styling {
         self.stroke = stroke
     }
 }
+
+extension Styling: CustomStringConvertible {
+
+    public var description: String {
+        var result = "  - Fill: \(fill)\n"
+        result += "  - Stroke: \(stroke)"
+        return result
+    }
+}

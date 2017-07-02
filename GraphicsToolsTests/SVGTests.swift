@@ -33,6 +33,7 @@ class SVGTests: XCTestCase {
             do {
                 let svg = try SVG(name: name)
                 let path = StyledPath.Composite(svg)
+                print(path)
                 let layer = CALayer(path)
                 layer.renderToPDF(name: name)
             } catch {

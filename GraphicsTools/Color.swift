@@ -7,6 +7,7 @@
 //
 
 import Collections
+import ArithmeticTools
 
 /// Structure representing a color.
 public struct Color {
@@ -246,6 +247,6 @@ extension Color {
 extension Color: CustomStringConvertible {
 
     public var description: String {
-        return "(r: \(components.red), g: \(components.green), b: \(components.blue), a: \(components.alpha))"
+        return "(r: \(components.red.formatted(digits: 2)), g: \(components.green.formatted(digits: 2)), b: \(components.blue.formatted(digits: 2)), a: \(components.alpha.formatted(digits: 2)))"
     }
 }

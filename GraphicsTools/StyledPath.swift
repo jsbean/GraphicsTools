@@ -51,3 +51,14 @@ extension StyledPath {
         return StyledPath(frame: frame, path: path.scaled(by: value), styling: newStyle)
     }
 }
+
+extension StyledPath: CustomStringConvertible {
+
+    public var description: String {
+        var result = "StyledPath:\n"
+        result += "Frame: \(frame)\n"
+        result += "\(path)\n"
+        result += "\(styling)"
+        return result
+    }
+}
