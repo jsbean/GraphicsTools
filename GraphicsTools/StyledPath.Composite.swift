@@ -29,6 +29,11 @@ extension StyledPath {
 extension Tree where Branch == StyledPath.Group, Leaf == StyledPath {
 
     public var axisAlignedBoundingBox: Rectangle {
-        return .zero
+        switch self {
+        case .leaf(let styledPath):
+            return styledPath.path.axisAlignedBoundingBox
+        case .branch:
+            fatalError()
+        }
     }
 }
