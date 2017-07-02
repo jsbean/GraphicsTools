@@ -19,6 +19,7 @@ public protocol CompositeRenderable: Renderable {
 extension CompositeRenderable {
     
     public var rendered: StyledPath.Composite {
+
         let paths = components.map { $0.rendered }
 
         let frame = paths
@@ -27,7 +28,7 @@ extension CompositeRenderable {
             .sum
 
         let translated = paths
-            .flatMap { $0.leaves.map { $0.translated(by: -frame.origin) } }
+            .flatMap { $0.leaves.map { $0.translated(by: -2 * frame.origin) } }
             .map { StyledPath.Composite.leaf($0) }
 
         print("bbox: \(frame)")
