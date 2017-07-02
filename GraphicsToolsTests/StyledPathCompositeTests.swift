@@ -35,4 +35,26 @@ class StyledPathCompositeTests: XCTestCase {
         let expected = Rectangle(x: -20, y: -20, width: 20, height: 20)
         XCTAssertEqual(bbox, expected)
     }
+
+    func testBranchAllZeroFramedLeaves() {
+
+        // bbox: (0,0),20,100
+        let a = Path.rectangle(origin: Point(), size: Size(width: 100, height: 10))
+        let styledA = StyledPath(path: a)
+
+        // bbox: (-15,-15),40,40
+        let b = Path.circle(center: Point(x: 5, y: 5), radius: 20)
+        let styledB = StyledPath(path: b)
+
+        let composite = StyledPath.Composite.branch(
+            StyledPath.Group(), [
+                .leaf(styledA),
+                .leaf(styledB)
+            ]
+        )
+
+        let bbox = composite.axisAlignedBoundingBox
+        let expected = Rectangle(x: -15, y: -15, width: 115, height: 40)
+        XCTAssertEqual(bbox, expected)
+    }
 }
