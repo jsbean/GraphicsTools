@@ -28,10 +28,8 @@ extension CompositeRenderable {
             .sum
 
         let translated = paths
-            .flatMap { $0.leaves.map { $0.translated(by: Point()) } }
+            .flatMap { $0.leaves.map { $0.translated(by: -2 * frame.origin) } }
             .map { StyledPath.Composite.leaf($0) }
-
-        print("bbox: \(frame)")
 
         // For now, flatten everything, assume that each sub-group's frame is `.zero`
         return .branch(StyledPath.Group("root", frame: frame), translated)
