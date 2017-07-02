@@ -24,3 +24,11 @@ extension StyledPath {
     
     public typealias Composite = Tree<Group,StyledPath>
 }
+
+// TODO: Use extension StyledPath.Composite when Swift allows it.
+extension Tree where Branch == StyledPath.Group, Leaf == StyledPath {
+
+    public var axisAlignedBoundingBox: Rectangle {
+        return .zero
+    }
+}
