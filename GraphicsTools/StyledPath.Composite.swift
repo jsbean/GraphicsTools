@@ -29,11 +29,20 @@ extension StyledPath {
 extension Tree where Branch == StyledPath.Group, Leaf == StyledPath {
 
     public var axisAlignedBoundingBox: Rectangle {
+
         switch self {
+
         case .leaf(let styledPath):
-            return styledPath.path.axisAlignedBoundingBox.translated(by: -styledPath.frame.origin)
+            return styledPath
+                .path
+                .axisAlignedBoundingBox
+                .translated(by: -styledPath.frame.origin)
+
         case let .branch(group, trees):
-            return trees.map { $0.axisAlignedBoundingBox }.sum.translated(by: -group.frame.origin)
+            return trees
+                .map { composite in composite.axisAlignedBoundingBox }
+                .sum
+                .translated(by: -group.frame.origin)
         }
     }
 }
