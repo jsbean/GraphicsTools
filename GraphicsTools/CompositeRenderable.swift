@@ -31,7 +31,7 @@ extension CompositeRenderable {
             .flatMap { $0.leaves.map { $0.translated(by: -2 * frame.origin) } }
             .map { StyledPath.Composite.leaf($0) }
 
-        // For now, flatten everything, assume that each sub-group's frame is `.zero`
+        // FIXME: For now, flatten everything, assume that each sub-group's frame is `.zero`
         return .branch(StyledPath.Group("root", frame: frame), translated)
     }
 }
