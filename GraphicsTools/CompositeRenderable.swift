@@ -20,10 +20,19 @@ extension CompositeRenderable {
     
     public var rendered: StyledPath.Composite {
         let paths = components.map { $0.rendered }
-        let frame = paths.lazy.flatMap { $0.leaves.map { $0.path.axisAlignedBoundingBox } }.sum
-        //let translated = paths.map { $0.leaves.map { $0.translated(by: -bbox.origin) } }
+
+        let frame = paths
+            .lazy
+            .flatMap { $0.leaves.map { $0.path.axisAlignedBoundingBox } }
+            .sum
+
+        let translated = paths
+            .flatMap { $0.leaves.map { $0.translated(by: -frame.origin) } }
+            .map { StyledPath.Composite.leaf($0) }
 
         print("bbox: \(frame)")
-        return .branch(StyledPath.Group("root", frame: frame), paths)
+
+        // For now, flatten everything, assume that each sub-group's frame is `.zero`
+        return .branch(StyledPath.Group("root", frame: frame), translated)
     }
 }
