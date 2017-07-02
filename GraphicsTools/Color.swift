@@ -247,6 +247,12 @@ extension Color {
 extension Color: CustomStringConvertible {
 
     public var description: String {
-        return "(r: \(components.red.formatted(digits: 2)), g: \(components.green.formatted(digits: 2)), b: \(components.blue.formatted(digits: 2)), a: \(components.alpha.formatted(digits: 2)))"
+        var result = "("
+        result += "r: \(components.red.formatted(digits: 2)), "
+        result += "g: \(components.green.formatted(digits: 2)), "
+        result += "b: \(components.blue.formatted(digits: 2)), "
+        result += "a: \(components.alpha.formatted(digits: 2))"
+        result += ")"
+        return result
     }
 }
