@@ -47,6 +47,8 @@
 		0744B4CB1EF01A53003F9B3A /* TextTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0744B4C91EF01A53003F9B3A /* TextTests.swift */; };
 		0748EEBE1E25816C003F19FD /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0748EEBD1E25816C003F19FD /* Renderer.swift */; };
 		0748EEBF1E25816C003F19FD /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0748EEBD1E25816C003F19FD /* Renderer.swift */; };
+		074A84201F09A23F007C612B /* StyledPathCompositeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074A841F1F09A23F007C612B /* StyledPathCompositeTests.swift */; };
+		074A84211F09A23F007C612B /* StyledPathCompositeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074A841F1F09A23F007C612B /* StyledPathCompositeTests.swift */; };
 		0750C43C1EF0546E005840B8 /* TextBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0750C43B1EF0546E005840B8 /* TextBox.swift */; };
 		0750C43D1EF0546E005840B8 /* TextBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0750C43B1EF0546E005840B8 /* TextBox.swift */; };
 		0750C43F1EF0549B005840B8 /* Insets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0750C43E1EF0549B005840B8 /* Insets.swift */; };
@@ -278,6 +280,7 @@
 		0744B4C31EF0154A003F9B3A /* Text+CATextLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Text+CATextLayer.swift"; path = "GraphicsTools/Text+CATextLayer.swift"; sourceTree = "<group>"; };
 		0744B4C91EF01A53003F9B3A /* TextTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextTests.swift; path = GraphicsToolsTests/TextTests.swift; sourceTree = "<group>"; };
 		0748EEBD1E25816C003F19FD /* Renderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Renderer.swift; path = GraphicsTools/Renderer.swift; sourceTree = "<group>"; };
+		074A841F1F09A23F007C612B /* StyledPathCompositeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StyledPathCompositeTests.swift; path = GraphicsToolsTests/StyledPathCompositeTests.swift; sourceTree = "<group>"; };
 		0750C43B1EF0546E005840B8 /* TextBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextBox.swift; path = GraphicsTools/TextBox.swift; sourceTree = "<group>"; };
 		0750C43E1EF0549B005840B8 /* Insets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Insets.swift; path = GraphicsTools/Insets.swift; sourceTree = "<group>"; };
 		0750C4411EF05739005840B8 /* TextBox+CALayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "TextBox+CALayer.swift"; path = "GraphicsTools/TextBox+CALayer.swift"; sourceTree = "<group>"; };
@@ -581,6 +584,7 @@
 				07B8E2B81EF442AD00C9EF18 /* SVGTests.swift */,
 				076484FE1EF812E20095FBB5 /* ColorTests.swift */,
 				0762009F1F03D5C300D62726 /* StyledPathTests.swift */,
+				074A841F1F09A23F007C612B /* StyledPathCompositeTests.swift */,
 			);
 			name = GraphicsToolsTests;
 			sourceTree = "<group>";
@@ -945,6 +949,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07ABA3EC1EE1C7FA00190BFC /* PDFTests.swift in Sources */,
+				074A84211F09A23F007C612B /* StyledPathCompositeTests.swift in Sources */,
 				0744B4CB1EF01A53003F9B3A /* TextTests.swift in Sources */,
 				0750C4461EF05763005840B8 /* TextBoxTests.swift in Sources */,
 				07B8E2BA1EF442AD00C9EF18 /* SVGTests.swift in Sources */,
@@ -960,6 +965,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07ABA3EB1EE1C7FA00190BFC /* PDFTests.swift in Sources */,
+				074A84201F09A23F007C612B /* StyledPathCompositeTests.swift in Sources */,
 				0744B4CA1EF01A53003F9B3A /* TextTests.swift in Sources */,
 				0750C4451EF05763005840B8 /* TextBoxTests.swift in Sources */,
 				07B8E2B91EF442AD00C9EF18 /* SVGTests.swift in Sources */,

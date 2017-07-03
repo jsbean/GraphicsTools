@@ -29,8 +29,17 @@ public struct StyledPath {
 
 extension StyledPath {
 
+    public var resizedToFitContents: StyledPath {
+        let frame = path.axisAlignedBoundingBox
+        return StyledPath(
+            frame: frame,
+            path: path.translated(by: -frame.origin),
+            styling: styling
+        )
+    }
+
     public func translated(by point: Point) -> StyledPath {
-        return StyledPath(path: path.translated(by: point), styling: styling)
+        return StyledPath(frame: frame.translated(by: point), path: path, styling: styling)
     }
 
     public func scaled(by value: Double) -> StyledPath {

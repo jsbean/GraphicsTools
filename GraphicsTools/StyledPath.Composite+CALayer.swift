@@ -25,18 +25,9 @@ extension CALayer {
                 return layer
             }
         }
-        
-        var frame: Rectangle {
-            switch composite {
-            case .leaf(let styledPath):
-                return styledPath.path.axisAlignedBoundingBox
-            case .branch(let group, _):
-                return group.frame
-            }
-        }
 
         self.init()
-        self.frame = CGRect(origin: .zero, size: CGSize(frame.size))
+        self.frame = CGRect(origin: .zero, size: CGSize(composite.frame.size))
         self.addSublayer(traverse(composite, building: self))
     }
 }
