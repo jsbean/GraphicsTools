@@ -8,24 +8,23 @@
 
 import QuartzCore
 
-#if os(iOS)
-    import UIKit
-#elseif os(OSX)
-    import AppKit
-#endif
-
 extension CALayer {
 
     public func showTestBorder() {
+        borderWidth = 0.5
+        borderColor = Color(red: 255, green: 0, blue: 0, alpha: 0.5).cgColor
+        backgroundColor = Color(white: 0, alpha: 0.025).cgColor
+    }
+
+    func showAllTestBorders() {
+
+        func traverse(layer: CALayer) {
+            layer.showTestBorder()
+            if let children = layer.sublayers {
+                children.forEach(traverse)
+            }
+        }
         
-        borderWidth = 1
-        
-        #if os(iOS)
-            borderColor = UIColor.red.cgColor
-            backgroundColor = UIColor.red.withAlphaComponent(0.125).cgColor
-        #elseif os(OSX)
-            borderColor = NSColor.red.cgColor
-            backgroundColor = NSColor.red.withAlphaComponent(0.125).cgColor
-        #endif        
+        traverse(layer: self)
     }
 }
