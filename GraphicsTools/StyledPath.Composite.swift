@@ -42,13 +42,14 @@ extension Tree where Branch == StyledPath.Group, Leaf == StyledPath {
         switch self {
 
         case .leaf(let styledPath):
-            let frame = styledPath.path.axisAlignedBoundingBox
-            let path = styledPath.path.translated(by: -2 * frame.origin)
-            let styling = styledPath.styling
-            return .leaf(StyledPath(frame: frame, path: path, styling: styling))
+            let styledPath = styledPath.resizedToFitContents
+            let frame = styledPath.frame
+            return .leaf(styledPath.translated(by: -frame.origin))
 
         case let .branch(group, trees):
-            fatalError()
+            let frame = trees.map { $0.frame }.sum
+            let group = StyledPath.Group(group.identifier, frame: frame)
+            return .branch(group, trees.map { $0.translated(by: -frame.origin) })
         }
     }
 
@@ -67,6 +68,16 @@ extension Tree where Branch == StyledPath.Group, Leaf == StyledPath {
                 .map { composite in composite.axisAlignedBoundingBox }
                 .sum
                 .translated(by: -group.frame.origin)
+        }
+    }
+
+    public func translated(by point: Point) -> StyledPath.Composite {
+        switch self {
+        case let .leaf(styledPath):
+            return .leaf(styledPath.translated(by: point))
+        case let .branch(group, trees):
+            let group = StyledPath.Group(group.identifier, frame: group.frame.translated(by: point))
+            return .branch(group, trees)
         }
     }
 }

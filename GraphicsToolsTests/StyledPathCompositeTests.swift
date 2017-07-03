@@ -13,6 +13,28 @@ import GraphicsTools
 
 class StyledPathCompositeTests: XCTestCase {
 
+    func testTranslateLeaf() {
+        let frame = Rectangle(x: 10, y: 10, width: 100, height: 100)
+        let path = Path.circle(center: Point(), radius: 10)
+        let styled = StyledPath(frame: frame, path: path)
+        let leaf = StyledPath.Composite.leaf(styled)
+        let translated = leaf.translated(by: Point(x: 10, y: 10))
+        let expected = Rectangle(x: 20, y: 20, width: 100, height: 100)
+        XCTAssertEqual(translated.frame, expected)
+    }
+
+    func testTranslateGroup() {
+        let frame = Rectangle(x: 10, y: 10, width: 100, height: 100)
+        let group = StyledPath.Group(frame: frame)
+        let path = Path.circle(center: Point(), radius: 10)
+        let styled = StyledPath(frame: frame, path: path)
+        let leaf = StyledPath.Composite.leaf(styled)
+        let branch = StyledPath.Composite.branch(group, [leaf])
+        let translated = branch.translated(by: Point(x: 10, y: 10))
+        let expected = Rectangle(x: 20, y: 20, width: 100, height: 100)
+        XCTAssertEqual(translated.frame, expected)
+    }
+
     func testLeafAxisAlignedBoundingBox() {
         let path = Path.circle(center: Point(), radius: 10)
         let composite = StyledPath.Composite.leaf(StyledPath(path: path))
@@ -145,6 +167,68 @@ class StyledPathCompositeTests: XCTestCase {
     }
 
     func testResizedToFitContentsBranchScaleAndTranslation() {
-        // TODO
+
+        let group = StyledPath.Group(frame: Rectangle(x: 5, y: 5, width: 100, height: 100))
+
+        // Offset by 0,0 in own coordinates
+        let a = Path.rectangle(x: 0, y: 0, width: 3, height: 3)
+
+        // Offset by 20,20 in parent coordinates
+        let styledA = StyledPath(frame: Rectangle(x: 20, y: 20, width: 4, height: 4), path: a)
+
+        // Offset by 5,5 in own coordinates
+        let b = Path.rectangle(x: 5, y: 5, width: 5, height: 5)
+
+        // Offset by 2,2 in parent coordinates
+        let styledB = StyledPath(frame: Rectangle(x: 2, y: 2, width: 10, height: 10), path: b)
+
+        let composite = StyledPath.Composite.branch(group, [.leaf(styledA), .leaf(styledB)])
+        let resized = composite.resizedToFitContents
+
+        // Assert logic
+        let expected = Rectangle(x: 0, y: 0, width: 12, height: 12)
+        XCTAssertEqual(resized.frame, expected)
+
+        // Check graphics
+        let before = CALayer(composite)
+        before.showTestBorder()
+        before.renderToPDF(name: "testResizedToFitContentsBranchScaleAndTranslation_before")
+
+        let after = CALayer(resized)
+        after.showTestBorder()
+        after.renderToPDF(name: "testResizedToFitContentsBranchScaleAndTranslation_after")
+    }
+
+    func testResizedToFitContentsBranchScaleAndTranslation2() {
+
+        let group = StyledPath.Group(frame: Rectangle(x: 0, y: 0, width: 100, height: 100))
+
+        // Offset by 0,0 in own coordinates
+        let a = Path.rectangle(x: 0, y: 0, width: 3, height: 3)
+
+        // Offset by 0,0 in parent coordinates
+        let styledA = StyledPath(frame: Rectangle(x: 0, y: 0, width: 3, height: 3), path: a)
+
+        // Offset by 0,0 in own coordinates
+        let b = Path.rectangle(x: 0, y: 0, width: 10, height: 10)
+
+        // Offset by 20,20 in parent coordinates
+        let styledB = StyledPath(frame: Rectangle(x: 20, y: 20, width: 10, height: 10), path: b)
+
+        let composite = StyledPath.Composite.branch(group, [.leaf(styledA), .leaf(styledB)])
+        let resized = composite.resizedToFitContents
+
+        // Assert logic
+        let expected = Rectangle(x: 0, y: 0, width: 12, height: 12)
+        XCTAssertEqual(resized.frame, expected)
+
+        // Check graphics
+        let before = CALayer(composite)
+        before.showTestBorder()
+        before.renderToPDF(name: "testResizedToFitContentsBranchScaleAndTranslation2_before")
+
+        let after = CALayer(resized)
+        after.showTestBorder()
+        after.renderToPDF(name: "testResizedToFitContentsBranchScaleAndTranslation2_after")
     }
 }
