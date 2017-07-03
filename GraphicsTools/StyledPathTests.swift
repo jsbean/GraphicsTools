@@ -21,7 +21,7 @@ class StyledPathTests: XCTestCase {
         let resized = styledPath.resizedToFitContents
 
         // Assert logic
-        let expected = Rectangle(x: 5, y: 5, width: 10, height: 10)
+        let expected = Rectangle(x: 15, y: 15, width: 10, height: 10)
         XCTAssertEqual(resized.frame, expected)
 
         // Check graphics

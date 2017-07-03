@@ -30,10 +30,19 @@ public struct StyledPath {
 extension StyledPath {
 
     public var resizedToFitContents: StyledPath {
-        let frame = path.axisAlignedBoundingBox
+
+        // Get the bounding box of the path in local coordinate space
+        let bbox = self.path.axisAlignedBoundingBox
+
+        // Normalized the path so that it is a tight fit with the new frame
+        let path = self.path.translated(by: -bbox.origin)
+
+        // Adjust the position within parent coordinate space to compensate for change in path
+        let frame = bbox.translated(by: self.frame.origin)
+
         return StyledPath(
             frame: frame,
-            path: path.translated(by: -frame.origin),
+            path: path,
             styling: styling
         )
     }
