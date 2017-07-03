@@ -81,4 +81,70 @@ class StyledPathCompositeTests: XCTestCase {
 
         XCTAssertEqual(bbox, expected)
     }
+
+    func testResizedToFitContentsLeafNoChange() {
+
+        let rect = Rectangle(width: 10, height: 10)
+        let styledPath = StyledPath(frame: rect, path: Path.rectangle(rect))
+        let composite = StyledPath.Composite.leaf(styledPath)
+        let resized = composite.resizedToFitContents
+
+        // Assert logic
+        XCTAssertEqual(resized.frame, rect)
+
+        // Check graphics
+        let before = CALayer(composite)
+        before.showTestBorder()
+        before.renderToPDF(name: "testResizedToFitContentsLeafNoChange_before")
+
+        let after = CALayer(resized)
+        after.showTestBorder()
+        after.renderToPDF(name: "testResizedToFitContentsLeafNoChange_after")
+    }
+
+    func testResizedToFitContentsLeafNoTranslation() {
+
+        let rect = Rectangle(width: 10, height: 10)
+        let styledPath = StyledPath(frame: .zero, path: Path.rectangle(rect))
+        let composite = StyledPath.Composite.leaf(styledPath)
+        let resized = composite.resizedToFitContents
+
+        // Assert logic
+        XCTAssertEqual(resized.frame, rect)
+
+        // Check graphics
+        let before = CALayer(composite)
+        before.showTestBorder()
+        before.renderToPDF(name: "testResizedToFitContentsLeafNoTranslation_before")
+
+        let after = CALayer(resized)
+        after.showTestBorder()
+        after.renderToPDF(name: "testResizedToFitContentsLeafNoTranslation_after")
+    }
+
+    func testResizedToFitContentsLeafScaleAndTranslation() {
+
+        let frame = Rectangle(x: 10, y: 10, width: 100, height: 100)
+        let path = Path.rectangle(x: 5, y: 5, width: 10, height: 10)
+        let styledPath = StyledPath(frame: frame, path: path)
+        let composite = StyledPath.Composite.leaf(styledPath)
+        let resized = composite.resizedToFitContents
+
+        // Assert logic
+        let expected = Rectangle(x: 5, y: 5, width: 10, height: 10)
+        XCTAssertEqual(resized.frame, expected)
+
+        // Check graphics
+        let before = CALayer(composite)
+        before.showTestBorder()
+        before.renderToPDF(name: "testResizedToFitContentsLeafScaleAndTranslation_before")
+
+        let after = CALayer(resized)
+        after.showTestBorder()
+        after.renderToPDF(name: "testResizedToFitContentsLeafScaleAndTranslation_after")
+    }
+
+    func testResizedToFitContentsBranchScaleAndTranslation() {
+        // TODO
+    }
 }
