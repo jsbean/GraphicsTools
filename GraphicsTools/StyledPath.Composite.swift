@@ -76,6 +76,7 @@ extension Tree where Branch == StyledPath.Group, Leaf == StyledPath {
         case let .leaf(styledPath):
             return .leaf(styledPath.translated(by: point))
         case let .branch(group, trees):
+            // TODO: Group.translated(by: Point)
             let group = StyledPath.Group(group.identifier, frame: group.frame.translated(by: point))
             return .branch(group, trees)
         }

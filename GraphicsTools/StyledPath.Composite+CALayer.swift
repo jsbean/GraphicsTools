@@ -10,7 +10,7 @@ import QuartzCore
 import GeometryTools
 
 extension CALayer {
-    
+
     public convenience init(_ composite: StyledPath.Composite) {
 
         func traverse(_ composite: StyledPath.Composite, building container: CALayer) {
@@ -28,6 +28,6 @@ extension CALayer {
 
         self.init()
         self.frame = CGRect(composite.frame)
-        traverse(composite, building: self)
+        traverse(composite.resizedToFitContents, building: self)
     }
 }
