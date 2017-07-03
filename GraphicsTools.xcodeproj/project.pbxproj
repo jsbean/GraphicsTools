@@ -113,6 +113,8 @@
 		076D04751E2D2F060023ED96 /* LayoutNodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D04731E2D2F050023ED96 /* LayoutNodeTests.swift */; };
 		07731ED61F06A00800BDDCD6 /* bbox.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 07731ED51F06A00100BDDCD6 /* bbox.svg */; };
 		07731ED71F06A00C00BDDCD6 /* bbox.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 07731ED51F06A00100BDDCD6 /* bbox.svg */; };
+		077BB3821F0A9CB700328803 /* QuartzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077BB3811F0A9CB700328803 /* QuartzTests.swift */; };
+		077BB3831F0A9CB700328803 /* QuartzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077BB3811F0A9CB700328803 /* QuartzTests.swift */; };
 		0789227D1EF2E3030037C572 /* Fill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0789227C1EF2E3030037C572 /* Fill.swift */; };
 		0789227E1EF2E3030037C572 /* Fill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0789227C1EF2E3030037C572 /* Fill.swift */; };
 		078922801EF2E3130037C572 /* Stoke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0789227F1EF2E3130037C572 /* Stoke.swift */; };
@@ -313,6 +315,7 @@
 		076D04701E2D2D740023ED96 /* LayoutNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LayoutNode.swift; path = GraphicsTools/LayoutNode.swift; sourceTree = "<group>"; };
 		076D04731E2D2F050023ED96 /* LayoutNodeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LayoutNodeTests.swift; path = GraphicsToolsTests/LayoutNodeTests.swift; sourceTree = "<group>"; };
 		07731ED51F06A00100BDDCD6 /* bbox.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = bbox.svg; sourceTree = "<group>"; };
+		077BB3811F0A9CB700328803 /* QuartzTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuartzTests.swift; path = GraphicsTools/QuartzTests.swift; sourceTree = "<group>"; };
 		0789227C1EF2E3030037C572 /* Fill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Fill.swift; path = GraphicsTools/Fill.swift; sourceTree = "<group>"; };
 		0789227F1EF2E3130037C572 /* Stoke.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Stoke.swift; path = GraphicsTools/Stoke.swift; sourceTree = "<group>"; };
 		079E69451EF5DF240093A7ED /* Styling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Styling.swift; path = GraphicsTools/Styling.swift; sourceTree = "<group>"; };
@@ -585,6 +588,7 @@
 				076484FE1EF812E20095FBB5 /* ColorTests.swift */,
 				0762009F1F03D5C300D62726 /* StyledPathTests.swift */,
 				074A841F1F09A23F007C612B /* StyledPathCompositeTests.swift */,
+				077BB3811F0A9CB700328803 /* QuartzTests.swift */,
 			);
 			name = GraphicsToolsTests;
 			sourceTree = "<group>";
@@ -952,6 +956,7 @@
 				074A84211F09A23F007C612B /* StyledPathCompositeTests.swift in Sources */,
 				0744B4CB1EF01A53003F9B3A /* TextTests.swift in Sources */,
 				0750C4461EF05763005840B8 /* TextBoxTests.swift in Sources */,
+				077BB3831F0A9CB700328803 /* QuartzTests.swift in Sources */,
 				07B8E2BA1EF442AD00C9EF18 /* SVGTests.swift in Sources */,
 				076485001EF812E20095FBB5 /* ColorTests.swift in Sources */,
 				076200A11F03D5C300D62726 /* StyledPathTests.swift in Sources */,
@@ -968,6 +973,7 @@
 				074A84201F09A23F007C612B /* StyledPathCompositeTests.swift in Sources */,
 				0744B4CA1EF01A53003F9B3A /* TextTests.swift in Sources */,
 				0750C4451EF05763005840B8 /* TextBoxTests.swift in Sources */,
+				077BB3821F0A9CB700328803 /* QuartzTests.swift in Sources */,
 				07B8E2B91EF442AD00C9EF18 /* SVGTests.swift in Sources */,
 				076484FF1EF812E20095FBB5 /* ColorTests.swift in Sources */,
 				076200A01F03D5C300D62726 /* StyledPathTests.swift in Sources */,
