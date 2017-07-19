@@ -46,9 +46,12 @@ class SVGTests: XCTestCase {
 
         do {
             let svg = try SVG(name: "bbox")
-            let path = StyledPath.Composite(svg, height: 1000)
-            let layer = CALayer(path)
-            layer.renderToPDF(name: "bbox_scale_to_height")
+            let pathByHeight = StyledPath.Composite(svg, height: 1000)
+            let pathByWidth = StyledPath.Composite(svg, width: 20)
+            let pathByHeightLayer = CALayer(pathByHeight)
+            let pathByWidthLayer = CALayer(pathByWidth)
+            pathByHeightLayer.renderToPDF(name: "bbox_scale_to_height")
+            pathByWidthLayer.renderToPDF(name: "bbox_scale_to_width")
         } catch {
             print(error)
         }

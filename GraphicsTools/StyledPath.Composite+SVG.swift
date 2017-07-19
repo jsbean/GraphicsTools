@@ -58,8 +58,11 @@ extension Tree where Branch == StyledPath.Group, Leaf == StyledPath {
 
         let proportion = height / boundingBox.size.height
         let ref = boundingBox.origin
+
         let translated = structure.mapLeaves { styledPath in
-            return styledPath.translated(by: -ref).scaled(by: proportion)
+            styledPath
+                .translated(by: -proportion * ref)
+                .scaled(by: proportion)
         }
 
         // Create root group
@@ -84,8 +87,11 @@ extension Tree where Branch == StyledPath.Group, Leaf == StyledPath {
         
         let proportion = width / boundingBox.size.height
         let ref = boundingBox.origin
+
         let translated = structure.mapLeaves { styledPath in
-            return styledPath.translated(by: -ref).scaled(by: proportion)
+            styledPath
+                .translated(by: -proportion * ref)
+                .scaled(by: proportion)
         }
 
         // Create root group
