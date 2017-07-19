@@ -186,7 +186,7 @@ class StyledPathCompositeTests: XCTestCase {
         let resized = composite.resizedToFitContents
 
         // Assert logic
-        let expected = Rectangle(x: 0, y: 0, width: 12, height: 12)
+        let expected = Rectangle(x: 2, y: 2, width: 22, height: 22)
         XCTAssertEqual(resized.frame, expected)
 
         // Check graphics
@@ -219,7 +219,7 @@ class StyledPathCompositeTests: XCTestCase {
         let resized = composite.resizedToFitContents
 
         // Assert logic
-        let expected = Rectangle(x: 0, y: 0, width: 12, height: 12)
+        let expected = Rectangle(x: 0, y: 0, width: 30, height: 30)
         XCTAssertEqual(resized.frame, expected)
 
         // Check graphics

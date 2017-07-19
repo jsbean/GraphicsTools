@@ -17,7 +17,7 @@ public struct StyledPath {
     
     public init(
         frame: Rectangle = .zero,
-        path: Path = .unit,
+        path: Path = .zero,
         styling: Styling = Styling()
     )
     {
@@ -33,6 +33,8 @@ extension StyledPath {
 
         // Get the bounding box of the path in local coordinate space
         let bbox = self.path.axisAlignedBoundingBox
+
+        print("bbox: \(bbox)")
 
         // Normalized the path so that it is a tight fit with the new frame
         let path = self.path.translated(by: -bbox.origin)

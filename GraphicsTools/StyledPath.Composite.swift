@@ -9,19 +9,7 @@
 import Collections
 import GeometryTools
 
-extension StyledPath {
-    
-    public struct Group {
-        
-        public let identifier: String
-        public let frame: Rectangle
-        
-        public init(_ identifier: String = "root", frame: Rectangle = .zero) {
-            self.identifier = identifier
-            self.frame = frame
-        }
-    }
-    
+extension StyledPath {     
     public typealias Composite = Tree<Group,StyledPath>
 }
 
@@ -42,12 +30,11 @@ extension Tree where Branch == StyledPath.Group, Leaf == StyledPath {
         switch self {
 
         case .leaf(let styledPath):
-            let styledPath = styledPath.resizedToFitContents
-            let frame = styledPath.frame
-            return .leaf(styledPath.translated(by: -frame.origin))
+            let resized = styledPath.resizedToFitContents
+            return .leaf(resized.translated(by: -styledPath.frame.origin))
 
         case let .branch(group, trees):
-            let frame = trees.map { $0.frame }.sum
+            let frame: Rectangle = trees.map { return $0.frame }.nonEmptySum ?? .zero
             let group = StyledPath.Group(group.identifier, frame: frame)
             return .branch(group, trees.map { $0.translated(by: -frame.origin) })
         }
@@ -64,10 +51,8 @@ extension Tree where Branch == StyledPath.Group, Leaf == StyledPath {
                 .translated(by: -styledPath.frame.origin)
 
         case let .branch(group, trees):
-            return trees
-                .map { composite in composite.axisAlignedBoundingBox }
-                .sum
-                .translated(by: -group.frame.origin)
+            let bbox = trees.map { $0.axisAlignedBoundingBox }.nonEmptySum ?? .zero
+            return bbox.translated(by: -group.frame.origin)
         }
     }
 

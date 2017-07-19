@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		070D41631D1030C200C02AC9 /* GraphicsContainerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070D41621D1030C200C02AC9 /* GraphicsContainerType.swift */; };
 		070D41641D1030C200C02AC9 /* GraphicsContainerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070D41621D1030C200C02AC9 /* GraphicsContainerType.swift */; };
+		072405151F1FDD0C00E266B3 /* StyledPath.Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072405141F1FDD0C00E266B3 /* StyledPath.Group.swift */; };
+		072405161F1FDD0C00E266B3 /* StyledPath.Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072405141F1FDD0C00E266B3 /* StyledPath.Group.swift */; };
 		0726DC491EF5458B0055B9A1 /* rect.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0726DC481EF5451E0055B9A1 /* rect.svg */; };
 		0726DC4A1EF5458B0055B9A1 /* circle.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0726DC411EF544CB0055B9A1 /* circle.svg */; };
 		0726DC4B1EF5458B0055B9A1 /* curve1.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0726DC421EF544CB0055B9A1 /* curve1.svg */; };
@@ -263,6 +265,7 @@
 
 /* Begin PBXFileReference section */
 		070D41621D1030C200C02AC9 /* GraphicsContainerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GraphicsContainerType.swift; path = GraphicsTools/GraphicsContainerType.swift; sourceTree = "<group>"; };
+		072405141F1FDD0C00E266B3 /* StyledPath.Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StyledPath.Group.swift; path = GraphicsTools/StyledPath.Group.swift; sourceTree = "<group>"; };
 		0726DC411EF544CB0055B9A1 /* circle.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = circle.svg; sourceTree = "<group>"; };
 		0726DC421EF544CB0055B9A1 /* curve1.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = curve1.svg; sourceTree = "<group>"; };
 		0726DC431EF544CB0055B9A1 /* curve2.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = curve2.svg; sourceTree = "<group>"; };
@@ -480,6 +483,7 @@
 			isa = PBXGroup;
 			children = (
 				079E69481EF5DF8F0093A7ED /* StyledPath.swift */,
+				072405141F1FDD0C00E266B3 /* StyledPath.Group.swift */,
 				076715691F029F980073AA6F /* StyledPath.Composite.swift */,
 				079E69451EF5DF240093A7ED /* Styling.swift */,
 				0789227C1EF2E3030037C572 /* Fill.swift */,
@@ -871,6 +875,7 @@
 				0744B4C11EF01344003F9B3A /* Alignment.swift in Sources */,
 				0750C43C1EF0546E005840B8 /* TextBox.swift in Sources */,
 				0764850C1EF814720095FBB5 /* Ellipse+SVG.swift in Sources */,
+				072405151F1FDD0C00E266B3 /* StyledPath.Group.swift in Sources */,
 				076D04641E2D22C50023ED96 /* Color+CGColor.swift in Sources */,
 				076484ED1EF7ECD30095FBB5 /* Polygon+SVG.swift in Sources */,
 				07305A581D0F47EE006E4085 /* ShapeType.swift in Sources */,
@@ -926,6 +931,7 @@
 				0744B4C21EF01344003F9B3A /* Alignment.swift in Sources */,
 				0750C43D1EF0546E005840B8 /* TextBox.swift in Sources */,
 				0764850D1EF814720095FBB5 /* Ellipse+SVG.swift in Sources */,
+				072405161F1FDD0C00E266B3 /* StyledPath.Group.swift in Sources */,
 				076D04651E2D22C50023ED96 /* Color+CGColor.swift in Sources */,
 				076484EE1EF7ECD30095FBB5 /* Polygon+SVG.swift in Sources */,
 				07305A591D0F47EE006E4085 /* ShapeType.swift in Sources */,
