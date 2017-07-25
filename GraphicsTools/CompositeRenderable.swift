@@ -12,13 +12,13 @@ import PathTools
 
 /// Type which represents a composite of `ConfiguredRenderable`-type values.
 public protocol CompositeRenderable: Renderable {
-    var rendered: StyledPath.Composite { get }
+    var rendered: Composite { get }
     var components: [Renderable] { get }
 }
 
 extension CompositeRenderable {
     
-    public var rendered: StyledPath.Composite {
-        return .branch(StyledPath.Group("container"), components.map { $0.rendered })
+    public var rendered: Composite {
+        return .branch(Group("container"), components.map { $0.rendered })
     }
 }

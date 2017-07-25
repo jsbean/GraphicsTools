@@ -1,20 +1,18 @@
 //
-//  StyledPath.Composite.swift
+//  Composite.swift
 //  GraphicsTools
 //
-//  Created by James Bean on 6/27/17.
+//  Created by James Bean on 7/25/17.
 //
 //
 
 import Collections
 import GeometryTools
 
-extension StyledPath {     
-    public typealias Composite = Tree<Group,StyledPath>
-}
+public typealias Composite = Tree<Group,Item>
 
 // TODO: Use extension StyledPath.Composite when Swift allows it.
-extension Tree where Branch == StyledPath.Group, Leaf == StyledPath {
+extension Tree where Branch == Group, Leaf == Item {
 
     public var frame: Rectangle {
         switch self {
@@ -25,17 +23,17 @@ extension Tree where Branch == StyledPath.Group, Leaf == StyledPath {
         }
     }
 
-    public var resizedToFitContents: StyledPath.Composite {
+    public var resizedToFitContents: Composite {
 
         switch self {
 
-        case .leaf(let styledPath):
-            let resized = styledPath.resizedToFitContents
-            return .leaf(resized.translated(by: -styledPath.frame.origin))
+        case .leaf(let item):
+            let resized = item.resizedToFitContents
+            return .leaf(resized.translated(by: -item.frame.origin))
 
         case let .branch(group, trees):
-            let frame: Rectangle = trees.map { return $0.frame }.nonEmptySum ?? .zero
-            let group = StyledPath.Group(group.identifier, frame: frame)
+            let frame: Rectangle = trees.map { $0.frame }.nonEmptySum ?? .zero
+            let group = Group(group.identifier, frame: frame)
             return .branch(group, trees.map { $0.translated(by: -frame.origin) })
         }
     }
@@ -44,11 +42,16 @@ extension Tree where Branch == StyledPath.Group, Leaf == StyledPath {
 
         switch self {
 
-        case .leaf(let styledPath):
-            return styledPath
-                .path
-                .axisAlignedBoundingBox
-                .translated(by: -styledPath.frame.origin)
+        // Encapsulate in Item
+        case .leaf(let item):
+            switch item {
+            case .path(let styledPath):
+                return styledPath.path
+                    .axisAlignedBoundingBox
+                    .translated(by: -item.frame.origin)
+            case .text:
+                fatalError()
+            }
 
         case let .branch(group, trees):
             let bbox = trees.map { $0.axisAlignedBoundingBox }.nonEmptySum ?? .zero
@@ -56,13 +59,13 @@ extension Tree where Branch == StyledPath.Group, Leaf == StyledPath {
         }
     }
 
-    public func translated(by point: Point) -> StyledPath.Composite {
+    public func translated(by point: Point) -> Composite {
         switch self {
         case let .leaf(styledPath):
             return .leaf(styledPath.translated(by: point))
         case let .branch(group, trees):
             // TODO: Group.translated(by: Point)
-            let group = StyledPath.Group(group.identifier, frame: group.frame.translated(by: point))
+            let group = Group(group.identifier, frame: group.frame.translated(by: point))
             return .branch(group, trees)
         }
     }
