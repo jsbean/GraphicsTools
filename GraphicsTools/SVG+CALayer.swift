@@ -11,6 +11,6 @@ import QuartzCore
 extension CALayer {
     
     public convenience init(_ svg: SVG) {
-        self.init(StyledPath.Composite(svg))
+        self.init(Composite(svg))
     }
 }

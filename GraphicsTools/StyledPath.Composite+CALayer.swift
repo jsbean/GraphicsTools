@@ -11,13 +11,21 @@ import GeometryTools
 
 extension CALayer {
 
-    public convenience init(_ composite: StyledPath.Composite) {
+    public convenience init(_ composite: Composite) {
 
-        func traverse(_ composite: StyledPath.Composite, building container: CALayer) {
+        func traverse(_ composite: Composite, building container: CALayer) {
             switch composite {
-            case .leaf(let styledPath):
-                let layer = CAShapeLayer(styledPath)
-                container.addSublayer(layer)
+
+            // FIXME: Encapsulate in Item
+            case .leaf(let item):
+                switch item {
+                case .path(let styledPath):
+                    let layer = CAShapeLayer(styledPath)
+                    container.addSublayer(layer)
+                case .text:
+                    fatalError()
+                }
+
             case .branch(let group, let trees):
                 let layer = CALayer()
                 layer.frame = CGRect(group.frame)

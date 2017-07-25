@@ -9,6 +9,6 @@
 /// Type which can be configured by its own `Configuration` type.
 public protocol Renderable {
     
-    /// `StyledPath.Composite`-representation of `Renderable`-conforming type.
-    var rendered: StyledPath.Composite { get }
+    /// `Composite`-representation of `Renderable`-conforming type.
+    var rendered: Composite { get }
 }
