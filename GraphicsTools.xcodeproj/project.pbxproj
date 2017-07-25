@@ -15,8 +15,6 @@
 		071E3F271F276EF800486F90 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071E3F251F276EF800486F90 /* Group.swift */; };
 		071E3F291F276F1E00486F90 /* Composite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071E3F281F276F1E00486F90 /* Composite.swift */; };
 		071E3F2A1F276F1E00486F90 /* Composite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071E3F281F276F1E00486F90 /* Composite.swift */; };
-		072405151F1FDD0C00E266B3 /* StyledPath.Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072405141F1FDD0C00E266B3 /* StyledPath.Group.swift */; };
-		072405161F1FDD0C00E266B3 /* StyledPath.Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072405141F1FDD0C00E266B3 /* StyledPath.Group.swift */; };
 		0726DC491EF5458B0055B9A1 /* rect.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0726DC481EF5451E0055B9A1 /* rect.svg */; };
 		0726DC4A1EF5458B0055B9A1 /* circle.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0726DC411EF544CB0055B9A1 /* circle.svg */; };
 		0726DC4B1EF5458B0055B9A1 /* curve1.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0726DC421EF544CB0055B9A1 /* curve1.svg */; };
@@ -55,8 +53,8 @@
 		0744B4CB1EF01A53003F9B3A /* TextTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0744B4C91EF01A53003F9B3A /* TextTests.swift */; };
 		0748EEBE1E25816C003F19FD /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0748EEBD1E25816C003F19FD /* Renderer.swift */; };
 		0748EEBF1E25816C003F19FD /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0748EEBD1E25816C003F19FD /* Renderer.swift */; };
-		074A84201F09A23F007C612B /* StyledPathCompositeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074A841F1F09A23F007C612B /* StyledPathCompositeTests.swift */; };
-		074A84211F09A23F007C612B /* StyledPathCompositeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074A841F1F09A23F007C612B /* StyledPathCompositeTests.swift */; };
+		074A84201F09A23F007C612B /* CompositeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074A841F1F09A23F007C612B /* CompositeTests.swift */; };
+		074A84211F09A23F007C612B /* CompositeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074A841F1F09A23F007C612B /* CompositeTests.swift */; };
 		0750C43C1EF0546E005840B8 /* TextBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0750C43B1EF0546E005840B8 /* TextBox.swift */; };
 		0750C43D1EF0546E005840B8 /* TextBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0750C43B1EF0546E005840B8 /* TextBox.swift */; };
 		0750C43F1EF0549B005840B8 /* Insets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0750C43E1EF0549B005840B8 /* Insets.swift */; };
@@ -109,8 +107,6 @@
 		076485161EF818830095FBB5 /* fill_stroke_opacity.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 076485141EF818750095FBB5 /* fill_stroke_opacity.svg */; };
 		076485181EF839DB0095FBB5 /* colors_opacity.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 076485171EF839D40095FBB5 /* colors_opacity.svg */; };
 		076485191EF839DF0095FBB5 /* colors_opacity.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 076485171EF839D40095FBB5 /* colors_opacity.svg */; };
-		0767156A1F029F980073AA6F /* StyledPath.Composite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076715691F029F980073AA6F /* StyledPath.Composite.swift */; };
-		0767156B1F029F980073AA6F /* StyledPath.Composite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076715691F029F980073AA6F /* StyledPath.Composite.swift */; };
 		076D04611E2D1CB00023ED96 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D04601E2D1CB00023ED96 /* Color.swift */; };
 		076D04621E2D1CB00023ED96 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D04601E2D1CB00023ED96 /* Color.swift */; };
 		076D04641E2D22C50023ED96 /* Color+CGColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D04631E2D22C50023ED96 /* Color+CGColor.swift */; };
@@ -274,7 +270,6 @@
 		071E3F221F276DB000486F90 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Item.swift; path = GraphicsTools/Item.swift; sourceTree = "<group>"; };
 		071E3F251F276EF800486F90 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Group.swift; path = GraphicsTools/Group.swift; sourceTree = "<group>"; };
 		071E3F281F276F1E00486F90 /* Composite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Composite.swift; path = GraphicsTools/Composite.swift; sourceTree = "<group>"; };
-		072405141F1FDD0C00E266B3 /* StyledPath.Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StyledPath.Group.swift; path = GraphicsTools/StyledPath.Group.swift; sourceTree = "<group>"; };
 		0726DC411EF544CB0055B9A1 /* circle.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = circle.svg; sourceTree = "<group>"; };
 		0726DC421EF544CB0055B9A1 /* curve1.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = curve1.svg; sourceTree = "<group>"; };
 		0726DC431EF544CB0055B9A1 /* curve2.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = curve2.svg; sourceTree = "<group>"; };
@@ -294,7 +289,7 @@
 		0744B4C31EF0154A003F9B3A /* Text+CATextLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Text+CATextLayer.swift"; path = "GraphicsTools/Text+CATextLayer.swift"; sourceTree = "<group>"; };
 		0744B4C91EF01A53003F9B3A /* TextTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextTests.swift; path = GraphicsToolsTests/TextTests.swift; sourceTree = "<group>"; };
 		0748EEBD1E25816C003F19FD /* Renderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Renderer.swift; path = GraphicsTools/Renderer.swift; sourceTree = "<group>"; };
-		074A841F1F09A23F007C612B /* StyledPathCompositeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StyledPathCompositeTests.swift; path = GraphicsToolsTests/StyledPathCompositeTests.swift; sourceTree = "<group>"; };
+		074A841F1F09A23F007C612B /* CompositeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompositeTests.swift; path = GraphicsToolsTests/CompositeTests.swift; sourceTree = "<group>"; };
 		0750C43B1EF0546E005840B8 /* TextBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextBox.swift; path = GraphicsTools/TextBox.swift; sourceTree = "<group>"; };
 		0750C43E1EF0549B005840B8 /* Insets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Insets.swift; path = GraphicsTools/Insets.swift; sourceTree = "<group>"; };
 		0750C4411EF05739005840B8 /* TextBox+CALayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "TextBox+CALayer.swift"; path = "GraphicsTools/TextBox+CALayer.swift"; sourceTree = "<group>"; };
@@ -321,7 +316,6 @@
 		076485111EF817870095FBB5 /* Styling+SVGInitializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Styling+SVGInitializable.swift"; path = "GraphicsTools/Styling+SVGInitializable.swift"; sourceTree = "<group>"; };
 		076485141EF818750095FBB5 /* fill_stroke_opacity.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = fill_stroke_opacity.svg; sourceTree = "<group>"; };
 		076485171EF839D40095FBB5 /* colors_opacity.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = colors_opacity.svg; sourceTree = "<group>"; };
-		076715691F029F980073AA6F /* StyledPath.Composite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StyledPath.Composite.swift; path = GraphicsTools/StyledPath.Composite.swift; sourceTree = "<group>"; };
 		076D04601E2D1CB00023ED96 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Color.swift; path = GraphicsTools/Color.swift; sourceTree = "<group>"; };
 		076D04631E2D22C50023ED96 /* Color+CGColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Color+CGColor.swift"; path = "GraphicsTools/Color+CGColor.swift"; sourceTree = "<group>"; };
 		076D04701E2D2D740023ED96 /* LayoutNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LayoutNode.swift; path = GraphicsTools/LayoutNode.swift; sourceTree = "<group>"; };
@@ -492,8 +486,6 @@
 			isa = PBXGroup;
 			children = (
 				079E69481EF5DF8F0093A7ED /* StyledPath.swift */,
-				072405141F1FDD0C00E266B3 /* StyledPath.Group.swift */,
-				076715691F029F980073AA6F /* StyledPath.Composite.swift */,
 				079E69451EF5DF240093A7ED /* Styling.swift */,
 				0789227C1EF2E3030037C572 /* Fill.swift */,
 				0789227F1EF2E3130037C572 /* Stoke.swift */,
@@ -603,7 +595,7 @@
 				07B8E2B81EF442AD00C9EF18 /* SVGTests.swift */,
 				076484FE1EF812E20095FBB5 /* ColorTests.swift */,
 				0762009F1F03D5C300D62726 /* StyledPathTests.swift */,
-				074A841F1F09A23F007C612B /* StyledPathCompositeTests.swift */,
+				074A841F1F09A23F007C612B /* CompositeTests.swift */,
 				077BB3811F0A9CB700328803 /* QuartzTests.swift */,
 			);
 			name = GraphicsToolsTests;
@@ -882,13 +874,11 @@
 				070D41631D1030C200C02AC9 /* GraphicsContainerType.swift in Sources */,
 				07ABA3F01EE1E57D00190BFC /* TestFrame.swift in Sources */,
 				076485031EF8140B0095FBB5 /* Line+SVG.swift in Sources */,
-				0767156A1F029F980073AA6F /* StyledPath.Composite.swift in Sources */,
 				076485061EF814320095FBB5 /* Polyline+SVG.swift in Sources */,
 				07D3A0F61EF58AA200641D15 /* SVGInitializable.swift in Sources */,
 				0744B4C11EF01344003F9B3A /* Alignment.swift in Sources */,
 				0750C43C1EF0546E005840B8 /* TextBox.swift in Sources */,
 				0764850C1EF814720095FBB5 /* Ellipse+SVG.swift in Sources */,
-				072405151F1FDD0C00E266B3 /* StyledPath.Group.swift in Sources */,
 				071E3F231F276DB000486F90 /* Item.swift in Sources */,
 				076D04641E2D22C50023ED96 /* Color+CGColor.swift in Sources */,
 				076484ED1EF7ECD30095FBB5 /* Polygon+SVG.swift in Sources */,
@@ -941,13 +931,11 @@
 				070D41641D1030C200C02AC9 /* GraphicsContainerType.swift in Sources */,
 				07ABA3F11EE1E57D00190BFC /* TestFrame.swift in Sources */,
 				076485041EF8140B0095FBB5 /* Line+SVG.swift in Sources */,
-				0767156B1F029F980073AA6F /* StyledPath.Composite.swift in Sources */,
 				076485071EF814320095FBB5 /* Polyline+SVG.swift in Sources */,
 				07D3A0F71EF58AA200641D15 /* SVGInitializable.swift in Sources */,
 				0744B4C21EF01344003F9B3A /* Alignment.swift in Sources */,
 				0750C43D1EF0546E005840B8 /* TextBox.swift in Sources */,
 				0764850D1EF814720095FBB5 /* Ellipse+SVG.swift in Sources */,
-				072405161F1FDD0C00E266B3 /* StyledPath.Group.swift in Sources */,
 				071E3F241F276DB000486F90 /* Item.swift in Sources */,
 				076D04651E2D22C50023ED96 /* Color+CGColor.swift in Sources */,
 				076484EE1EF7ECD30095FBB5 /* Polygon+SVG.swift in Sources */,
@@ -977,7 +965,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07ABA3EC1EE1C7FA00190BFC /* PDFTests.swift in Sources */,
-				074A84211F09A23F007C612B /* StyledPathCompositeTests.swift in Sources */,
+				074A84211F09A23F007C612B /* CompositeTests.swift in Sources */,
 				0744B4CB1EF01A53003F9B3A /* TextTests.swift in Sources */,
 				0750C4461EF05763005840B8 /* TextBoxTests.swift in Sources */,
 				077BB3831F0A9CB700328803 /* QuartzTests.swift in Sources */,
@@ -994,7 +982,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07ABA3EB1EE1C7FA00190BFC /* PDFTests.swift in Sources */,
-				074A84201F09A23F007C612B /* StyledPathCompositeTests.swift in Sources */,
+				074A84201F09A23F007C612B /* CompositeTests.swift in Sources */,
 				0744B4CA1EF01A53003F9B3A /* TextTests.swift in Sources */,
 				0750C4451EF05763005840B8 /* TextBoxTests.swift in Sources */,
 				077BB3821F0A9CB700328803 /* QuartzTests.swift in Sources */,

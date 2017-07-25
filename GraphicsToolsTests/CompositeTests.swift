@@ -1,5 +1,5 @@
 //
-//  StyledPathCompositeTests.swift
+//  CompositeTests.swift
 //  GraphicsTools
 //
 //  Created by James Bean on 7/2/17.
@@ -11,7 +11,7 @@ import GeometryTools
 import PathTools
 import GraphicsTools
 
-class StyledPathCompositeTests: XCTestCase {
+class CompositeTests: XCTestCase {
 
     func testTranslateLeaf() {
         let frame = Rectangle(x: 10, y: 10, width: 100, height: 100)
