@@ -16,7 +16,7 @@ class RenderableTests: XCTestCase {
     
     struct R: Renderable {
         
-        var rendered: StyledPath.Composite {
+        var rendered: Composite {
             fatalError()
         }
         
