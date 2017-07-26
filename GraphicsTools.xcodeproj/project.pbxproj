@@ -686,6 +686,7 @@
 				CC067F0C1DD8256AE7043609 /* Frameworks */,
 				A16DB72448B711DFDAFFE70F /* CopyFiles */,
 				07072ADC1D96F4F4006876C1 /* ShellScript */,
+				073E55181F29344D00EB6E1F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -705,7 +706,6 @@
 				E5E0940A69326869BD43BDAF /* Frameworks */,
 				2825C2889FAFBA5FEAFFF916 /* CopyFiles */,
 				07072ADB1D96F4D8006876C1 /* ShellScript */,
-				07ABA3ED1EE1DFD200190BFC /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -830,7 +830,7 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
-		07ABA3ED1EE1DFD200190BFC /* ShellScript */ = {
+		073E55181F29344D00EB6E1F /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -841,7 +841,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "echo \"${SRCROOT}\"";
+			shellScript = "open \"${BUILT_PRODUCTS_DIR}/Artifacts\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
