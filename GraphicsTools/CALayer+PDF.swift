@@ -6,42 +6,28 @@
 //
 //
 
-#if os(iOS)
-import UIKit
-#elseif os(OSX)
 import QuartzCore
-#endif
 
 extension CALayer {
-    
-    public func renderToPDF(name: String) {
+
+    public func renderToPDF(at location: URL) {
 
         let margin: CGFloat = 20
-        let path = "/Users/BEAN/\(name).pdf"
-        
-        let pageFrame = CGRect(
+        var pageFrame = CGRect(
             x: 0,
             y: 0,
             width: bounds.width + 2 * margin,
             height: bounds.height + 2 * margin
         )
-        
-        #if os(iOS)
-            
-            UIGraphicsBeginPDFContextToFile(path, pageFrame, nil)
-            UIGraphicsBeginPDFPage()
-            let context = UIGraphicsGetCurrentContext()!
-            context.translateBy(x: margin, y: margin)
-            render(in: context)
-            UIGraphicsEndPDFContext()
-        
-        #elseif os(OSX)
-         
-            
-            print("osx")
-            
-            
-        
-        #endif
+
+        let context = CGContext(location as CFURL, mediaBox: &pageFrame, nil)!
+        context.beginPDFPage(nil)
+        context.translateBy(x: margin, y: margin)
+        render(in: context)
+        context.endPDFPage()
+    }
+
+    public func renderToPDF(name: String, location: URL = URL(fileURLWithPath: "/Users/BEAN")) {
+        renderToPDF(at: location.appendingPathComponent("\(name).pdf"))
     }
 }

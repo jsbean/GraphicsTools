@@ -8,9 +8,28 @@
 
 import GeometryTools
 import PathTools
+import GraphicsTools
 import XCTest
 
-class PDFTests: XCTestCase {
+class GraphicsTestCase: XCTestCase {
+
+    func render(_ path: StyledPath, name: String) {
+        let fileManager = FileManager.default
+        let directory = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let url = directory.appendingPathComponent("\(name).pdf")
+        let layer = CAShapeLayer(path)
+        layer.renderToPDF(at: url)
+    }
+}
+
+class PDFTests: GraphicsTestCase {
+
+    func testPDF() {
+        let path = Path.circle(center: .zero, radius: 10)
+        let styling = Styling(fill: Fill(color: .chartreuse))
+        let styledPath = StyledPath(path: path, styling: styling)
+        render(styledPath, name: "testCircle2")
+    }
     
 //    func testRectsRenderedToPDF() {
 //        
