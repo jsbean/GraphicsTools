@@ -1,1 +1,1 @@
-github "dn-m/GraphicsTestTools" == 0.1
+github "dn-m/GraphicsTestTools" >= 0.1.5

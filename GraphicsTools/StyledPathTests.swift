@@ -10,6 +10,7 @@ import XCTest
 import GeometryTools
 import PathTools
 import GraphicsTools
+import GraphicsTestTools
 
 class StyledPathTests: GraphicsTestCase {
 

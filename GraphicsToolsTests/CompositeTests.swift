@@ -6,10 +6,11 @@
 //
 //
 
-import XCTest
 import GeometryTools
 import PathTools
 import GraphicsTools
+import GraphicsTestTools
+import XCTest
 
 class CompositeTests: GraphicsTestCase {
 

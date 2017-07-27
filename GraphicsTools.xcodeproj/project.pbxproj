@@ -117,6 +117,8 @@
 		079D5FF21F2A1EED00AC83A5 /* GeometryTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 079D5FF11F2A1EED00AC83A5 /* GeometryTools.framework */; };
 		079D5FF41F2A1EF500AC83A5 /* Algebra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 079D5FF31F2A1EF500AC83A5 /* Algebra.framework */; };
 		079D5FF61F2A1EF900AC83A5 /* GeometryTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 079D5FF51F2A1EF900AC83A5 /* GeometryTools.framework */; };
+		079D60141F2A22F200AC83A5 /* GraphicsTestTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 079D60131F2A22F200AC83A5 /* GraphicsTestTools.framework */; };
+		079D60161F2A22FD00AC83A5 /* GraphicsTestTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 079D60151F2A22FD00AC83A5 /* GraphicsTestTools.framework */; };
 		079E69461EF5DF240093A7ED /* Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079E69451EF5DF240093A7ED /* Styling.swift */; };
 		079E69471EF5DF240093A7ED /* Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079E69451EF5DF240093A7ED /* Styling.swift */; };
 		079E69491EF5DF8F0093A7ED /* StyledPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079E69481EF5DF8F0093A7ED /* StyledPath.swift */; };
@@ -301,6 +303,8 @@
 		079D5FF11F2A1EED00AC83A5 /* GeometryTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GeometryTools.framework; path = ../GraphicsTestTools/Carthage/Build/iOS/GeometryTools.framework; sourceTree = "<group>"; };
 		079D5FF31F2A1EF500AC83A5 /* Algebra.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Algebra.framework; path = ../GraphicsTestTools/Carthage/Build/Mac/Algebra.framework; sourceTree = "<group>"; };
 		079D5FF51F2A1EF900AC83A5 /* GeometryTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GeometryTools.framework; path = ../GraphicsTestTools/Carthage/Build/Mac/GeometryTools.framework; sourceTree = "<group>"; };
+		079D60131F2A22F200AC83A5 /* GraphicsTestTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GraphicsTestTools.framework; path = Carthage/Build/iOS/GraphicsTestTools.framework; sourceTree = "<group>"; };
+		079D60151F2A22FD00AC83A5 /* GraphicsTestTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GraphicsTestTools.framework; path = Carthage/Build/Mac/GraphicsTestTools.framework; sourceTree = "<group>"; };
 		079E69451EF5DF240093A7ED /* Styling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Styling.swift; path = GraphicsTools/Styling.swift; sourceTree = "<group>"; };
 		079E69481EF5DF8F0093A7ED /* StyledPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StyledPath.swift; path = GraphicsTools/StyledPath.swift; sourceTree = "<group>"; };
 		07ABA3A11EE1ACDA00190BFC /* ArithmeticTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArithmeticTools.framework; path = Carthage/Build/iOS/ArithmeticTools.framework; sourceTree = "<group>"; };
@@ -364,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A94F712C5F12ED0EFC349E9E /* Cocoa.framework in Frameworks */,
+				079D60141F2A22F200AC83A5 /* GraphicsTestTools.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +377,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDA097E07045D1788A7EA9C7 /* Foundation.framework in Frameworks */,
+				079D60161F2A22FD00AC83A5 /* GraphicsTestTools.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,6 +569,8 @@
 		61BE38DD4E3A380CBCE9E329 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				079D60151F2A22FD00AC83A5 /* GraphicsTestTools.framework */,
+				079D60131F2A22F200AC83A5 /* GraphicsTestTools.framework */,
 				079D5FF51F2A1EF900AC83A5 /* GeometryTools.framework */,
 				079D5FF31F2A1EF500AC83A5 /* Algebra.framework */,
 				079D5FF11F2A1EED00AC83A5 /* GeometryTools.framework */,
@@ -676,7 +684,6 @@
 				CC067F0C1DD8256AE7043609 /* Frameworks */,
 				A16DB72448B711DFDAFFE70F /* CopyFiles */,
 				07072ADC1D96F4F4006876C1 /* ShellScript */,
-				073E55181F29344D00EB6E1F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -696,7 +703,6 @@
 				E5E0940A69326869BD43BDAF /* Frameworks */,
 				2825C2889FAFBA5FEAFFF916 /* CopyFiles */,
 				07072ADB1D96F4D8006876C1 /* ShellScript */,
-				079D5FC51F2A095F00AC83A5 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -796,6 +802,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/GeometryTools.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/PathTools.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SWXMLHash.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/GraphicsTestTools.framework",
 			);
 			outputPaths = (
 			);
@@ -814,38 +821,13 @@
 				"$(SRCROOT)/Carthage/Build/Mac/GeometryTools.framework",
 				"$(SRCROOT)/Carthage/Build/Mac/PathTools.framework",
 				"$(SRCROOT)/Carthage/Build/Mac/SWXMLHash.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/GraphicsTestTools.framework",
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
-		073E55181F29344D00EB6E1F /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "mkdir -p \"${BUILT_PRODUCTS_DIR}/Artifacts\"\nopen \"${BUILT_PRODUCTS_DIR}/Artifacts\"";
-		};
-		079D5FC51F2A095F00AC83A5 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "mkdir -p \"${BUILT_PRODUCTS_DIR}/Artifacts\"\nopen \"${BUILT_PRODUCTS_DIR}/Artifacts\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1149,7 +1131,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/iOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = GraphicsToolsTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(SRCROOT)/Carthage/Build/iOS";
@@ -1168,7 +1153,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/Mac";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = GraphicsToolsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks $(SRCROOT)/Carthage/Build/Mac";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
@@ -1186,7 +1174,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/iOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = GraphicsToolsTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(SRCROOT)/Carthage/Build/iOS";
@@ -1235,7 +1226,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/Mac";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = GraphicsToolsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks $(SRCROOT)/Carthage/Build/Mac";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
