@@ -113,6 +113,10 @@
 		079D5FE31F2A152300AC83A5 /* rect.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FD31F2A151E00AC83A5 /* rect.svg */; };
 		079D5FE41F2A152300AC83A5 /* square.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FD41F2A151E00AC83A5 /* square.svg */; };
 		079D5FE51F2A152300AC83A5 /* stroke.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FD51F2A151E00AC83A5 /* stroke.svg */; };
+		079D5FF01F2A1EE900AC83A5 /* Algebra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 079D5FEF1F2A1EE900AC83A5 /* Algebra.framework */; };
+		079D5FF21F2A1EED00AC83A5 /* GeometryTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 079D5FF11F2A1EED00AC83A5 /* GeometryTools.framework */; };
+		079D5FF41F2A1EF500AC83A5 /* Algebra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 079D5FF31F2A1EF500AC83A5 /* Algebra.framework */; };
+		079D5FF61F2A1EF900AC83A5 /* GeometryTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 079D5FF51F2A1EF900AC83A5 /* GeometryTools.framework */; };
 		079E69461EF5DF240093A7ED /* Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079E69451EF5DF240093A7ED /* Styling.swift */; };
 		079E69471EF5DF240093A7ED /* Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079E69451EF5DF240093A7ED /* Styling.swift */; };
 		079E69491EF5DF8F0093A7ED /* StyledPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079E69481EF5DF8F0093A7ED /* StyledPath.swift */; };
@@ -293,6 +297,10 @@
 		079D5FD31F2A151E00AC83A5 /* rect.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = rect.svg; path = SVGTests/rect.svg; sourceTree = "<group>"; };
 		079D5FD41F2A151E00AC83A5 /* square.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = square.svg; path = SVGTests/square.svg; sourceTree = "<group>"; };
 		079D5FD51F2A151E00AC83A5 /* stroke.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = stroke.svg; path = SVGTests/stroke.svg; sourceTree = "<group>"; };
+		079D5FEF1F2A1EE900AC83A5 /* Algebra.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Algebra.framework; path = ../GraphicsTestTools/Carthage/Build/iOS/Algebra.framework; sourceTree = "<group>"; };
+		079D5FF11F2A1EED00AC83A5 /* GeometryTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GeometryTools.framework; path = ../GraphicsTestTools/Carthage/Build/iOS/GeometryTools.framework; sourceTree = "<group>"; };
+		079D5FF31F2A1EF500AC83A5 /* Algebra.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Algebra.framework; path = ../GraphicsTestTools/Carthage/Build/Mac/Algebra.framework; sourceTree = "<group>"; };
+		079D5FF51F2A1EF900AC83A5 /* GeometryTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GeometryTools.framework; path = ../GraphicsTestTools/Carthage/Build/Mac/GeometryTools.framework; sourceTree = "<group>"; };
 		079E69451EF5DF240093A7ED /* Styling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Styling.swift; path = GraphicsTools/Styling.swift; sourceTree = "<group>"; };
 		079E69481EF5DF8F0093A7ED /* StyledPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StyledPath.swift; path = GraphicsTools/StyledPath.swift; sourceTree = "<group>"; };
 		07ABA3A11EE1ACDA00190BFC /* ArithmeticTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArithmeticTools.framework; path = Carthage/Build/iOS/ArithmeticTools.framework; sourceTree = "<group>"; };
@@ -329,6 +337,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				079D5FF01F2A1EE900AC83A5 /* Algebra.framework in Frameworks */,
+				079D5FF21F2A1EED00AC83A5 /* GeometryTools.framework in Frameworks */,
 				07ABA3A51EE1ACDA00190BFC /* Collections.framework in Frameworks */,
 				6E5AEA81D6CD7042D31B961B /* Foundation.framework in Frameworks */,
 				07ABA3A31EE1ACDA00190BFC /* ArithmeticTools.framework in Frameworks */,
@@ -340,6 +350,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				079D5FF41F2A1EF500AC83A5 /* Algebra.framework in Frameworks */,
+				079D5FF61F2A1EF900AC83A5 /* GeometryTools.framework in Frameworks */,
 				07ABA3A61EE1ACDA00190BFC /* Collections.framework in Frameworks */,
 				0C56CCD3163F739244E75E4D /* Cocoa.framework in Frameworks */,
 				07ABA3A41EE1ACDA00190BFC /* ArithmeticTools.framework in Frameworks */,
@@ -551,6 +563,10 @@
 		61BE38DD4E3A380CBCE9E329 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				079D5FF51F2A1EF900AC83A5 /* GeometryTools.framework */,
+				079D5FF31F2A1EF500AC83A5 /* Algebra.framework */,
+				079D5FF11F2A1EED00AC83A5 /* GeometryTools.framework */,
+				079D5FEF1F2A1EE900AC83A5 /* Algebra.framework */,
 				5285216C693702AF91A0B87D /* iOS */,
 				73904CCBDB1B071F217EA6B1 /* OS X */,
 			);
