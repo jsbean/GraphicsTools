@@ -7,8 +7,9 @@
 //
 
 import XCTest
-import GraphicsTools
 import QuartzCore
+import GraphicsTools
+import GraphicsTestTools
 
 class TextTests: GraphicsTestCase {
     

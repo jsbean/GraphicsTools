@@ -6,8 +6,9 @@
 //
 //
 
-import XCTest
 import GraphicsTools
+import GraphicsTestTools
+import XCTest
 
 class SVGTests: GraphicsTestCase {
     

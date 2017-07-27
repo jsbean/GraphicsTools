@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "539954C379DDA922C3508E86C429FC32111F7C49",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "7DFC260B3FA775FDCF1E11206366FEC94D88814D" : 9223372036854775807,
+    "539954C379DDA922C3508E86C429FC32111F7C49" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "F3CD4A92-A1FA-4B3D-801F-DB75747E4823",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "7DFC260B3FA775FDCF1E11206366FEC94D88814D" : "GraphicsTestTools\/",
+    "539954C379DDA922C3508E86C429FC32111F7C49" : "GraphicsTools\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "GraphicsTools",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "GraphicsTools.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/dn-m\/GraphicsTools",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "539954C379DDA922C3508E86C429FC32111F7C49"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/dn-m\/GraphicsTestTools",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7DFC260B3FA775FDCF1E11206366FEC94D88814D"
+    }
+  ]
+}

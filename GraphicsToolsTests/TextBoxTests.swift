@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import GraphicsTestTools
 import GraphicsTools
 
 class TextBoxTests: GraphicsTestCase {

@@ -113,6 +113,28 @@
 		079D5FE31F2A152300AC83A5 /* rect.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FD31F2A151E00AC83A5 /* rect.svg */; };
 		079D5FE41F2A152300AC83A5 /* square.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FD41F2A151E00AC83A5 /* square.svg */; };
 		079D5FE51F2A152300AC83A5 /* stroke.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FD51F2A151E00AC83A5 /* stroke.svg */; };
+		079D5FF01F2A1EE900AC83A5 /* Algebra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 079D5FEF1F2A1EE900AC83A5 /* Algebra.framework */; };
+		079D5FF21F2A1EED00AC83A5 /* GeometryTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 079D5FF11F2A1EED00AC83A5 /* GeometryTools.framework */; };
+		079D5FF41F2A1EF500AC83A5 /* Algebra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 079D5FF31F2A1EF500AC83A5 /* Algebra.framework */; };
+		079D5FF61F2A1EF900AC83A5 /* GeometryTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 079D5FF51F2A1EF900AC83A5 /* GeometryTools.framework */; };
+		079D60141F2A22F200AC83A5 /* GraphicsTestTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 079D60131F2A22F200AC83A5 /* GraphicsTestTools.framework */; };
+		079D60161F2A22FD00AC83A5 /* GraphicsTestTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 079D60151F2A22FD00AC83A5 /* GraphicsTestTools.framework */; };
+		079D60191F2A38DB00AC83A5 /* bbox.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FC61F2A151E00AC83A5 /* bbox.svg */; };
+		079D601A1F2A38DB00AC83A5 /* circle.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FC71F2A151E00AC83A5 /* circle.svg */; };
+		079D601B1F2A38DB00AC83A5 /* colors_opacity.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FC81F2A151E00AC83A5 /* colors_opacity.svg */; };
+		079D601C1F2A38DB00AC83A5 /* curve1.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FC91F2A151E00AC83A5 /* curve1.svg */; };
+		079D601D1F2A38DB00AC83A5 /* curve2.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FCA1F2A151E00AC83A5 /* curve2.svg */; };
+		079D601E1F2A38DB00AC83A5 /* ellipse.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FCB1F2A151E00AC83A5 /* ellipse.svg */; };
+		079D601F1F2A38DB00AC83A5 /* fill_stroke_opacity.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FCC1F2A151E00AC83A5 /* fill_stroke_opacity.svg */; };
+		079D60201F2A38DB00AC83A5 /* line.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FCD1F2A151E00AC83A5 /* line.svg */; };
+		079D60211F2A38DB00AC83A5 /* multiple_groups.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FCE1F2A151E00AC83A5 /* multiple_groups.svg */; };
+		079D60221F2A38DB00AC83A5 /* multiple_objects.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FCF1F2A151E00AC83A5 /* multiple_objects.svg */; };
+		079D60231F2A38DB00AC83A5 /* polybezier.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FD01F2A151E00AC83A5 /* polybezier.svg */; };
+		079D60241F2A38DB00AC83A5 /* polygon.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FD11F2A151E00AC83A5 /* polygon.svg */; };
+		079D60251F2A38DB00AC83A5 /* polyline.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FD21F2A151E00AC83A5 /* polyline.svg */; };
+		079D60261F2A38DB00AC83A5 /* rect.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FD31F2A151E00AC83A5 /* rect.svg */; };
+		079D60271F2A38DB00AC83A5 /* square.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FD41F2A151E00AC83A5 /* square.svg */; };
+		079D60281F2A38DB00AC83A5 /* stroke.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FD51F2A151E00AC83A5 /* stroke.svg */; };
 		079E69461EF5DF240093A7ED /* Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079E69451EF5DF240093A7ED /* Styling.swift */; };
 		079E69471EF5DF240093A7ED /* Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079E69451EF5DF240093A7ED /* Styling.swift */; };
 		079E69491EF5DF8F0093A7ED /* StyledPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079E69481EF5DF8F0093A7ED /* StyledPath.swift */; };
@@ -206,6 +228,22 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
+				079D60191F2A38DB00AC83A5 /* bbox.svg in CopyFiles */,
+				079D601A1F2A38DB00AC83A5 /* circle.svg in CopyFiles */,
+				079D601B1F2A38DB00AC83A5 /* colors_opacity.svg in CopyFiles */,
+				079D601C1F2A38DB00AC83A5 /* curve1.svg in CopyFiles */,
+				079D601D1F2A38DB00AC83A5 /* curve2.svg in CopyFiles */,
+				079D601E1F2A38DB00AC83A5 /* ellipse.svg in CopyFiles */,
+				079D601F1F2A38DB00AC83A5 /* fill_stroke_opacity.svg in CopyFiles */,
+				079D60201F2A38DB00AC83A5 /* line.svg in CopyFiles */,
+				079D60211F2A38DB00AC83A5 /* multiple_groups.svg in CopyFiles */,
+				079D60221F2A38DB00AC83A5 /* multiple_objects.svg in CopyFiles */,
+				079D60231F2A38DB00AC83A5 /* polybezier.svg in CopyFiles */,
+				079D60241F2A38DB00AC83A5 /* polygon.svg in CopyFiles */,
+				079D60251F2A38DB00AC83A5 /* polyline.svg in CopyFiles */,
+				079D60261F2A38DB00AC83A5 /* rect.svg in CopyFiles */,
+				079D60271F2A38DB00AC83A5 /* square.svg in CopyFiles */,
+				079D60281F2A38DB00AC83A5 /* stroke.svg in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +331,12 @@
 		079D5FD31F2A151E00AC83A5 /* rect.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = rect.svg; path = SVGTests/rect.svg; sourceTree = "<group>"; };
 		079D5FD41F2A151E00AC83A5 /* square.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = square.svg; path = SVGTests/square.svg; sourceTree = "<group>"; };
 		079D5FD51F2A151E00AC83A5 /* stroke.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = stroke.svg; path = SVGTests/stroke.svg; sourceTree = "<group>"; };
+		079D5FEF1F2A1EE900AC83A5 /* Algebra.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Algebra.framework; path = ../GraphicsTestTools/Carthage/Build/iOS/Algebra.framework; sourceTree = "<group>"; };
+		079D5FF11F2A1EED00AC83A5 /* GeometryTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GeometryTools.framework; path = ../GraphicsTestTools/Carthage/Build/iOS/GeometryTools.framework; sourceTree = "<group>"; };
+		079D5FF31F2A1EF500AC83A5 /* Algebra.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Algebra.framework; path = ../GraphicsTestTools/Carthage/Build/Mac/Algebra.framework; sourceTree = "<group>"; };
+		079D5FF51F2A1EF900AC83A5 /* GeometryTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GeometryTools.framework; path = ../GraphicsTestTools/Carthage/Build/Mac/GeometryTools.framework; sourceTree = "<group>"; };
+		079D60131F2A22F200AC83A5 /* GraphicsTestTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GraphicsTestTools.framework; path = Carthage/Build/iOS/GraphicsTestTools.framework; sourceTree = "<group>"; };
+		079D60151F2A22FD00AC83A5 /* GraphicsTestTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GraphicsTestTools.framework; path = Carthage/Build/Mac/GraphicsTestTools.framework; sourceTree = "<group>"; };
 		079E69451EF5DF240093A7ED /* Styling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Styling.swift; path = GraphicsTools/Styling.swift; sourceTree = "<group>"; };
 		079E69481EF5DF8F0093A7ED /* StyledPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StyledPath.swift; path = GraphicsTools/StyledPath.swift; sourceTree = "<group>"; };
 		07ABA3A11EE1ACDA00190BFC /* ArithmeticTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArithmeticTools.framework; path = Carthage/Build/iOS/ArithmeticTools.framework; sourceTree = "<group>"; };
@@ -329,6 +373,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				079D5FF01F2A1EE900AC83A5 /* Algebra.framework in Frameworks */,
+				079D5FF21F2A1EED00AC83A5 /* GeometryTools.framework in Frameworks */,
 				07ABA3A51EE1ACDA00190BFC /* Collections.framework in Frameworks */,
 				6E5AEA81D6CD7042D31B961B /* Foundation.framework in Frameworks */,
 				07ABA3A31EE1ACDA00190BFC /* ArithmeticTools.framework in Frameworks */,
@@ -340,6 +386,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				079D5FF41F2A1EF500AC83A5 /* Algebra.framework in Frameworks */,
+				079D5FF61F2A1EF900AC83A5 /* GeometryTools.framework in Frameworks */,
 				07ABA3A61EE1ACDA00190BFC /* Collections.framework in Frameworks */,
 				0C56CCD3163F739244E75E4D /* Cocoa.framework in Frameworks */,
 				07ABA3A41EE1ACDA00190BFC /* ArithmeticTools.framework in Frameworks */,
@@ -352,6 +400,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A94F712C5F12ED0EFC349E9E /* Cocoa.framework in Frameworks */,
+				079D60141F2A22F200AC83A5 /* GraphicsTestTools.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +409,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDA097E07045D1788A7EA9C7 /* Foundation.framework in Frameworks */,
+				079D60161F2A22FD00AC83A5 /* GraphicsTestTools.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,6 +601,12 @@
 		61BE38DD4E3A380CBCE9E329 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				079D60151F2A22FD00AC83A5 /* GraphicsTestTools.framework */,
+				079D60131F2A22F200AC83A5 /* GraphicsTestTools.framework */,
+				079D5FF51F2A1EF900AC83A5 /* GeometryTools.framework */,
+				079D5FF31F2A1EF500AC83A5 /* Algebra.framework */,
+				079D5FF11F2A1EED00AC83A5 /* GeometryTools.framework */,
+				079D5FEF1F2A1EE900AC83A5 /* Algebra.framework */,
 				5285216C693702AF91A0B87D /* iOS */,
 				73904CCBDB1B071F217EA6B1 /* OS X */,
 			);
@@ -660,7 +716,6 @@
 				CC067F0C1DD8256AE7043609 /* Frameworks */,
 				A16DB72448B711DFDAFFE70F /* CopyFiles */,
 				07072ADC1D96F4F4006876C1 /* ShellScript */,
-				073E55181F29344D00EB6E1F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -680,7 +735,6 @@
 				E5E0940A69326869BD43BDAF /* Frameworks */,
 				2825C2889FAFBA5FEAFFF916 /* CopyFiles */,
 				07072ADB1D96F4D8006876C1 /* ShellScript */,
-				079D5FC51F2A095F00AC83A5 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -780,6 +834,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/GeometryTools.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/PathTools.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SWXMLHash.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/GraphicsTestTools.framework",
 			);
 			outputPaths = (
 			);
@@ -798,38 +853,13 @@
 				"$(SRCROOT)/Carthage/Build/Mac/GeometryTools.framework",
 				"$(SRCROOT)/Carthage/Build/Mac/PathTools.framework",
 				"$(SRCROOT)/Carthage/Build/Mac/SWXMLHash.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/GraphicsTestTools.framework",
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
-		073E55181F29344D00EB6E1F /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "mkdir -p \"${BUILT_PRODUCTS_DIR}/Artifacts\"\nopen \"${BUILT_PRODUCTS_DIR}/Artifacts\"";
-		};
-		079D5FC51F2A095F00AC83A5 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "mkdir -p \"${BUILT_PRODUCTS_DIR}/Artifacts\"\nopen \"${BUILT_PRODUCTS_DIR}/Artifacts\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1133,7 +1163,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/iOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = GraphicsToolsTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(SRCROOT)/Carthage/Build/iOS";
@@ -1152,7 +1185,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/Mac";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = GraphicsToolsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks $(SRCROOT)/Carthage/Build/Mac";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
@@ -1170,7 +1206,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/iOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = GraphicsToolsTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(SRCROOT)/Carthage/Build/iOS";
@@ -1219,7 +1258,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/Mac";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = GraphicsToolsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks $(SRCROOT)/Carthage/Build/Mac";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
