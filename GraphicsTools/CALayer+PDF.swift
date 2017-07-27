@@ -22,6 +22,11 @@ extension CALayer {
 
         let context = CGContext(location as CFURL, mediaBox: &pageFrame, nil)!
         context.beginPDFPage(nil)
+
+        // flip coordinates
+        context.translateBy(x: 0, y: pageFrame.height)
+        context.scaleBy(x: 1, y: -1)
+
         context.translateBy(x: margin, y: margin)
         render(in: context)
         context.endPDFPage()
