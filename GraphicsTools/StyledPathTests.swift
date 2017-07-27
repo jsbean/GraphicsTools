@@ -28,7 +28,7 @@ class StyledPathTests: GraphicsTestCase {
         let before = CAShapeLayer(styledPath)
         before.showTestBorder()
         render(before, name: "testResizedToFitContentsStyledPathScaleAndTranslation_before")
-        
+
         let after = CAShapeLayer(resized)
         after.showTestBorder()
         render(after, name: "testResizedToFitContentsStyledPathScaleAndTranslation_after")

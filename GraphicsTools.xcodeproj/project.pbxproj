@@ -593,10 +593,10 @@
 			isa = PBXGroup;
 			children = (
 				28D592D8D4AD3C2DE51F5183 /* Supporting Files */,
+				07ABA3EA1EE1C7FA00190BFC /* GraphicsTestCase.swift */,
 				076D04731E2D2F050023ED96 /* LayoutNodeTests.swift */,
 				0744B4C91EF01A53003F9B3A /* TextTests.swift */,
 				0750C4441EF05763005840B8 /* TextBoxTests.swift */,
-				07ABA3EA1EE1C7FA00190BFC /* GraphicsTestCase.swift */,
 				073A6F0F1F02A90700AEFA5D /* RenderableTests.swift */,
 				07B8E2B81EF442AD00C9EF18 /* SVGTests.swift */,
 				076484FE1EF812E20095FBB5 /* ColorTests.swift */,

@@ -31,8 +31,4 @@ extension CALayer {
         render(in: context)
         context.endPDFPage()
     }
-
-    public func renderToPDF(name: String, location: URL = URL(fileURLWithPath: "/Users/BEAN")) {
-        renderToPDF(at: location.appendingPathComponent("\(name).pdf"))
-    }
 }
