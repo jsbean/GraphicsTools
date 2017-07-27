@@ -16,7 +16,7 @@ class GraphicsTestCase: XCTestCase {
     lazy var artifactsDirectory: URL = {
         return Bundle(for: type(of: self)).bundleURL
             .deletingLastPathComponent()
-            .appendingPathComponent("Artifacts")
+            .appendingPathComponent("Artifacts/\(type(of: self))")
     }()
 
     override func setUp() {

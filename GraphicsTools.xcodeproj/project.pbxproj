@@ -848,7 +848,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "open \"${BUILT_PRODUCTS_DIR}/Artifacts\"";
+			shellScript = "mkdir \"${BUILT_PRODUCTS_DIR}/Artifacts\"\nopen \"${BUILT_PRODUCTS_DIR}/Artifacts\"";
 		};
 		079D5FC51F2A095F00AC83A5 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -861,7 +861,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "open \"${BUILT_PRODUCTS_DIR}/Artifacts\"";
+			shellScript = "mkdir \"${BUILT_PRODUCTS_DIR}/Artifacts\"\nopen \"${BUILT_PRODUCTS_DIR}/Artifacts\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
