@@ -10,7 +10,7 @@ import XCTest
 import GraphicsTools
 import QuartzCore
 
-class TextTests: XCTestCase {
+class TextTests: GraphicsTestCase {
     
 //    func testGetFontWithCapSize() {
 //        
@@ -85,7 +85,7 @@ class TextTests: XCTestCase {
                         container.frame = CGRect(x: 0, y: 0, width: 200, height: height)
                         container.borderWidth = 1
                         container.borderColor = Color.blue.cgColor
-                        container.renderToPDF(name: "textByHeight_109_\(fontName)")
+                        render(container, name: "testByHeight_109_\(fontName)")
                     }
                 }
             }
@@ -95,5 +95,5 @@ class TextTests: XCTestCase {
             
         #endif
 
-            }
+    }
 }

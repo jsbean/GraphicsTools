@@ -9,7 +9,7 @@
 import XCTest
 import GraphicsTools
 
-class SVGTests: XCTestCase {
+class SVGTests: GraphicsTestCase {
     
     func testParseSVG() {
         
@@ -35,7 +35,7 @@ class SVGTests: XCTestCase {
                 let path = Composite(svg)
                 print(path)
                 let layer = CALayer(path)
-                layer.renderToPDF(name: name)
+                render(layer, name: name)
             } catch {
                 print(error)
             }
@@ -50,8 +50,8 @@ class SVGTests: XCTestCase {
             let pathByWidth = Composite(svg, width: 20)
             let pathByHeightLayer = CALayer(pathByHeight)
             let pathByWidthLayer = CALayer(pathByWidth)
-            pathByHeightLayer.renderToPDF(name: "bbox_scale_to_height")
-            pathByWidthLayer.renderToPDF(name: "bbox_scale_to_width")
+            render(pathByHeightLayer, name: "bbox_scale_to_height")
+            render(pathByWidthLayer, name: "bbox_scale_to_width")
         } catch {
             print(error)
         }

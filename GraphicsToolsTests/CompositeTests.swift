@@ -11,7 +11,7 @@ import GeometryTools
 import PathTools
 import GraphicsTools
 
-class CompositeTests: XCTestCase {
+class CompositeTests: GraphicsTestCase {
 
     func testTranslateLeaf() {
         let frame = Rectangle(x: 10, y: 10, width: 100, height: 100)
@@ -117,11 +117,11 @@ class CompositeTests: XCTestCase {
         // Check graphics
         let before = CALayer(composite)
         before.showTestBorder()
-        before.renderToPDF(name: "testResizedToFitContentsLeafNoChange_before")
+        render(before, name: "testResizedToFitContentsLeafNoChange_before")
 
         let after = CALayer(resized)
         after.showTestBorder()
-        after.renderToPDF(name: "testResizedToFitContentsLeafNoChange_after")
+        render(after, name: "testResizedToFitContentsLeafNoChange_after")
     }
 
     func testResizedToFitContentsLeafNoTranslation() {
@@ -137,11 +137,11 @@ class CompositeTests: XCTestCase {
         // Check graphics
         let before = CALayer(composite)
         before.showTestBorder()
-        before.renderToPDF(name: "testResizedToFitContentsLeafNoTranslation_before")
+        render(before, name: "testResizedToFitContentsLeafNoTranslation_before")
 
         let after = CALayer(resized)
         after.showTestBorder()
-        after.renderToPDF(name: "testResizedToFitContentsLeafNoTranslation_after")
+        render(after, name: "testResizedToFitContentsLeafNoTranslation_after")
     }
 
     func testResizedToFitContentsLeafScaleAndTranslation() {
@@ -159,11 +159,11 @@ class CompositeTests: XCTestCase {
         // Check graphics
         let before = CALayer(composite)
         before.showTestBorder()
-        before.renderToPDF(name: "testResizedToFitContentsLeafScaleAndTranslation_before")
+        render(before, name: "testResizedToFitContentsLeafScaleAndTranslation_before")
 
         let after = CALayer(resized)
         after.showTestBorder()
-        after.renderToPDF(name: "testResizedToFitContentsLeafScaleAndTranslation_after")
+        render(after, name: "testResizedToFitContentsLeafScaleAndTranslation_after")
     }
 
     func testResizedToFitContentsBranchScaleAndTranslation() {
@@ -192,11 +192,11 @@ class CompositeTests: XCTestCase {
         // Check graphics
         let before = CALayer(composite)
         before.showTestBorder()
-        before.renderToPDF(name: "testResizedToFitContentsBranchScaleAndTranslation_before")
+        render(before, name: "testResizedToFitContentsBranchScaleAndTranslation_before")
 
         let after = CALayer(resized)
         after.showTestBorder()
-        after.renderToPDF(name: "testResizedToFitContentsBranchScaleAndTranslation_after")
+        render(after, name: "testResizedToFitContentsBranchScaleAndTranslation_after")
     }
 
     func testResizedToFitContentsBranchScaleAndTranslation2() {
@@ -225,10 +225,10 @@ class CompositeTests: XCTestCase {
         // Check graphics
         let before = CALayer(composite)
         before.showTestBorder()
-        before.renderToPDF(name: "testResizedToFitContentsBranchScaleAndTranslation2_before")
+        render(before, name: "testResizedToFitContentsBranchScaleAndTranslation2_before")
 
         let after = CALayer(resized)
         after.showTestBorder()
-        after.renderToPDF(name: "testResizedToFitContentsBranchScaleAndTranslation2_after")
+        render(after, name: "testResizedToFitContentsBranchScaleAndTranslation2_after")
     }
 }

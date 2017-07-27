@@ -9,7 +9,7 @@
 import XCTest
 import GraphicsTools
 
-class TextBoxTests: XCTestCase {
+class TextBoxTests: GraphicsTestCase {
     
     func testInit() {
         
@@ -25,6 +25,6 @@ class TextBoxTests: XCTestCase {
         )
         
         let layer = CALayer(textBox)
-        layer.renderToPDF(name: "textBox")
+        render(layer, name: "testBox")
     }
 }

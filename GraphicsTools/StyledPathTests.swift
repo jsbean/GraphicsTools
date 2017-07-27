@@ -11,7 +11,7 @@ import GeometryTools
 import PathTools
 import GraphicsTools
 
-class StyledPathTests: XCTestCase {
+class StyledPathTests: GraphicsTestCase {
 
     func testResizedToFitContents() {
 
@@ -27,10 +27,10 @@ class StyledPathTests: XCTestCase {
         // Check graphics
         let before = CAShapeLayer(styledPath)
         before.showTestBorder()
-        before.renderToPDF(name: "testResizedToFitContentsStyledPathScaleAndTranslation_before")
+        render(before, name: "testResizedToFitContentsStyledPathScaleAndTranslation_before")
 
         let after = CAShapeLayer(resized)
         after.showTestBorder()
-        after.renderToPDF(name: "testResizedToFitContentsStyledPathScaleAndTranslation_after")
+        render(after, name: "testResizedToFitContentsStyledPathScaleAndTranslation_after")
     }
 }
