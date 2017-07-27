@@ -15,22 +15,6 @@
 		071E3F271F276EF800486F90 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071E3F251F276EF800486F90 /* Group.swift */; };
 		071E3F291F276F1E00486F90 /* Composite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071E3F281F276F1E00486F90 /* Composite.swift */; };
 		071E3F2A1F276F1E00486F90 /* Composite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071E3F281F276F1E00486F90 /* Composite.swift */; };
-		0726DC491EF5458B0055B9A1 /* rect.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0726DC481EF5451E0055B9A1 /* rect.svg */; };
-		0726DC4A1EF5458B0055B9A1 /* circle.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0726DC411EF544CB0055B9A1 /* circle.svg */; };
-		0726DC4B1EF5458B0055B9A1 /* curve1.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0726DC421EF544CB0055B9A1 /* curve1.svg */; };
-		0726DC4C1EF5458B0055B9A1 /* curve2.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0726DC431EF544CB0055B9A1 /* curve2.svg */; };
-		0726DC4D1EF5458B0055B9A1 /* ellipse.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0726DC441EF544CB0055B9A1 /* ellipse.svg */; };
-		0726DC4E1EF5458B0055B9A1 /* line.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0726DC451EF544CB0055B9A1 /* line.svg */; };
-		0726DC4F1EF5458B0055B9A1 /* polyline.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0726DC461EF544CB0055B9A1 /* polyline.svg */; };
-		0726DC501EF5458B0055B9A1 /* square.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0726DC471EF544CB0055B9A1 /* square.svg */; };
-		0726DC511EF545900055B9A1 /* rect.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0726DC481EF5451E0055B9A1 /* rect.svg */; };
-		0726DC521EF545900055B9A1 /* circle.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0726DC411EF544CB0055B9A1 /* circle.svg */; };
-		0726DC531EF545900055B9A1 /* curve1.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0726DC421EF544CB0055B9A1 /* curve1.svg */; };
-		0726DC541EF545900055B9A1 /* curve2.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0726DC431EF544CB0055B9A1 /* curve2.svg */; };
-		0726DC551EF545900055B9A1 /* ellipse.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0726DC441EF544CB0055B9A1 /* ellipse.svg */; };
-		0726DC561EF545900055B9A1 /* line.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0726DC451EF544CB0055B9A1 /* line.svg */; };
-		0726DC571EF545900055B9A1 /* polyline.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0726DC461EF544CB0055B9A1 /* polyline.svg */; };
-		0726DC581EF545900055B9A1 /* square.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0726DC471EF544CB0055B9A1 /* square.svg */; };
 		07305A501D0F47EE006E4085 /* Buildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07305A4B1D0F47EE006E4085 /* Buildable.swift */; };
 		07305A511D0F47EE006E4085 /* Buildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07305A4B1D0F47EE006E4085 /* Buildable.swift */; };
 		07305A521D0F47EE006E4085 /* CompositeShapeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07305A4C1D0F47EE006E4085 /* CompositeShapeType.swift */; };
@@ -81,8 +65,6 @@
 		076484EB1EF7EAA70095FBB5 /* Double+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076484E91EF7EAA70095FBB5 /* Double+SVG.swift */; };
 		076484ED1EF7ECD30095FBB5 /* Polygon+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076484EC1EF7ECD30095FBB5 /* Polygon+SVG.swift */; };
 		076484EE1EF7ECD30095FBB5 /* Polygon+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076484EC1EF7ECD30095FBB5 /* Polygon+SVG.swift */; };
-		076484F01EF7EE070095FBB5 /* polygon.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 076484EF1EF7EDFF0095FBB5 /* polygon.svg */; };
-		076484F11EF7EE0B0095FBB5 /* polygon.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 076484EF1EF7EDFF0095FBB5 /* polygon.svg */; };
 		076484F31EF800EF0095FBB5 /* StyledPath+CAShapeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076484F21EF800EF0095FBB5 /* StyledPath+CAShapeLayer.swift */; };
 		076484F41EF800EF0095FBB5 /* StyledPath+CAShapeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076484F21EF800EF0095FBB5 /* StyledPath+CAShapeLayer.swift */; };
 		076484F61EF801900095FBB5 /* StyledPath.Composite+CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076484F51EF801900095FBB5 /* StyledPath.Composite+CALayer.swift */; };
@@ -103,10 +85,6 @@
 		0764850D1EF814720095FBB5 /* Ellipse+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0764850B1EF814720095FBB5 /* Ellipse+SVG.swift */; };
 		076485121EF817870095FBB5 /* Styling+SVGInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076485111EF817870095FBB5 /* Styling+SVGInitializable.swift */; };
 		076485131EF817870095FBB5 /* Styling+SVGInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076485111EF817870095FBB5 /* Styling+SVGInitializable.swift */; };
-		076485151EF8187F0095FBB5 /* fill_stroke_opacity.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 076485141EF818750095FBB5 /* fill_stroke_opacity.svg */; };
-		076485161EF818830095FBB5 /* fill_stroke_opacity.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 076485141EF818750095FBB5 /* fill_stroke_opacity.svg */; };
-		076485181EF839DB0095FBB5 /* colors_opacity.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 076485171EF839D40095FBB5 /* colors_opacity.svg */; };
-		076485191EF839DF0095FBB5 /* colors_opacity.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 076485171EF839D40095FBB5 /* colors_opacity.svg */; };
 		076D04611E2D1CB00023ED96 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D04601E2D1CB00023ED96 /* Color.swift */; };
 		076D04621E2D1CB00023ED96 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D04601E2D1CB00023ED96 /* Color.swift */; };
 		076D04641E2D22C50023ED96 /* Color+CGColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D04631E2D22C50023ED96 /* Color+CGColor.swift */; };
@@ -115,18 +93,30 @@
 		076D04721E2D2D740023ED96 /* LayoutNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D04701E2D2D740023ED96 /* LayoutNode.swift */; };
 		076D04741E2D2F050023ED96 /* LayoutNodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D04731E2D2F050023ED96 /* LayoutNodeTests.swift */; };
 		076D04751E2D2F060023ED96 /* LayoutNodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076D04731E2D2F050023ED96 /* LayoutNodeTests.swift */; };
-		07731ED61F06A00800BDDCD6 /* bbox.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 07731ED51F06A00100BDDCD6 /* bbox.svg */; };
-		07731ED71F06A00C00BDDCD6 /* bbox.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 07731ED51F06A00100BDDCD6 /* bbox.svg */; };
 		0789227D1EF2E3030037C572 /* Fill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0789227C1EF2E3030037C572 /* Fill.swift */; };
 		0789227E1EF2E3030037C572 /* Fill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0789227C1EF2E3030037C572 /* Fill.swift */; };
 		078922801EF2E3130037C572 /* Stoke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0789227F1EF2E3130037C572 /* Stoke.swift */; };
 		078922811EF2E3130037C572 /* Stoke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0789227F1EF2E3130037C572 /* Stoke.swift */; };
+		079D5FD61F2A152300AC83A5 /* bbox.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FC61F2A151E00AC83A5 /* bbox.svg */; };
+		079D5FD71F2A152300AC83A5 /* circle.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FC71F2A151E00AC83A5 /* circle.svg */; };
+		079D5FD81F2A152300AC83A5 /* colors_opacity.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FC81F2A151E00AC83A5 /* colors_opacity.svg */; };
+		079D5FD91F2A152300AC83A5 /* curve1.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FC91F2A151E00AC83A5 /* curve1.svg */; };
+		079D5FDA1F2A152300AC83A5 /* curve2.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FCA1F2A151E00AC83A5 /* curve2.svg */; };
+		079D5FDB1F2A152300AC83A5 /* ellipse.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FCB1F2A151E00AC83A5 /* ellipse.svg */; };
+		079D5FDC1F2A152300AC83A5 /* fill_stroke_opacity.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FCC1F2A151E00AC83A5 /* fill_stroke_opacity.svg */; };
+		079D5FDD1F2A152300AC83A5 /* line.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FCD1F2A151E00AC83A5 /* line.svg */; };
+		079D5FDE1F2A152300AC83A5 /* multiple_groups.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FCE1F2A151E00AC83A5 /* multiple_groups.svg */; };
+		079D5FDF1F2A152300AC83A5 /* multiple_objects.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FCF1F2A151E00AC83A5 /* multiple_objects.svg */; };
+		079D5FE01F2A152300AC83A5 /* polybezier.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FD01F2A151E00AC83A5 /* polybezier.svg */; };
+		079D5FE11F2A152300AC83A5 /* polygon.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FD11F2A151E00AC83A5 /* polygon.svg */; };
+		079D5FE21F2A152300AC83A5 /* polyline.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FD21F2A151E00AC83A5 /* polyline.svg */; };
+		079D5FE31F2A152300AC83A5 /* rect.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FD31F2A151E00AC83A5 /* rect.svg */; };
+		079D5FE41F2A152300AC83A5 /* square.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FD41F2A151E00AC83A5 /* square.svg */; };
+		079D5FE51F2A152300AC83A5 /* stroke.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FD51F2A151E00AC83A5 /* stroke.svg */; };
 		079E69461EF5DF240093A7ED /* Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079E69451EF5DF240093A7ED /* Styling.swift */; };
 		079E69471EF5DF240093A7ED /* Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079E69451EF5DF240093A7ED /* Styling.swift */; };
 		079E69491EF5DF8F0093A7ED /* StyledPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079E69481EF5DF8F0093A7ED /* StyledPath.swift */; };
 		079E694A1EF5DF8F0093A7ED /* StyledPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079E69481EF5DF8F0093A7ED /* StyledPath.swift */; };
-		079E694C1EF674600093A7ED /* stroke.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079E694B1EF674570093A7ED /* stroke.svg */; };
-		079E694D1EF674630093A7ED /* stroke.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079E694B1EF674570093A7ED /* stroke.svg */; };
 		07ABA3A31EE1ACDA00190BFC /* ArithmeticTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07ABA3A11EE1ACDA00190BFC /* ArithmeticTools.framework */; };
 		07ABA3A41EE1ACDA00190BFC /* ArithmeticTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07ABA3A11EE1ACDA00190BFC /* ArithmeticTools.framework */; };
 		07ABA3A51EE1ACDA00190BFC /* Collections.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07ABA3A21EE1ACDA00190BFC /* Collections.framework */; };
@@ -149,12 +139,6 @@
 		07D118091EF948EC00BCE6C9 /* Stroke+SVGInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D118071EF948EC00BCE6C9 /* Stroke+SVGInitializable.swift */; };
 		07D1180B1EF9495A00BCE6C9 /* Color+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D1180A1EF9495A00BCE6C9 /* Color+SVG.swift */; };
 		07D1180C1EF9495A00BCE6C9 /* Color+SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D1180A1EF9495A00BCE6C9 /* Color+SVG.swift */; };
-		07D1181D1EF9679A00BCE6C9 /* polybezier.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 07D1181C1EF9679400BCE6C9 /* polybezier.svg */; };
-		07D1181E1EF967A100BCE6C9 /* polybezier.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 07D1181C1EF9679400BCE6C9 /* polybezier.svg */; };
-		07D3A0D71EF5490900641D15 /* multiple_groups.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 07D3A0D51EF548FB00641D15 /* multiple_groups.svg */; };
-		07D3A0D81EF5490900641D15 /* multiple_objects.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 07D3A0D61EF548FB00641D15 /* multiple_objects.svg */; };
-		07D3A0DB1EF5491B00641D15 /* multiple_groups.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 07D3A0D51EF548FB00641D15 /* multiple_groups.svg */; };
-		07D3A0DC1EF5491B00641D15 /* multiple_objects.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 07D3A0D61EF548FB00641D15 /* multiple_objects.svg */; };
 		07D3A0F61EF58AA200641D15 /* SVGInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D3A0F51EF58AA200641D15 /* SVGInitializable.swift */; };
 		07D3A0F71EF58AA200641D15 /* SVGInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D3A0F51EF58AA200641D15 /* SVGInitializable.swift */; };
 		07E8F2221F02939800493E47 /* Renderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E8F2211F02939800493E47 /* Renderable.swift */; };
@@ -197,22 +181,22 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
-				076485181EF839DB0095FBB5 /* colors_opacity.svg in CopyFiles */,
-				076485161EF818830095FBB5 /* fill_stroke_opacity.svg in CopyFiles */,
-				079E694D1EF674630093A7ED /* stroke.svg in CopyFiles */,
-				07D3A0DB1EF5491B00641D15 /* multiple_groups.svg in CopyFiles */,
-				07D3A0DC1EF5491B00641D15 /* multiple_objects.svg in CopyFiles */,
-				0726DC491EF5458B0055B9A1 /* rect.svg in CopyFiles */,
-				0726DC4A1EF5458B0055B9A1 /* circle.svg in CopyFiles */,
-				0726DC4B1EF5458B0055B9A1 /* curve1.svg in CopyFiles */,
-				0726DC4C1EF5458B0055B9A1 /* curve2.svg in CopyFiles */,
-				0726DC4D1EF5458B0055B9A1 /* ellipse.svg in CopyFiles */,
-				0726DC4E1EF5458B0055B9A1 /* line.svg in CopyFiles */,
-				0726DC4F1EF5458B0055B9A1 /* polyline.svg in CopyFiles */,
-				0726DC501EF5458B0055B9A1 /* square.svg in CopyFiles */,
-				07731ED61F06A00800BDDCD6 /* bbox.svg in CopyFiles */,
-				07D1181D1EF9679A00BCE6C9 /* polybezier.svg in CopyFiles */,
-				076484F01EF7EE070095FBB5 /* polygon.svg in CopyFiles */,
+				079D5FD61F2A152300AC83A5 /* bbox.svg in CopyFiles */,
+				079D5FD71F2A152300AC83A5 /* circle.svg in CopyFiles */,
+				079D5FD81F2A152300AC83A5 /* colors_opacity.svg in CopyFiles */,
+				079D5FD91F2A152300AC83A5 /* curve1.svg in CopyFiles */,
+				079D5FDA1F2A152300AC83A5 /* curve2.svg in CopyFiles */,
+				079D5FDB1F2A152300AC83A5 /* ellipse.svg in CopyFiles */,
+				079D5FDC1F2A152300AC83A5 /* fill_stroke_opacity.svg in CopyFiles */,
+				079D5FDD1F2A152300AC83A5 /* line.svg in CopyFiles */,
+				079D5FDE1F2A152300AC83A5 /* multiple_groups.svg in CopyFiles */,
+				079D5FDF1F2A152300AC83A5 /* multiple_objects.svg in CopyFiles */,
+				079D5FE01F2A152300AC83A5 /* polybezier.svg in CopyFiles */,
+				079D5FE11F2A152300AC83A5 /* polygon.svg in CopyFiles */,
+				079D5FE21F2A152300AC83A5 /* polyline.svg in CopyFiles */,
+				079D5FE31F2A152300AC83A5 /* rect.svg in CopyFiles */,
+				079D5FE41F2A152300AC83A5 /* square.svg in CopyFiles */,
+				079D5FE51F2A152300AC83A5 /* stroke.svg in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,22 +206,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
-				076485191EF839DF0095FBB5 /* colors_opacity.svg in CopyFiles */,
-				076485151EF8187F0095FBB5 /* fill_stroke_opacity.svg in CopyFiles */,
-				079E694C1EF674600093A7ED /* stroke.svg in CopyFiles */,
-				0726DC511EF545900055B9A1 /* rect.svg in CopyFiles */,
-				0726DC521EF545900055B9A1 /* circle.svg in CopyFiles */,
-				0726DC531EF545900055B9A1 /* curve1.svg in CopyFiles */,
-				0726DC541EF545900055B9A1 /* curve2.svg in CopyFiles */,
-				0726DC551EF545900055B9A1 /* ellipse.svg in CopyFiles */,
-				0726DC561EF545900055B9A1 /* line.svg in CopyFiles */,
-				0726DC571EF545900055B9A1 /* polyline.svg in CopyFiles */,
-				0726DC581EF545900055B9A1 /* square.svg in CopyFiles */,
-				07D3A0D71EF5490900641D15 /* multiple_groups.svg in CopyFiles */,
-				07D3A0D81EF5490900641D15 /* multiple_objects.svg in CopyFiles */,
-				076484F11EF7EE0B0095FBB5 /* polygon.svg in CopyFiles */,
-				07731ED71F06A00C00BDDCD6 /* bbox.svg in CopyFiles */,
-				07D1181E1EF967A100BCE6C9 /* polybezier.svg in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,14 +236,6 @@
 		071E3F221F276DB000486F90 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Item.swift; path = GraphicsTools/Item.swift; sourceTree = "<group>"; };
 		071E3F251F276EF800486F90 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Group.swift; path = GraphicsTools/Group.swift; sourceTree = "<group>"; };
 		071E3F281F276F1E00486F90 /* Composite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Composite.swift; path = GraphicsTools/Composite.swift; sourceTree = "<group>"; };
-		0726DC411EF544CB0055B9A1 /* circle.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = circle.svg; sourceTree = "<group>"; };
-		0726DC421EF544CB0055B9A1 /* curve1.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = curve1.svg; sourceTree = "<group>"; };
-		0726DC431EF544CB0055B9A1 /* curve2.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = curve2.svg; sourceTree = "<group>"; };
-		0726DC441EF544CB0055B9A1 /* ellipse.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ellipse.svg; sourceTree = "<group>"; };
-		0726DC451EF544CB0055B9A1 /* line.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = line.svg; sourceTree = "<group>"; };
-		0726DC461EF544CB0055B9A1 /* polyline.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = polyline.svg; sourceTree = "<group>"; };
-		0726DC471EF544CB0055B9A1 /* square.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = square.svg; sourceTree = "<group>"; };
-		0726DC481EF5451E0055B9A1 /* rect.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = rect.svg; sourceTree = "<group>"; };
 		07305A4B1D0F47EE006E4085 /* Buildable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Buildable.swift; path = GraphicsTools/Buildable.swift; sourceTree = "<group>"; };
 		07305A4C1D0F47EE006E4085 /* CompositeShapeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompositeShapeType.swift; path = GraphicsTools/CompositeShapeType.swift; sourceTree = "<group>"; };
 		07305A4D1D0F47EE006E4085 /* FrameMaking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FrameMaking.swift; path = GraphicsTools/FrameMaking.swift; sourceTree = "<group>"; };
@@ -301,7 +261,6 @@
 		076484E61EF7E8560095FBB5 /* StyledPath+SVGInitializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "StyledPath+SVGInitializable.swift"; path = "GraphicsTools/StyledPath+SVGInitializable.swift"; sourceTree = "<group>"; };
 		076484E91EF7EAA70095FBB5 /* Double+SVG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Double+SVG.swift"; path = "GraphicsTools/Double+SVG.swift"; sourceTree = "<group>"; };
 		076484EC1EF7ECD30095FBB5 /* Polygon+SVG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Polygon+SVG.swift"; path = "GraphicsTools/Polygon+SVG.swift"; sourceTree = "<group>"; };
-		076484EF1EF7EDFF0095FBB5 /* polygon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = polygon.svg; sourceTree = "<group>"; };
 		076484F21EF800EF0095FBB5 /* StyledPath+CAShapeLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "StyledPath+CAShapeLayer.swift"; path = "GraphicsTools/StyledPath+CAShapeLayer.swift"; sourceTree = "<group>"; };
 		076484F51EF801900095FBB5 /* StyledPath.Composite+CALayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "StyledPath.Composite+CALayer.swift"; path = "GraphicsTools/StyledPath.Composite+CALayer.swift"; sourceTree = "<group>"; };
 		076484F81EF802EB0095FBB5 /* StyledPath.Composite+SVG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "StyledPath.Composite+SVG.swift"; path = "GraphicsTools/StyledPath.Composite+SVG.swift"; sourceTree = "<group>"; };
@@ -312,18 +271,30 @@
 		076485081EF814590095FBB5 /* Cirlce+SVG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Cirlce+SVG.swift"; path = "GraphicsTools/Cirlce+SVG.swift"; sourceTree = "<group>"; };
 		0764850B1EF814720095FBB5 /* Ellipse+SVG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Ellipse+SVG.swift"; path = "GraphicsTools/Ellipse+SVG.swift"; sourceTree = "<group>"; };
 		076485111EF817870095FBB5 /* Styling+SVGInitializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Styling+SVGInitializable.swift"; path = "GraphicsTools/Styling+SVGInitializable.swift"; sourceTree = "<group>"; };
-		076485141EF818750095FBB5 /* fill_stroke_opacity.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = fill_stroke_opacity.svg; sourceTree = "<group>"; };
-		076485171EF839D40095FBB5 /* colors_opacity.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = colors_opacity.svg; sourceTree = "<group>"; };
 		076D04601E2D1CB00023ED96 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Color.swift; path = GraphicsTools/Color.swift; sourceTree = "<group>"; };
 		076D04631E2D22C50023ED96 /* Color+CGColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Color+CGColor.swift"; path = "GraphicsTools/Color+CGColor.swift"; sourceTree = "<group>"; };
 		076D04701E2D2D740023ED96 /* LayoutNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LayoutNode.swift; path = GraphicsTools/LayoutNode.swift; sourceTree = "<group>"; };
 		076D04731E2D2F050023ED96 /* LayoutNodeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LayoutNodeTests.swift; path = GraphicsToolsTests/LayoutNodeTests.swift; sourceTree = "<group>"; };
-		07731ED51F06A00100BDDCD6 /* bbox.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = bbox.svg; sourceTree = "<group>"; };
 		0789227C1EF2E3030037C572 /* Fill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Fill.swift; path = GraphicsTools/Fill.swift; sourceTree = "<group>"; };
 		0789227F1EF2E3130037C572 /* Stoke.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Stoke.swift; path = GraphicsTools/Stoke.swift; sourceTree = "<group>"; };
+		079D5FC61F2A151E00AC83A5 /* bbox.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = bbox.svg; path = SVGTests/bbox.svg; sourceTree = "<group>"; };
+		079D5FC71F2A151E00AC83A5 /* circle.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = circle.svg; path = SVGTests/circle.svg; sourceTree = "<group>"; };
+		079D5FC81F2A151E00AC83A5 /* colors_opacity.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = colors_opacity.svg; path = SVGTests/colors_opacity.svg; sourceTree = "<group>"; };
+		079D5FC91F2A151E00AC83A5 /* curve1.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = curve1.svg; path = SVGTests/curve1.svg; sourceTree = "<group>"; };
+		079D5FCA1F2A151E00AC83A5 /* curve2.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = curve2.svg; path = SVGTests/curve2.svg; sourceTree = "<group>"; };
+		079D5FCB1F2A151E00AC83A5 /* ellipse.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = ellipse.svg; path = SVGTests/ellipse.svg; sourceTree = "<group>"; };
+		079D5FCC1F2A151E00AC83A5 /* fill_stroke_opacity.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = fill_stroke_opacity.svg; path = SVGTests/fill_stroke_opacity.svg; sourceTree = "<group>"; };
+		079D5FCD1F2A151E00AC83A5 /* line.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = line.svg; path = SVGTests/line.svg; sourceTree = "<group>"; };
+		079D5FCE1F2A151E00AC83A5 /* multiple_groups.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = multiple_groups.svg; path = SVGTests/multiple_groups.svg; sourceTree = "<group>"; };
+		079D5FCF1F2A151E00AC83A5 /* multiple_objects.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = multiple_objects.svg; path = SVGTests/multiple_objects.svg; sourceTree = "<group>"; };
+		079D5FD01F2A151E00AC83A5 /* polybezier.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = polybezier.svg; path = SVGTests/polybezier.svg; sourceTree = "<group>"; };
+		079D5FD11F2A151E00AC83A5 /* polygon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = polygon.svg; path = SVGTests/polygon.svg; sourceTree = "<group>"; };
+		079D5FD21F2A151E00AC83A5 /* polyline.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = polyline.svg; path = SVGTests/polyline.svg; sourceTree = "<group>"; };
+		079D5FD31F2A151E00AC83A5 /* rect.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = rect.svg; path = SVGTests/rect.svg; sourceTree = "<group>"; };
+		079D5FD41F2A151E00AC83A5 /* square.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = square.svg; path = SVGTests/square.svg; sourceTree = "<group>"; };
+		079D5FD51F2A151E00AC83A5 /* stroke.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = stroke.svg; path = SVGTests/stroke.svg; sourceTree = "<group>"; };
 		079E69451EF5DF240093A7ED /* Styling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Styling.swift; path = GraphicsTools/Styling.swift; sourceTree = "<group>"; };
 		079E69481EF5DF8F0093A7ED /* StyledPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StyledPath.swift; path = GraphicsTools/StyledPath.swift; sourceTree = "<group>"; };
-		079E694B1EF674570093A7ED /* stroke.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = stroke.svg; sourceTree = "<group>"; };
 		07ABA3A11EE1ACDA00190BFC /* ArithmeticTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArithmeticTools.framework; path = Carthage/Build/iOS/ArithmeticTools.framework; sourceTree = "<group>"; };
 		07ABA3A21EE1ACDA00190BFC /* Collections.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Collections.framework; path = Carthage/Build/iOS/Collections.framework; sourceTree = "<group>"; };
 		07ABA3E71EE1AFB600190BFC /* CALayer+PDF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CALayer+PDF.swift"; path = "GraphicsTools/CALayer+PDF.swift"; sourceTree = "<group>"; };
@@ -335,9 +306,6 @@
 		07D118041EF948A500BCE6C9 /* Fill+SVGInitializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Fill+SVGInitializable.swift"; path = "GraphicsTools/Fill+SVGInitializable.swift"; sourceTree = "<group>"; };
 		07D118071EF948EC00BCE6C9 /* Stroke+SVGInitializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Stroke+SVGInitializable.swift"; path = "GraphicsTools/Stroke+SVGInitializable.swift"; sourceTree = "<group>"; };
 		07D1180A1EF9495A00BCE6C9 /* Color+SVG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Color+SVG.swift"; path = "GraphicsTools/Color+SVG.swift"; sourceTree = "<group>"; };
-		07D1181C1EF9679400BCE6C9 /* polybezier.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = polybezier.svg; sourceTree = "<group>"; };
-		07D3A0D51EF548FB00641D15 /* multiple_groups.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = multiple_groups.svg; sourceTree = "<group>"; };
-		07D3A0D61EF548FB00641D15 /* multiple_objects.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = multiple_objects.svg; sourceTree = "<group>"; };
 		07D3A0F51EF58AA200641D15 /* SVGInitializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SVGInitializable.swift; path = GraphicsTools/SVGInitializable.swift; sourceTree = "<group>"; };
 		07E8F2211F02939800493E47 /* Renderable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Renderable.swift; path = GraphicsTools/Renderable.swift; sourceTree = "<group>"; };
 		07E8F2281F02951900493E47 /* CompositeRenderable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompositeRenderable.swift; path = GraphicsTools/CompositeRenderable.swift; sourceTree = "<group>"; };
@@ -641,22 +609,22 @@
 		E73F96132868A0F651B29140 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				07D1181C1EF9679400BCE6C9 /* polybezier.svg */,
-				076485171EF839D40095FBB5 /* colors_opacity.svg */,
-				079E694B1EF674570093A7ED /* stroke.svg */,
-				076485141EF818750095FBB5 /* fill_stroke_opacity.svg */,
-				07D3A0D51EF548FB00641D15 /* multiple_groups.svg */,
-				07D3A0D61EF548FB00641D15 /* multiple_objects.svg */,
-				0726DC481EF5451E0055B9A1 /* rect.svg */,
-				0726DC411EF544CB0055B9A1 /* circle.svg */,
-				0726DC421EF544CB0055B9A1 /* curve1.svg */,
-				0726DC431EF544CB0055B9A1 /* curve2.svg */,
-				0726DC441EF544CB0055B9A1 /* ellipse.svg */,
-				0726DC451EF544CB0055B9A1 /* line.svg */,
-				0726DC461EF544CB0055B9A1 /* polyline.svg */,
-				0726DC471EF544CB0055B9A1 /* square.svg */,
-				076484EF1EF7EDFF0095FBB5 /* polygon.svg */,
-				07731ED51F06A00100BDDCD6 /* bbox.svg */,
+				079D5FC61F2A151E00AC83A5 /* bbox.svg */,
+				079D5FC71F2A151E00AC83A5 /* circle.svg */,
+				079D5FC81F2A151E00AC83A5 /* colors_opacity.svg */,
+				079D5FC91F2A151E00AC83A5 /* curve1.svg */,
+				079D5FCA1F2A151E00AC83A5 /* curve2.svg */,
+				079D5FCB1F2A151E00AC83A5 /* ellipse.svg */,
+				079D5FCC1F2A151E00AC83A5 /* fill_stroke_opacity.svg */,
+				079D5FCD1F2A151E00AC83A5 /* line.svg */,
+				079D5FCE1F2A151E00AC83A5 /* multiple_groups.svg */,
+				079D5FCF1F2A151E00AC83A5 /* multiple_objects.svg */,
+				079D5FD01F2A151E00AC83A5 /* polybezier.svg */,
+				079D5FD11F2A151E00AC83A5 /* polygon.svg */,
+				079D5FD21F2A151E00AC83A5 /* polyline.svg */,
+				079D5FD31F2A151E00AC83A5 /* rect.svg */,
+				079D5FD41F2A151E00AC83A5 /* square.svg */,
+				079D5FD51F2A151E00AC83A5 /* stroke.svg */,
 				5F9BB74D0893C6E54A94EAD6 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -848,7 +816,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "mkdir \"${BUILT_PRODUCTS_DIR}/Artifacts\"\nopen \"${BUILT_PRODUCTS_DIR}/Artifacts\"";
+			shellScript = "mkdir -p \"${BUILT_PRODUCTS_DIR}/Artifacts\"\nopen \"${BUILT_PRODUCTS_DIR}/Artifacts\"";
 		};
 		079D5FC51F2A095F00AC83A5 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -861,7 +829,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "mkdir \"${BUILT_PRODUCTS_DIR}/Artifacts\"\nopen \"${BUILT_PRODUCTS_DIR}/Artifacts\"";
+			shellScript = "mkdir -p \"${BUILT_PRODUCTS_DIR}/Artifacts\"\nopen \"${BUILT_PRODUCTS_DIR}/Artifacts\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
