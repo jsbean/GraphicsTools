@@ -119,6 +119,22 @@
 		079D5FF61F2A1EF900AC83A5 /* GeometryTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 079D5FF51F2A1EF900AC83A5 /* GeometryTools.framework */; };
 		079D60141F2A22F200AC83A5 /* GraphicsTestTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 079D60131F2A22F200AC83A5 /* GraphicsTestTools.framework */; };
 		079D60161F2A22FD00AC83A5 /* GraphicsTestTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 079D60151F2A22FD00AC83A5 /* GraphicsTestTools.framework */; };
+		079D60191F2A38DB00AC83A5 /* bbox.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FC61F2A151E00AC83A5 /* bbox.svg */; };
+		079D601A1F2A38DB00AC83A5 /* circle.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FC71F2A151E00AC83A5 /* circle.svg */; };
+		079D601B1F2A38DB00AC83A5 /* colors_opacity.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FC81F2A151E00AC83A5 /* colors_opacity.svg */; };
+		079D601C1F2A38DB00AC83A5 /* curve1.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FC91F2A151E00AC83A5 /* curve1.svg */; };
+		079D601D1F2A38DB00AC83A5 /* curve2.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FCA1F2A151E00AC83A5 /* curve2.svg */; };
+		079D601E1F2A38DB00AC83A5 /* ellipse.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FCB1F2A151E00AC83A5 /* ellipse.svg */; };
+		079D601F1F2A38DB00AC83A5 /* fill_stroke_opacity.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FCC1F2A151E00AC83A5 /* fill_stroke_opacity.svg */; };
+		079D60201F2A38DB00AC83A5 /* line.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FCD1F2A151E00AC83A5 /* line.svg */; };
+		079D60211F2A38DB00AC83A5 /* multiple_groups.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FCE1F2A151E00AC83A5 /* multiple_groups.svg */; };
+		079D60221F2A38DB00AC83A5 /* multiple_objects.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FCF1F2A151E00AC83A5 /* multiple_objects.svg */; };
+		079D60231F2A38DB00AC83A5 /* polybezier.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FD01F2A151E00AC83A5 /* polybezier.svg */; };
+		079D60241F2A38DB00AC83A5 /* polygon.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FD11F2A151E00AC83A5 /* polygon.svg */; };
+		079D60251F2A38DB00AC83A5 /* polyline.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FD21F2A151E00AC83A5 /* polyline.svg */; };
+		079D60261F2A38DB00AC83A5 /* rect.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FD31F2A151E00AC83A5 /* rect.svg */; };
+		079D60271F2A38DB00AC83A5 /* square.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FD41F2A151E00AC83A5 /* square.svg */; };
+		079D60281F2A38DB00AC83A5 /* stroke.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 079D5FD51F2A151E00AC83A5 /* stroke.svg */; };
 		079E69461EF5DF240093A7ED /* Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079E69451EF5DF240093A7ED /* Styling.swift */; };
 		079E69471EF5DF240093A7ED /* Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079E69451EF5DF240093A7ED /* Styling.swift */; };
 		079E69491EF5DF8F0093A7ED /* StyledPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079E69481EF5DF8F0093A7ED /* StyledPath.swift */; };
@@ -212,6 +228,22 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
+				079D60191F2A38DB00AC83A5 /* bbox.svg in CopyFiles */,
+				079D601A1F2A38DB00AC83A5 /* circle.svg in CopyFiles */,
+				079D601B1F2A38DB00AC83A5 /* colors_opacity.svg in CopyFiles */,
+				079D601C1F2A38DB00AC83A5 /* curve1.svg in CopyFiles */,
+				079D601D1F2A38DB00AC83A5 /* curve2.svg in CopyFiles */,
+				079D601E1F2A38DB00AC83A5 /* ellipse.svg in CopyFiles */,
+				079D601F1F2A38DB00AC83A5 /* fill_stroke_opacity.svg in CopyFiles */,
+				079D60201F2A38DB00AC83A5 /* line.svg in CopyFiles */,
+				079D60211F2A38DB00AC83A5 /* multiple_groups.svg in CopyFiles */,
+				079D60221F2A38DB00AC83A5 /* multiple_objects.svg in CopyFiles */,
+				079D60231F2A38DB00AC83A5 /* polybezier.svg in CopyFiles */,
+				079D60241F2A38DB00AC83A5 /* polygon.svg in CopyFiles */,
+				079D60251F2A38DB00AC83A5 /* polyline.svg in CopyFiles */,
+				079D60261F2A38DB00AC83A5 /* rect.svg in CopyFiles */,
+				079D60271F2A38DB00AC83A5 /* square.svg in CopyFiles */,
+				079D60281F2A38DB00AC83A5 /* stroke.svg in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

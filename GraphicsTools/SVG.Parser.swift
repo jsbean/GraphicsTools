@@ -19,8 +19,8 @@ extension SVG {
     internal final class Parser {
         
         public enum Error: Swift.Error {
-            case illFormedIndexer(XMLIndexer)
             case fileNotFound(String)
+            case illFormedIndexer(XMLIndexer)
             case illFormedGroup(SVGElement)
             case illFormedLine(SVGElement)
             case illFormedPolyline(SVGElement)
